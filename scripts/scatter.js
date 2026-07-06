@@ -1,5 +1,9 @@
 const TIER_SCATTER_COLORS = { hit: '#1f9d55', mid: '#b8791a', niche: '#6b6b72' }; // matches --tier-hit/mid/niche badges
 
+function boxesOverlap(a, b) {
+  return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+}
+
 function pointLabelPlugin(getLabelIdxs) {
   return {
     id: 'pointLabels',
@@ -9,9 +13,12 @@ function pointLabelPlugin(getLabelIdxs) {
       const { ctx, chartArea } = chart;
       const meta = chart.getDatasetMeta(0);
       const points = chart.data.datasets[0].data;
+      const LINE_HEIGHT = 13;
       ctx.save();
       ctx.font = '11px system-ui, -apple-system, sans-serif';
       ctx.fillStyle = VIZ_TEXT;
+
+      const placedBoxes = [];
       idxs.forEach((idx) => {
         const el = meta.data[idx];
         const p = points[idx];
@@ -19,9 +26,29 @@ function pointLabelPlugin(getLabelIdxs) {
         const textWidth = ctx.measureText(p.name).width;
         // flip to the left of the point if it would overflow the chart's right edge
         const fitsOnRight = el.x + 7 + textWidth <= chartArea.right;
-        ctx.textAlign = fitsOnRight ? 'left' : 'right';
+        const textAlign = fitsOnRight ? 'left' : 'right';
         const x = fitsOnRight ? el.x + 7 : el.x - 7;
-        ctx.fillText(p.name, x, el.y - 6);
+
+        // Nudge down past any already-placed label this one would overlap —
+        // only 2-3 labels ever coexist, so a full layout solver would be overkill.
+        let y = el.y - 6;
+        for (let attempt = 0; attempt < 6; attempt++) {
+          const box = {
+            left: fitsOnRight ? x : x - textWidth,
+            right: fitsOnRight ? x + textWidth : x,
+            top: y - LINE_HEIGHT,
+            bottom: y,
+          };
+          const collision = placedBoxes.some((b) => boxesOverlap(box, b));
+          if (!collision) {
+            placedBoxes.push(box);
+            break;
+          }
+          y += LINE_HEIGHT;
+        }
+
+        ctx.textAlign = textAlign;
+        ctx.fillText(p.name, x, y);
       });
       ctx.restore();
     },
@@ -87,7 +114,7 @@ function createScatterChart({ container, titleText, xLabel, yLabel, xKey, xType,
             title: { display: true, text: titleText, color: VIZ_TEXT, font: { size: 13, weight: '600' } },
             tooltip: {
               callbacks: {
-                label: (item) => [item.raw.name, `${tooltipX(item.raw.x)} · ${item.raw.y}% positive`],
+                label: (item) => [item.raw.name, `${tooltipX(item.raw.x)} · ${item.raw.y}% positive · ${item.raw.tier}`],
               },
             },
           },

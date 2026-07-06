@@ -36,9 +36,7 @@ function tableCellHTML(game, key) {
 }
 
 function tableSortValue(game, key) {
-  if (key === 'review_score_percent') return game.review_score_percent ?? -1;
   if (key === 'release_year') return game.release_year ?? 0;
-  if (key === 'price_usd') return game.price_usd ?? Infinity;
   return game[key];
 }
 
@@ -56,6 +54,13 @@ function createGameTable({ container }) {
     const sorted = [...games].sort((a, b) => {
       const av = tableSortValue(a, sortKey);
       const bv = tableSortValue(b, sortKey);
+      // Unknown values (null price, null score) always sort last, regardless of direction —
+      // "unknown" isn't the same as "lowest", so it shouldn't flip to the top on a desc sort.
+      const aUnknown = av == null;
+      const bUnknown = bv == null;
+      if (aUnknown && bUnknown) return 0;
+      if (aUnknown) return 1;
+      if (bUnknown) return -1;
       const cmp = typeof av === 'string' ? av.localeCompare(bv) : av - bv;
       return sortDir === 'asc' ? cmp : -cmp;
     });
@@ -63,8 +68,9 @@ function createGameTable({ container }) {
     const headerHTML = TABLE_COLUMNS.map((col) => {
       const active = col.key === sortKey;
       const arrow = active ? (sortDir === 'asc' ? ' &#9650;' : ' &#9660;') : '';
-      const sortAttr = col.sortable ? ` data-sort-key="${col.key}"` : '';
-      return `<th class="${col.sortable ? 'game-table__sortable' : ''}"${sortAttr}>${col.label}${arrow}</th>`;
+      if (!col.sortable) return `<th>${col.label}</th>`;
+      const ariaSort = active ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none';
+      return `<th class="game-table__sortable" data-sort-key="${col.key}" tabindex="0" role="button" aria-sort="${ariaSort}">${col.label}${arrow}</th>`;
     }).join('');
 
     const rowsHTML = sorted.map((game) => `
@@ -82,10 +88,7 @@ function createGameTable({ container }) {
     `;
   }
 
-  container.addEventListener('click', (event) => {
-    const th = event.target.closest('[data-sort-key]');
-    if (!th) return;
-    const key = th.dataset.sortKey;
+  function sortBy(key) {
     if (sortKey === key) {
       sortDir = sortDir === 'asc' ? 'desc' : 'asc';
     } else {
@@ -93,6 +96,20 @@ function createGameTable({ container }) {
       sortDir = 'desc';
     }
     render();
+  }
+
+  container.addEventListener('click', (event) => {
+    const th = event.target.closest('[data-sort-key]');
+    if (!th) return;
+    sortBy(th.dataset.sortKey);
+  });
+
+  container.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    const th = event.target.closest('[data-sort-key]');
+    if (!th) return;
+    event.preventDefault(); // stop the page from scrolling on Space
+    sortBy(th.dataset.sortKey);
   });
 
   return {

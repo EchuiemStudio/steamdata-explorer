@@ -15,10 +15,6 @@ async function loadNav() {
       link.setAttribute('href', base + link.getAttribute('href'));
     });
   }
-
-  const current = document.body.dataset.page;
-  const activeLink = placeholder.querySelector(`[data-nav="${current}"]`);
-  if (activeLink) activeLink.classList.add('active');
 }
 
 loadNav();

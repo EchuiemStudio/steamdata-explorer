@@ -15,7 +15,7 @@ function steamStoreURL(appid) {
 function gameCardHTML(game) {
   return `
     <a class="game-card" data-appid="${game.appid}" href="${steamStoreURL(game.appid)}" target="_blank" rel="noopener noreferrer">
-      <img class="game-card__image" src="${game.header_image}" alt="${escapeHTML(game.name)}" loading="lazy">
+      <img class="game-card__image" src="${escapeHTML(game.header_image)}" alt="${escapeHTML(game.name)}" loading="lazy">
       <div class="game-card__body">
         <h3 class="game-card__title">${escapeHTML(game.name)}</h3>
         <div class="game-card__meta">

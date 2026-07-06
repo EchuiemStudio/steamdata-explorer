@@ -83,7 +83,7 @@ function createFilterPanel({ container, genreCounts, tagCounts, heading, caption
       <div class="filter-panel">
         <div class="filter-panel__header">
           <h2 class="filter-panel__heading">${escapeHTML(heading)}</h2>
-          <p class="filter-panel__caption">${caption}</p>
+          <p class="filter-panel__caption">${escapeHTML(caption)}</p>
         </div>
         <input type="search" class="filter-panel__search" placeholder="Search genres and tags&hellip;">
         ${selected.size ? `<div class="active-filters">${activePills}</div>` : ''}

@@ -22,6 +22,15 @@ a {
 
 /* --- Nav --- */
 
+/* nav.js injects .site-nav as this div's only child. Without display:contents,
+   this wrapper (which shrinks to exactly the nav's height) becomes .site-nav's
+   containing block for position:sticky purposes — leaving zero room for it to
+   stick, so it scrolls away immediately. display:contents removes the wrapper
+   from the box model so .site-nav's containing block is <body> instead. */
+#nav-placeholder {
+  display: contents;
+}
+
 .site-nav {
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
@@ -405,6 +414,12 @@ main.container section[id] {
   max-width: 65ch;
 }
 
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
 .chart-pair {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -437,8 +452,11 @@ main.container section[id] {
 .heatmap-grid {
   display: grid;
   grid-template-columns: minmax(90px, auto) repeat(var(--heatmap-cols, 1), minmax(48px, 1fr));
+  align-content: start;
   gap: 2px;
+  max-height: 100%;
   overflow-x: auto;
+  overflow-y: auto;
   font-size: 0.75rem;
 }
 
@@ -555,5 +573,11 @@ main.container section[id] {
 
   .page-header {
     padding: var(--space-4) 0 var(--space-3);
+  }
+
+  /* nav wraps to 2 lines at this width (taller than the 80px desktop anchor
+     offset assumes) — match it so anchor jumps don't hide the section heading. */
+  main.container section[id] {
+    scroll-margin-top: 140px;
   }
 }

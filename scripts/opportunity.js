@@ -170,14 +170,19 @@ function createOpportunitySection({ container, aggregates }) {
           const step = heatmapStep(count, maxCount);
           const bg = HEATMAP_SEQUENTIAL_SCALE[step];
           const fg = step >= 4 ? '#ffffff' : '#17171a';
-          html += `<button type="button" class="heatmap-cell heatmap-cell--value" style="background:${bg};color:${fg}" data-i="${i}" data-j="${j}">${count}</button>`;
+          const pairLabel = `${labels[i].value} + ${labels[j].value}: ${count} game${count === 1 ? '' : 's'} in both`;
+          html += `<button type="button" class="heatmap-cell heatmap-cell--value" style="background:${bg};color:${fg}" data-i="${i}" data-j="${j}" aria-label="${escapeHTML(pairLabel)}">${count}</button>`;
         }
       }
       html += '</div>';
     }
 
     heatmapEl.innerHTML = html;
-    heatmapEl.style.setProperty('--heatmap-cols', labels.length + 1);
+    // CSS template already reserves 1 fixed column for the row-header; each row
+    // emits exactly `labels.length` value cells after that, so --heatmap-cols
+    // must be labels.length, not labels.length + 1 (that extra column was
+    // silently shifting every row's cells one column right of their header).
+    heatmapEl.style.setProperty('--heatmap-cols', labels.length);
 
     heatmapEl.querySelectorAll('.heatmap-cell--value').forEach((cell) => {
       cell.addEventListener('click', () => {
