@@ -1,0 +1,188 @@
+{
+  "total_games": 51,
+  "genre_counts": {
+    "Action": 26,
+    "Indie": 24,
+    "Massively Multiplayer": 1,
+    "RPG": 17,
+    "Free To Play": 7,
+    "Adventure": 16,
+    "Casual": 12,
+    "Simulation": 8,
+    "Racing": 2,
+    "Early Access": 3,
+    "Sports": 3,
+    "Strategy": 10
+  },
+  "tier_counts": {
+    "hit": 17,
+    "mid": 17,
+    "niche": 17
+  },
+  "tag_cooccurrence": [
+    {
+      "tag_a": "Action",
+      "tag_b": "Multiplayer",
+      "count": 8
+    },
+    {
+      "tag_a": "Action",
+      "tag_b": "Shooter",
+      "count": 8
+    },
+    {
+      "tag_a": "Multiplayer",
+      "tag_b": "Shooter",
+      "count": 7
+    },
+    {
+      "tag_a": "FPS",
+      "tag_b": "Multiplayer",
+      "count": 6
+    },
+    {
+      "tag_a": "FPS",
+      "tag_b": "Shooter",
+      "count": 6
+    },
+    {
+      "tag_a": "Adventure",
+      "tag_b": "Singleplayer",
+      "count": 5
+    },
+    {
+      "tag_a": "Action",
+      "tag_b": "Adventure",
+      "count": 5
+    },
+    {
+      "tag_a": "Action",
+      "tag_b": "FPS",
+      "count": 5
+    },
+    {
+      "tag_a": "Casual",
+      "tag_b": "Indie",
+      "count": 5
+    },
+    {
+      "tag_a": "Free to Play",
+      "tag_b": "Multiplayer",
+      "count": 4
+    },
+    {
+      "tag_a": "Co-op",
+      "tag_b": "Multiplayer",
+      "count": 4
+    },
+    {
+      "tag_a": "Action",
+      "tag_b": "Open World",
+      "count": 4
+    },
+    {
+      "tag_a": "Action",
+      "tag_b": "First-Person",
+      "count": 4
+    },
+    {
+      "tag_a": "First-Person",
+      "tag_b": "Shooter",
+      "count": 4
+    },
+    {
+      "tag_a": "Action",
+      "tag_b": "RPG",
+      "count": 4
+    },
+    {
+      "tag_a": "Action Roguelike",
+      "tag_b": "Rogue-lite",
+      "count": 4
+    },
+    {
+      "tag_a": "Anime",
+      "tag_b": "RPG",
+      "count": 4
+    },
+    {
+      "tag_a": "RPG",
+      "tag_b": "Singleplayer",
+      "count": 4
+    },
+    {
+      "tag_a": "Adventure",
+      "tag_b": "Story Rich",
+      "count": 4
+    },
+    {
+      "tag_a": "Multiplayer",
+      "tag_b": "Singleplayer",
+      "count": 4
+    },
+    {
+      "tag_a": "Action",
+      "tag_b": "Indie",
+      "count": 4
+    },
+    {
+      "tag_a": "Casual",
+      "tag_b": "Singleplayer",
+      "count": 4
+    },
+    {
+      "tag_a": "Multiplayer",
+      "tag_b": "Open World",
+      "count": 3
+    },
+    {
+      "tag_a": "Open World",
+      "tag_b": "Shooter",
+      "count": 3
+    },
+    {
+      "tag_a": "Action",
+      "tag_b": "Singleplayer",
+      "count": 3
+    },
+    {
+      "tag_a": "Action",
+      "tag_b": "Rogue-like",
+      "count": 3
+    },
+    {
+      "tag_a": "Action",
+      "tag_b": "Rogue-lite",
+      "count": 3
+    },
+    {
+      "tag_a": "Rogue-like",
+      "tag_b": "Rogue-lite",
+      "count": 3
+    },
+    {
+      "tag_a": "Hack and Slash",
+      "tag_b": "RPG",
+      "count": 3
+    },
+    {
+      "tag_a": "JRPG",
+      "tag_b": "Turn-Based Combat",
+      "count": 3
+    }
+  ],
+  "tier_stats": {
+    "hit": {
+      "avg_review_score": 81.9,
+      "avg_price": 20.64
+    },
+    "mid": {
+      "avg_review_score": 80.1,
+      "avg_price": 14.26
+    },
+    "niche": {
+      "avg_review_score": 69.9,
+      "avg_price": 5.97
+    }
+  }
+}

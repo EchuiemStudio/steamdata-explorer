@@ -1,0 +1,1393 @@
+[
+  {
+    "appid": 555570,
+    "name": "Infestation: The New Z",
+    "genres": [
+      "Action",
+      "Indie",
+      "Massively Multiplayer",
+      "RPG",
+      "Free To Play"
+    ],
+    "tags": [
+      "Zombies",
+      "Free to Play",
+      "Survival",
+      "Multiplayer",
+      "Open World",
+      "Massively Multiplayer",
+      "FPS",
+      "Shooter"
+    ],
+    "release_year": 2016,
+    "price_usd": 0,
+    "review_score_desc": "Mixed",
+    "review_positive": 18298,
+    "review_negative": 15581,
+    "review_total": 33879,
+    "review_score_percent": 54,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/555570/header.jpg?t=1732531912"
+  },
+  {
+    "appid": 1549180,
+    "name": "Propnight",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual"
+    ],
+    "tags": [
+      "Multiplayer",
+      "Horror",
+      "Survival Horror",
+      "Action",
+      "Online Co-Op",
+      "Co-op",
+      "PvP",
+      "3D"
+    ],
+    "release_year": 2021,
+    "price_usd": 0,
+    "review_score_desc": "Mixed",
+    "review_positive": 12965,
+    "review_negative": 7203,
+    "review_total": 20168,
+    "review_score_percent": 64.3,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1549180/header.jpg?t=1703193974"
+  },
+  {
+    "appid": 236870,
+    "name": "HITMAN™",
+    "genres": [
+      "Action"
+    ],
+    "tags": [
+      "Stealth",
+      "Action",
+      "Assassin",
+      "Third Person",
+      "Singleplayer",
+      "Tactical",
+      "Shooter",
+      "Open World"
+    ],
+    "release_year": 2016,
+    "price_usd": 0,
+    "review_score_desc": "Very Positive",
+    "review_positive": 30944,
+    "review_negative": 6215,
+    "review_total": 37159,
+    "review_score_percent": 83.3,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236870/header.jpg?t=1768906497"
+  },
+  {
+    "appid": 278970,
+    "name": "Digger Online",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "tags": [
+      "Story Rich",
+      "Action",
+      "Atmospheric",
+      "Realistic",
+      "Shooter",
+      "Survival",
+      "First-Person",
+      "Open World"
+    ],
+    "release_year": 2015,
+    "price_usd": 21.75,
+    "review_score_desc": "Mixed",
+    "review_positive": 8726,
+    "review_negative": 9123,
+    "review_total": 17849,
+    "review_score_percent": 48.9,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/278970/header.jpg?t=1690364798"
+  },
+  {
+    "appid": 1145350,
+    "name": "Hades II",
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG"
+    ],
+    "tags": [
+      "Action",
+      "Rogue-like",
+      "Rogue-lite",
+      "Hack and Slash",
+      "RPG",
+      "Action Roguelike",
+      "Mythology",
+      "Dungeon Crawler"
+    ],
+    "release_year": 2025,
+    "price_usd": 27.29,
+    "review_score_desc": "Overwhelmingly Positive",
+    "review_positive": 115477,
+    "review_negative": 5178,
+    "review_total": 120655,
+    "review_score_percent": 95.7,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/91ac334a2c137d08968ccc0bc474a02579602100/header.jpg?t=1779901265"
+  },
+  {
+    "appid": 1687950,
+    "name": "Persona 5 Royal",
+    "genres": [
+      "RPG"
+    ],
+    "tags": [
+      "JRPG",
+      "Story Rich",
+      "Great Soundtrack",
+      "Turn-Based Combat",
+      "Anime",
+      "RPG",
+      "Singleplayer",
+      "Dating Sim"
+    ],
+    "release_year": 2022,
+    "price_usd": 17.99,
+    "review_score_desc": "Overwhelmingly Positive",
+    "review_positive": 128823,
+    "review_negative": 4829,
+    "review_total": 133652,
+    "review_score_percent": 96.4,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/header.jpg?t=1782353605"
+  },
+  {
+    "appid": 611790,
+    "name": "House Party",
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie",
+      "RPG",
+      "Simulation"
+    ],
+    "tags": [
+      "Nudity",
+      "Mature",
+      "NSFW",
+      "Simulation",
+      "Sandbox",
+      "Choices Matter",
+      "Story Rich",
+      "Adventure"
+    ],
+    "release_year": 2022,
+    "price_usd": 11.24,
+    "review_score_desc": "Very Positive",
+    "review_positive": 13195,
+    "review_negative": 2171,
+    "review_total": 15366,
+    "review_score_percent": 85.9,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/611790/8596a877ba1c17b31ac02460c1ae995693ba3147/header_alt_assets_0.jpg?t=1771516030"
+  },
+  {
+    "appid": 866800,
+    "name": "The Walking Dead: The Final Season",
+    "genres": [
+      "Adventure"
+    ],
+    "tags": [
+      "Story Rich",
+      "Choices Matter",
+      "Zombies",
+      "Adventure",
+      "Choose Your Own Adventure",
+      "Singleplayer",
+      "Female Protagonist",
+      "Post-apocalyptic"
+    ],
+    "release_year": 2018,
+    "price_usd": 2.62,
+    "review_score_desc": "Overwhelmingly Positive",
+    "review_positive": 20255,
+    "review_negative": 1050,
+    "review_total": 21305,
+    "review_score_percent": 95.1,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/866800/header.jpg?t=1729703141"
+  },
+  {
+    "appid": 2680010,
+    "name": "The First Berserker: Khazan",
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "tags": [
+      "Souls-like",
+      "Difficult",
+      "Hack and Slash",
+      "Action RPG",
+      "Anime",
+      "Action-Adventure",
+      "Third Person",
+      "RPG"
+    ],
+    "release_year": 2025,
+    "price_usd": 119.4,
+    "review_score_desc": "Very Positive",
+    "review_positive": 26445,
+    "review_negative": 4683,
+    "review_total": 31128,
+    "review_score_percent": 85,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2680010/header.jpg?t=1776936760"
+  },
+  {
+    "appid": 269950,
+    "name": "X-Plane 11",
+    "genres": [
+      "Simulation"
+    ],
+    "tags": [
+      "Simulation",
+      "Flight",
+      "Realistic",
+      "Open World",
+      "Multiplayer",
+      "VR",
+      "Singleplayer",
+      "Physics"
+    ],
+    "release_year": 2017,
+    "price_usd": 16.83,
+    "review_score_desc": "Very Positive",
+    "review_positive": 18661,
+    "review_negative": 1404,
+    "review_total": 20065,
+    "review_score_percent": 93,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/269950/header.jpg?t=1753867064"
+  },
+  {
+    "appid": 362930,
+    "name": "Garfield Kart",
+    "genres": [
+      "Racing"
+    ],
+    "tags": [
+      "Cult Classic",
+      "Combat Racing",
+      "Competitive",
+      "Racing",
+      "Action",
+      "Multiplayer",
+      "Family Friendly",
+      "Singleplayer"
+    ],
+    "release_year": 2015,
+    "price_usd": 3,
+    "review_score_desc": "Very Positive",
+    "review_positive": 12351,
+    "review_negative": 1769,
+    "review_total": 14120,
+    "review_score_percent": 87.5,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/362930/header.jpg?t=1750323352"
+  },
+  {
+    "appid": 960910,
+    "name": "Heavy Rain",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "tags": [
+      "Choices Matter",
+      "Story Rich",
+      "Multiple Endings",
+      "Narration",
+      "Cinematic",
+      "Adventure",
+      "Detective",
+      "Thriller"
+    ],
+    "release_year": 2020,
+    "price_usd": 5.9,
+    "review_score_desc": "Very Positive",
+    "review_positive": 25168,
+    "review_negative": 4213,
+    "review_total": 29381,
+    "review_score_percent": 85.7,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/960910/header.jpg?t=1675271942"
+  },
+  {
+    "appid": 582010,
+    "name": "Monster Hunter: World",
+    "genres": [
+      "Action"
+    ],
+    "tags": [
+      "Co-op",
+      "Multiplayer",
+      "Action",
+      "Open World",
+      "RPG",
+      "Character Customization",
+      "Third Person",
+      "Adventure"
+    ],
+    "release_year": 2018,
+    "price_usd": 26.49,
+    "review_score_desc": "Very Positive",
+    "review_positive": 454833,
+    "review_negative": 57559,
+    "review_total": 512392,
+    "review_score_percent": 88.8,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/header.jpg?t=1773328926"
+  },
+  {
+    "appid": 70000,
+    "name": "Dino D-Day",
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "tags": [
+      "Dinosaurs",
+      "Multiplayer",
+      "Action",
+      "World War II",
+      "FPS",
+      "Indie",
+      "Shooter",
+      "First-Person"
+    ],
+    "release_year": 2011,
+    "price_usd": 2.3,
+    "review_score_desc": "Very Positive",
+    "review_positive": 12725,
+    "review_negative": 2388,
+    "review_total": 15113,
+    "review_score_percent": 84.2,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/70000/header.jpg?t=1478380788"
+  },
+  {
+    "appid": 858210,
+    "name": "Nova Drift",
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "tags": [
+      "Action Roguelike",
+      "Arena Shooter",
+      "Bullet Hell",
+      "Rogue-lite",
+      "Shoot 'Em Up",
+      "Shooter",
+      "Arcade",
+      "Action RPG"
+    ],
+    "release_year": 2024,
+    "price_usd": 24.75,
+    "review_score_desc": "Overwhelmingly Positive",
+    "review_positive": 13881,
+    "review_negative": 632,
+    "review_total": 14513,
+    "review_score_percent": 95.6,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/858210/32823a9525b5b4fdcdad9b8306e77fe52869b3af/header.jpg?t=1774453699"
+  },
+  {
+    "appid": 302830,
+    "name": "BLOCKADE 3D",
+    "genres": [
+      "Action",
+      "Free To Play",
+      "Early Access"
+    ],
+    "tags": [
+      "Free to Play",
+      "Shooter",
+      "Multiplayer",
+      "FPS",
+      "Action",
+      "Building",
+      "Zombies",
+      "Early Access"
+    ],
+    "release_year": 2014,
+    "price_usd": 0,
+    "review_score_desc": "Mixed",
+    "review_positive": 14793,
+    "review_negative": 10404,
+    "review_total": 25197,
+    "review_score_percent": 58.7,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/302830/header.jpg?t=1569057315"
+  },
+  {
+    "appid": 10190,
+    "name": "Call of Duty®: Modern Warfare® 2 (2009)",
+    "genres": [
+      "Action"
+    ],
+    "tags": [
+      "Action",
+      "FPS",
+      "Multiplayer",
+      "Shooter",
+      "First-Person",
+      "Singleplayer",
+      "War",
+      "Military"
+    ],
+    "release_year": 2009,
+    "price_usd": 71.25,
+    "review_score_desc": "Very Positive",
+    "review_positive": 10395,
+    "review_negative": 1221,
+    "review_total": 11616,
+    "review_score_percent": 89.5,
+    "performance_tier": "hit",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10180/header.jpg?t=1780962606"
+  },
+  {
+    "appid": 1676130,
+    "name": "Deadlink",
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "tags": [
+      "FPS",
+      "Action Roguelike",
+      "Cyberpunk",
+      "Class-Based",
+      "Fast-Paced",
+      "Difficult",
+      "Rogue-lite",
+      "Arena Shooter"
+    ],
+    "release_year": 2023,
+    "price_usd": 33.55,
+    "review_score_desc": "Very Positive",
+    "review_positive": 3235,
+    "review_negative": 398,
+    "review_total": 3633,
+    "review_score_percent": 89,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1676130/header.jpg?t=1727716437"
+  },
+  {
+    "appid": 1519350,
+    "name": "Madden NFL 22",
+    "genres": [
+      "Casual",
+      "Simulation",
+      "Sports",
+      "Strategy"
+    ],
+    "tags": [
+      "Football (American)",
+      "Sports",
+      "Controller",
+      "PvP",
+      "Realistic",
+      "Casual",
+      "e-sports",
+      "Immersive Sim"
+    ],
+    "release_year": 2021,
+    "price_usd": 0,
+    "review_score_desc": "Mixed",
+    "review_positive": 3825,
+    "review_negative": 3368,
+    "review_total": 7193,
+    "review_score_percent": 53.2,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1519350/header.jpg?t=1745600215"
+  },
+  {
+    "appid": 9350,
+    "name": "Supreme Commander",
+    "genres": [
+      "Strategy"
+    ],
+    "tags": [
+      "Strategy",
+      "RTS",
+      "Sci-fi",
+      "Multiplayer",
+      "Base-Building",
+      "Real-Time",
+      "Co-op",
+      "Real-Time with Pause"
+    ],
+    "release_year": 2011,
+    "price_usd": 2.09,
+    "review_score_desc": "Very Positive",
+    "review_positive": 2784,
+    "review_negative": 343,
+    "review_total": 3127,
+    "review_score_percent": 89,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/9350/header.jpg?t=1779202386"
+  },
+  {
+    "appid": 370240,
+    "name": "NBA 2K16",
+    "genres": [
+      "Sports"
+    ],
+    "tags": [
+      "Sports",
+      "Basketball",
+      "Multiplayer",
+      "Simulation",
+      "Singleplayer",
+      "Realistic",
+      "Co-op",
+      "Great Soundtrack"
+    ],
+    "release_year": 2015,
+    "price_usd": 0,
+    "review_score_desc": "Mixed",
+    "review_positive": 3826,
+    "review_negative": 3546,
+    "review_total": 7372,
+    "review_score_percent": 51.9,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/370240/header.jpg?t=1569020499"
+  },
+  {
+    "appid": 1161870,
+    "name": "Epiphyllum in Love",
+    "genres": [
+      "Adventure",
+      "Casual",
+      "Indie"
+    ],
+    "tags": [
+      "Casual",
+      "Indie",
+      "Adventure",
+      "Visual Novel",
+      "Dating Sim",
+      "Word Game",
+      "Anime",
+      "Sexual Content"
+    ],
+    "release_year": 2020,
+    "price_usd": 6.19,
+    "review_score_desc": "Overwhelmingly Positive",
+    "review_positive": 2278,
+    "review_negative": 44,
+    "review_total": 2322,
+    "review_score_percent": 98.1,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1161870/header.jpg?t=1740711251"
+  },
+  {
+    "appid": 3399950,
+    "name": "Your Mother",
+    "genres": [
+      "Casual",
+      "Indie",
+      "RPG"
+    ],
+    "tags": [
+      "Anime",
+      "Female Protagonist",
+      "2D",
+      "Cute",
+      "Emotional",
+      "Casual",
+      "Relaxing",
+      "Singleplayer"
+    ],
+    "release_year": 2025,
+    "price_usd": 2.25,
+    "review_score_desc": "Very Positive",
+    "review_positive": 9485,
+    "review_negative": 776,
+    "review_total": 10261,
+    "review_score_percent": 92.4,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3399950/68800498b6f468820ce5bdfcb33f796a56597532/header_alt_assets_4.jpg?t=1781631200"
+  },
+  {
+    "appid": 508190,
+    "name": "Dragon Knight",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie",
+      "RPG"
+    ],
+    "tags": [
+      "Hentai",
+      "Sexual Content",
+      "Nudity",
+      "Action",
+      "Anime",
+      "RPG",
+      "Indie",
+      "Mature"
+    ],
+    "release_year": 2018,
+    "price_usd": 0,
+    "review_score_desc": "Mostly Positive",
+    "review_positive": 1975,
+    "review_negative": 619,
+    "review_total": 2594,
+    "review_score_percent": 76.1,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/508190/header.jpg?t=1645801678"
+  },
+  {
+    "appid": 11280,
+    "name": "Penguins Arena: Sedna's World",
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie"
+    ],
+    "tags": [
+      "Action",
+      "Casual",
+      "Indie",
+      "FPS",
+      "Multiplayer",
+      "Great Soundtrack",
+      "Shooter",
+      "Family Friendly"
+    ],
+    "release_year": 2008,
+    "price_usd": 9,
+    "review_score_desc": "Very Positive",
+    "review_positive": 1248,
+    "review_negative": 141,
+    "review_total": 1389,
+    "review_score_percent": 89.8,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/11280/header.jpg?t=1779481687"
+  },
+  {
+    "appid": 2450,
+    "name": "Bloody Good Time",
+    "genres": [
+      "Action"
+    ],
+    "tags": [
+      "Action",
+      "Multiplayer",
+      "FPS",
+      "Comedy",
+      "Funny",
+      "First-Person",
+      "Shooter",
+      "Gore"
+    ],
+    "release_year": 2010,
+    "price_usd": 3.2,
+    "review_score_desc": "Mostly Positive",
+    "review_positive": 861,
+    "review_negative": 237,
+    "review_total": 1098,
+    "review_score_percent": 78.4,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2450/header.jpg?t=1682459523"
+  },
+  {
+    "appid": 2249160,
+    "name": "September 7th",
+    "genres": [
+      "Indie",
+      "Simulation"
+    ],
+    "tags": [
+      "Horror",
+      "Exploration",
+      "Walking Simulator",
+      "Psychological Horror",
+      "First-Person",
+      "3D Platformer",
+      "3D",
+      "Simulation"
+    ],
+    "release_year": 2023,
+    "price_usd": 7.21,
+    "review_score_desc": "Very Positive",
+    "review_positive": 2642,
+    "review_negative": 366,
+    "review_total": 3008,
+    "review_score_percent": 87.8,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2249160/header.jpg?t=1758450267"
+  },
+  {
+    "appid": 1370050,
+    "name": "Trek to Yomi",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "tags": [
+      "Action",
+      "Adventure",
+      "Side Scroller",
+      "Hack and Slash",
+      "Action-Adventure",
+      "Cinematic",
+      "Atmospheric",
+      "Stylized"
+    ],
+    "release_year": 2022,
+    "price_usd": 12.25,
+    "review_score_desc": "Mostly Positive",
+    "review_positive": 2166,
+    "review_negative": 873,
+    "review_total": 3039,
+    "review_score_percent": 71.3,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1370050/header.jpg?t=1728950386"
+  },
+  {
+    "appid": 741260,
+    "name": "Mobile Empire",
+    "genres": [
+      "Casual",
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "tags": [
+      "Strategy",
+      "Simulation",
+      "Casual",
+      "Indie"
+    ],
+    "release_year": 2018,
+    "price_usd": 11.5,
+    "review_score_desc": "Mixed",
+    "review_positive": 822,
+    "review_negative": 691,
+    "review_total": 1513,
+    "review_score_percent": 54.3,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/741260/header.jpg?t=1660734523"
+  },
+  {
+    "appid": 2314160,
+    "name": "Tactical Assault VR",
+    "genres": [
+      "Action",
+      "Simulation",
+      "Early Access"
+    ],
+    "tags": [
+      "Tactical",
+      "VR",
+      "Shooter",
+      "Online Co-Op",
+      "Multiplayer",
+      "Wargame",
+      "Sandbox",
+      "Sniper"
+    ],
+    "release_year": 2023,
+    "price_usd": 32.4,
+    "review_score_desc": "Very Positive",
+    "review_positive": 2872,
+    "review_negative": 612,
+    "review_total": 3484,
+    "review_score_percent": 82.4,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2314160/header.jpg?t=1777952697"
+  },
+  {
+    "appid": 227580,
+    "name": "10,000,000",
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "RPG"
+    ],
+    "tags": [
+      "Match 3",
+      "Indie",
+      "Puzzle",
+      "Casual",
+      "Pixel Graphics",
+      "RPG",
+      "Mouse only",
+      "Singleplayer"
+    ],
+    "release_year": 2013,
+    "price_usd": 12,
+    "review_score_desc": "Very Positive",
+    "review_positive": 2130,
+    "review_negative": 232,
+    "review_total": 2362,
+    "review_score_percent": 90.2,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227580/header.jpg?t=1572970613"
+  },
+  {
+    "appid": 1173800,
+    "name": "FINAL FANTASY IV",
+    "genres": [
+      "RPG"
+    ],
+    "tags": [
+      "RPG",
+      "JRPG",
+      "Exploration",
+      "Party-Based RPG",
+      "2D",
+      "Lore-Rich",
+      "Turn-Based Combat",
+      "Story Rich"
+    ],
+    "release_year": 2021,
+    "price_usd": 47.4,
+    "review_score_desc": "Very Positive",
+    "review_positive": 2678,
+    "review_negative": 253,
+    "review_total": 2931,
+    "review_score_percent": 91.4,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1173800/header.jpg?t=1773825482"
+  },
+  {
+    "appid": 1287840,
+    "name": "Disciples: Liberation",
+    "genres": [
+      "RPG",
+      "Strategy"
+    ],
+    "tags": [
+      "RPG",
+      "Strategy",
+      "Dark Fantasy",
+      "Female Protagonist",
+      "Tactical RPG",
+      "Turn-Based Strategy",
+      "Multiple Endings",
+      "Turn-Based Tactics"
+    ],
+    "release_year": 2021,
+    "price_usd": 33,
+    "review_score_desc": "Mostly Positive",
+    "review_positive": 2878,
+    "review_negative": 1075,
+    "review_total": 3953,
+    "review_score_percent": 72.8,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1287840/header.jpg?t=1769442052"
+  },
+  {
+    "appid": 1450830,
+    "name": "At Dead Of Night",
+    "genres": [
+      "Action",
+      "Indie",
+      "RPG",
+      "Strategy"
+    ],
+    "tags": [
+      "Survival Horror",
+      "Horror",
+      "Strategy",
+      "Supernatural",
+      "Investigation",
+      "Point & Click",
+      "Tactical",
+      "First-Person"
+    ],
+    "release_year": 2020,
+    "price_usd": 30.37,
+    "review_score_desc": "Very Positive",
+    "review_positive": 3266,
+    "review_negative": 211,
+    "review_total": 3477,
+    "review_score_percent": 93.9,
+    "performance_tier": "mid",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1450830/d3aaa83d213c5ed3d757f50f73cc38b0a6485c25/header.jpg?t=1759702068"
+  },
+  {
+    "appid": 219760,
+    "name": "Beyond Divinity",
+    "genres": [
+      "RPG"
+    ],
+    "tags": [
+      "RPG",
+      "Singleplayer",
+      "Isometric",
+      "Fantasy",
+      "Classic",
+      "Action RPG",
+      "Hack and Slash",
+      "Adventure"
+    ],
+    "release_year": 2012,
+    "price_usd": 2.25,
+    "review_score_desc": "Mixed",
+    "review_positive": 423,
+    "review_negative": 435,
+    "review_total": 858,
+    "review_score_percent": 49.3,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/219760/header.jpg?t=1765504804"
+  },
+  {
+    "appid": 299110,
+    "name": "Theatre Of The Absurd",
+    "genres": [
+      "Adventure"
+    ],
+    "tags": [
+      "Adventure",
+      "Hidden Object",
+      "Point & Click",
+      "Female Protagonist",
+      "Horror",
+      "Casual"
+    ],
+    "release_year": 2014,
+    "price_usd": 3.49,
+    "review_score_desc": "Very Positive",
+    "review_positive": 216,
+    "review_negative": 54,
+    "review_total": 270,
+    "review_score_percent": 80,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/299110/header.jpg?t=1759954034"
+  },
+  {
+    "appid": 315650,
+    "name": "Deep Under the Sky",
+    "genres": [
+      "Action",
+      "Casual",
+      "Indie",
+      "Strategy"
+    ],
+    "tags": [
+      "Arcade",
+      "Physics",
+      "Puzzle",
+      "Platformer",
+      "Relaxing",
+      "Action",
+      "Psychedelic",
+      "Puzzle-Platformer"
+    ],
+    "release_year": 2014,
+    "price_usd": 10.7,
+    "review_score_desc": "Mixed",
+    "review_positive": 41,
+    "review_negative": 18,
+    "review_total": 59,
+    "review_score_percent": 69.5,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/315650/header.jpg?t=1684873242"
+  },
+  {
+    "appid": 1773200,
+    "name": "NMNE",
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "tags": [
+      "Adventure",
+      "1980s",
+      "Singleplayer",
+      "Exploration",
+      "Hidden Object",
+      "First-Person",
+      "Psychedelic",
+      "Realistic"
+    ],
+    "release_year": 2021,
+    "price_usd": 2.35,
+    "review_score_desc": "Mostly Positive",
+    "review_positive": 59,
+    "review_negative": 19,
+    "review_total": 78,
+    "review_score_percent": 75.6,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1773200/header.jpg?t=1777576086"
+  },
+  {
+    "appid": 892630,
+    "name": "Mojo: Hanako",
+    "genres": [
+      "Casual",
+      "Free To Play",
+      "Indie",
+      "RPG"
+    ],
+    "tags": [
+      "Nudity",
+      "Sexual Content",
+      "Free to Play",
+      "Casual",
+      "Indie",
+      "Anime",
+      "RPG",
+      "Singleplayer"
+    ],
+    "release_year": 2018,
+    "price_usd": 0,
+    "review_score_desc": "Very Positive",
+    "review_positive": 621,
+    "review_negative": 152,
+    "review_total": 773,
+    "review_score_percent": 80.3,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892630/header.jpg?t=1674320093"
+  },
+  {
+    "appid": 1245250,
+    "name": "Thrive: Heavy Lies The Crown",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Casual",
+      "Indie",
+      "RPG",
+      "Simulation",
+      "Strategy"
+    ],
+    "tags": [
+      "Early Access",
+      "RTS",
+      "Management",
+      "Colony Sim",
+      "Grand Strategy",
+      "Fantasy",
+      "Casual",
+      "Tactical"
+    ],
+    "release_year": 2025,
+    "price_usd": 33.49,
+    "review_score_desc": "Mixed",
+    "review_positive": 265,
+    "review_negative": 183,
+    "review_total": 448,
+    "review_score_percent": 59.2,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245250/header.jpg?t=1778809574"
+  },
+  {
+    "appid": 285070,
+    "name": "Between Me and The Night",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "tags": [
+      "Adventure",
+      "Retro",
+      "Point & Click",
+      "1990's",
+      "Cult Classic",
+      "Great Soundtrack",
+      "Singleplayer",
+      "Puzzle"
+    ],
+    "release_year": 2016,
+    "price_usd": 12.5,
+    "review_score_desc": "Mostly Positive",
+    "review_positive": 629,
+    "review_negative": 201,
+    "review_total": 830,
+    "review_score_percent": 75.8,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285070/header.jpg?t=1550925909"
+  },
+  {
+    "appid": 438010,
+    "name": "PulseCharge",
+    "genres": [
+      "Action",
+      "Indie"
+    ],
+    "tags": [
+      "Indie",
+      "Platformer",
+      "Action",
+      "2D",
+      "Puzzle",
+      "Side Scroller",
+      "Precision Platformer",
+      "Puzzle-Platformer"
+    ],
+    "release_year": 2016,
+    "price_usd": 1.44,
+    "review_score_desc": "Mixed",
+    "review_positive": 97,
+    "review_negative": 94,
+    "review_total": 191,
+    "review_score_percent": 50.8,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438010/header.jpg?t=1768664392"
+  },
+  {
+    "appid": 2216280,
+    "name": "The Crackpet Show: Prologue",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "tags": [
+      "Action",
+      "Adventure",
+      "Rogue-like",
+      "Bullet Hell",
+      "Rogue-lite",
+      "Shoot 'Em Up",
+      "Colorful",
+      "Cute"
+    ],
+    "release_year": 2022,
+    "price_usd": 0,
+    "review_score_desc": "Very Positive",
+    "review_positive": 166,
+    "review_negative": 25,
+    "review_total": 191,
+    "review_score_percent": 86.9,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2216280/header.jpg?t=1688577279"
+  },
+  {
+    "appid": 245050,
+    "name": "SpellForce 2 - Demons of the Past",
+    "genres": [
+      "RPG",
+      "Strategy"
+    ],
+    "tags": [
+      "RPG",
+      "Strategy",
+      "RTS",
+      "Fantasy"
+    ],
+    "release_year": 2014,
+    "price_usd": 9.5,
+    "review_score_desc": "Mixed",
+    "review_positive": 181,
+    "review_negative": 183,
+    "review_total": 364,
+    "review_score_percent": 49.7,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/245050/header.jpg?t=1561968887"
+  },
+  {
+    "appid": 728240,
+    "name": "Adventure Time: Pirates of the Enchiridion",
+    "genres": [
+      "Adventure",
+      "RPG"
+    ],
+    "tags": [
+      "RPG",
+      "Adventure",
+      "Cartoon",
+      "Action",
+      "Wholesome",
+      "Controller",
+      "Open World",
+      "Family Friendly"
+    ],
+    "release_year": 2018,
+    "price_usd": 13.2,
+    "review_score_desc": "Very Positive",
+    "review_positive": 1093,
+    "review_negative": 118,
+    "review_total": 1211,
+    "review_score_percent": 90.3,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/728240/header.jpg?t=1669902198"
+  },
+  {
+    "appid": 1317950,
+    "name": "Eternal Dreamers",
+    "genres": [
+      "Indie",
+      "RPG",
+      "Free To Play"
+    ],
+    "tags": [
+      "Party-Based RPG",
+      "JRPG",
+      "Turn-Based Combat",
+      "Rogue-lite",
+      "Character Customization",
+      "RPG",
+      "2D",
+      "Cute"
+    ],
+    "release_year": 2021,
+    "price_usd": 0,
+    "review_score_desc": "Very Positive",
+    "review_positive": 74,
+    "review_negative": 16,
+    "review_total": 90,
+    "review_score_percent": 82.2,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1317950/header.jpg?t=1762816845"
+  },
+  {
+    "appid": 827050,
+    "name": "Rising Kingdoms",
+    "genres": [
+      "Strategy"
+    ],
+    "tags": [
+      "Strategy",
+      "RTS",
+      "Fantasy",
+      "Multiplayer",
+      "Retro"
+    ],
+    "release_year": 2019,
+    "price_usd": 12.5,
+    "review_score_desc": "Very Positive",
+    "review_positive": 233,
+    "review_negative": 20,
+    "review_total": 253,
+    "review_score_percent": 92.1,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/827050/header.jpg?t=1563893760"
+  },
+  {
+    "appid": 1103780,
+    "name": "Top Speed 2: Racing Legends",
+    "genres": [
+      "Free To Play",
+      "Racing",
+      "Simulation",
+      "Sports",
+      "Early Access"
+    ],
+    "tags": [
+      "Racing",
+      "Free to Play",
+      "Simulation",
+      "Sports",
+      "Automobile Sim",
+      "Early Access",
+      "Driving",
+      "Multiplayer"
+    ],
+    "release_year": 2019,
+    "price_usd": 0,
+    "review_score_desc": "Mixed",
+    "review_positive": 108,
+    "review_negative": 70,
+    "review_total": 178,
+    "review_score_percent": 60.7,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1103780/header.jpg?t=1664797999"
+  },
+  {
+    "appid": 1515290,
+    "name": "Boodunnit",
+    "genres": [
+      "Casual",
+      "Free To Play",
+      "Indie"
+    ],
+    "tags": [
+      "Casual",
+      "Singleplayer",
+      "Story Rich",
+      "Comedy",
+      "Exploration",
+      "Adventure",
+      "Sandbox",
+      "Linear"
+    ],
+    "release_year": 2021,
+    "price_usd": 0,
+    "review_score_desc": "Mixed",
+    "review_positive": 361,
+    "review_negative": 171,
+    "review_total": 532,
+    "review_score_percent": 67.9,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1515290/header.jpg?t=1612436440"
+  },
+  {
+    "appid": 330000,
+    "name": "Kingdoms CCG",
+    "genres": [
+      "Free To Play",
+      "Strategy"
+    ],
+    "tags": [
+      "Free to Play",
+      "Trading Card Game",
+      "Strategy",
+      "Multiplayer",
+      "Fantasy",
+      "PvP",
+      "PvE",
+      "Card Game"
+    ],
+    "release_year": 2015,
+    "price_usd": 0,
+    "review_score_desc": "Mixed",
+    "review_positive": 71,
+    "review_negative": 69,
+    "review_total": 140,
+    "review_score_percent": 50.7,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/330000/header.jpg?t=1684168023"
+  },
+  {
+    "appid": 2226100,
+    "name": "The Molfar: Call of Heart",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Indie"
+    ],
+    "tags": [
+      "Action",
+      "Adventure",
+      "Rogue-like",
+      "Action Roguelike",
+      "Education",
+      "Beat 'em up",
+      "Shooter",
+      "Rogue-lite"
+    ],
+    "release_year": 2022,
+    "price_usd": 0,
+    "review_score_desc": "Mixed",
+    "review_positive": 12,
+    "review_negative": 6,
+    "review_total": 18,
+    "review_score_percent": 66.7,
+    "performance_tier": "niche",
+    "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2226100/header.jpg?t=1739968955"
+  }
+]
