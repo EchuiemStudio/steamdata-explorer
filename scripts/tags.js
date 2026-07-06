@@ -1,7 +1,13 @@
 const TAG_CHIP_LIMIT = 24;
 
 async function initTagsPage() {
-  const games = await loadGames();
+  let games;
+  try {
+    games = await loadGames();
+  } catch (err) {
+    showLoadError(document.getElementById('game-grid'));
+    return;
+  }
 
   const tagCounts = {};
   games.forEach((g) => g.tags.forEach((tag) => {

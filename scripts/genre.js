@@ -8,8 +8,9 @@ function mostCommonTag(games) {
 }
 
 function genreStatsHTML(label, subset) {
-  const avgScore = subset.length
-    ? (subset.reduce((sum, g) => sum + g.review_score_percent, 0) / subset.length).toFixed(1)
+  const scoredSubset = subset.filter((g) => g.review_score_percent != null);
+  const avgScore = scoredSubset.length
+    ? (scoredSubset.reduce((sum, g) => sum + g.review_score_percent, 0) / scoredSubset.length).toFixed(1)
     : '—';
   const avgPrice = subset.length
     ? (subset.reduce((sum, g) => sum + g.price_usd, 0) / subset.length).toFixed(2)
@@ -36,7 +37,13 @@ function genreStatsHTML(label, subset) {
 }
 
 async function initGenrePage() {
-  const [games, aggregates] = await Promise.all([loadGames(), loadAggregates()]);
+  let games, aggregates;
+  try {
+    [games, aggregates] = await Promise.all([loadGames(), loadAggregates()]);
+  } catch (err) {
+    showLoadError(document.getElementById('game-grid'));
+    return;
+  }
   const genres = Object.keys(aggregates.genre_counts).sort();
 
   const chipRow = document.getElementById('chip-row');

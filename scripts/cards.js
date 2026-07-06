@@ -1,5 +1,11 @@
 function formatPrice(price) {
+  if (price == null) return '—';
   return price === 0 ? 'Free' : `$${price.toFixed(2)}`;
+}
+
+function formatReviewSummary(game) {
+  if (game.review_score_percent == null) return 'No reviews yet';
+  return `${game.review_score_percent}% positive &middot; ${game.review_total.toLocaleString()} reviews`;
 }
 
 function steamStoreURL(appid) {
@@ -17,7 +23,7 @@ function gameCardHTML(game) {
           <span class="game-card__price">${formatPrice(game.price_usd)}</span>
         </div>
         <div class="game-card__review">
-          ${game.review_score_percent}% positive &middot; ${game.review_total.toLocaleString()} reviews
+          ${formatReviewSummary(game)}
         </div>
         <div class="game-card__genres">${escapeHTML(game.genres.join(', '))}</div>
         <div class="game-card__steam-link">View on Steam &#8599;</div>

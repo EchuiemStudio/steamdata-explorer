@@ -3,10 +3,6 @@ const THEME_TAGS = [
   'Post-apocalyptic', 'Mythology', 'War', 'Detective', 'Dinosaurs', 'Survival Horror',
 ];
 
-const VIZ_MUTED = '#898781';
-const VIZ_GRID = '#e1e0d9';
-const VIZ_SURFACE = '#ffffff';
-
 function hasGenre(game, genre) {
   return game.genres.includes(genre);
 }
@@ -45,7 +41,13 @@ function pairGames(games, a, b, checkA, checkB) {
 }
 
 async function initOpportunityPage() {
-  const [games, aggregates] = await Promise.all([loadGames(), loadAggregates()]);
+  let games, aggregates;
+  try {
+    [games, aggregates] = await Promise.all([loadGames(), loadAggregates()]);
+  } catch (err) {
+    showLoadError(document.getElementById('detail-grid'));
+    return;
+  }
   const genreList = Object.keys(aggregates.genre_counts).sort();
   const themeList = THEME_TAGS.filter((tag) => games.some((g) => g.tags.includes(tag)));
 

@@ -17,12 +17,15 @@ function shuffle(arr) {
   return copy;
 }
 
-async function fetchJson(url, { retries = 1 } = {}) {
+async function fetchJson(url, { retries = 3 } = {}) {
   for (let attempt = 0; attempt <= retries; attempt++) {
     const res = await fetch(url);
     if (res.ok) return res.json();
     if (attempt === retries) throw new Error(`${url} failed: HTTP ${res.status}`);
-    await sleep(2000);
+
+    const retryAfterMs = Number(res.headers.get('retry-after')) * 1000;
+    const backoffMs = retryAfterMs || 2000 * 2 ** attempt; // 2s, 4s, 8s if no Retry-After header
+    await sleep(backoffMs);
   }
 }
 

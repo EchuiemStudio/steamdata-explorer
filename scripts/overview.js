@@ -1,8 +1,3 @@
-const VIZ_PRIMARY = '#2a78d6';
-const VIZ_GRID = '#e1e0d9';
-const VIZ_MUTED = '#898781';
-const VIZ_TEXT = '#17171a';
-
 function extremesBarChart(canvasId, games, title) {
   const ctx = document.getElementById(canvasId);
   return new Chart(ctx, {
@@ -46,10 +41,19 @@ function extremesBarChart(canvasId, games, title) {
 }
 
 async function initOverviewPage() {
-  const [games, aggregates] = await Promise.all([loadGames(), loadAggregates()]);
+  let games, aggregates;
+  try {
+    [games, aggregates] = await Promise.all([loadGames(), loadAggregates()]);
+  } catch (err) {
+    showLoadError(document.getElementById('game-grid'));
+    return;
+  }
 
+  const scoredGames = games.filter((g) => g.review_score_percent != null);
   const totalReviews = games.reduce((sum, g) => sum + g.review_total, 0);
-  const avgScore = (games.reduce((sum, g) => sum + g.review_score_percent, 0) / games.length).toFixed(1);
+  const avgScore = scoredGames.length
+    ? (scoredGames.reduce((sum, g) => sum + g.review_score_percent, 0) / scoredGames.length).toFixed(1)
+    : '—';
 
   document.getElementById('stat-tiles').innerHTML = `
     <div class="stat-tile">
@@ -78,7 +82,7 @@ async function initOverviewPage() {
     </div>
   `).join('');
 
-  const byScoreDesc = [...games].sort((a, b) => b.review_score_percent - a.review_score_percent);
+  const byScoreDesc = [...scoredGames].sort((a, b) => b.review_score_percent - a.review_score_percent);
   const highest = byScoreDesc.slice(0, 8);
   const lowest = byScoreDesc.slice(-8).reverse();
 
