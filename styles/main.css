@@ -30,6 +30,10 @@ a {
   z-index: 10;
 }
 
+main.container section[id] {
+  scroll-margin-top: 80px;
+}
+
 .nav-inner {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -181,6 +185,13 @@ a {
   margin-bottom: var(--space-4);
 }
 
+.chip-row--scrollable {
+  max-height: 220px;
+  overflow-y: auto;
+  align-content: flex-start;
+  padding-right: var(--space-2);
+}
+
 .chip {
   font: inherit;
   cursor: pointer;
@@ -212,6 +223,83 @@ a {
   color: var(--color-text-muted);
   padding: var(--space-5) 0;
   text-align: center;
+}
+
+/* --- Filter panel --- */
+
+.filter-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.filter-panel__header {
+  margin-bottom: var(--space-3);
+}
+
+.filter-panel__heading {
+  margin: 0 0 var(--space-1);
+  font-size: 1.05rem;
+}
+
+.filter-panel__caption {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.filter-panel__search {
+  width: 100%;
+  font: inherit;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-3);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.filter-panel__search:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.filter-panel__group {
+  margin-bottom: var(--space-3);
+}
+
+.filter-panel__group:last-child {
+  margin-bottom: 0;
+}
+
+.filter-panel__group-title {
+  margin: 0 0 var(--space-2);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+}
+
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: var(--space-2) 0 var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-3);
+}
+
+.chip--removable {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chip__remove {
+  opacity: 0.8;
+  font-size: 1em;
 }
 
 /* --- Game grid / cards --- */
@@ -340,6 +428,112 @@ a {
 .toggle-group {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+/* --- Heatmap --- */
+
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: minmax(90px, auto) repeat(var(--heatmap-cols, 1), minmax(48px, 1fr));
+  gap: 2px;
+  overflow-x: auto;
+  font-size: 0.75rem;
+}
+
+.heatmap-row {
+  display: contents;
+}
+
+.heatmap-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1);
+  min-height: 40px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font: inherit;
+  border: none;
+  cursor: default;
+}
+
+.heatmap-cell--header {
+  color: var(--color-text-muted);
+  background: none;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.heatmap-cell--corner {
+  background: none;
+}
+
+.heatmap-cell--diagonal {
+  background: var(--color-border);
+}
+
+.heatmap-cell--value {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.heatmap-cell--value:hover {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+/* --- Data table --- */
+
+.game-table-wrap {
+  overflow-x: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.game-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.game-table th,
+.game-table td {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.game-table th {
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.game-table__sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.game-table__sortable:hover {
+  color: var(--color-accent);
+}
+
+.game-table__count {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-top: var(--space-2);
+}
+
+.data-view-toggle {
+  display: flex;
   gap: var(--space-2);
   margin-bottom: var(--space-3);
 }

@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SteamData Explorer &mdash; Overview</title>
+  <title>SteamData Explorer</title>
   <link rel="stylesheet" href="styles/tokens.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body data-page="overview">
+<body data-page="home">
   <div id="nav-placeholder"></div>
 
   <main class="container">
@@ -16,41 +16,78 @@
       <p>
         A browsable snapshot of public Steam games &mdash; genres, tags, price, and real review data.
         No sales or "units sold" figures anywhere: Steam has no free API for those, so only genuine
-        review counts and scores are shown.
+        review counts and scores are shown. Filter below to slice the data before reading any chart.
       </p>
     </header>
 
-    <section id="stat-tiles" class="stat-tiles"></section>
+    <section id="filters">
+      <div class="global-filter-panel"></div>
+    </section>
 
+    <section id="stat-tiles" class="stat-tiles"></section>
     <section id="tier-breakdown" class="tier-breakdown"></section>
 
-    <section class="chart-section">
-      <h2 class="chart-section__title">Highest &amp; lowest rated in this sample</h2>
-      <p class="chart-section__caption">
-        Ranked by review score within these 51 games only &mdash; not a Steam-wide ranking.
-        None of this sample's games fall in Steam's own "Overwhelmingly Negative" band.
-      </p>
+    <section id="charts" class="chart-section">
+      <h2 class="chart-section__title">Highest, lowest &amp; most reviewed</h2>
+      <p class="chart-section__caption">Ranked within the current filter only &mdash; not a Steam-wide ranking.</p>
       <div class="chart-pair">
-        <div class="chart-card">
-          <canvas id="chart-highest" role="img" aria-label="Bar chart of the 8 highest-rated games in the sample"></canvas>
-        </div>
-        <div class="chart-card">
-          <canvas id="chart-lowest" role="img" aria-label="Bar chart of the 8 lowest-rated games in the sample"></canvas>
-        </div>
+        <div class="chart-card"><canvas class="chart-highest" role="img" aria-label="Bar chart of the 8 highest-rated games"></canvas></div>
+        <div class="chart-card"><canvas class="chart-lowest" role="img" aria-label="Bar chart of the 8 lowest-rated games"></canvas></div>
+      </div>
+      <div class="chart-card" style="margin-top: var(--space-3);">
+        <canvas class="chart-most-reviewed" role="img" aria-label="Bar chart of the 8 most-reviewed games"></canvas>
       </div>
     </section>
 
-    <section id="game-grid" class="game-grid"></section>
+    <section class="chart-section">
+      <h2 class="chart-section__title">Price &amp; tag patterns</h2>
+      <div class="chart-pair">
+        <div class="chart-card"><canvas class="chart-price-bucket" role="img" aria-label="Bar chart of games by price bucket"></canvas></div>
+        <div class="chart-card"><canvas class="chart-tag-frequency" role="img" aria-label="Diverging bar chart of tags skewing toward hit or niche games"></canvas></div>
+      </div>
+    </section>
+
+    <section id="opportunity" class="chart-section">
+      <h2 class="chart-section__title">Genre &amp; Tag Opportunity Map</h2>
+      <p class="chart-section__caption">
+        Pick genres/tags to cross-compare. X: games in either. Y: games in both &mdash; the lower-right
+        a point sits, the more novel that combination is within the current filter.
+      </p>
+      <div class="opportunity-section"></div>
+    </section>
+
+    <section id="scatters" class="chart-section">
+      <h2 class="chart-section__title">Price &amp; popularity vs. review score</h2>
+      <div class="chart-pair">
+        <div class="chart-card"><canvas class="chart-price-score" role="img" aria-label="Scatter plot of price versus review score"></canvas></div>
+        <div class="chart-card"><canvas class="chart-count-score" role="img" aria-label="Scatter plot of review count versus review score"></canvas></div>
+      </div>
+    </section>
+
+    <section id="data" class="chart-section">
+      <h2 class="chart-section__title">Explore the data</h2>
+      <div class="data-view-toggle">
+        <button type="button" class="chip chip--active" data-view="table">Table view</button>
+        <button type="button" class="chip" data-view="cards">Card view</button>
+      </div>
+      <div class="data-table-view"></div>
+      <div class="data-cards-view game-grid" hidden></div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    Data pulled from SteamSpy and the Steam Store API &middot; prototype sample, not a market survey.
+    Data pulled from SteamSpy and the Steam Store API &middot; sampled snapshot, not a market survey.
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
-  <script src="scripts/nav.js"></script>
-  <script src="scripts/data.js"></script>
-  <script src="scripts/cards.js"></script>
-  <script src="scripts/overview.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script defer src="scripts/nav.js"></script>
+  <script defer src="scripts/data.js"></script>
+  <script defer src="scripts/cards.js"></script>
+  <script defer src="scripts/filters.js"></script>
+  <script defer src="scripts/opportunity.js"></script>
+  <script defer src="scripts/insights.js"></script>
+  <script defer src="scripts/scatter.js"></script>
+  <script defer src="scripts/table.js"></script>
+  <script defer src="scripts/home.js"></script>
 </body>
 </html>

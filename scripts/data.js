@@ -1,4 +1,5 @@
 const VIZ_PRIMARY = '#2a78d6';
+const VIZ_DIVERGING_NEGATIVE = '#e34948'; // red pole, pairs with VIZ_PRIMARY as the blue pole
 const VIZ_GRID = '#e1e0d9';
 const VIZ_MUTED = '#898781';
 const VIZ_TEXT = '#17171a';

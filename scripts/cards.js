@@ -14,7 +14,7 @@ function steamStoreURL(appid) {
 
 function gameCardHTML(game) {
   return `
-    <a class="game-card" href="${steamStoreURL(game.appid)}" target="_blank" rel="noopener noreferrer">
+    <a class="game-card" data-appid="${game.appid}" href="${steamStoreURL(game.appid)}" target="_blank" rel="noopener noreferrer">
       <img class="game-card__image" src="${game.header_image}" alt="${escapeHTML(game.name)}" loading="lazy">
       <div class="game-card__body">
         <h3 class="game-card__title">${escapeHTML(game.name)}</h3>
@@ -37,5 +37,21 @@ function renderGameGrid(container, games) {
     container.innerHTML = '<p class="empty-state">No games match this filter.</p>';
     return;
   }
-  container.innerHTML = games.map(gameCardHTML).join('');
+
+  const existing = new Map();
+  container.querySelectorAll('.game-card').forEach((el) => existing.set(Number(el.dataset.appid), el));
+
+  const frag = document.createDocumentFragment();
+  for (const game of games) {
+    let card = existing.get(game.appid);
+    if (card) {
+      existing.delete(game.appid);
+    } else {
+      const wrapper = document.createElement('div');
+      wrapper.innerHTML = gameCardHTML(game);
+      card = wrapper.firstElementChild;
+    }
+    frag.appendChild(card);
+  }
+  container.replaceChildren(frag);
 }

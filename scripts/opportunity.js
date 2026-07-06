@@ -1,82 +1,93 @@
-const THEME_TAGS = [
-  'Zombies', 'Horror', 'Sci-fi', 'Fantasy', 'Anime', 'Cyberpunk',
-  'Post-apocalyptic', 'Mythology', 'War', 'Detective', 'Dinosaurs', 'Survival Horror',
-];
+const HEATMAP_SEQUENTIAL_SCALE = ['#cde2fb', '#9ec5f4', '#6da7ec', '#3987e5', '#2a78d6', '#1c5cab', '#0d366b'];
 
-function hasGenre(game, genre) {
-  return game.genres.includes(genre);
+function labelMatches(game, label) {
+  return label.type === 'genre' ? game.genres.includes(label.value) : game.tags.includes(label.value);
 }
 
-function hasTag(game, tag) {
-  return game.tags.includes(tag);
-}
-
-function buildPairs(games, axisA, axisB, checkA, checkB, sameAxis) {
+function buildPairs(games, labels) {
   const pairs = [];
-  for (let i = 0; i < axisA.length; i++) {
-    const startJ = sameAxis ? i + 1 : 0;
-    for (let j = startJ; j < axisB.length; j++) {
-      const a = axisA[i];
-      const b = axisB[j];
-      if (sameAxis && a === b) continue;
-
+  for (let i = 0; i < labels.length; i++) {
+    for (let j = i + 1; j < labels.length; j++) {
+      const a = labels[i];
+      const b = labels[j];
       let eitherCount = 0;
       let bothCount = 0;
       for (const game of games) {
-        const isA = checkA(game, a);
-        const isB = checkB(game, b);
+        const isA = labelMatches(game, a);
+        const isB = labelMatches(game, b);
         if (isA || isB) eitherCount++;
         if (isA && isB) bothCount++;
       }
-
-      if (eitherCount === 0) continue;
-      pairs.push({ a, b, x: eitherCount, y: bothCount, r: 9 });
+      if (eitherCount) pairs.push({ a, b, x: eitherCount, y: bothCount, r: 9 });
     }
   }
   return pairs;
 }
 
-function pairGames(games, a, b, checkA, checkB) {
-  return games.filter((g) => checkA(g, a) && checkB(g, b));
+function pairGames(games, a, b) {
+  return games.filter((g) => labelMatches(g, a) && labelMatches(g, b));
 }
 
-async function initOpportunityPage() {
-  let games, aggregates;
-  try {
-    [games, aggregates] = await Promise.all([loadGames(), loadAggregates()]);
-  } catch (err) {
-    showLoadError(document.getElementById('detail-grid'));
-    return;
-  }
-  const genreList = Object.keys(aggregates.genre_counts).sort();
-  const themeList = THEME_TAGS.filter((tag) => games.some((g) => g.tags.includes(tag)));
+function sameLabel(a, b) {
+  return a.type === b.type && a.value === b.value;
+}
 
-  const toggle = document.getElementById('mode-toggle');
-  const detailHeading = document.getElementById('detail-heading');
-  const detailGrid = document.getElementById('detail-grid');
+function createOpportunitySection({ container, aggregates }) {
+  container.innerHTML = `
+    <div class="opportunity-picker"></div>
+    <div class="toggle-group opportunity-view-toggle">
+      <button type="button" class="chip chip--active" data-view="bubble">Bubble view</button>
+      <button type="button" class="chip" data-view="heatmap">Heatmap view</button>
+    </div>
+    <div class="chart-card chart-card--tall">
+      <canvas class="opportunity-canvas" role="img" aria-label="Chart comparing selected genre/tag pairs"></canvas>
+      <div class="heatmap-grid" hidden></div>
+    </div>
+    <h3 class="chart-section__title">Click a point to see matching games</h3>
+    <div class="game-grid opportunity-detail-grid"></div>
+  `;
+
+  const pickerContainer = container.querySelector('.opportunity-picker');
+  const viewToggle = container.querySelector('.opportunity-view-toggle');
+  const canvas = container.querySelector('.opportunity-canvas');
+  const heatmapEl = container.querySelector('.heatmap-grid');
+  const detailHeading = container.querySelector('.chart-section__title');
+  const detailGrid = container.querySelector('.opportunity-detail-grid');
+
+  let games = [];
   let chart = null;
-  let mode = 'genre-genre';
+  let currentPairs = [];
+  let currentLabelSet = [];
+  let view = 'bubble';
 
-  function renderToggle() {
-    toggle.innerHTML = `
-      <button class="chip ${mode === 'genre-genre' ? 'chip--active' : ''}" data-mode="genre-genre">Genre &times; Genre</button>
-      <button class="chip ${mode === 'genre-theme' ? 'chip--active' : ''}" data-mode="genre-theme">Genre &times; Theme</button>
-    `;
+  function currentLabels() {
+    return [...picker.getSelected()].map((key) => {
+      const { type, value } = parseFilterKey(key);
+      return { type, value };
+    });
   }
 
-  function renderChart() {
-    const pairs = mode === 'genre-genre'
-      ? buildPairs(games, genreList, genreList, hasGenre, hasGenre, true)
-      : buildPairs(games, genreList, themeList, hasGenre, hasTag, false);
+  function showDetail(a, b) {
+    const matches = pairGames(games, a, b);
+    detailHeading.textContent = `${a.value} + ${b.value} — ${matches.length} game${matches.length === 1 ? '' : 's'}`;
+    renderGameGrid(detailGrid, matches);
+  }
 
-    if (chart) chart.destroy();
+  function renderBubble() {
+    canvas.hidden = false;
+    heatmapEl.hidden = true;
 
-    const ctx = document.getElementById('chart-opportunity');
-    chart = new Chart(ctx, {
+    if (chart) {
+      chart.data.datasets[0].data = currentPairs;
+      chart.update();
+      return;
+    }
+
+    chart = new Chart(canvas, {
       type: 'bubble',
       data: {
         datasets: [{
-          data: pairs,
+          data: currentPairs,
           backgroundColor: 'rgba(42, 120, 214, 0.55)',
           borderColor: VIZ_SURFACE,
           borderWidth: 2,
@@ -92,7 +103,7 @@ async function initOpportunityPage() {
             callbacks: {
               label: (item) => {
                 const p = item.raw;
-                return [`${p.a} + ${p.b}`, `${p.x} in either · ${p.y} in both`];
+                return [`${p.a.value} + ${p.b.value}`, `${p.x} in either · ${p.y} in both`];
               },
             },
           },
@@ -113,29 +124,119 @@ async function initOpportunityPage() {
         },
         onClick: (event, elements) => {
           if (!elements.length) return;
-          const point = pairs[elements[0].index];
-          const checkA = hasGenre;
-          const checkB = mode === 'genre-genre' ? hasGenre : hasTag;
-          const matches = pairGames(games, point.a, point.b, checkA, checkB);
-          detailHeading.textContent = `${point.a} + ${point.b} — ${matches.length} game${matches.length === 1 ? '' : 's'}`;
-          renderGameGrid(detailGrid, matches);
+          const point = currentPairs[elements[0].index];
+          showDetail(point.a, point.b);
         },
       },
     });
   }
 
-  toggle.addEventListener('click', (event) => {
-    const button = event.target.closest('[data-mode]');
+  function heatmapStep(count, maxCount) {
+    if (count === 0) return 0;
+    return Math.min(HEATMAP_SEQUENTIAL_SCALE.length - 1, Math.round((count / maxCount) * (HEATMAP_SEQUENTIAL_SCALE.length - 1)));
+  }
+
+  function renderHeatmap() {
+    canvas.hidden = true;
+    heatmapEl.hidden = false;
+
+    const labels = currentLabelSet;
+    if (labels.length < 2) {
+      heatmapEl.innerHTML = '<p class="empty-state">Select at least 2 labels above to compare.</p>';
+      heatmapEl.style.removeProperty('--heatmap-cols');
+      return;
+    }
+
+    const matrix = labels.map((a) => labels.map((b) => {
+      if (sameLabel(a, b)) return null;
+      const found = currentPairs.find((p) => (sameLabel(p.a, a) && sameLabel(p.b, b)) || (sameLabel(p.a, b) && sameLabel(p.b, a)));
+      return found ? found.y : 0;
+    }));
+    const maxCount = Math.max(1, ...matrix.flat().filter((v) => v != null));
+
+    let html = '<div class="heatmap-row heatmap-row--header"><div class="heatmap-cell heatmap-cell--corner"></div>';
+    for (const label of labels) {
+      html += `<div class="heatmap-cell heatmap-cell--header" title="${escapeHTML(label.value)}">${escapeHTML(label.value)}</div>`;
+    }
+    html += '</div>';
+
+    for (let i = 0; i < labels.length; i++) {
+      html += `<div class="heatmap-row"><div class="heatmap-cell heatmap-cell--header">${escapeHTML(labels[i].value)}</div>`;
+      for (let j = 0; j < labels.length; j++) {
+        const count = matrix[i][j];
+        if (count == null) {
+          html += '<div class="heatmap-cell heatmap-cell--diagonal"></div>';
+        } else {
+          const step = heatmapStep(count, maxCount);
+          const bg = HEATMAP_SEQUENTIAL_SCALE[step];
+          const fg = step >= 4 ? '#ffffff' : '#17171a';
+          html += `<button type="button" class="heatmap-cell heatmap-cell--value" style="background:${bg};color:${fg}" data-i="${i}" data-j="${j}">${count}</button>`;
+        }
+      }
+      html += '</div>';
+    }
+
+    heatmapEl.innerHTML = html;
+    heatmapEl.style.setProperty('--heatmap-cols', labels.length + 1);
+
+    heatmapEl.querySelectorAll('.heatmap-cell--value').forEach((cell) => {
+      cell.addEventListener('click', () => {
+        const i = Number(cell.dataset.i);
+        const j = Number(cell.dataset.j);
+        showDetail(labels[i], labels[j]);
+      });
+    });
+  }
+
+  function renderView() {
+    if (view === 'bubble') renderBubble();
+    else renderHeatmap();
+  }
+
+  function recompute() {
+    currentLabelSet = currentLabels();
+    currentPairs = buildPairs(games, currentLabelSet);
+    renderView();
+  }
+
+  viewToggle.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-view]');
     if (!button) return;
-    mode = button.dataset.mode;
-    renderToggle();
-    renderChart();
-    detailHeading.textContent = 'Click a point to see matching games';
-    detailGrid.innerHTML = '';
+    view = button.dataset.view;
+    viewToggle.querySelectorAll('.chip').forEach((c) => c.classList.toggle('chip--active', c === button));
+    renderView();
   });
 
-  renderToggle();
-  renderChart();
-}
+  const topGenres = Object.entries(aggregates.genre_counts).sort((a, b) => b[1] - a[1]).slice(0, 6).map(([g]) => g);
+  const seedTags = [...new Set(
+    (aggregates.tag_cooccurrence || []).flatMap((p) => [p.tag_a, p.tag_b]),
+  )].filter((t) => !topGenres.includes(t)).slice(0, 2);
+  const defaultSelected = [
+    ...topGenres.map((g) => filterKey('genre', g)),
+    ...seedTags.map((t) => filterKey('tag', t)),
+  ];
 
-initOpportunityPage();
+  const picker = createFilterPanel({
+    container: pickerContainer,
+    genreCounts: aggregates.genre_counts,
+    tagCounts: {},
+    heading: 'Compare labels',
+    caption: 'Pick genres/tags to cross-compare — every pair within your selection gets plotted. Separate from the game filter above; this only controls which dimensions are compared, over whatever games that filter currently allows.',
+    defaultSelected,
+    onChange: recompute,
+  });
+
+  return {
+    update(newGames) {
+      games = newGames;
+      const genreCounts = {};
+      const tagCounts = {};
+      for (const g of games) {
+        for (const genre of g.genres) genreCounts[genre] = (genreCounts[genre] || 0) + 1;
+        for (const tag of g.tags) tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+      }
+      picker.setCounts(genreCounts, tagCounts);
+      recompute();
+    },
+  };
+}

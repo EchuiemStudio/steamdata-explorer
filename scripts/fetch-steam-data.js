@@ -2,9 +2,11 @@
 // Needs Node 18+ (uses the built-in fetch, no npm install required).
 
 const FLOOR_REVIEWS = 10;       // exclude zero-signal noise (test uploads, abandoned pages) — not a sales stand-in
-const SAMPLE_PER_TIER = 17;     // ~50 games total across hit/mid/niche
+const SAMPLE_PER_TIER = 250;    // ~750 games total across hit/mid/niche
 const MAX_STEAMSPY_PAGES = 15;  // how deep into SteamSpy's catalog to look for a spread of games (higher = wider spread, slower)
 const REQUEST_DELAY_MS = 1200;  // stay polite to Steam's undocumented per-app endpoints
+const SAMPLE_REVIEWS_PER_GAME = 5; // review text snippets captured per game, for future keyword analysis
+const SAMPLE_REVIEW_MAX_CHARS = 300; // truncate long reviews so the JSON file stays a reasonable size
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -69,15 +71,18 @@ function stratifySample(pool) {
 }
 
 async function fetchAppDetails(appid) {
-  const data = await fetchJson(`https://store.steampowered.com/api/appdetails?appids=${appid}`);
+  // cc=us pins the response to USD pricing — without it, Steam's region auto-detection
+  // can return price_overview in SAR/MYR/VND/etc, and price_usd would silently be wrong
+  // (a raw non-USD "final" value divided by 100, with no currency check at all).
+  const data = await fetchJson(`https://store.steampowered.com/api/appdetails?appids=${appid}&cc=us`);
   const entry = data?.[appid];
   if (!entry?.success) return null;
   return entry.data;
 }
 
 async function fetchReviewSummary(appid) {
-  const data = await fetchJson(`https://store.steampowered.com/appreviews/${appid}?json=1&num_per_page=0&language=all&purchase_type=all`);
-  return data?.query_summary ?? null;
+  const data = await fetchJson(`https://store.steampowered.com/appreviews/${appid}?json=1&num_per_page=${SAMPLE_REVIEWS_PER_GAME}&language=english&purchase_type=all&filter=all`);
+  return { summary: data?.query_summary ?? null, reviews: data?.reviews ?? [] };
 }
 
 async function fetchSteamSpyTags(appid) {
@@ -95,15 +100,26 @@ async function enrichGame(candidate) {
   await sleep(REQUEST_DELAY_MS);
   if (!details || details.type !== 'game') return null; // drops DLC/soundtracks/demos/software
 
-  const reviews = await fetchReviewSummary(candidate.appid);
+  const { summary, reviews } = await fetchReviewSummary(candidate.appid);
   await sleep(REQUEST_DELAY_MS);
 
   const tags = await fetchSteamSpyTags(candidate.appid);
   await sleep(REQUEST_DELAY_MS);
 
-  const positive = reviews?.total_positive ?? 0;
-  const negative = reviews?.total_negative ?? 0;
+  const positive = summary?.total_positive ?? 0;
+  const negative = summary?.total_negative ?? 0;
   const total = positive + negative;
+
+  const sample_reviews = reviews.map((r) => ({
+    text: (r.review || '').slice(0, SAMPLE_REVIEW_MAX_CHARS),
+    voted_up: !!r.voted_up,
+  })).filter((r) => r.text.length > 0);
+
+  // Belt-and-suspenders: even with cc=us, only trust price_overview if it actually says USD.
+  const priceIsUsd = details.is_free || !details.price_overview || details.price_overview.currency === 'USD';
+  if (!priceIsUsd) {
+    console.log(`  WARNING: ${details.name} returned non-USD currency (${details.price_overview.currency}) despite cc=us — price_usd set to null`);
+  }
 
   return {
     appid: candidate.appid,
@@ -111,14 +127,15 @@ async function enrichGame(candidate) {
     genres: (details.genres || []).map((g) => g.description),
     tags,
     release_year: parseInt((details.release_date?.date || '').slice(-4), 10) || null,
-    price_usd: details.is_free ? 0 : (details.price_overview?.final ?? 0) / 100,
-    review_score_desc: reviews?.review_score_desc ?? 'Unknown',
+    price_usd: details.is_free ? 0 : (priceIsUsd ? (details.price_overview?.final ?? 0) / 100 : null),
+    review_score_desc: summary?.review_score_desc ?? 'Unknown',
     review_positive: positive,
     review_negative: negative,
     review_total: total,
     review_score_percent: total > 0 ? Math.round((positive / total) * 1000) / 10 : null,
     performance_tier: candidate.performance_tier,
     header_image: details.header_image,
+    sample_reviews,
   };
 }
 
@@ -127,9 +144,9 @@ function buildAggregates(games) {
   const tier_counts = { hit: 0, mid: 0, niche: 0 };
   const tag_pair_counts = new Map();
   const tier_totals = {
-    hit: { score: 0, price: 0, count: 0 },
-    mid: { score: 0, price: 0, count: 0 },
-    niche: { score: 0, price: 0, count: 0 },
+    hit: { score: 0, scoreCount: 0, price: 0, priceCount: 0 },
+    mid: { score: 0, scoreCount: 0, price: 0, priceCount: 0 },
+    niche: { score: 0, scoreCount: 0, price: 0, priceCount: 0 },
   };
 
   for (const g of games) {
@@ -137,9 +154,8 @@ function buildAggregates(games) {
     tier_counts[g.performance_tier]++;
 
     const t = tier_totals[g.performance_tier];
-    if (g.review_score_percent != null) t.score += g.review_score_percent;
-    t.price += g.price_usd;
-    t.count++;
+    if (g.review_score_percent != null) { t.score += g.review_score_percent; t.scoreCount++; }
+    if (g.price_usd != null) { t.price += g.price_usd; t.priceCount++; }
 
     for (let i = 0; i < g.tags.length; i++) {
       for (let j = i + 1; j < g.tags.length; j++) {
@@ -160,8 +176,8 @@ function buildAggregates(games) {
   const tier_stats = {};
   for (const [tier, t] of Object.entries(tier_totals)) {
     tier_stats[tier] = {
-      avg_review_score: t.count ? Math.round((t.score / t.count) * 10) / 10 : null,
-      avg_price: t.count ? Math.round((t.price / t.count) * 100) / 100 : null,
+      avg_review_score: t.scoreCount ? Math.round((t.score / t.scoreCount) * 10) / 10 : null,
+      avg_price: t.priceCount ? Math.round((t.price / t.priceCount) * 100) / 100 : null,
     };
   }
 
