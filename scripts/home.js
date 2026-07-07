@@ -69,6 +69,7 @@ async function initHomePage() {
     },
   });
   const tagFrequencyChart = createTagFrequencyChart({ container: document.querySelector('.chart-tag-frequency') });
+  const reviewKeywordChart = createReviewKeywordChart({ container: document.querySelector('.chart-review-keywords') });
 
   // Axis bounds fixed from the FULL dataset (not whatever's currently filtered) so a
   // filter/tier change only moves the plotted points — the axis itself never rescales,
@@ -164,6 +165,7 @@ async function initHomePage() {
     renderExtremes(filtered);
     priceBucketChart.update(filtered);
     tagFrequencyChart.update(filtered);
+    reviewKeywordChart.update(filtered);
     renderScatters();
     document.querySelector('.price-bucket-detail').innerHTML = ''; // clear any bucket detail from before this filter change — it no longer reflects the current filter
   }
