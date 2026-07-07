@@ -10,12 +10,21 @@
   display: none !important;
 }
 
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 body {
   margin: 0;
   font-family: var(--font-sans);
   color: var(--color-text);
-  background: var(--color-bg);
-  line-height: 1.5;
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 15% -10%, rgba(34, 211, 238, 0.10), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(251, 191, 36, 0.05), transparent 60%);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -26,6 +35,33 @@ a {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--space-4);
+}
+
+/* --- Scroll-reveal motion (see scripts/motion.js) — purely cosmetic, additive;
+   nothing here gates functionality, so if motion.js ever fails to load, everything
+   still renders (just without the fade-in). --- */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s var(--ease-cinematic), transform 0.9s var(--ease-cinematic);
+}
+
+[data-reveal].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .page-header {
+    animation: none !important;
+  }
 }
 
 /* --- Nav --- */
@@ -40,7 +76,9 @@ a {
 }
 
 .site-nav {
-  background: var(--color-surface);
+  background: rgba(10, 13, 18, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
@@ -63,8 +101,10 @@ main.container section[id] {
 }
 
 .nav-brand {
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
   text-decoration: none;
 }
 
@@ -75,38 +115,91 @@ main.container section[id] {
 }
 
 .nav-links a {
+  position: relative;
   text-decoration: none;
   color: var(--color-text-muted);
   font-size: 0.95rem;
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease-cinematic);
 }
 
 .nav-links a:hover {
   color: var(--color-text);
 }
 
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
 .nav-links a.active {
   color: var(--color-accent);
-  border-bottom-color: var(--color-accent);
   font-weight: 600;
 }
 
-/* --- Page header --- */
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+/* --- Page header (hero) --- */
 
 .page-header {
-  padding: var(--space-5) 0 var(--space-4);
+  position: relative;
+  padding: var(--space-6) var(--space-5);
+  margin: var(--space-4) 0 var(--space-5);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(34, 211, 238, 0.14), rgba(251, 191, 36, 0.07) 55%, transparent 85%),
+    linear-gradient(180deg, var(--color-surface), var(--color-bg-2));
+  background-size: 220% 220%, 100% 100%;
+  animation: gradientShift 20s ease-in-out infinite;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .page-header h1 {
+  position: relative;
   margin: 0 0 var(--space-2);
-  font-size: 1.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background: linear-gradient(90deg, var(--color-text), var(--color-accent) 130%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .page-header p {
+  position: relative;
   margin: 0;
   color: var(--color-text-muted);
   max-width: 65ch;
+  font-size: 1.02rem;
 }
 
 /* --- Stat tiles --- */
@@ -123,9 +216,17 @@ main.container section[id] {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-3) var(--space-4);
+  transition: transform 0.3s var(--ease-cinematic), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-card);
 }
 
 .stat-tile__value {
+  font-family: var(--font-display);
   font-size: 1.9rem;
   font-weight: 700;
 }
@@ -155,6 +256,11 @@ main.container section[id] {
   border-radius: var(--radius-sm);
   padding: var(--space-2) var(--space-3);
   font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+}
+
+.tier-row:hover {
+  border-color: var(--color-border-strong);
 }
 
 .tier-row__count {
@@ -183,11 +289,13 @@ main.container section[id] {
   padding: var(--space-2) var(--space-3);
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.25s var(--ease-cinematic);
 }
 
 .news-item:hover {
   border-color: var(--color-accent);
+  background: var(--color-surface-2);
+  transform: translateY(-2px);
 }
 
 .news-item__title {
@@ -220,8 +328,8 @@ main.container section[id] {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  padding: 2px 8px;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
   border-radius: 999px;
 }
 
@@ -277,22 +385,25 @@ main.container section[id] {
 .chip {
   font: inherit;
   cursor: pointer;
-  background: var(--color-surface);
+  background: var(--color-surface-2);
   border: 1px solid var(--color-border);
   border-radius: 999px;
   padding: 6px 14px;
   font-size: 0.85rem;
   color: var(--color-text);
+  transition: border-color 0.2s ease, transform 0.15s var(--ease-cinematic);
 }
 
 .chip:hover {
   border-color: var(--color-accent);
+  transform: translateY(-1px);
 }
 
 .chip--active {
   background: var(--color-accent);
   border-color: var(--color-accent);
-  color: #fff;
+  color: var(--color-bg);
+  font-weight: 600;
 }
 
 .chip__count {
@@ -323,6 +434,7 @@ main.container section[id] {
 
 .filter-panel__heading {
   margin: 0 0 var(--space-1);
+  font-family: var(--font-display);
   font-size: 1.05rem;
 }
 
@@ -335,17 +447,19 @@ main.container section[id] {
 .filter-panel__search {
   width: 100%;
   font: inherit;
-  padding: 8px 12px;
+  padding: 10px 14px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   margin-bottom: var(--space-3);
-  background: var(--color-bg);
+  background: var(--color-bg-2);
   color: var(--color-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .filter-panel__search:focus {
   outline: none;
   border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
 }
 
 .filter-combobox {
@@ -358,8 +472,8 @@ main.container section[id] {
   left: 0;
   right: 0;
   z-index: 20;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card-hover);
   padding: var(--space-3);
@@ -407,12 +521,13 @@ main.container section[id] {
   box-shadow: var(--shadow-card);
   text-decoration: none;
   color: inherit;
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  transition: box-shadow 0.35s var(--ease-cinematic), transform 0.35s var(--ease-cinematic), border-color 0.35s ease;
 }
 
 .game-card:hover {
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover), var(--shadow-glow);
+  transform: translateY(-4px);
+  border-color: var(--color-border-strong);
 }
 
 .game-card__image {
@@ -420,7 +535,7 @@ main.container section[id] {
   aspect-ratio: 460 / 215;
   object-fit: cover;
   display: block;
-  background: var(--color-border);
+  background: var(--color-surface-2);
 }
 
 .game-card__body {
@@ -429,7 +544,9 @@ main.container section[id] {
 
 .game-card__title {
   margin: 0 0 var(--space-2);
+  font-family: var(--font-display);
   font-size: 1rem;
+  font-weight: 600;
   line-height: 1.3;
 }
 
@@ -441,7 +558,7 @@ main.container section[id] {
 }
 
 .game-card__price {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.9rem;
 }
 
@@ -475,7 +592,7 @@ main.container section[id] {
   color: var(--color-accent);
   opacity: 0;
   transform: translateY(-2px);
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .game-card:hover .game-card__steam-link {
@@ -530,10 +647,12 @@ main.container section[id] {
   font-family: inherit;
   cursor: pointer;
   padding: 0;
+  transition: color 0.2s ease;
 }
 
 .see-more-btn:hover {
   text-decoration: underline;
+  color: var(--color-accent-2);
 }
 
 /* --- Chart sections --- */
@@ -544,7 +663,9 @@ main.container section[id] {
 
 .chart-section__title {
   margin: 0 0 var(--space-1);
-  font-size: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
 .chart-section__caption {
@@ -578,6 +699,12 @@ main.container section[id] {
   padding: var(--space-3);
   height: 320px;
   position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-card:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-card);
 }
 
 .chart-card--tall {
@@ -595,22 +722,26 @@ main.container section[id] {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-surface);
+  background: var(--color-surface-2);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   color: var(--color-text-muted);
   cursor: pointer;
   font-size: 0.9rem;
   line-height: 1;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s var(--ease-cinematic);
 }
 
 .chart-card__expand-btn:hover {
   color: var(--color-accent);
   border-color: var(--color-accent);
+  transform: scale(1.08);
 }
 
 /* --- Chart modal (also shared by .game-modal — the "See more" game-grid popup —
-   which reuses this same chrome via its own class so the two dialogs never collide) --- */
+   which reuses this same chrome via its own class so the two dialogs never collide).
+   <dialog> has a UA-default white background/black text — both must be set
+   explicitly or the modal would show as a jarring white box on this dark theme. --- */
 
 .chart-modal,
 .game-modal {
@@ -620,11 +751,14 @@ main.container section[id] {
   box-shadow: var(--shadow-card-hover);
   width: min(900px, 92vw);
   height: min(600px, 85vh);
+  background: var(--color-surface);
+  color: var(--color-text);
 }
 
 .chart-modal::backdrop,
 .game-modal::backdrop {
-  background: rgba(23, 23, 26, 0.5);
+  background: rgba(5, 6, 9, 0.72);
+  backdrop-filter: blur(4px);
 }
 
 .chart-modal__inner {
@@ -643,6 +777,7 @@ main.container section[id] {
 
 .chart-modal__title {
   margin: 0;
+  font-family: var(--font-display);
   font-size: 1.1rem;
 }
 
@@ -654,6 +789,7 @@ main.container section[id] {
   cursor: pointer;
   color: var(--color-text-muted);
   padding: 0 var(--space-1);
+  transition: color 0.2s ease;
 }
 
 .chart-modal__close:hover {
@@ -703,9 +839,18 @@ main.container section[id] {
   letter-spacing: 0.02em;
 }
 
+.game-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.game-table tbody tr:hover {
+  background: var(--color-surface-2);
+}
+
 .game-table__sortable {
   cursor: pointer;
   user-select: none;
+  transition: color 0.2s ease;
 }
 
 .game-table__sortable:hover {
@@ -740,7 +885,7 @@ main.container section[id] {
   }
 
   .page-header {
-    padding: var(--space-4) 0 var(--space-3);
+    padding: var(--space-4) var(--space-3);
   }
 
   /* nav wraps to 2 lines at this width (taller than the 80px desktop anchor

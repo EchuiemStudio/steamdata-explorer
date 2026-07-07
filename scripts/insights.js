@@ -7,7 +7,10 @@ const PRICE_BUCKETS = [
   { label: '$30–50', min: 30.01, max: 50 },
   { label: '$50+', min: 50.01, max: Infinity },
 ];
-const PRICE_ORDINAL_SCALE = ['#cde2fb', '#9ec5f4', '#6da7ec', '#3987e5', '#2a78d6', '#1c5cab', '#0d366b'];
+// Sequential scale: one hue (cyan, matches the accent), dim -> vivid so both ends
+// stay visible against a dark chart background (a light->dark scale like the old
+// light-theme one would fade into the background at its dark end here).
+const PRICE_ORDINAL_SCALE = ['#0d3b42', '#0f4e58', '#13626e', '#178094', '#22a8c2', '#4dd4ec', '#9de9f5'];
 
 function bucketFor(price) {
   return PRICE_BUCKETS.find((b) => price >= b.min && price <= b.max) || PRICE_BUCKETS[PRICE_BUCKETS.length - 1];

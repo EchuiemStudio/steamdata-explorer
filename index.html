@@ -7,6 +7,9 @@
   <meta name="theme-color" content="#2a78d6">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>SteamData Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/tokens.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -23,21 +26,21 @@
       </p>
     </header>
 
-    <section class="chart-section">
+    <section class="chart-section" data-reveal>
       <h2 class="chart-section__title">Latest Gaming News</h2>
       <p class="chart-section__caption">General gaming news from around the web &mdash; not limited to games in this dataset.</p>
       <div class="news-strip"></div>
       <a class="see-more-btn" href="news.html">See more news &rarr;</a>
     </section>
 
-    <section id="filters">
+    <section id="filters" data-reveal>
       <div class="global-filter-panel"></div>
     </section>
 
-    <section id="stat-tiles" class="stat-tiles"></section>
-    <section id="tier-breakdown" class="tier-breakdown"></section>
+    <section id="stat-tiles" class="stat-tiles" data-reveal></section>
+    <section id="tier-breakdown" class="tier-breakdown" data-reveal></section>
 
-    <section id="charts" class="chart-section">
+    <section id="charts" class="chart-section" data-reveal>
       <h2 class="chart-section__title">Highest, lowest &amp; most reviewed</h2>
       <p class="chart-section__caption">
         Ranked within the current filter only &mdash; not a Steam-wide ranking. Click a bar to open
@@ -59,7 +62,7 @@
       </div>
     </section>
 
-    <section class="chart-section">
+    <section class="chart-section" data-reveal>
       <h2 class="chart-section__title">Price &amp; tag patterns</h2>
       <p class="chart-section__caption">Click a price bucket bar to see which games are in it.</p>
       <div class="chart-pair">
@@ -69,7 +72,7 @@
       <div class="price-bucket-detail"></div>
     </section>
 
-    <section class="chart-section">
+    <section class="chart-section" data-reveal>
       <h2 class="chart-section__title">Review keyword patterns</h2>
       <p class="chart-section__caption">What positive and negative reviewers actually say, from a sample of each game's reviews.</p>
       <div class="chart-card">
@@ -77,7 +80,7 @@
       </div>
     </section>
 
-    <section id="scatters" class="chart-section">
+    <section id="scatters" class="chart-section" data-reveal>
       <h2 class="chart-section__title">Price &amp; popularity vs. review score</h2>
       <p class="chart-section__caption">
         Games with no listed price (delisted or bundle-only listings) can't be plotted on the price chart, so its
@@ -110,5 +113,6 @@
   <script defer src="scripts/scatter.js"></script>
   <script defer src="scripts/news.js"></script>
   <script defer src="scripts/home.js"></script>
+  <script defer src="scripts/motion.js"></script>
 </body>
 </html>

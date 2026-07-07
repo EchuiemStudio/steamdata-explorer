@@ -7,6 +7,9 @@
   <meta name="theme-color" content="#2a78d6">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>SteamData Explorer — Browse Data</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/tokens.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -22,12 +25,12 @@
       </p>
     </header>
 
-    <section id="filters">
+    <section id="filters" data-reveal>
       <input type="search" class="name-search-input filter-panel__search" placeholder="Search by game name&hellip;" aria-label="Search by game name">
       <div class="global-filter-panel"></div>
     </section>
 
-    <section id="data" class="chart-section">
+    <section id="data" class="chart-section" data-reveal>
       <div class="data-view-toggle">
         <button type="button" class="chip chip--active" data-view="table">Table view</button>
         <button type="button" class="chip" data-view="cards">Card view</button>
@@ -47,5 +50,6 @@
   <script defer src="scripts/filters.js"></script>
   <script defer src="scripts/table.js"></script>
   <script defer src="scripts/browse.js"></script>
+  <script defer src="scripts/motion.js"></script>
 </body>
 </html>
