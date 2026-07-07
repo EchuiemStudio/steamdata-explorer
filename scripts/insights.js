@@ -140,7 +140,7 @@ function createReviewKeywordChart({ container }) {
       let negativeTotal = 0;
 
       for (const g of games) {
-        for (const review of g.sample_reviews) {
+        for (const review of g.sample_reviews || []) { // tolerate a null/missing field rather than throwing mid-render
           const words = new Set(extractReviewWords(review.text)); // count each word once per review, not per raw occurrence
           if (review.voted_up) {
             positiveTotal++;

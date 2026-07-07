@@ -67,6 +67,7 @@ function extractReviewWords(text) {
 // the aggregate chart does, so this just returns the most-repeated words within
 // whichever reviews matched votedUp, tolerant of games with few or zero of either.
 function topReviewWords(sampleReviews, votedUp, limit = 2) {
+  if (!Array.isArray(sampleReviews)) return []; // tolerate a null/missing field rather than throwing mid-render
   const counts = {};
   for (const review of sampleReviews) {
     if (review.voted_up !== votedUp) continue;

@@ -79,9 +79,17 @@ function createFilterPanel({ container, labelCounts, heading, caption, onChange,
     }
   }
 
+  // render()'s focus-preservation (below) re-focuses the search input whenever it was
+  // focused before a re-render — necessary so typing doesn't lose focus/cursor position
+  // on every keystroke, but it means Escape's own render() call re-focuses the input,
+  // which re-fires this same focusin listener and reopens the popover Escape just
+  // closed. This flag (set only for the duration of that one render() call) lets Escape
+  // suppress that specific reopen without touching the normal typing-refocus behavior.
+  let suppressFocusReopen = false;
+
   container.addEventListener('focusin', (event) => {
     if (!event.target.classList.contains('filter-panel__search')) return;
-    if (popoverOpen) return;
+    if (popoverOpen || suppressFocusReopen) return;
     popoverOpen = true;
     render();
   });
@@ -89,7 +97,9 @@ function createFilterPanel({ container, labelCounts, heading, caption, onChange,
   container.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && popoverOpen) {
       popoverOpen = false;
+      suppressFocusReopen = true;
       render();
+      suppressFocusReopen = false;
     }
   });
 
