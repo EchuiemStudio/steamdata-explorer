@@ -30,6 +30,15 @@ function createOpportunitySection({ container, games }) {
   const legend = container.querySelector('.chart-legend');
   let selectedTiers = new Set(['hit', 'mid', 'niche']);
 
+  // Axis bounds fixed from the FULL dataset (not whatever the current genre/tag/tier
+  // filter narrows to) so filtering only moves the plotted points, never the axis range.
+  const datedGames = games.filter((g) => g.release_year_month != null);
+  const xMin = Math.min(...datedGames.map((g) => g.release_year_month));
+  const xMax = Math.max(...datedGames.map((g) => g.release_year_month));
+  const reviewTotals = games.map((g) => g.review_total);
+  const yMin = Math.min(...reviewTotals);
+  const yMax = Math.max(...reviewTotals);
+
   const scatter = createScatterChart({
     container: container.querySelector('.opportunity-canvas'),
     titleText: 'Release date vs. popularity',
@@ -39,9 +48,13 @@ function createOpportunitySection({ container, games }) {
     xType: 'linear',
     xBeginAtZero: false,
     xTicksCallback: (v) => Math.round(v),
+    xMin,
+    xMax,
     tooltipX: (x) => formatReleaseYearMonth(x),
     yKey: 'review_total',
     yType: 'logarithmic',
+    yMin,
+    yMax,
     tooltipY: (y) => `${y.toLocaleString()} reviews`,
   });
   const table = createGameTable({ container: container.querySelector('.opportunity-table-view') });

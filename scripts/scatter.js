@@ -73,7 +73,7 @@ function pickScatterOutliers(points) {
 }
 
 function createScatterChart({
-  container, titleText, xLabel, yLabel, xKey, xType, tooltipX, xBeginAtZero, xTicksCallback,
+  container, titleText, xLabel, yLabel, xKey, xType, tooltipX, xBeginAtZero, xTicksCallback, xMin, xMax,
   yKey = 'review_score_percent', yType = 'linear', yMin, yMax, tooltipY,
 }) {
   let chart = null;
@@ -134,6 +134,12 @@ function createScatterChart({
               grid: { color: VIZ_GRID },
               ticks: xTicksCallback ? { color: VIZ_MUTED, callback: xTicksCallback } : { color: VIZ_MUTED },
               beginAtZero,
+              // Fixed once at chart creation from the FULL unfiltered dataset (not the
+              // currently-filtered one) so the axis range never shifts as filters change —
+              // update() below only ever replaces the plotted points, never these options,
+              // so whatever min/max is passed in here stays fixed for the chart's lifetime.
+              ...(xMin != null ? { min: xMin } : {}),
+              ...(xMax != null ? { max: xMax } : {}),
             },
             y: {
               type: yType,
@@ -150,7 +156,7 @@ function createScatterChart({
   };
 }
 
-function createPriceScoreScatter({ container }) {
+function createPriceScoreScatter({ container, xMin, xMax }) {
   return createScatterChart({
     container,
     titleText: 'Price vs. review score',
@@ -158,6 +164,8 @@ function createPriceScoreScatter({ container }) {
     yLabel: 'Review score %',
     xKey: 'price_usd',
     xType: 'linear',
+    xMin,
+    xMax,
     tooltipX: (x) => (x === 0 ? 'Free' : `$${x.toFixed(2)}`),
     yKey: 'review_score_percent',
     yMin: 0,
@@ -166,7 +174,7 @@ function createPriceScoreScatter({ container }) {
   });
 }
 
-function createReviewCountScoreScatter({ container }) {
+function createReviewCountScoreScatter({ container, xMin, xMax }) {
   return createScatterChart({
     container,
     titleText: 'Popularity vs. review score (log scale)',
@@ -174,6 +182,8 @@ function createReviewCountScoreScatter({ container }) {
     yLabel: 'Review score %',
     xKey: 'review_total',
     xType: 'logarithmic',
+    xMin,
+    xMax,
     tooltipX: (x) => `${x.toLocaleString()} reviews`,
     yKey: 'review_score_percent',
     yMin: 0,

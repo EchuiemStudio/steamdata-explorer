@@ -69,8 +69,18 @@ async function initHomePage() {
     },
   });
   const tagFrequencyChart = createTagFrequencyChart({ container: document.querySelector('.chart-tag-frequency') });
-  const priceScoreScatter = createPriceScoreScatter({ container: document.querySelector('.chart-price-score') });
-  const countScoreScatter = createReviewCountScoreScatter({ container: document.querySelector('.chart-count-score') });
+
+  // Axis bounds fixed from the FULL dataset (not whatever's currently filtered) so a
+  // filter/tier change only moves the plotted points — the axis itself never rescales,
+  // which was confusing users into thinking the data had changed when it hadn't.
+  const pricedGames = games.filter((g) => g.price_usd != null);
+  const priceMax = Math.max(...pricedGames.map((g) => g.price_usd));
+  const reviewTotals = games.map((g) => g.review_total);
+  const reviewMin = Math.min(...reviewTotals);
+  const reviewMax = Math.max(...reviewTotals);
+
+  const priceScoreScatter = createPriceScoreScatter({ container: document.querySelector('.chart-price-score'), xMin: 0, xMax: priceMax });
+  const countScoreScatter = createReviewCountScoreScatter({ container: document.querySelector('.chart-count-score'), xMin: reviewMin, xMax: reviewMax });
 
   let highestChart = null;
   let lowestChart = null;
