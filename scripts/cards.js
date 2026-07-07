@@ -1,15 +1,6 @@
-function formatPrice(price) {
-  if (price == null) return '—';
-  return price === 0 ? 'Free' : `$${price.toFixed(2)}`;
-}
-
 function formatReviewSummary(game) {
   if (game.review_score_percent == null) return 'No reviews yet';
   return `${game.review_score_percent}% positive &middot; ${game.review_total.toLocaleString()} reviews`;
-}
-
-function steamStoreURL(appid) {
-  return `https://store.steampowered.com/app/${appid}/`;
 }
 
 function gameCardHTML(game) {

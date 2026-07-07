@@ -72,19 +72,27 @@ function pickScatterOutliers(points) {
   return [...new Set([highestY, highestX, bestValue].filter((i) => i >= 0))];
 }
 
-function createScatterChart({ container, titleText, xLabel, yLabel, xKey, xType, tooltipX }) {
+function createScatterChart({
+  container, titleText, xLabel, yLabel, xKey, xType, tooltipX, xBeginAtZero,
+  yKey = 'review_score_percent', yType = 'linear', yMin, yMax, tooltipY,
+}) {
   let chart = null;
   let currentLabelIdxs = [];
+  let currentPoints = [];
+  const beginAtZero = xBeginAtZero != null ? xBeginAtZero : xType !== 'logarithmic';
+  const formatY = tooltipY || ((y) => `${y}% positive`);
 
   return {
     update(games) {
-      const scored = games.filter((g) => g.review_score_percent != null && g[xKey] != null);
+      const scored = games.filter((g) => g[yKey] != null && g[xKey] != null);
       const points = scored.map((g) => ({
         x: g[xKey],
-        y: g.review_score_percent,
+        y: g[yKey],
         name: g.name,
         tier: g.performance_tier,
+        appid: g.appid,
       }));
+      currentPoints = points;
       currentLabelIdxs = pickScatterOutliers(points);
 
       if (chart) {
@@ -109,12 +117,13 @@ function createScatterChart({ container, titleText, xLabel, yLabel, xKey, xType,
         options: {
           responsive: true,
           maintainAspectRatio: false,
+          onClick: gameClickHandler((idx) => currentPoints[idx]),
           plugins: {
             legend: { display: false },
             title: { display: true, text: titleText, color: VIZ_TEXT, font: { size: 13, weight: '600' } },
             tooltip: {
               callbacks: {
-                label: (item) => [item.raw.name, `${tooltipX(item.raw.x)} · ${item.raw.y}% positive · ${item.raw.tier}`],
+                label: (item) => [item.raw.name, `${tooltipX(item.raw.x)} · ${formatY(item.raw.y)} · ${item.raw.tier}`],
               },
             },
           },
@@ -124,14 +133,15 @@ function createScatterChart({ container, titleText, xLabel, yLabel, xKey, xType,
               title: { display: true, text: xLabel, color: VIZ_MUTED },
               grid: { color: VIZ_GRID },
               ticks: { color: VIZ_MUTED },
-              beginAtZero: xType !== 'logarithmic',
+              beginAtZero,
             },
             y: {
+              type: yType,
               title: { display: true, text: yLabel, color: VIZ_MUTED },
               grid: { color: VIZ_GRID },
               ticks: { color: VIZ_MUTED },
-              min: 0,
-              max: 100,
+              ...(yMin != null ? { min: yMin } : {}),
+              ...(yMax != null ? { max: yMax } : {}),
             },
           },
         },
@@ -149,6 +159,10 @@ function createPriceScoreScatter({ container }) {
     xKey: 'price_usd',
     xType: 'linear',
     tooltipX: (x) => (x === 0 ? 'Free' : `$${x.toFixed(2)}`),
+    yKey: 'review_score_percent',
+    yMin: 0,
+    yMax: 100,
+    tooltipY: (y) => `${y}% positive`,
   });
 }
 
@@ -161,5 +175,9 @@ function createReviewCountScoreScatter({ container }) {
     xKey: 'review_total',
     xType: 'logarithmic',
     tooltipX: (x) => `${x.toLocaleString()} reviews`,
+    yKey: 'review_score_percent',
+    yMin: 0,
+    yMax: 100,
+    tooltipY: (y) => `${y}% positive`,
   });
 }

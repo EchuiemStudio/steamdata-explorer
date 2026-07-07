@@ -29,12 +29,22 @@
 
     <section id="charts" class="chart-section">
       <h2 class="chart-section__title">Highest, lowest &amp; most reviewed</h2>
-      <p class="chart-section__caption">Ranked within the current filter only &mdash; not a Steam-wide ranking.</p>
+      <p class="chart-section__caption">
+        Ranked within the current filter only &mdash; not a Steam-wide ranking. Click a bar to open
+        that game on Steam; use the expand icon to see a chart bigger.
+      </p>
       <div class="chart-pair">
-        <div class="chart-card"><canvas class="chart-highest" role="img" aria-label="Bar chart of the 8 highest-rated games"></canvas></div>
-        <div class="chart-card"><canvas class="chart-lowest" role="img" aria-label="Bar chart of the 8 lowest-rated games"></canvas></div>
+        <div class="chart-card">
+          <button type="button" class="chart-card__expand-btn" data-expand-target="highest" aria-label="Expand Highest rated chart">&#10530;</button>
+          <canvas class="chart-highest" role="img" aria-label="Bar chart of the 8 highest-rated games"></canvas>
+        </div>
+        <div class="chart-card">
+          <button type="button" class="chart-card__expand-btn" data-expand-target="lowest" aria-label="Expand Lowest rated chart">&#10530;</button>
+          <canvas class="chart-lowest" role="img" aria-label="Bar chart of the 8 lowest-rated games"></canvas>
+        </div>
       </div>
       <div class="chart-card" style="margin-top: var(--space-3);">
+        <button type="button" class="chart-card__expand-btn" data-expand-target="most-reviewed" aria-label="Expand Most reviewed chart">&#10530;</button>
         <canvas class="chart-most-reviewed" role="img" aria-label="Bar chart of the 8 most-reviewed games"></canvas>
       </div>
     </section>
@@ -45,15 +55,6 @@
         <div class="chart-card"><canvas class="chart-price-bucket" role="img" aria-label="Bar chart of games by price bucket"></canvas></div>
         <div class="chart-card"><canvas class="chart-tag-frequency" role="img" aria-label="Diverging bar chart of tags skewing toward hit or niche games"></canvas></div>
       </div>
-    </section>
-
-    <section id="opportunity" class="chart-section">
-      <h2 class="chart-section__title">Genre &amp; Tag Opportunity Map</h2>
-      <p class="chart-section__caption">
-        Pick genres/tags to cross-compare. X: games in either. Y: games in both &mdash; the lower-right
-        a point sits, the more novel that combination is within the current filter.
-      </p>
-      <div class="opportunity-section"></div>
     </section>
 
     <section id="scatters" class="chart-section">
@@ -68,16 +69,6 @@
         <div class="chart-card"><canvas class="chart-count-score" role="img" aria-label="Scatter plot of review count versus review score"></canvas></div>
       </div>
     </section>
-
-    <section id="data" class="chart-section">
-      <h2 class="chart-section__title">Explore the data</h2>
-      <div class="data-view-toggle">
-        <button type="button" class="chip chip--active" data-view="table">Table view</button>
-        <button type="button" class="chip" data-view="cards">Card view</button>
-      </div>
-      <div class="data-table-view"></div>
-      <div class="data-cards-view game-grid" hidden></div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -87,12 +78,10 @@
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
   <script defer src="scripts/nav.js"></script>
   <script defer src="scripts/data.js"></script>
-  <script defer src="scripts/cards.js"></script>
+  <script defer src="scripts/chart-interactions.js"></script>
   <script defer src="scripts/filters.js"></script>
-  <script defer src="scripts/opportunity.js"></script>
   <script defer src="scripts/insights.js"></script>
   <script defer src="scripts/scatter.js"></script>
-  <script defer src="scripts/table.js"></script>
   <script defer src="scripts/home.js"></script>
 </body>
 </html>

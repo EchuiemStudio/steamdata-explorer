@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SteamData Explorer — Opportunity Map</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body data-page="opportunity">
+  <div id="nav-placeholder"></div>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Genre &amp; Tag Opportunity Map</h1>
+      <p>
+        Every game in this snapshot, plotted by release year and popularity. Pick genres/tags
+        below to narrow to games matching ALL of them &mdash; click a point to open that game
+        on Steam. This filter is independent from the Home page filter.
+      </p>
+    </header>
+
+    <section id="opportunity" class="chart-section">
+      <div class="opportunity-section"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Data pulled from SteamSpy and the Steam Store API &middot; sampled snapshot, not a market survey.
+  </footer>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script defer src="scripts/nav.js"></script>
+  <script defer src="scripts/data.js"></script>
+  <script defer src="scripts/chart-interactions.js"></script>
+  <script defer src="scripts/filters.js"></script>
+  <script defer src="scripts/scatter.js"></script>
+  <script defer src="scripts/table.js"></script>
+  <script defer src="scripts/opportunity.js"></script>
+</body>
+</html>

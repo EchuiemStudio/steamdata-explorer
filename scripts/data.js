@@ -26,3 +26,12 @@ function escapeHTML(str) {
   div.textContent = str;
   return div.innerHTML.replaceAll('"', '&quot;').replaceAll("'", '&#39;');
 }
+
+function steamStoreURL(appid) {
+  return `https://store.steampowered.com/app/${appid}/`;
+}
+
+function formatPrice(price) {
+  if (price == null) return '—';
+  return price === 0 ? 'Free' : `$${price.toFixed(2)}`;
+}

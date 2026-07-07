@@ -1,12 +1,6 @@
-function extremesBarChart(existing, canvas, data, title, valueKey, formatValue) {
+function buildExtremesChartConfig(data, title, valueKey, formatValue) {
   const values = data.map((g) => g[valueKey]);
-  if (existing) {
-    existing.data.labels = data.map((g) => g.name);
-    existing.data.datasets[0].data = values;
-    existing.update();
-    return existing;
-  }
-  return new Chart(canvas, {
+  return {
     type: 'bar',
     data: {
       labels: data.map((g) => g.name),
@@ -16,6 +10,7 @@ function extremesBarChart(existing, canvas, data, title, valueKey, formatValue) 
       indexAxis: 'y',
       responsive: true,
       maintainAspectRatio: false,
+      onClick: gameClickHandler((idx) => data[idx]),
       plugins: {
         legend: { display: false },
         title: { display: true, text: title, color: VIZ_TEXT, font: { size: 13, weight: '600' }, padding: { bottom: 10 } },
@@ -26,35 +21,40 @@ function extremesBarChart(existing, canvas, data, title, valueKey, formatValue) 
         y: { grid: { display: false }, ticks: { color: VIZ_TEXT, font: { size: 11 } } },
       },
     },
-  });
+  };
+}
+
+function extremesBarChart(existing, canvas, data, title, valueKey, formatValue) {
+  if (existing) {
+    existing.data.labels = data.map((g) => g.name);
+    existing.data.datasets[0].data = data.map((g) => g[valueKey]);
+    existing.options.onClick = gameClickHandler((idx) => data[idx]); // re-bind so clicks resolve against the current filtered data, not the array from first render
+    existing.update();
+    return existing;
+  }
+  return new Chart(canvas, buildExtremesChartConfig(data, title, valueKey, formatValue));
 }
 
 async function initHomePage() {
-  let games, aggregates;
+  let games;
   try {
-    [games, aggregates] = await Promise.all([loadGames(), loadAggregates()]);
+    games = await loadGames();
   } catch (err) {
-    showLoadError(document.querySelector('.data-table-view'));
+    showLoadError(document.querySelector('#charts'));
     return;
   }
 
-  const tagCounts = {};
-  games.forEach((g) => g.tags.forEach((t) => { tagCounts[t] = (tagCounts[t] || 0) + 1; }));
-
-  const opportunitySection = createOpportunitySection({
-    container: document.querySelector('.opportunity-section'),
-    aggregates,
-  });
   const priceBucketChart = createPriceBucketChart({ container: document.querySelector('.chart-price-bucket') });
   const tagFrequencyChart = createTagFrequencyChart({ container: document.querySelector('.chart-tag-frequency') });
   const priceScoreScatter = createPriceScoreScatter({ container: document.querySelector('.chart-price-score') });
   const countScoreScatter = createReviewCountScoreScatter({ container: document.querySelector('.chart-count-score') });
-  const gameTable = createGameTable({ container: document.querySelector('.data-table-view') });
 
   let highestChart = null;
   let lowestChart = null;
   let mostReviewedChart = null;
-  let dataView = 'table';
+  let highestData = [];
+  let lowestData = [];
+  let mostReviewedData = [];
 
   function renderStats(filteredGames) {
     const scoredGames = filteredGames.filter((g) => g.review_score_percent != null);
@@ -106,52 +106,44 @@ async function initHomePage() {
   function renderExtremes(filteredGames) {
     const scoredGames = filteredGames.filter((g) => g.review_score_percent != null);
     const byScoreDesc = [...scoredGames].sort((a, b) => b.review_score_percent - a.review_score_percent);
-    const highest = byScoreDesc.slice(0, 8);
-    const lowest = byScoreDesc.slice(-8).reverse();
-    const mostReviewed = [...filteredGames].sort((a, b) => b.review_total - a.review_total).slice(0, 8);
+    highestData = byScoreDesc.slice(0, 8);
+    lowestData = byScoreDesc.slice(-8).reverse();
+    mostReviewedData = [...filteredGames].sort((a, b) => b.review_total - a.review_total).slice(0, 8);
 
-    highestChart = extremesBarChart(highestChart, document.querySelector('.chart-highest'), highest, 'Highest rated', 'review_score_percent', (v) => `${v}%`);
-    lowestChart = extremesBarChart(lowestChart, document.querySelector('.chart-lowest'), lowest, 'Lowest rated', 'review_score_percent', (v) => `${v}%`);
-    mostReviewedChart = extremesBarChart(mostReviewedChart, document.querySelector('.chart-most-reviewed'), mostReviewed, 'Most reviewed', 'review_total', (v) => v.toLocaleString());
+    highestChart = extremesBarChart(highestChart, document.querySelector('.chart-highest'), highestData, 'Highest rated', 'review_score_percent', (v) => `${v}%`);
+    lowestChart = extremesBarChart(lowestChart, document.querySelector('.chart-lowest'), lowestData, 'Lowest rated', 'review_score_percent', (v) => `${v}%`);
+    mostReviewedChart = extremesBarChart(mostReviewedChart, document.querySelector('.chart-most-reviewed'), mostReviewedData, 'Most reviewed', 'review_total', (v) => v.toLocaleString());
   }
 
-  function renderDataSection(filteredGames) {
-    if (dataView === 'table') {
-      gameTable.update(filteredGames);
-    } else {
-      renderGameGrid(document.querySelector('.data-cards-view'), filteredGames);
-    }
-  }
-
-  function applyFilters(selectedKeys) {
-    const filtered = games.filter((g) => matchesFilters(g, selectedKeys));
+  function applyFilters(selected) {
+    const filtered = games.filter((g) => matchesFilters(g, selected));
     renderStats(filtered);
     renderExtremes(filtered);
     priceBucketChart.update(filtered);
     tagFrequencyChart.update(filtered);
-    opportunitySection.update(filtered);
     priceScoreScatter.update(filtered);
     countScoreScatter.update(filtered);
-    renderDataSection(filtered);
   }
 
   const globalFilter = createFilterPanel({
     container: document.querySelector('.global-filter-panel'),
-    genreCounts: aggregates.genre_counts,
-    tagCounts,
+    labelCounts: computeLabelCounts(games),
     heading: 'Filter games',
-    caption: 'Matches any selected genre AND any selected tag. Everything below reacts to this filter.',
+    caption: 'Matches any selected genre or tag. Everything below reacts to this filter.',
     onChange: applyFilters,
   });
 
-  document.querySelector('.data-view-toggle').addEventListener('click', (event) => {
-    const button = event.target.closest('[data-view]');
+  document.querySelector('#charts').addEventListener('click', (event) => {
+    const button = event.target.closest('[data-expand-target]');
     if (!button) return;
-    dataView = button.dataset.view;
-    document.querySelectorAll('.data-view-toggle .chip').forEach((c) => c.classList.toggle('chip--active', c === button));
-    document.querySelector('.data-table-view').hidden = dataView !== 'table';
-    document.querySelector('.data-cards-view').hidden = dataView !== 'cards';
-    renderDataSection(games.filter((g) => matchesFilters(g, globalFilter.getSelected())));
+    const target = button.dataset.expandTarget;
+    if (target === 'highest') {
+      openChartModal('Highest rated', () => buildExtremesChartConfig(highestData, 'Highest rated', 'review_score_percent', (v) => `${v}%`));
+    } else if (target === 'lowest') {
+      openChartModal('Lowest rated', () => buildExtremesChartConfig(lowestData, 'Lowest rated', 'review_score_percent', (v) => `${v}%`));
+    } else if (target === 'most-reviewed') {
+      openChartModal('Most reviewed', () => buildExtremesChartConfig(mostReviewedData, 'Most reviewed', 'review_total', (v) => v.toLocaleString()));
+    }
   });
 
   applyFilters(globalFilter.getSelected());

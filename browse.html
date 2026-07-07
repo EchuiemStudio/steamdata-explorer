@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SteamData Explorer — Browse Data</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body data-page="browse">
+  <div id="nav-placeholder"></div>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Browse the data</h1>
+      <p>
+        Every game in this snapshot, filterable and sortable. Switch between a compact
+        table and a visual card grid.
+      </p>
+    </header>
+
+    <section id="filters">
+      <div class="global-filter-panel"></div>
+    </section>
+
+    <section id="data" class="chart-section">
+      <div class="data-view-toggle">
+        <button type="button" class="chip chip--active" data-view="table">Table view</button>
+        <button type="button" class="chip" data-view="cards">Card view</button>
+      </div>
+      <div class="data-table-view"></div>
+      <div class="data-cards-view game-grid" hidden></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Data pulled from SteamSpy and the Steam Store API &middot; sampled snapshot, not a market survey.
+  </footer>
+
+  <script defer src="scripts/nav.js"></script>
+  <script defer src="scripts/data.js"></script>
+  <script defer src="scripts/cards.js"></script>
+  <script defer src="scripts/filters.js"></script>
+  <script defer src="scripts/table.js"></script>
+  <script defer src="scripts/browse.js"></script>
+</body>
+</html>
