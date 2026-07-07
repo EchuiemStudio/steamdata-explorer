@@ -72,6 +72,12 @@ async function main() {
 
   const trimmed = allItems.slice(0, TOTAL_ITEMS);
 
+  // If every feed failed (e.g. a transient outage during a scheduled run), don't
+  // overwrite existing good data with an empty file — leave it untouched and fail loudly.
+  if (trimmed.length === 0) {
+    throw new Error('No news items fetched from any feed — leaving existing data/news.json untouched.');
+  }
+
   const fs = await import('node:fs/promises');
   await fs.writeFile('data/news.json', JSON.stringify(trimmed, null, 2));
   console.log(`Done. Wrote ${trimmed.length} news items (from ${allItems.length} fetched) to data/news.json.`);
