@@ -13,12 +13,16 @@ function bucketFor(price) {
   return PRICE_BUCKETS.find((b) => price >= b.min && price <= b.max) || PRICE_BUCKETS[PRICE_BUCKETS.length - 1];
 }
 
-function createPriceBucketChart({ container }) {
+function createPriceBucketChart({ container, onBucketClick }) {
   let chart = null;
+  let currentBucketGames = [];
+
   return {
     update(games) {
       const pricedGames = games.filter((g) => g.price_usd != null);
-      const counts = PRICE_BUCKETS.map((b) => pricedGames.filter((g) => bucketFor(g.price_usd) === b).length);
+      const bucketGames = PRICE_BUCKETS.map((b) => pricedGames.filter((g) => bucketFor(g.price_usd) === b));
+      currentBucketGames = bucketGames;
+      const counts = bucketGames.map((gs) => gs.length);
 
       if (chart) {
         chart.data.datasets[0].data = counts;
@@ -35,6 +39,11 @@ function createPriceBucketChart({ container }) {
         options: {
           responsive: true,
           maintainAspectRatio: false,
+          onClick: (event, elements) => {
+            if (!elements.length || !onBucketClick) return;
+            const idx = elements[0].index;
+            onBucketClick(PRICE_BUCKETS[idx].label, currentBucketGames[idx]);
+          },
           plugins: {
             legend: { display: false },
             title: { display: true, text: 'Games by price bucket', color: VIZ_TEXT, font: { size: 13, weight: '600' } },

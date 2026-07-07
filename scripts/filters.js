@@ -93,7 +93,22 @@ function createFilterPanel({ container, labelCounts, heading, caption, onChange,
     }
   });
 
+  // A chip click's own handler (below) calls render(), which replaces container's
+  // entire innerHTML — detaching the clicked button from the document before this
+  // same click event finishes bubbling up here. container.contains(event.target)
+  // would then see a stale, already-detached node and wrongly report "outside",
+  // closing the popover after every single selection. This flag lets the chip
+  // handler (which fires first, since it's on a descendant) tell this listener
+  // "that was an inside click" before the DOM mutation can confuse the containment
+  // check — event listeners on different elements always fire in DOM bubble order,
+  // so the chip handler is guaranteed to run and set this before this one reads it.
+  let ignoreNextDocumentClick = false;
+
   document.addEventListener('click', (event) => {
+    if (ignoreNextDocumentClick) {
+      ignoreNextDocumentClick = false;
+      return;
+    }
     if (!popoverOpen || container.contains(event.target)) return;
     popoverOpen = false;
     render();
@@ -108,6 +123,7 @@ function createFilterPanel({ container, labelCounts, heading, caption, onChange,
   container.addEventListener('click', (event) => {
     const button = event.target.closest('[data-filter-key]');
     if (!button) return;
+    ignoreNextDocumentClick = true;
     const key = button.dataset.filterKey;
     if (selected.has(key)) selected.delete(key); else selected.add(key);
     render();

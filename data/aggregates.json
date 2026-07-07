@@ -1,18 +1,18 @@
 {
-  "total_games": 740,
+  "total_games": 716,
   "genre_counts": {
-    "Action": 374,
-    "Adventure": 308,
-    "Indie": 419,
-    "Simulation": 168,
-    "Early Access": 32,
-    "Racing": 30,
-    "Sports": 29,
-    "RPG": 182,
-    "Strategy": 166,
-    "Massively Multiplayer": 54,
-    "Free To Play": 110,
-    "Casual": 182,
+    "Action": 370,
+    "Adventure": 298,
+    "Indie": 404,
+    "Simulation": 164,
+    "Early Access": 31,
+    "Racing": 29,
+    "Sports": 27,
+    "RPG": 173,
+    "Strategy": 160,
+    "Massively Multiplayer": 53,
+    "Free To Play": 107,
+    "Casual": 175,
     "Acción": 1,
     "Бойовики": 1,
     "Software Training": 1,
@@ -24,12 +24,12 @@
     "Design & Illustration": 1,
     "Video Production": 1,
     "Web Publishing": 2,
-    "Education": 2
+    "Education": 1
   },
   "tier_counts": {
-    "hit": 245,
-    "mid": 248,
-    "niche": 247
+    "hit": 244,
+    "mid": 247,
+    "niche": 225
   },
   "tag_cooccurrence": [
     {
@@ -45,7 +45,7 @@
     {
       "tag_a": "Action",
       "tag_b": "Multiplayer",
-      "count": 85
+      "count": 84
     },
     {
       "tag_a": "Action",
@@ -55,30 +55,25 @@
     {
       "tag_a": "Adventure",
       "tag_b": "Indie",
-      "count": 79
+      "count": 76
     },
     {
       "tag_a": "Action",
       "tag_b": "Shooter",
-      "count": 73
+      "count": 72
     },
     {
       "tag_a": "Action",
       "tag_b": "FPS",
-      "count": 64
-    },
-    {
-      "tag_a": "Adventure",
-      "tag_b": "Singleplayer",
       "count": 63
     },
     {
       "tag_a": "FPS",
       "tag_b": "Shooter",
-      "count": 61
+      "count": 60
     },
     {
-      "tag_a": "Indie",
+      "tag_a": "Adventure",
       "tag_b": "Singleplayer",
       "count": 60
     },
@@ -86,6 +81,11 @@
       "tag_a": "Casual",
       "tag_b": "Indie",
       "count": 60
+    },
+    {
+      "tag_a": "Indie",
+      "tag_b": "Singleplayer",
+      "count": 59
     },
     {
       "tag_a": "Free to Play",
@@ -100,12 +100,7 @@
     {
       "tag_a": "Adventure",
       "tag_b": "RPG",
-      "count": 49
-    },
-    {
-      "tag_a": "RPG",
-      "tag_b": "Singleplayer",
-      "count": 47
+      "count": 46
     },
     {
       "tag_a": "Action",
@@ -113,13 +108,13 @@
       "count": 45
     },
     {
-      "tag_a": "Action",
-      "tag_b": "Free to Play",
-      "count": 43
+      "tag_a": "RPG",
+      "tag_b": "Singleplayer",
+      "count": 45
     },
     {
-      "tag_a": "Free to Play",
-      "tag_b": "Indie",
+      "tag_a": "Action",
+      "tag_b": "Free to Play",
       "count": 43
     },
     {
@@ -140,12 +135,17 @@
     {
       "tag_a": "Multiplayer",
       "tag_b": "Shooter",
-      "count": 41
+      "count": 40
+    },
+    {
+      "tag_a": "Free to Play",
+      "tag_b": "Indie",
+      "count": 40
     },
     {
       "tag_a": "FPS",
       "tag_b": "Multiplayer",
-      "count": 40
+      "count": 39
     },
     {
       "tag_a": "Action",
@@ -158,23 +158,23 @@
       "count": 39
     },
     {
-      "tag_a": "Indie",
-      "tag_b": "RPG",
-      "count": 39
-    },
-    {
-      "tag_a": "Adventure",
-      "tag_b": "Casual",
-      "count": 39
-    },
-    {
       "tag_a": "Action",
       "tag_b": "Co-op",
       "count": 38
     },
     {
+      "tag_a": "Adventure",
+      "tag_b": "Casual",
+      "count": 38
+    },
+    {
       "tag_a": "FPS",
       "tag_b": "First-Person",
+      "count": 36
+    },
+    {
+      "tag_a": "Indie",
+      "tag_b": "RPG",
       "count": 36
     },
     {
@@ -186,15 +186,15 @@
   "tier_stats": {
     "hit": {
       "avg_review_score": 84.3,
-      "avg_price": 9.01
+      "avg_price": 9.04
     },
     "mid": {
-      "avg_review_score": 82.3,
-      "avg_price": 5.52
+      "avg_review_score": 82.2,
+      "avg_price": 5.51
     },
     "niche": {
-      "avg_review_score": 70.6,
-      "avg_price": 3.07
+      "avg_review_score": 70,
+      "avg_price": 2.98
     }
   }
 }

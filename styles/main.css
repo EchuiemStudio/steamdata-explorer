@@ -193,6 +193,17 @@ main.container section[id] {
   background: var(--tier-niche-soft);
 }
 
+.tier-badge--toggle {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  transition: opacity 0.15s ease;
+}
+
+.tier-badge--toggle.tier-badge--inactive {
+  opacity: 0.35;
+}
+
 /* --- Chips (genre / tag filters) --- */
 
 .chip-row {
@@ -429,8 +440,13 @@ main.container section[id] {
 
 .chart-legend {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--space-2);
+}
+
+.price-bucket-detail {
+  margin-top: var(--space-4);
 }
 
 .chart-pair {
@@ -529,6 +545,12 @@ main.container section[id] {
   flex: 1;
   position: relative;
   min-height: 0;
+  overflow-y: auto;
+}
+
+.chart-modal__scroll {
+  position: relative;
+  width: 100%;
 }
 
 /* --- Data table --- */

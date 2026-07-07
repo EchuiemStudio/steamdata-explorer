@@ -73,7 +73,7 @@ function pickScatterOutliers(points) {
 }
 
 function createScatterChart({
-  container, titleText, xLabel, yLabel, xKey, xType, tooltipX, xBeginAtZero,
+  container, titleText, xLabel, yLabel, xKey, xType, tooltipX, xBeginAtZero, xTicksCallback,
   yKey = 'review_score_percent', yType = 'linear', yMin, yMax, tooltipY,
 }) {
   let chart = null;
@@ -132,7 +132,7 @@ function createScatterChart({
               type: xType || 'linear',
               title: { display: true, text: xLabel, color: VIZ_MUTED },
               grid: { color: VIZ_GRID },
-              ticks: { color: VIZ_MUTED },
+              ticks: xTicksCallback ? { color: VIZ_MUTED, callback: xTicksCallback } : { color: VIZ_MUTED },
               beginAtZero,
             },
             y: {

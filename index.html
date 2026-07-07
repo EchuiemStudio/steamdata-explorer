@@ -36,33 +36,36 @@
       <div class="chart-pair">
         <div class="chart-card">
           <button type="button" class="chart-card__expand-btn" data-expand-target="highest" aria-label="Expand Highest rated chart">&#10530;</button>
-          <canvas class="chart-highest" role="img" aria-label="Bar chart of the 8 highest-rated games"></canvas>
+          <canvas class="chart-highest" role="img" aria-label="Bar chart of the 10 highest-rated games"></canvas>
         </div>
         <div class="chart-card">
           <button type="button" class="chart-card__expand-btn" data-expand-target="lowest" aria-label="Expand Lowest rated chart">&#10530;</button>
-          <canvas class="chart-lowest" role="img" aria-label="Bar chart of the 8 lowest-rated games"></canvas>
+          <canvas class="chart-lowest" role="img" aria-label="Bar chart of the 10 lowest-rated games"></canvas>
         </div>
       </div>
       <div class="chart-card" style="margin-top: var(--space-3);">
         <button type="button" class="chart-card__expand-btn" data-expand-target="most-reviewed" aria-label="Expand Most reviewed chart">&#10530;</button>
-        <canvas class="chart-most-reviewed" role="img" aria-label="Bar chart of the 8 most-reviewed games"></canvas>
+        <canvas class="chart-most-reviewed" role="img" aria-label="Bar chart of the 10 most-reviewed games"></canvas>
       </div>
     </section>
 
     <section class="chart-section">
       <h2 class="chart-section__title">Price &amp; tag patterns</h2>
+      <p class="chart-section__caption">Click a price bucket bar to see which games are in it.</p>
       <div class="chart-pair">
         <div class="chart-card"><canvas class="chart-price-bucket" role="img" aria-label="Bar chart of games by price bucket"></canvas></div>
         <div class="chart-card"><canvas class="chart-tag-frequency" role="img" aria-label="Diverging bar chart of tags skewing toward hit or niche games"></canvas></div>
       </div>
+      <div class="price-bucket-detail"></div>
     </section>
 
     <section id="scatters" class="chart-section">
       <h2 class="chart-section__title">Price &amp; popularity vs. review score</h2>
       <p class="chart-section__caption chart-legend">
-        Point color: <span class="tier-badge tier-badge--hit">hit</span>
-        <span class="tier-badge tier-badge--mid">mid</span>
-        <span class="tier-badge tier-badge--niche">niche</span>
+        Point color (click a tier to isolate it, click again to restore all):
+        <button type="button" class="tier-badge tier-badge--hit tier-badge--toggle" data-tier="hit">hit</button>
+        <button type="button" class="tier-badge tier-badge--mid tier-badge--toggle" data-tier="mid">mid</button>
+        <button type="button" class="tier-badge tier-badge--niche tier-badge--toggle" data-tier="niche">niche</button>
       </p>
       <div class="chart-pair">
         <div class="chart-card"><canvas class="chart-price-score" role="img" aria-label="Scatter plot of price versus review score"></canvas></div>
@@ -79,6 +82,7 @@
   <script defer src="scripts/nav.js"></script>
   <script defer src="scripts/data.js"></script>
   <script defer src="scripts/chart-interactions.js"></script>
+  <script defer src="scripts/cards.js"></script>
   <script defer src="scripts/filters.js"></script>
   <script defer src="scripts/insights.js"></script>
   <script defer src="scripts/scatter.js"></script>

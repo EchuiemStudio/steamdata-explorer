@@ -1,7 +1,7 @@
 // One-time/occasional data pull. Run with: node scripts/fetch-steam-data.js
 // Needs Node 18+ (uses the built-in fetch, no npm install required).
 
-const FLOOR_REVIEWS = 10;       // exclude zero-signal noise (test uploads, abandoned pages) — not a sales stand-in
+const FLOOR_REVIEWS = 15;       // exclude zero-signal noise (test uploads, abandoned pages) — not a sales stand-in; raised from 10 after seeing how thin sub-15-review games looked in practice
 const SAMPLE_PER_TIER = 250;    // ~750 games total across hit/mid/niche
 const MAX_STEAMSPY_PAGES = 15;  // how deep into SteamSpy's catalog to look for a spread of games (higher = wider spread, slower)
 const REQUEST_DELAY_MS = 1200;  // stay polite to Steam's undocumented per-app endpoints
@@ -211,7 +211,13 @@ async function main() {
   console.log(`Done. Wrote ${games.length} games to data/games.json.`);
 }
 
-main().catch((err) => {
-  console.error('Fetch failed:', err);
-  process.exit(1);
-});
+// Guarded so requiring this file for buildAggregates() (e.g. from a data-migration
+// script) doesn't also kick off the full multi-minute SteamSpy sampling pass.
+if (require.main === module) {
+  main().catch((err) => {
+    console.error('Fetch failed:', err);
+    process.exit(1);
+  });
+}
+
+module.exports = { buildAggregates };

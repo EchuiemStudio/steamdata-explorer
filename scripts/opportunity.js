@@ -1,9 +1,19 @@
+const OPPORTUNITY_MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+// release_year_month is a fractional value (e.g. 2019.083 for Feb 2019) so games
+// spread out within a year instead of stacking at one X position per year.
+function formatReleaseYearMonth(value) {
+  const year = Math.floor(value);
+  const month = Math.min(11, Math.max(0, Math.round((value - year) * 12)));
+  return `${OPPORTUNITY_MONTH_NAMES[month]} ${year}`;
+}
+
 function createOpportunitySection({ container, games }) {
   container.innerHTML = `
     <div class="opportunity-picker"></div>
     <p class="chart-section__caption opportunity-empty-hint"></p>
     <div class="chart-card chart-card--tall">
-      <canvas class="opportunity-canvas" role="img" aria-label="Scatter plot of games by release year and popularity"></canvas>
+      <canvas class="opportunity-canvas" role="img" aria-label="Scatter plot of games by release month and popularity"></canvas>
     </div>
     <h3 class="chart-section__title">Matching games</h3>
     <div class="opportunity-table-view"></div>
@@ -14,13 +24,14 @@ function createOpportunitySection({ container, games }) {
 
   const scatter = createScatterChart({
     container: container.querySelector('.opportunity-canvas'),
-    titleText: 'Release year vs. popularity',
-    xLabel: 'Release year',
+    titleText: 'Release date vs. popularity',
+    xLabel: 'Release date',
     yLabel: 'Total reviews (log scale)',
-    xKey: 'release_year',
+    xKey: 'release_year_month',
     xType: 'linear',
     xBeginAtZero: false,
-    tooltipX: (x) => `${x}`,
+    xTicksCallback: (v) => Math.round(v),
+    tooltipX: (x) => formatReleaseYearMonth(x),
     yKey: 'review_total',
     yType: 'logarithmic',
     tooltipY: (y) => `${y.toLocaleString()} reviews`,

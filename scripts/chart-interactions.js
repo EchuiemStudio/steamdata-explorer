@@ -17,7 +17,7 @@ function gameClickHandler(getGameAt) {
 // Single reused <dialog> for "expand chart" — created lazily on first use.
 // Destroying/recreating the Chart.js instance on each open (and on close)
 // avoids the "canvas is already in use" error from reusing a stale instance.
-function openChartModal(title, chartConfigFactory) {
+function openChartModal(title, chartConfigFactory, { scrollHeight } = {}) {
   let dialog = document.querySelector('.chart-modal');
   if (!dialog) {
     dialog = document.createElement('dialog');
@@ -28,7 +28,9 @@ function openChartModal(title, chartConfigFactory) {
           <h3 class="chart-modal__title"></h3>
           <button type="button" class="chart-modal__close" aria-label="Close">&times;</button>
         </div>
-        <div class="chart-modal__body"><canvas class="chart-modal__canvas"></canvas></div>
+        <div class="chart-modal__body">
+          <div class="chart-modal__scroll"><canvas class="chart-modal__canvas"></canvas></div>
+        </div>
       </div>
     `;
     document.body.appendChild(dialog);
@@ -45,6 +47,9 @@ function openChartModal(title, chartConfigFactory) {
   }
 
   dialog.querySelector('.chart-modal__title').textContent = title;
+  // A tall inner scroll wrapper (rather than resizing the dialog itself) lets a
+  // 100-row chart scroll inside a fixed-size modal instead of overflowing the viewport.
+  dialog.querySelector('.chart-modal__scroll').style.height = scrollHeight ? `${scrollHeight}px` : '100%';
   if (dialog._chart) {
     dialog._chart.destroy();
     dialog._chart = null;
