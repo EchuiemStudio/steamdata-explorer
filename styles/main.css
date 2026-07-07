@@ -197,11 +197,18 @@ main.container section[id] {
   border: none;
   cursor: pointer;
   font: inherit;
-  transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease, transform 0.1s ease;
 }
 
 .tier-badge--toggle.tier-badge--inactive {
   opacity: 0.35;
+}
+
+/* Opacity-only transitions never fire on whichever badge ends up active (its opacity
+   was already 1, so there's nothing to animate) — this gives every click, including
+   that one, a visible press response regardless of whether its class actually changed. */
+.tier-badge--toggle:active {
+  transform: scale(0.92);
 }
 
 /* --- Chips (genre / tag filters) --- */
