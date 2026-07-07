@@ -1,4 +1,4 @@
-const TIER_SCATTER_COLORS = { hit: '#34d399', mid: '#fbbf24', niche: '#94a3b8' }; // matches --tier-hit/mid/niche badges
+const TIER_SCATTER_COLORS = { hit: '#52c97a', mid: '#c99a56', niche: '#a69c8e' }; // matches --tier-hit/mid/niche badges
 
 function boxesOverlap(a, b) {
   return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;

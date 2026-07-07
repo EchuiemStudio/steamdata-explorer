@@ -1,12 +1,12 @@
 // Mirrors the --viz-*/--color-* tokens in styles/tokens.css — Chart.js can't read CSS
 // custom properties directly, so these stay in sync manually. Keep both in sync if
 // the dark-theme palette ever changes.
-const VIZ_PRIMARY = '#22d3ee';
-const VIZ_DIVERGING_NEGATIVE = '#f87171'; // red pole, pairs with VIZ_PRIMARY as the cyan pole
-const VIZ_GRID = '#242b38';
-const VIZ_MUTED = '#8b93a7';
-const VIZ_TEXT = '#eef1f6';
-const VIZ_SURFACE = '#151a24';
+const VIZ_PRIMARY = '#d9a441';
+const VIZ_DIVERGING_NEGATIVE = '#c9754a'; // copper pole, pairs with VIZ_PRIMARY as the brass pole
+const VIZ_GRID = '#332b22';
+const VIZ_MUTED = '#a69c8e';
+const VIZ_TEXT = '#f5f0e8';
+const VIZ_SURFACE = '#221d18';
 
 async function loadGames() {
   const res = await fetch(`${sitePathPrefix()}data/games.json`);

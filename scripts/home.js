@@ -60,10 +60,12 @@ async function initHomePage() {
         : '';
       detail.innerHTML = `
         <h3 class="chart-section__title">${escapeHTML(modalTitle)}</h3>
-        <div class="game-strip price-bucket-games"></div>
+        <div class="game-strip price-bucket-games" data-lenis-prevent></div>
         ${seeMoreHTML}
       `;
-      renderGameGrid(detail.querySelector('.price-bucket-games'), gamesInBucket.slice(0, PRICE_BUCKET_PREVIEW_LIMIT), { compact: true });
+      const stripEl = detail.querySelector('.price-bucket-games');
+      renderGameGrid(stripEl, gamesInBucket.slice(0, PRICE_BUCKET_PREVIEW_LIMIT), { compact: true });
+      enhanceScrollStrip(stripEl);
       const seeMoreBtn = detail.querySelector('.see-more-btn');
       if (seeMoreBtn) seeMoreBtn.addEventListener('click', () => openGameGridModal(modalTitle, gamesInBucket));
     },

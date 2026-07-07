@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+/* Browser default focus rings are a saturated blue — breaks the color-consistency
+   of the brass/graphite theme on every Tab keystroke otherwise. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 /* The browser's default [hidden]{display:none} is "normal user-agent" priority,
    which any author display rule (e.g. .chip-row{display:flex}) always wins against
    regardless of specificity — so hidden alone silently fails to hide flex/grid
@@ -10,19 +18,14 @@
   display: none !important;
 }
 
-@keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
 body {
   margin: 0;
   font-family: var(--font-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
   background-image:
-    radial-gradient(ellipse 80% 50% at 15% -10%, rgba(34, 211, 238, 0.10), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(251, 191, 36, 0.05), transparent 60%);
+    radial-gradient(ellipse 80% 50% at 15% -10%, rgba(217, 164, 65, 0.08), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(245, 197, 99, 0.05), transparent 60%);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -76,10 +79,11 @@ a {
 }
 
 .site-nav {
-  background: rgba(10, 13, 18, 0.72);
+  background: rgba(22, 19, 15, 0.72);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);
+  border-top: 1px solid rgba(245, 197, 99, 0.12);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -106,6 +110,19 @@ main.container section[id] {
   font-size: 1.15rem;
   letter-spacing: 0.01em;
   text-decoration: none;
+}
+
+/* --- Metallic text: a brushed-brass sheen (dark brass -> bright highlight band -> dark
+   brass) shared by the 3 places that use bold/gradient emphasis, so "metal catching light"
+   reads as one consistent motif rather than 3 different treatments. --- */
+.nav-brand,
+.page-header h1,
+.stat-tile__value {
+  background: linear-gradient(100deg, #8a6d35 0%, var(--color-accent) 30%, #f5e7c4 50%, var(--color-accent) 70%, #8a6d35 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-links {
@@ -147,6 +164,7 @@ main.container section[id] {
 .nav-links a.active {
   color: var(--color-accent);
   font-weight: 600;
+  text-shadow: 0 0 12px rgba(245, 197, 99, 0.35);
 }
 
 .nav-links a.active::after {
@@ -156,66 +174,40 @@ main.container section[id] {
 /* --- Page header (hero) --- */
 
 .page-header {
-  position: relative;
-  padding: var(--space-6) var(--space-5);
-  margin: var(--space-4) 0 var(--space-5);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(34, 211, 238, 0.14), rgba(251, 191, 36, 0.07) 55%, transparent 85%),
-    linear-gradient(180deg, var(--color-surface), var(--color-bg-2));
-  background-size: 220% 220%, 100% 100%;
-  animation: gradientShift 20s ease-in-out infinite;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-card);
-}
-
-.page-header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 22px 22px;
-  opacity: 0.5;
-  pointer-events: none;
+  padding: var(--space-4) 0;
+  margin: var(--space-3) 0 var(--space-4);
 }
 
 .page-header h1 {
-  position: relative;
-  margin: 0 0 var(--space-2);
+  margin: 0 0 var(--space-1);
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.4rem, 2.5vw, 1.75rem);
   font-weight: 700;
   letter-spacing: -0.01em;
-  background: linear-gradient(90deg, var(--color-text), var(--color-accent) 130%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
 }
 
 .page-header p {
-  position: relative;
   margin: 0;
   color: var(--color-text-muted);
   max-width: 65ch;
-  font-size: 1.02rem;
+  font-size: 0.9rem;
 }
 
 /* --- Stat tiles --- */
 
 .stat-tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--space-2);
   margin-bottom: var(--space-4);
 }
 
 .stat-tile {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid rgba(245, 197, 99, 0.12);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
   transition: transform 0.3s var(--ease-cinematic), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -227,13 +219,16 @@ main.container section[id] {
 
 .stat-tile__value {
   font-family: var(--font-display);
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
 .stat-tile__label {
   color: var(--color-text-muted);
-  font-size: 0.85rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   margin-top: var(--space-1);
 }
 
@@ -243,7 +238,7 @@ main.container section[id] {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
 }
 
 .tier-row {
@@ -308,17 +303,89 @@ main.container section[id] {
   color: var(--color-text-muted);
 }
 
+.strip-w {
+  position: relative;
+  margin-bottom: var(--space-3);
+}
+
 .news-strip {
   display: flex;
   gap: var(--space-2);
   overflow-x: auto;
-  padding-bottom: var(--space-2);
-  margin-bottom: var(--space-3);
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  padding: 0 var(--space-1) var(--space-2);
 }
 
 .news-strip .news-item {
   flex: 0 0 260px;
   width: 260px;
+  scroll-snap-align: start;
+}
+
+/* --- Horizontally-scrolling strips (.news-strip, .game-strip): hide the native
+   scrollbar and fade the edges instead, with .strip-arrow buttons (added by
+   enhanceScrollStrip() in scripts/motion.js) as the discoverable affordance —
+   a bare overflow-x:auto div with its default OS scrollbar reads as unfinished. --- */
+.news-strip,
+.game-strip {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  mask-image: linear-gradient(to right, transparent, black var(--space-2), black calc(100% - var(--space-2)), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black var(--space-2), black calc(100% - var(--space-2)), transparent);
+}
+
+.news-strip::-webkit-scrollbar,
+.game-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.strip-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.95rem;
+  line-height: 1;
+  box-shadow: var(--shadow-card);
+  opacity: 1;
+  transition: opacity 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s var(--ease-cinematic);
+}
+
+.strip-arrow:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.strip-arrow--prev {
+  left: calc(-1 * var(--space-2));
+}
+
+.strip-arrow--next {
+  right: calc(-1 * var(--space-2));
+}
+
+.strip-arrow.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.8);
+}
+
+@media (max-width: 560px) {
+  .strip-arrow {
+    display: none;
+  }
 }
 
 /* --- Tier badges --- */
@@ -400,7 +467,7 @@ main.container section[id] {
 }
 
 .chip--active {
-  background: var(--color-accent);
+  background: linear-gradient(160deg, var(--color-accent), #b8853a);
   border-color: var(--color-accent);
   color: var(--color-bg);
   font-weight: 600;
@@ -516,6 +583,7 @@ main.container section[id] {
   display: block;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  border-top: 1px solid rgba(245, 197, 99, 0.12);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-card);
@@ -560,6 +628,7 @@ main.container section[id] {
 .game-card__price {
   font-weight: 700;
   font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .game-card__review {
@@ -658,7 +727,7 @@ main.container section[id] {
 /* --- Chart sections --- */
 
 .chart-section {
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
 }
 
 .chart-section__title {
@@ -695,9 +764,10 @@ main.container section[id] {
 .chart-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  border-top: 1px solid rgba(245, 197, 99, 0.12);
   border-radius: var(--radius-md);
-  padding: var(--space-3);
-  height: 320px;
+  padding: var(--space-2) var(--space-3);
+  height: 240px;
   position: relative;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -708,7 +778,7 @@ main.container section[id] {
 }
 
 .chart-card--tall {
-  height: 520px;
+  height: 420px;
   margin-bottom: var(--space-4);
 }
 
@@ -821,6 +891,7 @@ main.container section[id] {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .game-table th,
@@ -885,7 +956,7 @@ main.container section[id] {
   }
 
   .page-header {
-    padding: var(--space-4) var(--space-3);
+    padding: var(--space-3) 0;
   }
 
   /* nav wraps to 2 lines at this width (taller than the 80px desktop anchor

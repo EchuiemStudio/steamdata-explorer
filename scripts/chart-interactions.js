@@ -28,7 +28,7 @@ function openChartModal(title, chartConfigFactory, { scrollHeight } = {}) {
           <h3 class="chart-modal__title"></h3>
           <button type="button" class="chart-modal__close" aria-label="Close">&times;</button>
         </div>
-        <div class="chart-modal__body">
+        <div class="chart-modal__body" data-lenis-prevent>
           <div class="chart-modal__scroll"><canvas class="chart-modal__canvas"></canvas></div>
         </div>
       </div>
@@ -71,7 +71,7 @@ function openGameGridModal(title, games) {
           <h3 class="chart-modal__title"></h3>
           <button type="button" class="chart-modal__close" aria-label="Close">&times;</button>
         </div>
-        <div class="chart-modal__body"><div class="game-grid"></div></div>
+        <div class="chart-modal__body" data-lenis-prevent><div class="game-grid"></div></div>
       </div>
     `;
     document.body.appendChild(dialog);

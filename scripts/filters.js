@@ -63,7 +63,7 @@ function createFilterPanel({ container, labelCounts, heading, caption, onChange,
         </div>
         <div class="filter-combobox">
           <input type="search" class="filter-panel__search" placeholder="Search genres and tags&hellip;">
-          <div class="filter-popover chip-row chip-row--scrollable" ${popoverOpen ? '' : 'hidden'}>
+          <div class="filter-popover chip-row chip-row--scrollable" data-lenis-prevent ${popoverOpen ? '' : 'hidden'}>
             ${labels.length ? labels.map((e) => chipHTML(e.value, e.count)).join('') : '<p class="empty-state">No matches</p>'}
           </div>
         </div>

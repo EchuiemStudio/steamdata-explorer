@@ -7,10 +7,10 @@ const PRICE_BUCKETS = [
   { label: '$30–50', min: 30.01, max: 50 },
   { label: '$50+', min: 50.01, max: Infinity },
 ];
-// Sequential scale: one hue (cyan, matches the accent), dim -> vivid so both ends
+// Sequential scale: one hue (brass, matches the accent), dim -> vivid so both ends
 // stay visible against a dark chart background (a light->dark scale like the old
 // light-theme one would fade into the background at its dark end here).
-const PRICE_ORDINAL_SCALE = ['#0d3b42', '#0f4e58', '#13626e', '#178094', '#22a8c2', '#4dd4ec', '#9de9f5'];
+const PRICE_ORDINAL_SCALE = ['#3d2f14', '#59431a', '#7a5c22', '#9c7629', '#bd9433', '#dab659', '#f0d896'];
 
 function bucketFor(price) {
   return PRICE_BUCKETS.find((b) => price >= b.min && price <= b.max) || PRICE_BUCKETS[PRICE_BUCKETS.length - 1];
@@ -108,7 +108,7 @@ function createTagFrequencyChart({ container }) {
             legend: { display: false },
             title: {
               display: true,
-              text: 'Tags skewing toward hits (blue) vs. niche (red)',
+              text: 'Tags skewing toward hits (gold) vs. niche (red)',
               color: VIZ_TEXT,
               font: { size: 13, weight: '600' },
             },
@@ -192,7 +192,7 @@ function createReviewKeywordChart({ container }) {
             legend: { display: false },
             title: {
               display: true,
-              text: 'Review words skewing positive (blue) vs. negative (red)',
+              text: 'Review words skewing positive (gold) vs. negative (red)',
               color: VIZ_TEXT,
               font: { size: 13, weight: '600' },
             },

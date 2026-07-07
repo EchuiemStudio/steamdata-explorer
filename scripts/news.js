@@ -44,7 +44,10 @@ async function initNews() {
     return;
   }
 
-  if (stripContainer) renderNewsList(stripContainer, items.slice(0, HOME_NEWS_STRIP_LIMIT));
+  if (stripContainer) {
+    renderNewsList(stripContainer, items.slice(0, HOME_NEWS_STRIP_LIMIT));
+    enhanceScrollStrip(stripContainer);
+  }
   if (fullContainer) renderNewsList(fullContainer, items);
 }
 

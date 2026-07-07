@@ -1,39 +1,42 @@
 :root {
-  /* --- Surfaces (dark, layered — never a single flat color) --- */
-  --color-bg: #0a0d12;
-  --color-bg-2: #10141c;
-  --color-surface: #151a24;
-  --color-surface-2: #1c222f;
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-strong: rgba(255, 255, 255, 0.16);
+  /* --- Surfaces (warm near-black charcoal, layered — never a single flat color) --- */
+  --color-bg: #16130f;
+  --color-bg-2: #1c1712;
+  --color-surface: #221d18;
+  --color-surface-2: #2b241d;
+  --color-border: rgba(245, 230, 200, 0.08);
+  --color-border-strong: rgba(245, 230, 200, 0.18);
 
-  /* --- Text (off-white, never flat #fff) --- */
-  --color-text: #eef1f6;
-  --color-text-muted: #8b93a7;
+  /* --- Text (warm ivory, never flat #fff) --- */
+  --color-text: #f5f0e8;
+  --color-text-muted: #a69c8e;
 
-  /* --- Accents: cool cyan (primary) + warm amber (cinematic secondary pole) --- */
-  --color-accent: #22d3ee;
-  --color-accent-soft: rgba(34, 211, 238, 0.14);
-  --color-accent-2: #fbbf24;
+  /* --- Accents: brushed brass/gold (primary) + warm copper (secondary pole) --- */
+  --color-accent: #d9a441;
+  --color-accent-soft: rgba(217, 164, 65, 0.14);
+  --color-accent-2: #c9754a;
+
+  /* --- Emission: bright amber, used only for glow shadows/text-shadow (never fills) --- */
+  --color-emission: #f5c563;
 
   /* --- Chart/viz colors — also mirrored as JS constants in scripts/data.js,
      scripts/scatter.js, scripts/insights.js since Chart.js can't read CSS
      custom properties directly. Keep both in sync if these ever change. --- */
-  --viz-grid: #242b38;
-  --viz-axis: #333c4d;
-  --viz-muted: #8b93a7;
-  --viz-primary: #22d3ee;
-  --viz-primary-100: #123842;
-  --viz-primary-400: #4dd4ec;
-  --viz-diverging-negative: #f87171;
+  --viz-grid: #332b22;
+  --viz-axis: #473c2e;
+  --viz-muted: #a69c8e;
+  --viz-primary: #d9a441;
+  --viz-primary-100: #3d2f14;
+  --viz-primary-400: #e8c77a;
+  --viz-diverging-negative: #c9754a;
 
   /* --- Tier categories: fixed hue assignment, never cycled/reused elsewhere --- */
-  --tier-hit: #34d399;
-  --tier-hit-soft: rgba(52, 211, 153, 0.16);
-  --tier-mid: #fbbf24;
-  --tier-mid-soft: rgba(251, 191, 36, 0.16);
-  --tier-niche: #94a3b8;
-  --tier-niche-soft: rgba(148, 163, 184, 0.16);
+  --tier-hit: #52c97a;
+  --tier-hit-soft: rgba(82, 201, 122, 0.16);
+  --tier-mid: #c99a56;
+  --tier-mid-soft: rgba(201, 154, 86, 0.16);
+  --tier-niche: #a69c8e;
+  --tier-niche-soft: rgba(166, 156, 142, 0.16);
 
   --space-1: 4px;
   --space-2: 8px;
@@ -45,14 +48,13 @@
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 18px;
-  --radius-xl: 28px;
 
   --font-display: 'Space Grotesk', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --font-sans: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
   --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
   --shadow-card-hover: 0 4px 14px rgba(0, 0, 0, 0.4), 0 20px 48px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 32px rgba(34, 211, 238, 0.18);
+  --shadow-glow: 0 0 32px rgba(245, 197, 99, 0.22);
 
   --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
 
