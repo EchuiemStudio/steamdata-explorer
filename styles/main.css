@@ -200,6 +200,19 @@ main.container section[id] {
   color: var(--color-text-muted);
 }
 
+.news-strip {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.news-strip .news-item {
+  flex: 0 0 260px;
+  width: 260px;
+}
+
 /* --- Tier badges --- */
 
 .tier-badge {

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Latest gaming news from around the web, refreshed periodically.">
+  <meta name="theme-color" content="#2a78d6">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>SteamData Explorer — News</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body data-page="news">
+  <div id="nav-placeholder"></div>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Latest Gaming News</h1>
+      <p>
+        General gaming news from around the web &mdash; not limited to games in this dataset.
+        Refreshed periodically by hand, not live.
+      </p>
+    </header>
+
+    <section class="chart-section">
+      <div class="news-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Data pulled from SteamSpy and the Steam Store API &middot; sampled snapshot, not a market survey.
+  </footer>
+
+  <script defer src="scripts/nav.js"></script>
+  <script defer src="scripts/data.js"></script>
+  <script defer src="scripts/news.js"></script>
+</body>
+</html>

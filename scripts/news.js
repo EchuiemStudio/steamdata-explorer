@@ -1,3 +1,5 @@
+const HOME_NEWS_STRIP_LIMIT = 12;
+
 function formatNewsDate(pubDate) {
   if (!pubDate) return '';
   const date = new Date(pubDate);
@@ -15,20 +17,35 @@ function newsItemHTML(item) {
   `;
 }
 
-async function initNewsSection() {
-  const container = document.querySelector('.news-list');
-  if (!container) return;
-  try {
-    const res = await fetch(`${sitePathPrefix()}data/news.json`);
-    const items = await res.json();
-    if (!Array.isArray(items) || items.length === 0) {
-      container.innerHTML = '<p class="empty-state">No news available right now.</p>';
-      return;
-    }
-    container.innerHTML = items.map(newsItemHTML).join('');
-  } catch (err) {
-    container.innerHTML = '<p class="empty-state">Could not load news.</p>';
+function renderNewsList(container, items) {
+  if (items.length === 0) {
+    container.innerHTML = '<p class="empty-state">No news available right now.</p>';
+    return;
   }
+  container.innerHTML = items.map(newsItemHTML).join('');
 }
 
-initNewsSection();
+// Home shows a compact horizontal preview (.news-strip); the dedicated news.html page
+// shows the full list (.news-list). Either or both containers may exist on a given page.
+async function initNews() {
+  const stripContainer = document.querySelector('.news-strip');
+  const fullContainer = document.querySelector('.news-list');
+  if (!stripContainer && !fullContainer) return;
+
+  let items;
+  try {
+    const res = await fetch(`${sitePathPrefix()}data/news.json`);
+    items = await res.json();
+    if (!Array.isArray(items)) throw new Error('news.json did not return an array');
+  } catch (err) {
+    const errorHTML = '<p class="empty-state">Could not load news.</p>';
+    if (stripContainer) stripContainer.innerHTML = errorHTML;
+    if (fullContainer) fullContainer.innerHTML = errorHTML;
+    return;
+  }
+
+  if (stripContainer) renderNewsList(stripContainer, items.slice(0, HOME_NEWS_STRIP_LIMIT));
+  if (fullContainer) renderNewsList(fullContainer, items);
+}
+
+initNews();
