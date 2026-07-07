@@ -55,6 +55,23 @@ function pointLabelPlugin(getLabelIdxs) {
   };
 }
 
+// data/games.json is stored contiguously grouped by performance_tier (all "hit" games
+// first, then "mid", then "niche"), an artifact of how the sampling script built it.
+// Chart.js animates points by array index (old[i] -> new[i]) on update(), so isolating
+// "hit" — already a contiguous prefix of the unfiltered array — produces an identical
+// index-for-index mapping and animates nothing; isolating "mid"/"niche" shifts every
+// game to a different index and animates a big, inconsistent-looking "rescatter". A
+// fresh shuffle on every update() makes index alignment collide by chance rather than
+// by data ordering, so all three tiers behave the same way.
+function shufflePoints(points) {
+  const copy = [...points];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
 function pickScatterOutliers(points) {
   if (points.length === 0) return [];
   let highestY = 0;
@@ -85,13 +102,13 @@ function createScatterChart({
   return {
     update(games) {
       const scored = games.filter((g) => g[yKey] != null && g[xKey] != null);
-      const points = scored.map((g) => ({
+      const points = shufflePoints(scored.map((g) => ({
         x: g[xKey],
         y: g[yKey],
         name: g.name,
         tier: g.performance_tier,
         appid: g.appid,
-      }));
+      })));
       currentPoints = points;
       currentLabelIdxs = pickScatterOutliers(points);
 
