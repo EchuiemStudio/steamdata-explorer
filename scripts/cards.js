@@ -3,6 +3,15 @@ function formatReviewSummary(game) {
   return `${game.review_score_percent}% positive &middot; ${game.review_total.toLocaleString()} reviews`;
 }
 
+function reviewKeywordLinesHTML(game) {
+  const praise = topReviewWords(game.sample_reviews, true);
+  const complaints = topReviewWords(game.sample_reviews, false);
+  return `
+    ${praise.length ? `<div class="game-card__keyword">Praise: ${escapeHTML(praise.join(', '))}</div>` : ''}
+    ${complaints.length ? `<div class="game-card__keyword">Complaints: ${escapeHTML(complaints.join(', '))}</div>` : ''}
+  `;
+}
+
 function gameCardHTML(game, { compact = false } = {}) {
   return `
     <a class="game-card ${compact ? 'game-card--compact' : ''}" data-appid="${game.appid}" href="${steamStoreURL(game.appid)}" target="_blank" rel="noopener noreferrer">
@@ -17,6 +26,7 @@ function gameCardHTML(game, { compact = false } = {}) {
           ${formatReviewSummary(game)}
         </div>
         <div class="game-card__genres">${escapeHTML(game.genres.join(', '))}</div>
+        ${compact ? '' : reviewKeywordLinesHTML(game)}
         <div class="game-card__steam-link">View on Steam &#8599;</div>
       </div>
     </a>

@@ -412,6 +412,15 @@ main.container section[id] {
   white-space: nowrap;
 }
 
+.game-card__keyword {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
 .game-card__steam-link {
   margin-top: var(--space-2);
   font-size: 0.78rem;

@@ -7,6 +7,8 @@ const TABLE_COLUMNS = [
   { key: 'review_score_percent', label: 'Score %', sortable: true },
   { key: 'review_total', label: 'Reviews', sortable: true },
   { key: 'release_year', label: 'Year', sortable: true },
+  { key: 'praise', label: 'Praise', sortable: false },
+  { key: 'complaints', label: 'Complaints', sortable: false },
 ];
 
 function tableCellHTML(game, key) {
@@ -30,6 +32,14 @@ function tableCellHTML(game, key) {
       return game.review_total.toLocaleString();
     case 'release_year':
       return game.release_year || '—';
+    case 'praise': {
+      const words = topReviewWords(game.sample_reviews, true);
+      return words.length ? escapeHTML(words.join(', ')) : '—';
+    }
+    case 'complaints': {
+      const words = topReviewWords(game.sample_reviews, false);
+      return words.length ? escapeHTML(words.join(', ')) : '—';
+    }
     default:
       return '';
   }

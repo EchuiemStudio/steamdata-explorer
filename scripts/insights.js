@@ -128,32 +128,7 @@ function createTagFrequencyChart({ container }) {
   };
 }
 
-// Standard English function words (articles/pronouns/prepositions/auxiliary verbs) — not
-// sentiment words like "good"/"worst", which are exactly the useful signal this chart
-// is meant to surface, not noise to filter out.
-const REVIEW_STOPWORDS = new Set([
-  'i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your', 'yours', 'yourself', 'yourselves',
-  'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself', 'it', 'its', 'itself', 'they', 'them', 'their',
-  'theirs', 'themselves', 'what', 'which', 'who', 'whom', 'this', 'that', 'these', 'those', 'am', 'is', 'are',
-  'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'having', 'do', 'does', 'did', 'doing', 'a', 'an',
-  'the', 'and', 'but', 'if', 'or', 'because', 'as', 'until', 'while', 'of', 'at', 'by', 'for', 'with', 'about',
-  'against', 'between', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up',
-  'down', 'in', 'out', 'on', 'off', 'over', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'when',
-  'where', 'why', 'how', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'not',
-  'only', 'own', 'same', 'than', 'too', 'very', 'can', 'will', 'just', 'now', 'also', 'game', 'games', 'play',
-  'playing', 'played', 'really', 'actually', 'much', 'many', 'get', 'got', 'one', 'would', 'could', 'even',
-  'still', 'yet', 'use', 'used', 'using', 'like', 'dont', 'didn', 'doesn', 'isn', 'wasn', 'youre',
-]);
-const REVIEW_WORD_MIN_LENGTH = 4;
 const REVIEW_KEYWORD_MIN_OCCURRENCES = 8; // needs to show up in at least this many reviews to count — avoids noise from one review's odd vocabulary
-
-function extractReviewWords(text) {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z\s]/g, ' ')
-    .split(/\s+/)
-    .filter((w) => w.length >= REVIEW_WORD_MIN_LENGTH && !REVIEW_STOPWORDS.has(w));
-}
 
 function createReviewKeywordChart({ container }) {
   let chart = null;
