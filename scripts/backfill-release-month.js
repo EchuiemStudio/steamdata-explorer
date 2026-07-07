@@ -25,7 +25,10 @@ async function fetchJson(url, { retries = 3 } = {}) {
 }
 
 async function fetchReleaseDateString(appid) {
-  const data = await fetchJson(`https://store.steampowered.com/api/appdetails?appids=${appid}&cc=us`);
+  // l=english: without it, Steam occasionally returns localized text (observed on
+  // genre descriptions for a few games) — belt-and-suspenders here too, since a
+  // non-English date format could otherwise silently misparse in new Date(dateStr).
+  const data = await fetchJson(`https://store.steampowered.com/api/appdetails?appids=${appid}&cc=us&l=english`);
   const entry = data?.[appid];
   if (!entry?.success) return null;
   return entry.data?.release_date?.date || null;

@@ -1330,7 +1330,7 @@
     "appid": 952060,
     "name": "Resident Evil 3",
     "genres": [
-      "Acción"
+      "Action"
     ],
     "tags": [
       "Action",
@@ -1628,7 +1628,7 @@
     "appid": 70,
     "name": "Half-Life",
     "genres": [
-      "Бойовики"
+      "Action"
     ],
     "tags": [
       "FPS",
@@ -6688,8 +6688,8 @@
     "appid": 730,
     "name": "Counter-Strike 2",
     "genres": [
-      "Ação",
-      "Gratuitos para Jogar"
+      "Action",
+      "Free to Play"
     ],
     "tags": [
       "FPS",
@@ -21348,7 +21348,7 @@
       "Hack and Slash",
       "Fantasy"
     ],
-    "release_year": 2009,
+    "release_year": 2008,
     "price_usd": 1.99,
     "review_score_desc": "Mostly Positive",
     "review_positive": 983,

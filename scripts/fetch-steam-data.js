@@ -74,7 +74,10 @@ async function fetchAppDetails(appid) {
   // cc=us pins the response to USD pricing — without it, Steam's region auto-detection
   // can return price_overview in SAR/MYR/VND/etc, and price_usd would silently be wrong
   // (a raw non-USD "final" value divided by 100, with no currency check at all).
-  const data = await fetchJson(`https://store.steampowered.com/api/appdetails?appids=${appid}&cc=us`);
+  // l=english pins genre/description text — without it, a handful of games came back
+  // with genres in Spanish/Ukrainian/Portuguese/etc for no visible reason (observed on
+  // Half-Life, Counter-Strike 2, Resident Evil 3), same class of silent-default bug.
+  const data = await fetchJson(`https://store.steampowered.com/api/appdetails?appids=${appid}&cc=us&l=english`);
   const entry = data?.[appid];
   if (!entry?.success) return null;
   return entry.data;
