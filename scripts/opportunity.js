@@ -12,6 +12,12 @@ function createOpportunitySection({ container, games }) {
   container.innerHTML = `
     <div class="opportunity-picker"></div>
     <p class="chart-section__caption opportunity-empty-hint"></p>
+    <p class="chart-section__caption chart-legend">
+      Tier (a second filter, applied after the genres/tags above &mdash; click a tier to isolate it, click again to restore all):
+      <button type="button" class="tier-badge tier-badge--hit tier-badge--toggle" data-tier="hit">hit</button>
+      <button type="button" class="tier-badge tier-badge--mid tier-badge--toggle" data-tier="mid">mid</button>
+      <button type="button" class="tier-badge tier-badge--niche tier-badge--toggle" data-tier="niche">niche</button>
+    </p>
     <div class="chart-card chart-card--tall">
       <canvas class="opportunity-canvas" role="img" aria-label="Scatter plot of games by release month and popularity"></canvas>
     </div>
@@ -21,6 +27,8 @@ function createOpportunitySection({ container, games }) {
 
   const pickerContainer = container.querySelector('.opportunity-picker');
   const hint = container.querySelector('.opportunity-empty-hint');
+  const legend = container.querySelector('.chart-legend');
+  let selectedTiers = new Set(['hit', 'mid', 'niche']);
 
   const scatter = createScatterChart({
     container: container.querySelector('.opportunity-canvas'),
@@ -40,12 +48,27 @@ function createOpportunitySection({ container, games }) {
 
   function recompute() {
     const selected = picker.getSelected();
-    const filtered = games.filter((g) => matchesFilters(g, selected, { mode: 'all' }));
+    const labelFiltered = games.filter((g) => matchesFilters(g, selected, { mode: 'all' }));
+    const filtered = labelFiltered.filter((g) => selectedTiers.has(g.performance_tier));
     hint.hidden = selected.size !== 0;
     hint.textContent = `Showing all ${games.length} games — pick genres/tags above to narrow (a game must match ALL selected).`;
     scatter.update(filtered);
     table.update(filtered);
   }
+
+  legend.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-tier]');
+    if (!button) return;
+    const tier = button.dataset.tier;
+    // Click a tier to isolate it (show only that one); click the already-isolated tier again to restore all three.
+    selectedTiers = (selectedTiers.size === 1 && selectedTiers.has(tier))
+      ? new Set(['hit', 'mid', 'niche'])
+      : new Set([tier]);
+    legend.querySelectorAll('[data-tier]').forEach((el) => {
+      el.classList.toggle('tier-badge--inactive', !selectedTiers.has(el.dataset.tier));
+    });
+    recompute();
+  });
 
   const picker = createFilterPanel({
     container: pickerContainer,

@@ -57,3 +57,31 @@ function openChartModal(title, chartConfigFactory, { scrollHeight } = {}) {
   dialog.showModal();
   dialog._chart = new Chart(dialog.querySelector('.chart-modal__canvas'), chartConfigFactory());
 }
+
+// Separate singleton dialog (shares the .chart-modal chrome via CSS, but is a distinct
+// element/class) so "See more" game-grid popups never collide with the chart-expand modal.
+function openGameGridModal(title, games) {
+  let dialog = document.querySelector('.game-modal');
+  if (!dialog) {
+    dialog = document.createElement('dialog');
+    dialog.className = 'game-modal';
+    dialog.innerHTML = `
+      <div class="chart-modal__inner">
+        <div class="chart-modal__header">
+          <h3 class="chart-modal__title"></h3>
+          <button type="button" class="chart-modal__close" aria-label="Close">&times;</button>
+        </div>
+        <div class="chart-modal__body"><div class="game-grid"></div></div>
+      </div>
+    `;
+    document.body.appendChild(dialog);
+    dialog.querySelector('.chart-modal__close').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  }
+
+  dialog.querySelector('.chart-modal__title').textContent = title;
+  renderGameGrid(dialog.querySelector('.game-grid'), games);
+  dialog.showModal();
+}

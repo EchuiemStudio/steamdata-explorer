@@ -3,9 +3,9 @@ function formatReviewSummary(game) {
   return `${game.review_score_percent}% positive &middot; ${game.review_total.toLocaleString()} reviews`;
 }
 
-function gameCardHTML(game) {
+function gameCardHTML(game, { compact = false } = {}) {
   return `
-    <a class="game-card" data-appid="${game.appid}" href="${steamStoreURL(game.appid)}" target="_blank" rel="noopener noreferrer">
+    <a class="game-card ${compact ? 'game-card--compact' : ''}" data-appid="${game.appid}" href="${steamStoreURL(game.appid)}" target="_blank" rel="noopener noreferrer">
       <img class="game-card__image" src="${escapeHTML(game.header_image)}" alt="${escapeHTML(game.name)}" loading="lazy">
       <div class="game-card__body">
         <h3 class="game-card__title">${escapeHTML(game.name)}</h3>
@@ -23,7 +23,7 @@ function gameCardHTML(game) {
   `;
 }
 
-function renderGameGrid(container, games) {
+function renderGameGrid(container, games, { compact = false } = {}) {
   if (games.length === 0) {
     container.innerHTML = '<p class="empty-state">No games match this filter.</p>';
     return;
@@ -39,7 +39,7 @@ function renderGameGrid(container, games) {
       existing.delete(game.appid);
     } else {
       const wrapper = document.createElement('div');
-      wrapper.innerHTML = gameCardHTML(game);
+      wrapper.innerHTML = gameCardHTML(game, { compact });
       card = wrapper.firstElementChild;
     }
     frag.appendChild(card);

@@ -1,4 +1,5 @@
 const EXTREMES_MODAL_ROW_HEIGHT = 26; // px per bar in the scrollable "top 100" modal view
+const PRICE_BUCKET_PREVIEW_LIMIT = 12; // cards shown in the horizontal preview strip before "See more"
 
 function buildExtremesChartConfig(data, title, valueKey, formatValue) {
   const values = data.map((g) => g[valueKey]);
@@ -53,11 +54,18 @@ async function initHomePage() {
     container: document.querySelector('.chart-price-bucket'),
     onBucketClick: (label, gamesInBucket) => {
       const detail = document.querySelector('.price-bucket-detail');
+      const modalTitle = `${label} — ${gamesInBucket.length} game${gamesInBucket.length === 1 ? '' : 's'}`;
+      const seeMoreHTML = gamesInBucket.length > PRICE_BUCKET_PREVIEW_LIMIT
+        ? `<button type="button" class="see-more-btn">See all ${gamesInBucket.length} games</button>`
+        : '';
       detail.innerHTML = `
-        <h3 class="chart-section__title">${escapeHTML(label)} &mdash; ${gamesInBucket.length} game${gamesInBucket.length === 1 ? '' : 's'}</h3>
-        <div class="game-grid price-bucket-games"></div>
+        <h3 class="chart-section__title">${escapeHTML(modalTitle)}</h3>
+        <div class="game-strip price-bucket-games"></div>
+        ${seeMoreHTML}
       `;
-      renderGameGrid(detail.querySelector('.price-bucket-games'), gamesInBucket);
+      renderGameGrid(detail.querySelector('.price-bucket-games'), gamesInBucket.slice(0, PRICE_BUCKET_PREVIEW_LIMIT), { compact: true });
+      const seeMoreBtn = detail.querySelector('.see-more-btn');
+      if (seeMoreBtn) seeMoreBtn.addEventListener('click', () => openGameGridModal(modalTitle, gamesInBucket));
     },
   });
   const tagFrequencyChart = createTagFrequencyChart({ container: document.querySelector('.chart-tag-frequency') });
