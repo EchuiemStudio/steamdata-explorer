@@ -9,6 +9,7 @@ async function initBrowsePage() {
 
   const gameTable = createGameTable({ container: document.querySelector('.data-table-view') });
   let dataView = 'table';
+  let nameQuery = '';
 
   function renderDataSection(filteredGames) {
     if (dataView === 'table') {
@@ -18,8 +19,12 @@ async function initBrowsePage() {
     }
   }
 
-  function applyFilters(selected) {
-    renderDataSection(games.filter((g) => matchesFilters(g, selected)));
+  function recompute() {
+    const selected = filterPanel.getSelected();
+    const filtered = games.filter((g) =>
+      matchesFilters(g, selected) && (!nameQuery || g.name.toLowerCase().includes(nameQuery))
+    );
+    renderDataSection(filtered);
   }
 
   const filterPanel = createFilterPanel({
@@ -27,7 +32,12 @@ async function initBrowsePage() {
     labelCounts: computeLabelCounts(games),
     heading: 'Filter games',
     caption: 'Matches any selected genre or tag.',
-    onChange: applyFilters,
+    onChange: recompute,
+  });
+
+  document.querySelector('.name-search-input').addEventListener('input', (event) => {
+    nameQuery = event.target.value.trim().toLowerCase();
+    recompute();
   });
 
   document.querySelector('.data-view-toggle').addEventListener('click', (event) => {
@@ -37,10 +47,10 @@ async function initBrowsePage() {
     document.querySelectorAll('.data-view-toggle .chip').forEach((c) => c.classList.toggle('chip--active', c === button));
     document.querySelector('.data-table-view').hidden = dataView !== 'table';
     document.querySelector('.data-cards-view').hidden = dataView !== 'cards';
-    renderDataSection(games.filter((g) => matchesFilters(g, filterPanel.getSelected())));
+    recompute();
   });
 
-  applyFilters(filterPanel.getSelected());
+  recompute();
 }
 
 initBrowsePage();
