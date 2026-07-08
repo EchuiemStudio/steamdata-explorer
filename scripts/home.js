@@ -7,7 +7,17 @@ function buildExtremesChartConfig(data, title, valueKey, formatValue) {
     type: 'bar',
     data: {
       labels: data.map((g) => g.name),
-      datasets: [{ data: values, backgroundColor: VIZ_PRIMARY, borderRadius: 4, barThickness: 20 }],
+      datasets: [{
+        data: values,
+        backgroundColor: VIZ_PRIMARY,
+        hoverBackgroundColor: VIZ_PRIMARY_400,
+        borderColor: VIZ_PRIMARY_100,
+        borderWidth: 1,
+        borderRadius: 4,
+        borderSkipped: false,
+        categoryPercentage: 0.8,
+        barPercentage: 0.7,
+      }],
     },
     options: {
       indexAxis: 'y',
@@ -38,6 +48,23 @@ function extremesBarChart(existing, canvas, data, title, valueKey, formatValue) 
   return new Chart(canvas, buildExtremesChartConfig(data, title, valueKey, formatValue));
 }
 
+// Hero backdrop: a collage of real Steam header images for the most-reviewed games in
+// the full (unfiltered) dataset. Deliberately rendered once here, not wired into
+// applyFilters/renderExtremes — this is a static cover visual, not a data view, so it
+// must not reshuffle every time the user changes a filter.
+function renderHeroCollage(allGames) {
+  const container = document.querySelector('.hero-collage');
+  if (!container) return; // not present on other pages
+  const featured = [...allGames]
+    .filter((g) => g.header_image)
+    .sort((a, b) => b.review_total - a.review_total)
+    .slice(0, 20);
+  container.innerHTML = featured.map((g) => `<img src="${g.header_image}" alt="" loading="lazy">`).join('');
+  container.querySelectorAll('img').forEach((img) => {
+    img.addEventListener('error', () => img.remove()); // Steam CDN URL 404s silently, no broken-image icon
+  });
+}
+
 async function initHomePage() {
   let games;
   try {
@@ -46,6 +73,8 @@ async function initHomePage() {
     showLoadError(document.querySelector('#charts'));
     return;
   }
+
+  renderHeroCollage(games);
 
   let selectedTiers = new Set(['hit', 'mid', 'niche']);
   let lastFilteredGames = games;
@@ -101,19 +130,19 @@ async function initHomePage() {
 
     document.getElementById('stat-tiles').innerHTML = `
       <div class="stat-tile">
-        <div class="stat-tile__value">${filteredGames.length}</div>
-        <div class="stat-tile__label">Games matching filter</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-tile__value">${totalReviews.toLocaleString()}</div>
+        <div class="stat-tile__value text-metallic" data-count-to="${totalReviews}" data-count-format="integer">0</div>
         <div class="stat-tile__label">Total reviews</div>
       </div>
       <div class="stat-tile">
-        <div class="stat-tile__value">${avgScore}%</div>
+        <div class="stat-tile__value text-metallic" data-count-to="${filteredGames.length}" data-count-format="integer">0</div>
+        <div class="stat-tile__label">Games matching filter</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-tile__value text-metallic" data-count-to="${avgScore === '—' ? '' : avgScore}" data-count-format="percent">${avgScore === '—' ? '—' : '0%'}</div>
         <div class="stat-tile__label">Avg. review score</div>
       </div>
       <div class="stat-tile">
-        <div class="stat-tile__value">${new Set(filteredGames.flatMap((g) => g.genres)).size}</div>
+        <div class="stat-tile__value text-metallic" data-count-to="${new Set(filteredGames.flatMap((g) => g.genres)).size}" data-count-format="integer">0</div>
         <div class="stat-tile__label">Genres represented</div>
       </div>
     `;

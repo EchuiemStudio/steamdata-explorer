@@ -2,6 +2,8 @@
 // custom properties directly, so these stay in sync manually. Keep both in sync if
 // the dark-theme palette ever changes.
 const VIZ_PRIMARY = '#d9a441';
+const VIZ_PRIMARY_100 = '#3d2f14'; // dark brass — bar border, gives each bar a defined edge
+const VIZ_PRIMARY_400 = '#e8c77a'; // bright brass — hover state
 const VIZ_DIVERGING_NEGATIVE = '#c9754a'; // copper pole, pairs with VIZ_PRIMARY as the brass pole
 const VIZ_GRID = '#332b22';
 const VIZ_MUTED = '#a69c8e';

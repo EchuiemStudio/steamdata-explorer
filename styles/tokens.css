@@ -4,7 +4,7 @@
   --color-bg-2: #1c1712;
   --color-surface: #221d18;
   --color-surface-2: #2b241d;
-  --color-border: rgba(245, 230, 200, 0.08);
+  --color-border: rgba(245, 230, 200, 0.12);
   --color-border-strong: rgba(245, 230, 200, 0.18);
 
   /* --- Text (warm ivory, never flat #fff) --- */
@@ -15,9 +15,14 @@
   --color-accent: #d9a441;
   --color-accent-soft: rgba(217, 164, 65, 0.14);
   --color-accent-2: #c9754a;
+  --color-accent-rgb: 217, 164, 65;
+  --color-accent-shade-dark: #8a6d35;
+  --color-accent-shade-light: #f5e7c4;
+  --gradient-metallic: linear-gradient(100deg, var(--color-accent-shade-dark) 0%, var(--color-accent) 30%, var(--color-accent-shade-light) 50%, var(--color-accent) 70%, var(--color-accent-shade-dark) 100%);
 
   /* --- Emission: bright amber, used only for glow shadows/text-shadow (never fills) --- */
   --color-emission: #f5c563;
+  --color-emission-rgb: 245, 197, 99;
 
   /* --- Chart/viz colors — also mirrored as JS constants in scripts/data.js,
      scripts/scatter.js, scripts/insights.js since Chart.js can't read CSS
@@ -44,13 +49,14 @@
   --space-4: 24px;
   --space-5: 40px;
   --space-6: 64px;
+  --space-7: 96px;
 
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 18px;
 
-  --font-display: 'Space Grotesk', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --font-sans: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Work Sans', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
   --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
   --shadow-card-hover: 0 4px 14px rgba(0, 0, 0, 0.4), 0 20px 48px rgba(0, 0, 0, 0.5);

@@ -24,8 +24,8 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   background-image:
-    radial-gradient(ellipse 80% 50% at 15% -10%, rgba(217, 164, 65, 0.08), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(245, 197, 99, 0.05), transparent 60%);
+    radial-gradient(ellipse 80% 50% at 15% -10%, rgba(var(--color-accent-rgb), 0.08), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(var(--color-emission-rgb), 0.05), transparent 60%);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -83,7 +83,7 @@ a {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);
-  border-top: 1px solid rgba(245, 197, 99, 0.12);
+  border-top: 1px solid rgba(var(--color-emission-rgb), 0.12);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -113,12 +113,11 @@ main.container section[id] {
 }
 
 /* --- Metallic text: a brushed-brass sheen (dark brass -> bright highlight band -> dark
-   brass) shared by the 3 places that use bold/gradient emphasis, so "metal catching light"
-   reads as one consistent motif rather than 3 different treatments. --- */
-.nav-brand,
-.page-header h1,
-.stat-tile__value {
-  background: linear-gradient(100deg, #8a6d35 0%, var(--color-accent) 30%, #f5e7c4 50%, var(--color-accent) 70%, #8a6d35 100%);
+   brass), applied via .text-metallic wherever "metal catching light" emphasis is wanted.
+   Deliberately reserved for hero elements (brand, page h1, hero stat number) so it reads
+   as one consistent, meaningful motif rather than diluted across every heading. --- */
+.text-metallic {
+  background: var(--gradient-metallic);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -164,22 +163,42 @@ main.container section[id] {
 .nav-links a.active {
   color: var(--color-accent);
   font-weight: 600;
-  text-shadow: 0 0 12px rgba(245, 197, 99, 0.35);
+  text-shadow: 0 0 12px rgba(var(--color-emission-rgb), 0.35);
 }
 
 .nav-links a.active::after {
   transform: scaleX(1);
 }
 
-/* --- Page header (hero) --- */
+/* --- Page header (hero): full-bleed band (breaks out of .container's max-width via
+   the left:50%/width:100vw/translateX(-50%) technique on .hero-collage) so the homepage
+   opens with edge-to-edge game art instead of a boxed banner. Other pages share the same
+   card treatment but have no .hero-collage child, so they stay a plain elevated header. --- */
 
 .page-header {
-  padding: var(--space-4) 0;
-  margin: var(--space-3) 0 var(--space-4);
+  position: relative;
+  isolation: isolate;
+  padding: var(--space-4) var(--space-4);
+  margin: var(--space-3) 0 var(--space-6);
+}
+
+/* Homepage only (has a .hero-collage child): the bigger full-bleed cover-slide treatment.
+   Other pages keep the modest card padding above — they have no image layer to fill the
+   extra space, so blowing up their padding the same way just left a dead gap (caught in
+   the screenshot pass: text stayed small, whitespace didn't). */
+.page-header:has(.hero-collage) {
+  padding: var(--space-6) var(--space-4);
+  margin: 0 0 var(--space-7);
+}
+
+.page-header h1,
+.page-header p {
+  position: relative;
+  z-index: 1;
 }
 
 .page-header h1 {
-  margin: 0 0 var(--space-1);
+  margin: 0 0 var(--space-2);
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 2.5vw, 1.75rem);
   font-weight: 700;
@@ -193,28 +212,100 @@ main.container section[id] {
   font-size: 0.9rem;
 }
 
-/* --- Stat tiles --- */
+/* Homepage only: a collage of real Steam header images (populated by renderHeroCollage()
+   in scripts/home.js), darkened and faded so the headline stays fully legible on top. */
+.hero-collage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 2px;
+  overflow: hidden;
+}
+
+.hero-collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.15) brightness(0.8);
+  opacity: 0.9;
+}
+
+/* A left-to-right scrim, not a flat dark wash: strong enough behind the headline (which
+   sits on the left, inside .container) to stay legible, fading out fast so the collage
+   reads as real, recognizable game art on the right two-thirds rather than a dark smear.
+   A short bottom fade blends the hero into the section below it. */
+.hero-collage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--color-bg) 0%, rgba(22, 19, 15, 0.85) 34%, rgba(22, 19, 15, 0.5) 62%, rgba(22, 19, 15, 0.12) 82%),
+    linear-gradient(180deg, transparent 75%, var(--color-bg) 100%);
+}
+
+/* Homepage-only .page-header gets a taller, bolder headline since it's acting as a real
+   cover slide; pages without .hero-collage keep the smaller size set above. */
+.page-header:has(.hero-collage) h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+/* --- Full-bleed section "chapter" band: same left:50%/100vw technique as .hero-collage,
+   used to visually separate a group of sections from the page's base background so
+   scrolling past it reads as moving into a new chapter, not just another stacked box. --- */
+.section-panel {
+  position: relative;
+  isolation: isolate;
+  padding: var(--space-5) 0;
+  margin-bottom: var(--space-7);
+}
+
+.section-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
+  background: var(--color-bg-2);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* --- Stat tiles: asymmetric "bento" grid — the first tile leads as the hero number,
+   the other three support it, instead of 4 identical boxes with no hierarchy. --- */
 
 .stat-tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: var(--space-2);
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: var(--space-3);
   margin-bottom: var(--space-4);
 }
 
 .stat-tile {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-top: 1px solid rgba(245, 197, 99, 0.12);
+  border-top: 1px solid rgba(var(--color-emission-rgb), 0.12);
   border-radius: var(--radius-sm);
   padding: var(--space-2) var(--space-3);
   transition: transform 0.3s var(--ease-cinematic), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.stat-tile:first-child {
+  padding: var(--space-4);
+}
+
 .stat-tile:hover {
   transform: translateY(-3px);
   border-color: var(--color-border-strong);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
 }
 
 .stat-tile__value {
@@ -222,6 +313,10 @@ main.container section[id] {
   font-size: 1.5rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+}
+
+.stat-tile:first-child .stat-tile__value {
+  font-size: 2.75rem;
 }
 
 .stat-tile__label {
@@ -232,24 +327,25 @@ main.container section[id] {
   margin-top: var(--space-1);
 }
 
-/* --- Tier breakdown --- */
+/* --- Tier breakdown: rank cards instead of thin stacked list rows — "tier" already
+   implies a game-like rank/achievement framing, so give it card-level visual weight. --- */
 
 .tier-breakdown {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  margin-bottom: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
 }
 
 .tier-row {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2) var(--space-3);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  border-top: 1px solid rgba(var(--color-emission-rgb), 0.12);
   border-radius: var(--radius-sm);
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-3) var(--space-4);
   font-size: 0.9rem;
   transition: border-color 0.2s ease;
 }
@@ -264,7 +360,6 @@ main.container section[id] {
 
 .tier-row__stat {
   color: var(--color-text-muted);
-  margin-left: auto;
 }
 
 /* --- News panel --- */
@@ -280,6 +375,7 @@ main.container section[id] {
   display: block;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  border-top: 1px solid rgba(var(--color-emission-rgb), 0.12);
   border-radius: var(--radius-sm);
   padding: var(--space-2) var(--space-3);
   text-decoration: none;
@@ -338,6 +434,18 @@ main.container section[id] {
 .news-strip::-webkit-scrollbar,
 .game-strip::-webkit-scrollbar {
   display: none;
+}
+
+.news-strip,
+.game-strip {
+  cursor: grab;
+}
+
+.news-strip.is-dragging,
+.game-strip.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
 }
 
 .strip-arrow {
@@ -467,7 +575,7 @@ main.container section[id] {
 }
 
 .chip--active {
-  background: linear-gradient(160deg, var(--color-accent), #b8853a);
+  background: var(--color-accent);
   border-color: var(--color-accent);
   color: var(--color-bg);
   font-weight: 600;
@@ -490,6 +598,7 @@ main.container section[id] {
 .filter-panel {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  border-top: 1px solid rgba(var(--color-emission-rgb), 0.12);
   border-radius: var(--radius-md);
   padding: var(--space-4);
   margin-bottom: var(--space-5);
@@ -583,7 +692,7 @@ main.container section[id] {
   display: block;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-top: 1px solid rgba(245, 197, 99, 0.12);
+  border-top: 1px solid rgba(var(--color-emission-rgb), 0.12);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-card);
@@ -727,7 +836,7 @@ main.container section[id] {
 /* --- Chart sections --- */
 
 .chart-section {
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-6);
 }
 
 .chart-section__title {
@@ -764,7 +873,7 @@ main.container section[id] {
 .chart-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-top: 1px solid rgba(245, 197, 99, 0.12);
+  border-top: 1px solid rgba(var(--color-emission-rgb), 0.12);
   border-radius: var(--radius-md);
   padding: var(--space-2) var(--space-3);
   height: 240px;
@@ -774,12 +883,16 @@ main.container section[id] {
 
 .chart-card:hover {
   border-color: var(--color-border-strong);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
 }
 
 .chart-card--tall {
   height: 420px;
   margin-bottom: var(--space-4);
+}
+
+.chart-card--bars {
+  height: 280px;
 }
 
 .chart-card__expand-btn {
@@ -884,6 +997,7 @@ main.container section[id] {
   overflow-x: auto;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  border-top: 1px solid rgba(var(--color-emission-rgb), 0.12);
   border-radius: var(--radius-md);
 }
 
@@ -956,7 +1070,31 @@ main.container section[id] {
   }
 
   .page-header {
-    padding: var(--space-3) 0;
+    padding: var(--space-4) var(--space-4);
+  }
+
+  .hero-collage {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* The desktop left-dark/right-light scrim assumes a "clear side" for the images to
+     show through; at this width there's no room for that, so the whole hero needs a
+     flat dark wash instead or the text sitting over lighter covers loses contrast. */
+  .hero-collage::after {
+    background:
+      linear-gradient(180deg, rgba(22, 19, 15, 0.88) 0%, rgba(22, 19, 15, 0.8) 60%, var(--color-bg) 100%);
+  }
+
+  .stat-tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-tile:first-child {
+    grid-column: span 2;
+  }
+
+  .tier-breakdown {
+    grid-template-columns: 1fr;
   }
 
   /* nav wraps to 2 lines at this width (taller than the 80px desktop anchor

@@ -9,7 +9,7 @@
   <title>SteamData Explorer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/tokens.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -18,7 +18,8 @@
 
   <main class="container">
     <header class="page-header">
-      <h1>SteamData Explorer</h1>
+      <div class="hero-collage" aria-hidden="true"></div>
+      <h1 class="text-metallic">SteamData Explorer</h1>
       <p>
         A browsable snapshot of public Steam games &mdash; genres, tags, price, and real review data.
         No sales or "units sold" figures anywhere: Steam has no free API for those, so only genuine
@@ -37,8 +38,10 @@
       <div class="global-filter-panel"></div>
     </section>
 
-    <section id="stat-tiles" class="stat-tiles" data-reveal></section>
-    <section id="tier-breakdown" class="tier-breakdown" data-reveal></section>
+    <section class="section-panel" data-reveal>
+      <section id="stat-tiles" class="stat-tiles"></section>
+      <section id="tier-breakdown" class="tier-breakdown"></section>
+    </section>
 
     <section id="charts" class="chart-section" data-reveal>
       <h2 class="chart-section__title">Highest, lowest &amp; most reviewed</h2>
@@ -47,16 +50,16 @@
         that game on Steam; use the expand icon to see a chart bigger.
       </p>
       <div class="chart-pair">
-        <div class="chart-card">
+        <div class="chart-card chart-card--bars">
           <button type="button" class="chart-card__expand-btn" data-expand-target="highest" aria-label="Expand Highest rated chart">&#10530;</button>
           <canvas class="chart-highest" role="img" aria-label="Bar chart of the 10 highest-rated games"></canvas>
         </div>
-        <div class="chart-card">
+        <div class="chart-card chart-card--bars">
           <button type="button" class="chart-card__expand-btn" data-expand-target="lowest" aria-label="Expand Lowest rated chart">&#10530;</button>
           <canvas class="chart-lowest" role="img" aria-label="Bar chart of the 10 lowest-rated games"></canvas>
         </div>
       </div>
-      <div class="chart-card" style="margin-top: var(--space-3);">
+      <div class="chart-card chart-card--bars" style="margin-top: var(--space-3);">
         <button type="button" class="chart-card__expand-btn" data-expand-target="most-reviewed" aria-label="Expand Most reviewed chart">&#10530;</button>
         <canvas class="chart-most-reviewed" role="img" aria-label="Bar chart of the 10 most-reviewed games"></canvas>
       </div>
