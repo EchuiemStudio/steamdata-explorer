@@ -35,13 +35,15 @@
   --viz-primary-400: #e8c77a;
   --viz-diverging-negative: #c9754a;
 
-  /* --- Tier categories: fixed hue assignment, never cycled/reused elsewhere --- */
-  --tier-hit: #52c97a;
-  --tier-hit-soft: rgba(82, 201, 122, 0.16);
+  /* --- Tier categories: fixed hue assignment, never cycled/reused elsewhere. A
+     cool-to-warm gradient across the 3 tiers (hit=cool blue, mid=amber, niche=copper)
+     rather than a traffic-light red/amber/green scheme. --- */
+  --tier-hit: #5b9dd9;
+  --tier-hit-soft: rgba(91, 157, 217, 0.16);
   --tier-mid: #c99a56;
   --tier-mid-soft: rgba(201, 154, 86, 0.16);
-  --tier-niche: #a69c8e;
-  --tier-niche-soft: rgba(166, 156, 142, 0.16);
+  --tier-niche: #c9754a;
+  --tier-niche-soft: rgba(201, 117, 74, 0.16);
 
   --space-1: 4px;
   --space-2: 8px;

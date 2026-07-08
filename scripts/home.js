@@ -229,12 +229,17 @@ async function initHomePage() {
     const button = event.target.closest('[data-tier]');
     if (!button) return;
     const tier = button.dataset.tier;
-    // Click a tier to isolate it (show only that one); click the already-isolated tier again to restore all three.
-    selectedTiers = (selectedTiers.size === 1 && selectedTiers.has(tier))
-      ? new Set(['hit', 'mid', 'niche'])
-      : new Set([tier]);
+    // Each tier toggles independently — hit/mid/niche can be combined in any combination
+    // (e.g. hit + niche, no mid), not locked to "all three" or "exactly one."
+    if (selectedTiers.has(tier)) {
+      selectedTiers.delete(tier);
+    } else {
+      selectedTiers.add(tier);
+    }
     document.querySelectorAll('.chart-legend [data-tier]').forEach((el) => {
-      el.classList.toggle('tier-badge--inactive', !selectedTiers.has(el.dataset.tier));
+      const isActive = selectedTiers.has(el.dataset.tier);
+      el.classList.toggle('tier-badge--inactive', !isActive);
+      el.classList.toggle('tier-badge--selected', isActive);
     });
     renderScatters();
   });

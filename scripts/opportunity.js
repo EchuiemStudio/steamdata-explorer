@@ -1,28 +1,17 @@
-const OPPORTUNITY_MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-// release_year_month is a fractional value (e.g. 2019.083 for Feb 2019) so games
-// spread out within a year instead of stacking at one X position per year.
-function formatReleaseYearMonth(value) {
-  const year = Math.floor(value);
-  const month = Math.min(11, Math.max(0, Math.round((value - year) * 12)));
-  return `${OPPORTUNITY_MONTH_NAMES[month]} ${year}`;
-}
-
 function createOpportunitySection({ container, games }) {
   container.innerHTML = `
     <div class="opportunity-picker"></div>
     <p class="chart-section__caption opportunity-empty-hint"></p>
-    <p class="chart-section__caption chart-legend">
-      Tier (a second filter, applied after the genres/tags above &mdash; click a tier to isolate it, click again to restore all):
+    <div class="chart-legend">
       <button type="button" class="tier-badge tier-badge--hit tier-badge--toggle" data-tier="hit">hit</button>
       <button type="button" class="tier-badge tier-badge--mid tier-badge--toggle" data-tier="mid">mid</button>
       <button type="button" class="tier-badge tier-badge--niche tier-badge--toggle" data-tier="niche">niche</button>
-    </p>
+    </div>
     <div class="chart-card chart-card--tall">
       <canvas class="opportunity-canvas" role="img" aria-label="Scatter plot of games by release month and popularity"></canvas>
     </div>
     <h3 class="chart-section__title">Matching games</h3>
-    <div class="opportunity-table-view"></div>
+    <div class="opportunity-cards-view game-grid"></div>
   `;
 
   const pickerContainer = container.querySelector('.opportunity-picker');
@@ -57,28 +46,33 @@ function createOpportunitySection({ container, games }) {
     yMax,
     tooltipY: (y) => `${y.toLocaleString()} reviews`,
   });
-  const table = createGameTable({ container: container.querySelector('.opportunity-table-view') });
+  const cardsContainer = container.querySelector('.opportunity-cards-view');
 
   function recompute() {
     const selected = picker.getSelected();
     const labelFiltered = games.filter((g) => matchesFilters(g, selected, { mode: 'all' }));
     const filtered = labelFiltered.filter((g) => selectedTiers.has(g.performance_tier));
     hint.hidden = selected.size !== 0;
-    hint.textContent = `Showing all ${games.length} games — pick genres/tags above to narrow (a game must match ALL selected).`;
+    hint.textContent = `Showing all ${games.length} games.`;
     scatter.update(filtered);
-    table.update(filtered);
+    renderGameGrid(cardsContainer, filtered);
   }
 
   legend.addEventListener('click', (event) => {
     const button = event.target.closest('[data-tier]');
     if (!button) return;
     const tier = button.dataset.tier;
-    // Click a tier to isolate it (show only that one); click the already-isolated tier again to restore all three.
-    selectedTiers = (selectedTiers.size === 1 && selectedTiers.has(tier))
-      ? new Set(['hit', 'mid', 'niche'])
-      : new Set([tier]);
+    // Each tier toggles independently — hit/mid/niche can be combined in any combination
+    // (e.g. hit + niche, no mid), not locked to "all three" or "exactly one."
+    if (selectedTiers.has(tier)) {
+      selectedTiers.delete(tier);
+    } else {
+      selectedTiers.add(tier);
+    }
     legend.querySelectorAll('[data-tier]').forEach((el) => {
-      el.classList.toggle('tier-badge--inactive', !selectedTiers.has(el.dataset.tier));
+      const isActive = selectedTiers.has(el.dataset.tier);
+      el.classList.toggle('tier-badge--inactive', !isActive);
+      el.classList.toggle('tier-badge--selected', isActive);
     });
     recompute();
   });

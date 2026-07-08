@@ -10,6 +10,16 @@ const VIZ_MUTED = '#a69c8e';
 const VIZ_TEXT = '#f5f0e8';
 const VIZ_SURFACE = '#221d18';
 
+const OPPORTUNITY_MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+// release_year_month is a fractional value (e.g. 2019.083 for Feb 2019) so games
+// spread out within a year instead of stacking at one X position per year.
+function formatReleaseYearMonth(value) {
+  const year = Math.floor(value);
+  const month = Math.min(11, Math.max(0, Math.round((value - year) * 12)));
+  return `${OPPORTUNITY_MONTH_NAMES[month]} ${year}`;
+}
+
 async function loadGames() {
   const res = await fetch(`${sitePathPrefix()}data/games.json`);
   return res.json();

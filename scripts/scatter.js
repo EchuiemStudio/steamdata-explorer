@@ -1,7 +1,42 @@
-const TIER_SCATTER_COLORS = { hit: '#52c97a', mid: '#c99a56', niche: '#a69c8e' }; // matches --tier-hit/mid/niche badges
+const TIER_SCATTER_COLORS = { hit: '#5b9dd9', mid: '#c99a56', niche: '#c9754a' }; // matches --tier-hit/mid/niche badges
+const SCATTER_POINT_RADIUS = 6;
+const SCATTER_POINT_HOVER_RADIUS = 9;
 
 function boxesOverlap(a, b) {
   return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+}
+
+// Soft emissive halo behind each point, matching the brass/graphite theme's glow motif
+// elsewhere (--shadow-glow, the metallic text sheen). Reads el.options.radius rather than
+// a fixed size so the glow shrinks/grows in lockstep with the point during the filter
+// transition below — when a point's radius animates to 0 its glow fades out with it.
+// Dim at rest, brightens on hover (chart.getActiveElements() drives which point that is —
+// same interaction Chart.js already uses internally for hoverRadius/tooltips).
+function pointGlowPlugin() {
+  return {
+    id: 'pointGlow',
+    beforeDatasetsDraw(chart) {
+      const meta = chart.getDatasetMeta(0);
+      const points = chart.data.datasets[0].data;
+      const { ctx } = chart;
+      const activeIdxs = new Set(chart.getActiveElements().map((active) => active.index));
+      ctx.save();
+      meta.data.forEach((el, i) => {
+        const r = el.options?.radius;
+        if (!r) return;
+        const color = TIER_SCATTER_COLORS[points[i]?.tier] || VIZ_PRIMARY;
+        const alpha = activeIdxs.has(i) ? '4d' : '1a';
+        const gradient = ctx.createRadialGradient(el.x, el.y, 0, el.x, el.y, r * 2.6);
+        gradient.addColorStop(0, `${color}${alpha}`);
+        gradient.addColorStop(1, `${color}00`);
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(el.x, el.y, r * 2.6, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      ctx.restore();
+    },
+  };
 }
 
 function pointLabelPlugin(getLabelIdxs) {
@@ -55,65 +90,70 @@ function pointLabelPlugin(getLabelIdxs) {
   };
 }
 
-// data/games.json is stored contiguously grouped by performance_tier (all "hit" games
-// first, then "mid", then "niche"), an artifact of how the sampling script built it.
-// Chart.js animates points by array index (old[i] -> new[i]) on update(), so isolating
-// "hit" — already a contiguous prefix of the unfiltered array — produces an identical
-// index-for-index mapping and animates nothing; isolating "mid"/"niche" shifts every
-// game to a different index and animates a big, inconsistent-looking "rescatter". A
-// fresh shuffle on every update() makes index alignment collide by chance rather than
-// by data ordering, so all three tiers behave the same way.
-function shufflePoints(points) {
-  const copy = [...points];
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy;
-}
-
-function pickScatterOutliers(points) {
-  if (points.length === 0) return [];
+function pickScatterOutliers(indexedPoints) {
+  if (indexedPoints.length === 0) return [];
   let highestY = 0;
   let highestX = 0;
-  let bestValue = points[0].x > 0 ? 0 : -1;
-  for (let i = 1; i < points.length; i++) {
-    if (points[i].y > points[highestY].y) highestY = i;
-    if (points[i].x > points[highestX].x) highestX = i;
-    if (points[i].x > 0) {
-      const ratio = points[i].y / points[i].x;
-      const bestRatio = bestValue >= 0 ? points[bestValue].y / points[bestValue].x : -Infinity;
+  let bestValue = indexedPoints[0].point.x > 0 ? 0 : -1;
+  for (let i = 1; i < indexedPoints.length; i++) {
+    if (indexedPoints[i].point.y > indexedPoints[highestY].point.y) highestY = i;
+    if (indexedPoints[i].point.x > indexedPoints[highestX].point.x) highestX = i;
+    if (indexedPoints[i].point.x > 0) {
+      const ratio = indexedPoints[i].point.y / indexedPoints[i].point.x;
+      const bestRatio = bestValue >= 0
+        ? indexedPoints[bestValue].point.y / indexedPoints[bestValue].point.x
+        : -Infinity;
       if (ratio > bestRatio) bestValue = i;
     }
   }
-  return [...new Set([highestY, highestX, bestValue].filter((i) => i >= 0))];
+  return [...new Set([highestY, highestX, bestValue].filter((i) => i >= 0))].map((i) => indexedPoints[i].index);
 }
 
 function createScatterChart({
   container, titleText, xLabel, yLabel, xKey, xType, tooltipX, xBeginAtZero, xTicksCallback, xMin, xMax,
-  yKey = 'review_score_percent', yType = 'linear', yMin, yMax, tooltipY,
+  yKey = 'review_score_percent', yType = 'linear', yMin, yMax, tooltipY, yTicksCallback,
 }) {
   let chart = null;
   let currentLabelIdxs = [];
-  let currentPoints = [];
+  // Points live at a stable, append-only index keyed by appid — filtering never removes
+  // or reorders them, it only flips __visible and re-targets radius to 0/full. That way
+  // Chart.js's own animation only has to interpolate the points that are actually
+  // entering or leaving; a point present before and after a filter change keeps the same
+  // index/x/y/radius throughout and never re-animates ("respawns").
+  const orderedPoints = [];
+  const pointIndexByAppId = new Map();
   const beginAtZero = xBeginAtZero != null ? xBeginAtZero : xType !== 'logarithmic';
   const formatY = tooltipY || ((y) => `${y}% positive`);
 
   return {
     update(games) {
       const scored = games.filter((g) => g[yKey] != null && g[xKey] != null);
-      const points = shufflePoints(scored.map((g) => ({
-        x: g[xKey],
-        y: g[yKey],
-        name: g.name,
-        tier: g.performance_tier,
-        appid: g.appid,
-      })));
-      currentPoints = points;
-      currentLabelIdxs = pickScatterOutliers(points);
+      const wantedIds = new Set(scored.map((g) => g.appid));
+
+      scored.forEach((g) => {
+        if (!pointIndexByAppId.has(g.appid)) {
+          pointIndexByAppId.set(g.appid, orderedPoints.length);
+          orderedPoints.push({
+            x: g[xKey], y: g[yKey], name: g.name, tier: g.performance_tier, appid: g.appid, __visible: false,
+          });
+        }
+      });
+      orderedPoints.forEach((p) => { p.__visible = wantedIds.has(p.appid); });
+
+      const visibleIndexed = orderedPoints
+        .map((point, index) => ({ point, index }))
+        .filter((entry) => entry.point.__visible);
+      currentLabelIdxs = pickScatterOutliers(visibleIndexed);
+
+      const radii = orderedPoints.map((p) => (p.__visible ? SCATTER_POINT_RADIUS : 0));
+      const hoverRadii = orderedPoints.map((p) => (p.__visible ? SCATTER_POINT_HOVER_RADIUS : 0));
 
       if (chart) {
-        chart.data.datasets[0].data = points;
+        const dataset = chart.data.datasets[0];
+        dataset.data = orderedPoints;
+        dataset.radius = radii;
+        dataset.hoverRadius = hoverRadii;
+        chart.options.animation = { duration: 280, easing: 'easeOutQuad' };
         chart.update();
         return;
       }
@@ -122,19 +162,28 @@ function createScatterChart({
         type: 'scatter',
         data: {
           datasets: [{
-            data: points,
-            backgroundColor: (ctx) => TIER_SCATTER_COLORS[ctx.raw?.tier] || VIZ_PRIMARY,
-            borderColor: VIZ_SURFACE,
+            data: orderedPoints,
+            // Dims every point except the hovered one (getActiveElements) a little, so
+            // the highlighted point reads as clearly foregrounded rather than just bigger.
+            backgroundColor: (ctx) => {
+              const color = TIER_SCATTER_COLORS[ctx.raw?.tier] || VIZ_PRIMARY;
+              const active = ctx.chart.getActiveElements();
+              const isSibling = active.length && !active.some((a) => a.index === ctx.dataIndex);
+              return isSibling ? `${color}b3` : color;
+            },
             borderWidth: 1,
-            radius: 5,
-            hoverRadius: 7,
+            borderColor: `${VIZ_SURFACE}66`,
+            hoverBorderColor: VIZ_SURFACE,
+            hoverBorderWidth: 2,
+            radius: radii,
+            hoverRadius: hoverRadii,
           }],
         },
-        plugins: [pointLabelPlugin(() => currentLabelIdxs)],
+        plugins: [pointGlowPlugin(), pointLabelPlugin(() => currentLabelIdxs)],
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          onClick: gameClickHandler((idx) => currentPoints[idx]),
+          onClick: gameClickHandler((idx) => orderedPoints[idx]),
           plugins: {
             legend: { display: false },
             title: { display: true, text: titleText, color: VIZ_TEXT, font: { size: 13, weight: '600' } },
@@ -162,13 +211,19 @@ function createScatterChart({
               type: yType,
               title: { display: true, text: yLabel, color: VIZ_MUTED },
               grid: { color: VIZ_GRID },
-              ticks: { color: VIZ_MUTED },
+              ticks: yTicksCallback ? { color: VIZ_MUTED, callback: yTicksCallback } : { color: VIZ_MUTED },
               ...(yMin != null ? { min: yMin } : {}),
               ...(yMax != null ? { max: yMax } : {}),
             },
           },
         },
       });
+    },
+    destroy() {
+      if (chart) {
+        chart.destroy();
+        chart = null;
+      }
     },
   };
 }

@@ -427,6 +427,7 @@ main.container section[id] {
 .game-strip {
   scrollbar-width: none;
   -ms-overflow-style: none;
+  touch-action: pan-x; /* lock touch drags to horizontal — without this, a diagonal swipe also scrolls the page vertically */
   mask-image: linear-gradient(to right, transparent, black var(--space-2), black calc(100% - var(--space-2)), transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black var(--space-2), black calc(100% - var(--space-2)), transparent);
 }
@@ -523,22 +524,58 @@ main.container section[id] {
   background: var(--tier-niche-soft);
 }
 
+/* The plain .tier-badge (used elsewhere as a passive read-only label, e.g. in the tier
+   breakdown cards) is intentionally left untouched above — a small soft-tint pill is
+   correct for a label. --toggle is a real filter control and needs to read as one: an
+   always-visible tier-colored outline (not hover-only), bigger tap target, and a bold
+   solid-fill "selected" state for each currently-active tier (any combination of the
+   three can be active at once) — not just the inactive ones dimming, which was too
+   indirect a signal on its own. */
 .tier-badge--toggle {
-  border: none;
+  border: 1.5px solid currentColor;
+  padding: 5px 14px;
   cursor: pointer;
   font: inherit;
-  transition: opacity 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.15s ease, transform 0.15s var(--ease-cinematic), box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.tier-badge--toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
 .tier-badge--toggle.tier-badge--inactive {
   opacity: 0.35;
+  box-shadow: none;
+}
+
+.tier-badge--toggle.tier-badge--inactive:hover {
+  opacity: 0.65;
+}
+
+.tier-badge--toggle.tier-badge--selected {
+  color: var(--color-bg);
+}
+
+.tier-badge--toggle.tier-badge--selected.tier-badge--hit {
+  background: var(--tier-hit);
+}
+
+.tier-badge--toggle.tier-badge--selected.tier-badge--mid {
+  background: var(--tier-mid);
+}
+
+.tier-badge--toggle.tier-badge--selected.tier-badge--niche {
+  background: var(--tier-niche);
 }
 
 /* Opacity-only transitions never fire on whichever badge ends up active (its opacity
    was already 1, so there's nothing to animate) — this gives every click, including
    that one, a visible press response regardless of whether its class actually changed. */
 .tier-badge--toggle:active {
-  transform: scale(0.92);
+  transform: scale(0.92) translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 /* --- Chips (genre / tag filters) --- */
@@ -857,7 +894,56 @@ main.container section[id] {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+/* --- Axis picker (Test: Axis Explorer) --- */
+
+.axis-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.axis-picker__field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.axis-select {
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.axis-select:hover,
+.axis-select:focus-visible {
+  border-color: var(--color-accent);
+}
+
+.page-header__badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent-2);
+  border: 1px solid var(--color-accent-2);
+  border-radius: 999px;
+  padding: 2px 8px;
 }
 
 .price-bucket-detail {
@@ -989,69 +1075,6 @@ main.container section[id] {
 .chart-modal__scroll {
   position: relative;
   width: 100%;
-}
-
-/* --- Data table --- */
-
-.game-table-wrap {
-  overflow-x: auto;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-top: 1px solid rgba(var(--color-emission-rgb), 0.12);
-  border-radius: var(--radius-md);
-}
-
-.game-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.85rem;
-  font-variant-numeric: tabular-nums;
-}
-
-.game-table th,
-.game-table td {
-  padding: var(--space-2) var(--space-3);
-  text-align: left;
-  border-bottom: 1px solid var(--color-border);
-  white-space: nowrap;
-}
-
-.game-table th {
-  color: var(--color-text-muted);
-  font-weight: 600;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
-.game-table tbody tr {
-  transition: background 0.15s ease;
-}
-
-.game-table tbody tr:hover {
-  background: var(--color-surface-2);
-}
-
-.game-table__sortable {
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.2s ease;
-}
-
-.game-table__sortable:hover {
-  color: var(--color-accent);
-}
-
-.game-table__count {
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-  margin-top: var(--space-2);
-}
-
-.data-view-toggle {
-  display: flex;
-  gap: var(--space-2);
-  margin-bottom: var(--space-3);
 }
 
 /* --- Footer --- */
