@@ -207,11 +207,48 @@ async function main() {
     }
   }
 
+  const aggregates = buildAggregates(games);
+
   const fs = await import('node:fs/promises');
   await fs.writeFile('data/games.json', JSON.stringify(games, null, 2));
-  await fs.writeFile('data/aggregates.json', JSON.stringify(buildAggregates(games), null, 2));
+  await fs.writeFile('data/aggregates.json', JSON.stringify(aggregates, null, 2));
 
   console.log(`Done. Wrote ${games.length} games to data/games.json.`);
+
+  await writeToSupabase(games, aggregates);
+}
+
+// Dual-write during the hub-pivot migration, same rationale as fetch-news.js's
+// writeToSupabase(): skip quietly with no credentials, throw on a real write failure
+// once SUPABASE_URL/SUPABASE_SERVICE_ROLE_KEY are configured.
+async function writeToSupabase(games, aggregates) {
+  const { loadEnv } = require('./load-env');
+  loadEnv();
+  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    console.log('Skipped Supabase write: SUPABASE_URL/SUPABASE_SERVICE_ROLE_KEY not set.');
+    return;
+  }
+
+  const { getSupabaseAdmin } = require('./supabase-admin');
+  const supabase = getSupabaseAdmin();
+
+  // Each run resamples from scratch (a different set of appids can come up), so mirror
+  // the JSON file's full overwrite rather than upserting — otherwise games dropped from
+  // this run's sample would linger in the table forever.
+  const { error: deleteError } = await supabase.from('games').delete().gt('appid', 0);
+  if (deleteError) throw deleteError;
+
+  const GAMES_BATCH_SIZE = 200;
+  for (let i = 0; i < games.length; i += GAMES_BATCH_SIZE) {
+    const batch = games.slice(i, i + GAMES_BATCH_SIZE);
+    const { error } = await supabase.from('games').insert(batch);
+    if (error) throw error;
+  }
+
+  const { error: aggError } = await supabase.from('aggregates').upsert({ id: 1, data: aggregates }, { onConflict: 'id' });
+  if (aggError) throw aggError;
+
+  console.log(`Wrote ${games.length} games + aggregates to Supabase.`);
 }
 
 // Guarded so requiring this file for buildAggregates() (e.g. from a data-migration

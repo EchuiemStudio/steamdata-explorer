@@ -81,6 +81,39 @@ async function main() {
   const fs = await import('node:fs/promises');
   await fs.writeFile('data/news.json', JSON.stringify(trimmed, null, 2));
   console.log(`Done. Wrote ${trimmed.length} news items (from ${allItems.length} fetched) to data/news.json.`);
+
+  await writeToSupabase(trimmed);
+}
+
+// Dual-write during the hub-pivot migration: data/news.json stays the fallback source
+// for one release cycle while the site's read path moves to Supabase. Skips quietly
+// when no credentials are configured (e.g. local dev without .env) — but once
+// SUPABASE_URL/SUPABASE_SERVICE_ROLE_KEY are set (as in CI), a write failure throws
+// and fails the run, same as a JSON-write failure would.
+async function writeToSupabase(items) {
+  const { loadEnv } = require('./load-env');
+  loadEnv();
+  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    console.log('Skipped Supabase write: SUPABASE_URL/SUPABASE_SERVICE_ROLE_KEY not set.');
+    return;
+  }
+
+  const { getSupabaseAdmin } = require('./supabase-admin');
+  const supabase = getSupabaseAdmin();
+
+  const { error: deleteError } = await supabase.from('content_items').delete().eq('section', 'news');
+  if (deleteError) throw deleteError;
+
+  const rows = items.map((item) => ({
+    section: 'news',
+    title: item.title,
+    url: item.link,
+    source: item.source,
+    published_at: item.pubDate ? new Date(item.pubDate).toISOString() : null,
+  }));
+  const { error: insertError } = await supabase.from('content_items').insert(rows);
+  if (insertError) throw insertError;
+  console.log(`Wrote ${rows.length} news items to Supabase.`);
 }
 
 main().catch((err) => {

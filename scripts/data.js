@@ -21,13 +21,15 @@ function formatReleaseYearMonth(value) {
 }
 
 async function loadGames() {
-  const res = await fetch(`${sitePathPrefix()}data/games.json`);
-  return res.json();
+  const { data, error } = await supabaseClient.from('games').select('*');
+  if (error) throw error;
+  return data;
 }
 
 async function loadAggregates() {
-  const res = await fetch(`${sitePathPrefix()}data/aggregates.json`);
-  return res.json();
+  const { data, error } = await supabaseClient.from('aggregates').select('data').eq('id', 1).single();
+  if (error) throw error;
+  return data.data;
 }
 
 function showLoadError(container) {

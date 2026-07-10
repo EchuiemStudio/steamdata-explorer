@@ -34,9 +34,13 @@ async function initNews() {
 
   let items;
   try {
-    const res = await fetch(`${sitePathPrefix()}data/news.json`);
-    items = await res.json();
-    if (!Array.isArray(items)) throw new Error('news.json did not return an array');
+    const { data, error } = await supabaseClient
+      .from('content_items')
+      .select('title, url, source, published_at')
+      .eq('section', 'news')
+      .order('published_at', { ascending: false });
+    if (error) throw error;
+    items = data.map((row) => ({ title: row.title, link: row.url, source: row.source, pubDate: row.published_at }));
   } catch (err) {
     const errorHTML = '<p class="empty-state">Could not load news.</p>';
     if (stripContainer) stripContainer.innerHTML = errorHTML;
