@@ -20,16 +20,59 @@ function formatReleaseYearMonth(value) {
   return `${OPPORTUNITY_MONTH_NAMES[month]} ${year}`;
 }
 
+// A live Supabase query round-trips in ~600ms regardless of payload size (mostly network
+// latency, not transfer time) versus the ~0ms a same-origin static file used to cost before
+// the Hub Pivot moved data off static JSON. Game/aggregate data only changes when the daily
+// fetch scripts run, so a short client-side cache absorbs that cost for repeat page loads
+// within the same browser without reintroducing staleness beyond the TTL window.
+const DATA_CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
+
+function readDataCache(key) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return null;
+    const { data, savedAt } = JSON.parse(raw);
+    if (Date.now() - savedAt > DATA_CACHE_TTL_MS) return null;
+    return data;
+  } catch {
+    return null; // corrupt entry, private-browsing localStorage restrictions, etc — just refetch
+  }
+}
+
+function writeDataCache(key, data) {
+  try {
+    localStorage.setItem(key, JSON.stringify({ data, savedAt: Date.now() }));
+  } catch {
+    // localStorage full/unavailable — caching is an optimization, not a requirement
+  }
+}
+
 async function loadGames() {
+  const cached = readDataCache('cache:games');
+  if (cached) return cached;
   const { data, error } = await supabaseClient.from('games').select('*');
   if (error) throw error;
+  writeDataCache('cache:games', data);
   return data;
 }
 
 async function loadAggregates() {
+  const cached = readDataCache('cache:aggregates');
+  if (cached) return cached;
   const { data, error } = await supabaseClient.from('aggregates').select('data').eq('id', 1).single();
   if (error) throw error;
+  writeDataCache('cache:aggregates', data.data);
   return data.data;
+}
+
+// Delays fn until `wait` ms after the last call — used for the Browse page's name-search
+// input so every keystroke doesn't trigger a full filter + grid re-render.
+function debounce(fn, wait) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), wait);
+  };
 }
 
 function showLoadError(container) {

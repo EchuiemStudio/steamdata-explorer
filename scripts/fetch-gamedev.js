@@ -6,9 +6,11 @@
 
 const { parseFeedItems } = require('./feed-parse');
 
+// GMTK's blog feed (gamemakerstoolkit.com/feed/) was tried and dropped: confirmed live
+// but permanently empty — Mark Brown posts to YouTube, not the blog. The YouTube feed
+// below already covers that content.
 const FEEDS = [
   { name: 'Game Developer', url: 'https://www.gamedeveloper.com/rss.xml' },
-  { name: 'GMTK Blog', url: 'https://gamemakerstoolkit.com/feed/' },
   { name: 'GMTK (YouTube)', url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCqJ-Xo29CKyLTjn6z2XwYAw' },
 ];
 const ITEMS_PER_FEED = 15;

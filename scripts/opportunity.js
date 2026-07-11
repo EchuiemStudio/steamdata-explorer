@@ -12,6 +12,7 @@ function createOpportunitySection({ container, games }) {
     </div>
     <h3 class="chart-section__title">Matching games</h3>
     <div class="opportunity-cards-view game-grid"></div>
+    <button type="button" class="see-more-btn grid-load-more" hidden></button>
   `;
 
   const pickerContainer = container.querySelector('.opportunity-picker');
@@ -47,16 +48,28 @@ function createOpportunitySection({ container, games }) {
     tooltipY: (y) => `${y.toLocaleString()} reviews`,
   });
   const cardsContainer = container.querySelector('.opportunity-cards-view');
+  const loadMoreBtn = container.querySelector('.grid-load-more');
+  const GRID_PAGE_SIZE = 60; // caps the card grid below the chart; the scatter plot itself always shows every match
+  let visibleCount = GRID_PAGE_SIZE;
 
-  function recompute() {
+  function recompute({ resetPage = true } = {}) {
     const selected = picker.getSelected();
     const labelFiltered = games.filter((g) => matchesFilters(g, selected, { mode: 'all' }));
     const filtered = labelFiltered.filter((g) => selectedTiers.has(g.performance_tier));
     hint.hidden = selected.size !== 0;
     hint.textContent = `Showing all ${games.length} games.`;
+    if (resetPage) visibleCount = GRID_PAGE_SIZE;
     scatter.update(filtered);
-    renderGameGrid(cardsContainer, filtered);
+    renderGameGrid(cardsContainer, filtered.slice(0, visibleCount));
+    const remaining = filtered.length - visibleCount;
+    loadMoreBtn.hidden = remaining <= 0;
+    loadMoreBtn.textContent = `Show ${Math.min(remaining, GRID_PAGE_SIZE)} more (${filtered.length} total)`;
   }
+
+  loadMoreBtn.addEventListener('click', () => {
+    visibleCount += GRID_PAGE_SIZE;
+    recompute({ resetPage: false });
+  });
 
   legend.addEventListener('click', (event) => {
     const button = event.target.closest('[data-tier]');

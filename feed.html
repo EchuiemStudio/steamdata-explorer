@@ -13,7 +13,13 @@
   <link rel="stylesheet" href="styles/tokens.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body data-page="feed">
+<body>
+  <script>
+    // Runs synchronously during parsing (before the deferred nav.js reads data-page
+    // below) so the correct nav link highlights per ?section= — one HTML file serves
+    // 4 sections, so this can't just be a static attribute like every other page.
+    document.body.dataset.page = 'feed-' + (new URLSearchParams(location.search).get('section') || '');
+  </script>
   <div id="nav-placeholder"></div>
 
   <main class="container">
