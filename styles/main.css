@@ -546,7 +546,21 @@ main.container section[id] {
 
 .news-item__title {
   font-size: 0.9rem;
+  font-weight: 600;
   margin-bottom: 2px;
+}
+
+.news-item__excerpt {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin-bottom: var(--space-1);
+  /* Clamp to 2 lines instead of trusting the ~200-char truncation alone - some sources'
+     descriptions run longer per-character (e.g. wide characters, emoji) than others. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .news-item__meta {

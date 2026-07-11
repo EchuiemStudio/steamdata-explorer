@@ -27,6 +27,7 @@ function feedItemHTML(item) {
   return `
     <a class="news-item" href="${escapeHTML(item.link)}" target="_blank" rel="noopener noreferrer">
       <div class="news-item__title">${escapeHTML(item.title)}</div>
+      ${item.description ? `<div class="news-item__excerpt">${escapeHTML(item.description)}</div>` : ''}
       <div class="news-item__meta">${escapeHTML(item.source)}${dateStr ? ` &middot; ${dateStr}` : ''}</div>
     </a>
   `;
@@ -39,7 +40,9 @@ async function initFeedPage() {
   if (!container) return;
 
   const section = new URLSearchParams(window.location.search).get('section');
-  const meta = FEED_SECTIONS[section];
+  // Object.hasOwn guards against a crafted ?section= value (e.g. "constructor") matching
+  // an inherited Object.prototype member instead of failing the "no such section" check.
+  const meta = Object.hasOwn(FEED_SECTIONS, section || '') ? FEED_SECTIONS[section] : undefined;
 
   if (!meta) {
     // textContent, not innerHTML, is already safe against injection here — running the
@@ -58,12 +61,14 @@ async function initFeedPage() {
   try {
     const { data, error } = await supabaseClient
       .from('content_items')
-      .select('title, url, source, published_at')
+      .select('title, url, source, description, published_at')
       .eq('section', section)
       .order('published_at', { ascending: false, nullsFirst: false });
     if (error) throw error;
 
-    const items = data.map((row) => ({ title: row.title, link: row.url, source: row.source, pubDate: row.published_at }));
+    const items = data.map((row) => ({
+      title: row.title, link: row.url, source: row.source, description: row.description, pubDate: row.published_at,
+    }));
     container.innerHTML = items.length
       ? items.map(feedItemHTML).join('')
       : '<p class="empty-state">No items available right now.</p>';

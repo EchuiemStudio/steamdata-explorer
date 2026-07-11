@@ -72,6 +72,7 @@ async function writeToSupabase(items) {
     title: item.title,
     url: item.link,
     source: item.source,
+    description: item.description,
     published_at: item.pubDate ? new Date(item.pubDate).toISOString() : null,
   }));
   const { error: insertError } = await supabase.from('content_items').insert(rows);
