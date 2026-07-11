@@ -38,7 +38,7 @@ async function initNews() {
       .from('content_items')
       .select('title, url, source, published_at')
       .eq('section', 'news')
-      .order('published_at', { ascending: false });
+      .order('published_at', { ascending: false, nullsFirst: false });
     if (error) throw error;
     items = data.map((row) => ({ title: row.title, link: row.url, source: row.source, pubDate: row.published_at }));
   } catch (err) {

@@ -6,19 +6,19 @@
 const FEED_SECTIONS = {
   gamedev: {
     title: 'Game Dev & Design',
-    description: 'Design and craft content from around the web — not narrative/worldbuilding specifically. Refreshed on a schedule, not curated.',
+    description: 'Design and craft content from around the web, not narrative or worldbuilding specifically. New items land on a daily schedule.',
   },
   engines: {
     title: 'Engine Research',
-    description: 'Official Unreal Engine and Godot feeds. Refreshed on a schedule, not curated.',
+    description: 'Official Unreal Engine and Godot feeds, checked once a day.',
   },
   ai: {
     title: 'AI / Claude',
-    description: 'Anthropic news via an unofficial community-maintained feed. Refreshed on a schedule, not curated.',
+    description: 'Anthropic news via an unofficial, community-maintained feed, pulled in daily.',
   },
   art: {
     title: 'Art & Design',
-    description: 'Concept art and illustration blogs. A thinner feed than the others — art discovery skews visual, not RSS-friendly. Refreshed on a schedule, not curated.',
+    description: 'Concept art and illustration blogs. Thinner than the other sections here, since art discovery skews visual and isn’t very RSS-friendly.',
   },
 };
 
@@ -42,8 +42,11 @@ async function initFeedPage() {
   const meta = FEED_SECTIONS[section];
 
   if (!meta) {
+    // textContent, not innerHTML, is already safe against injection here — running the
+    // value through escapeHTML() first would double-escape it, showing literal "&lt;"
+    // instead of "<" for a section param containing one.
     if (titleEl) titleEl.textContent = 'Unknown feed';
-    if (descEl) descEl.textContent = `No such section "${escapeHTML(section || '')}". Valid sections: ${Object.keys(FEED_SECTIONS).join(', ')}.`;
+    if (descEl) descEl.textContent = `No such section "${section || ''}". Valid sections: ${Object.keys(FEED_SECTIONS).join(', ')}.`;
     container.innerHTML = '<p class="empty-state">Nothing to show.</p>';
     return;
   }
@@ -57,7 +60,7 @@ async function initFeedPage() {
       .from('content_items')
       .select('title, url, source, published_at')
       .eq('section', section)
-      .order('published_at', { ascending: false });
+      .order('published_at', { ascending: false, nullsFirst: false });
     if (error) throw error;
 
     const items = data.map((row) => ({ title: row.title, link: row.url, source: row.source, pubDate: row.published_at }));

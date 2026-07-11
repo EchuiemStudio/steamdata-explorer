@@ -21,25 +21,33 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # continue-on-error on each fetch: the AI section's single source is an unofficial
+      # third-party feed that could go stale or disappear (see hub-sections-plan.md) - one
+      # section failing shouldn't block the other three from updating or block the commit
+      # step below from running at all.
       - name: Fetch Game Dev & Design
+        continue-on-error: true
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node scripts/fetch-gamedev.js
 
       - name: Fetch Engine Research
+        continue-on-error: true
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node scripts/fetch-engines.js
 
       - name: Fetch AI / Claude
+        continue-on-error: true
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node scripts/fetch-ai.js
 
       - name: Fetch Art & Design
+        continue-on-error: true
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}

@@ -5,7 +5,8 @@
 /* Browser default focus rings are a saturated blue — breaks the color-consistency
    of the brass/graphite theme on every Tab keystroke otherwise. */
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+summary:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
@@ -168,6 +169,160 @@ main.container section[id] {
 
 .nav-links a.active::after {
   transform: scaleX(1);
+}
+
+/* Grouped nav dropdowns ("Steam Game Data" / "Hub") — native <details>/<summary>, so
+   the open/close mechanic needs no JS; nav.js only adds active-state propagation up to
+   the summary and a click-outside-to-close enhancement (see scripts/nav.js). */
+.nav-group {
+  position: relative;
+}
+
+.nav-group > summary {
+  list-style: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  padding-bottom: 4px;
+  transition: color 0.2s ease;
+}
+
+.nav-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-group > summary::after {
+  content: '\25be';
+  display: inline-block;
+  margin-left: 0.4em;
+  font-size: 0.7em;
+  transition: transform 0.2s ease;
+}
+
+.nav-group[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+.nav-group > summary:hover {
+  color: var(--color-text);
+}
+
+.nav-group > summary.active {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-shadow: 0 0 12px rgba(var(--color-emission-rgb), 0.35);
+}
+
+.nav-group__panel {
+  position: absolute;
+  top: calc(100% + var(--space-3));
+  left: 0;
+  min-width: 200px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  z-index: 20;
+}
+
+/* The last group sits near the nav's right edge (justify-content: space-between) — a
+   left-anchored panel there overflows off-screen on common 1366-1440px laptop widths.
+   Right-anchoring the last group's panel keeps it inside the viewport without needing
+   JS to measure and flip it. */
+.nav-group:last-child .nav-group__panel {
+  left: auto;
+  right: 0;
+}
+
+.nav-group__panel a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+/* .nav-links a::after (the animated underline) is a descendant selector, so it also
+   matches these panel links unintentionally, stacking its underline animation on top
+   of the background-highlight hover above. Panel links get the background treatment
+   only. */
+.nav-group__panel a::after {
+  content: none;
+}
+
+.nav-group__panel a:hover {
+  background: rgba(var(--color-emission-rgb), 0.08);
+  color: var(--color-text);
+}
+
+.nav-group__panel a.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* Homepage portal cards ("Steam Game Data" / "Hub") — same surface/hover-glow language
+   as .stat-tile/.chart-card so the new landing page doesn't introduce a third card style. */
+.portal-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.portal-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 1px solid rgba(var(--color-emission-rgb), 0.12);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  transition: transform 0.3s var(--ease-cinematic), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portal-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+}
+
+.portal-card__title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-2);
+}
+
+.portal-card__desc {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 var(--space-3);
+  max-width: 60ch;
+}
+
+.portal-card__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+}
+
+.portal-card__links a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.portal-card__links a:hover {
+  border-color: var(--color-accent);
 }
 
 /* --- Page header (hero): full-bleed band (breaks out of .container's max-width via

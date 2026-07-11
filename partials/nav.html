@@ -2,15 +2,25 @@
   <div class="nav-inner">
     <a class="nav-brand text-metallic" href="index.html">SteamData Explorer</a>
     <div class="nav-links">
-      <a href="index.html" data-page="home">Home</a>
-      <a href="browse.html" data-page="browse">Browse Data</a>
-      <a href="opportunity.html" data-page="opportunity">Opportunity Map</a>
-      <a href="news.html" data-page="news">News</a>
-      <a href="feed.html?section=gamedev" data-page="feed-gamedev">Game Dev</a>
-      <a href="feed.html?section=engines" data-page="feed-engines">Engines</a>
-      <a href="feed.html?section=ai" data-page="feed-ai">AI / Claude</a>
-      <a href="feed.html?section=art" data-page="feed-art">Art</a>
-      <a href="Test_OpportunityMap.html" data-page="test-opportunity">Axis Explorer (test)</a>
+      <details class="nav-group">
+        <summary>Steam Game Data</summary>
+        <div class="nav-group__panel">
+          <a href="steam-game-data.html" data-page="steam-game-data">Dashboard</a>
+          <a href="browse.html" data-page="browse">Browse Game Data</a>
+          <a href="opportunity.html" data-page="opportunity">Opportunity Map</a>
+          <a href="Test_OpportunityMap.html" data-page="test-opportunity">Axis Explorer (test)</a>
+        </div>
+      </details>
+      <details class="nav-group">
+        <summary>Hub</summary>
+        <div class="nav-group__panel">
+          <a href="news.html" data-page="news">Game News</a>
+          <a href="feed.html?section=gamedev" data-page="feed-gamedev">Game Dev & Design</a>
+          <a href="feed.html?section=engines" data-page="feed-engines">Engine Research</a>
+          <a href="feed.html?section=ai" data-page="feed-ai">AI / Claude</a>
+          <a href="feed.html?section=art" data-page="feed-art">Art & Design</a>
+        </div>
+      </details>
     </div>
   </div>
 </nav>

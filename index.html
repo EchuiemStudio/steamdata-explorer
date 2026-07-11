@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A browsable snapshot of 716 public Steam games — genres, tags, price, and real review data. Filter, chart, and explore market patterns.">
+  <meta name="description" content="SteamData Explorer: a personal hub with a Steam game data section (charts, filters, opportunity analysis) and a fast, unfiltered feed across game dev, engines, AI, and art.">
   <meta name="theme-color" content="#16130f">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>SteamData Explorer</title>
@@ -13,110 +13,53 @@
   <link rel="stylesheet" href="styles/tokens.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body data-page="home">
+<body data-page="portal">
   <div id="nav-placeholder"></div>
 
   <main class="container">
     <header class="page-header">
-      <div class="hero-collage" aria-hidden="true"></div>
       <h1 class="text-metallic">SteamData Explorer</h1>
-      <p>
-        A browsable snapshot of public Steam games &mdash; genres, tags, price, and real review data.
-        No sales or "units sold" figures anywhere: Steam has no free API for those, so only genuine
-        review counts and scores are shown. Filter below to slice the data before reading any chart.
-      </p>
+      <p>Two sections below. Pick where you want to look.</p>
     </header>
 
-    <section class="chart-section" data-reveal>
-      <h2 class="chart-section__title">Latest Gaming News</h2>
-      <p class="chart-section__caption">General gaming news from around the web &mdash; not limited to games in this dataset.</p>
-      <div class="news-strip" data-lenis-prevent></div>
-      <a class="see-more-btn" href="news.html">See more news &rarr;</a>
-    </section>
-
-    <section id="filters" data-reveal>
-      <div class="global-filter-panel"></div>
-    </section>
-
-    <section class="section-panel" data-reveal>
-      <section id="stat-tiles" class="stat-tiles"></section>
-      <section id="tier-breakdown" class="tier-breakdown"></section>
-    </section>
-
-    <section id="charts" class="chart-section" data-reveal>
-      <h2 class="chart-section__title">Highest, lowest &amp; most reviewed</h2>
-      <p class="chart-section__caption">
-        Ranked within the current filter only &mdash; not a Steam-wide ranking. Click a bar to open
-        that game on Steam; use the expand icon to see a chart bigger.
-      </p>
-      <div class="chart-pair">
-        <div class="chart-card chart-card--bars">
-          <button type="button" class="chart-card__expand-btn" data-expand-target="highest" aria-label="Expand Highest rated chart">&#10530;</button>
-          <canvas class="chart-highest" role="img" aria-label="Bar chart of the 10 highest-rated games"></canvas>
-        </div>
-        <div class="chart-card chart-card--bars">
-          <button type="button" class="chart-card__expand-btn" data-expand-target="lowest" aria-label="Expand Lowest rated chart">&#10530;</button>
-          <canvas class="chart-lowest" role="img" aria-label="Bar chart of the 10 lowest-rated games"></canvas>
-        </div>
+    <section class="portal-groups" data-reveal>
+      <div class="portal-card">
+        <h2 class="portal-card__title">Steam Game Data</h2>
+        <p class="portal-card__desc">
+          A sampled set of public Steam games: genres, tags, price, and real review data.
+          No sales figures, since Steam has no free API for those, only genuine review
+          counts and scores.
+        </p>
+        <ul class="portal-card__links">
+          <li><a href="steam-game-data.html" data-page="steam-game-data">Dashboard</a></li>
+          <li><a href="browse.html" data-page="browse">Browse Game Data</a></li>
+          <li><a href="opportunity.html" data-page="opportunity">Opportunity Map</a></li>
+          <li><a href="Test_OpportunityMap.html" data-page="test-opportunity">Axis Explorer (test)</a></li>
+        </ul>
       </div>
-      <div class="chart-card chart-card--bars" style="margin-top: var(--space-3);">
-        <button type="button" class="chart-card__expand-btn" data-expand-target="most-reviewed" aria-label="Expand Most reviewed chart">&#10530;</button>
-        <canvas class="chart-most-reviewed" role="img" aria-label="Bar chart of the 10 most-reviewed games"></canvas>
-      </div>
-    </section>
 
-    <section class="chart-section" data-reveal>
-      <h2 class="chart-section__title">Price &amp; tag patterns</h2>
-      <p class="chart-section__caption">Click a price bucket bar to see which games are in it.</p>
-      <div class="chart-pair">
-        <div class="chart-card"><canvas class="chart-tag-frequency" role="img" aria-label="Diverging bar chart of tags skewing toward hit or niche games"></canvas></div>
-        <div class="chart-card"><canvas class="chart-price-bucket" role="img" aria-label="Bar chart of games by price bucket"></canvas></div>
-      </div>
-      <div class="price-bucket-detail"></div>
-    </section>
-
-    <section class="chart-section" data-reveal>
-      <h2 class="chart-section__title">Review keyword patterns</h2>
-      <p class="chart-section__caption">What positive and negative reviewers actually say, from a sample of each game's reviews.</p>
-      <div class="chart-card">
-        <canvas class="chart-review-keywords" role="img" aria-label="Diverging bar chart of review words skewing positive or negative"></canvas>
-      </div>
-    </section>
-
-    <section id="scatters" class="chart-section" data-reveal>
-      <h2 class="chart-section__title">Price &amp; popularity vs. review score</h2>
-      <p class="chart-section__caption">Unpriced games (delisted or bundle-only) aren't plotted.</p>
-      <div class="chart-legend">
-        <button type="button" class="tier-badge tier-badge--hit tier-badge--toggle" data-tier="hit">hit</button>
-        <button type="button" class="tier-badge tier-badge--mid tier-badge--toggle" data-tier="mid">mid</button>
-        <button type="button" class="tier-badge tier-badge--niche tier-badge--toggle" data-tier="niche">niche</button>
-      </div>
-      <div class="chart-pair">
-        <div class="chart-card"><canvas class="chart-price-score" role="img" aria-label="Scatter plot of price versus review score"></canvas></div>
-        <div class="chart-card"><canvas class="chart-count-score" role="img" aria-label="Scatter plot of review count versus review score"></canvas></div>
+      <div class="portal-card">
+        <h2 class="portal-card__title">Hub</h2>
+        <p class="portal-card__desc">
+          A raw, unfiltered feed, not curated, just refreshed daily. It's a radar, not a
+          reading list: anything worth keeping gets pulled out by hand later.
+        </p>
+        <ul class="portal-card__links">
+          <li><a href="news.html" data-page="news">Game News</a></li>
+          <li><a href="feed.html?section=gamedev" data-page="feed-gamedev">Game Dev & Design</a></li>
+          <li><a href="feed.html?section=engines" data-page="feed-engines">Engine Research</a></li>
+          <li><a href="feed.html?section=ai" data-page="feed-ai">AI / Claude</a></li>
+          <li><a href="feed.html?section=art" data-page="feed-art">Art & Design</a></li>
+        </ul>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    Data pulled from SteamSpy and the Steam Store API &middot; sampled snapshot, not a market survey.
+    A personal hub: Steam game data plus a daily feed across game dev, engines, AI, and art.
   </footer>
 
-  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
   <script defer src="scripts/nav.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
-  <script defer src="scripts/supabase-client.js"></script>
-  <script defer src="scripts/data.js"></script>
-  <script defer src="scripts/chart-interactions.js"></script>
-  <script defer src="scripts/cards.js"></script>
-  <script defer src="scripts/filters.js"></script>
-  <script defer src="scripts/insights.js"></script>
-  <script defer src="scripts/scatter.js"></script>
-  <script defer src="scripts/news.js"></script>
-  <script defer src="scripts/home.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.24/dist/lenis.min.js"></script>
   <script defer src="scripts/motion.js"></script>
 </body>
 </html>

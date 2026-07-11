@@ -38,17 +38,27 @@ wired up to anything).
 
 ## Architecture
 
-**Pages** (each a standalone HTML file, no router): `index.html` (home),
+**Pages** (each a standalone HTML file, no router): `index.html` is a portal
+landing page (two category cards: "Steam Game Data" and "Hub", linking out
+to the pages below) — it is NOT the dashboard. The Steam dashboard (hero
+collage, stat tiles, charts) lives at `steam-game-data.html`. Also:
 `browse.html`, `opportunity.html`, `Test_OpportunityMap.html` (experimental
 axis-picker variant of the Opportunity Map, `data-page="test-opportunity"`),
-`news.html`. Each `<body>` carries `data-page="..."` (used by nav to highlight
-the active link) and `data-base` when deployed under a subpath (read by
+`news.html` ("Game News"), and `feed.html?section=<name>` (one generic page
+serving 4 Hub content sections: gamedev/engines/ai/art). Each `<body>`
+carries `data-page="..."` (used by nav to highlight the active link,
+including the parent `<summary>` when the link is inside a nav dropdown
+group) and `data-base` when deployed under a subpath (read by
 `sitePathPrefix()` in `scripts/nav.js` and `scripts/data.js` to prefix fetches
-to `data/*.json` and `partials/nav.html`).
+to `data/*.json` and `partials/nav.html`). `feed.html` sets its `data-page`
+dynamically via an inline `<script>` (before nav.js runs) since one file
+serves 4 different sections.
 
 **Shared nav**: `partials/nav.html` is fetched and injected into
 `#nav-placeholder` at runtime by `scripts/nav.js` — it is not duplicated per
-page.
+page. The nav itself is two `<details>/<summary>` dropdown groups ("Steam
+Game Data" and "Hub"), not flat links — native disclosure elements, no JS
+needed for the open/close mechanic itself.
 
 **Data layer**: `data/games.json` (per-game records) and
 `data/aggregates.json` (precomputed cross-game stats: genre counts, tier
@@ -81,9 +91,12 @@ dependency order via `<script defer>`) and then a page-specific
 - `scripts/motion.js` — GSAP/ScrollTrigger reveal animations + Lenis smooth
   scroll; opts individual elements in via `data-reveal` and out of Lenis
   capture via `data-lenis-prevent`.
-- `scripts/home.js`, `scripts/browse.js`, `scripts/opportunity.js`,
-  `scripts/test-opportunity.js`, `scripts/news.js` — one per page, each calls
-  its own `init<Page>Page()` at the bottom of the file.
+- `scripts/home.js` (drives `steam-game-data.html`, despite the filename —
+  named before the IA rework that moved the dashboard off `index.html`),
+  `scripts/browse.js`, `scripts/opportunity.js`, `scripts/test-opportunity.js`,
+  `scripts/news.js`, `scripts/feed.js` (the generic Hub section page) — one
+  per page, each calls its own `init<Page>Page()` at the bottom of the file.
+  `index.html` (the portal) has no page-specific script; it's static links only.
 
 **Styling**: `styles/tokens.css` holds all design tokens (the "Brass &
 Graphite" dark theme — warm charcoal surfaces, brass/copper accents, fixed

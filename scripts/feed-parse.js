@@ -3,14 +3,25 @@
 // because some verified sources are Atom, not RSS (YouTube channel feeds, Unreal Engine's
 // official feed) despite several of them being named "rss.xml".
 
+// &amp; is decoded LAST: decoding it first would turn a genuinely double-encoded
+// "&amp;lt;" into "&lt;", which the &lt;/&gt;/etc. replacements below it would then
+// decode a second time into "<" — over-decoding input that was correctly escaped twice.
 function decodeEntities(str) {
   return str
-    .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
     .replace(/&#0?39;/g, "'")
-    .replace(/&#82(1[6-9]|2[01]);/g, (_, code) => ({ '216': '‘', '217': '’', '220': '“', '221': '”' }[code] || ''));
+    // Curly quotes: capture the full 3-digit code (216/217/218/219/220/221) so it
+    // matches the lookup keys directly — a prior version captured only the last 2
+    // digits ("16" instead of "216"), which never matched, silently deleting every
+    // curly-quote entity instead of converting it.
+    .replace(/&#8(21[6-9]|22[01]);/g, (_, code) => ({
+      '216': '‘', '217': '’', '218': '‚', '219': '‛', '220': '“', '221': '”',
+    }[code] || '')
+    )
+    .replace(/&amp;/g, '&');
 }
 
 function extractTag(block, tag) {
