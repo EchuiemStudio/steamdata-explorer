@@ -1216,6 +1216,25 @@ button.news-item {
 .text-modal {
   width: min(560px, 92vw);
   max-height: min(600px, 85vh);
+  overflow-y: auto;
+}
+
+/* .chart-modal__inner's height:100% (below) is meant for the OTHER two modals, which
+   have an explicit fixed height to stretch to fill. .text-modal only has a max-height,
+   and 100% of an auto-sized box is themselves auto per spec - but the .chart-modal__body
+   child below is `flex: 1`, and a flex-grow item inside a height-auto flex column is an
+   edge case some browsers resolve by collapsing it to zero height instead of "auto" -
+   which is exactly what was hiding the description text entirely (title/header still
+   rendered fine, since those aren't flex-grow items). Overriding both removes the
+   flex-grow dependency for this modal specifically: the dialog itself scrolls
+   (overflow-y: auto above) if content is too tall, instead of a nested flex body doing it. */
+.text-modal .chart-modal__inner {
+  height: auto;
+}
+
+.text-modal .chart-modal__body {
+  flex: none;
+  overflow-y: visible;
 }
 
 .chart-modal::backdrop,
@@ -1252,8 +1271,14 @@ button.news-item {
   line-height: 1;
   cursor: pointer;
   color: var(--color-text-muted);
-  padding: 0 var(--space-1);
   transition: color 0.2s ease;
+  /* 44px minimum touch target (mobile a11y baseline) - the old 0/var(--space-1) padding
+     made this close button noticeably small and fiddly to tap accurately. */
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .chart-modal__close:hover {
@@ -1278,8 +1303,28 @@ button.news-item {
   color: var(--color-text);
 }
 
+/* The primary action of this whole modal, so it gets real button chrome instead of
+   .see-more-btn's subtle bare-text-link treatment - full-width and padded specifically
+   because a small text link is a poor, hard-to-hit tap target on mobile. */
 .text-modal__link {
-  text-decoration: none; /* .see-more-btn's hover rule already adds it back on :hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.text-modal__link:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  text-decoration: none; /* .see-more-btn:hover's underline (higher specificity) otherwise wins */
 }
 
 /* --- Footer --- */

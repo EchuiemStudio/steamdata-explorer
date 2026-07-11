@@ -104,6 +104,10 @@ function openTextModal({ title, description, link }) {
     // 600px height (defeating .text-modal's own auto-sized rule) and make this dialog
     // collide with openChartModal's `.chart-modal` singleton lookup in chart-interactions.js.
     dialog.className = 'text-modal';
+    // The scroll container for long descriptions is this dialog itself (.text-modal has
+    // overflow-y: auto - see styles/main.css), not .chart-modal__body like the other two
+    // modals - so Lenis needs to ignore wheel events here too, not just over the body.
+    dialog.setAttribute('data-lenis-prevent', '');
     dialog.innerHTML = `
       <div class="chart-modal__inner">
         <div class="chart-modal__header">
