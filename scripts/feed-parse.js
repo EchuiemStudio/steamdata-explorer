@@ -69,7 +69,11 @@ function extractDate(block) {
   return extractTag(block, 'pubDate') || extractTag(block, 'published') || extractTag(block, 'updated');
 }
 
-const DESCRIPTION_MAX_LENGTH = 200;
+// Full description is stored (up to a generous safety cap, not the ~200 chars needed for
+// the inline card) since the frontend now shows the complete text in a popup modal before
+// the user decides whether to click through to the full article - the inline card view
+// still visually truncates via CSS line-clamp, but on the stored data, not this cutoff.
+const DESCRIPTION_MAX_LENGTH = 2000;
 
 function stripHtml(str) {
   return str

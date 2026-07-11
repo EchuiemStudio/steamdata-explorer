@@ -87,6 +87,48 @@ function escapeHTML(str) {
   return div.innerHTML.replaceAll('"', '&quot;').replaceAll("'", '&#39;');
 }
 
+// Single reused <dialog> for showing a feed item's full description before deciding
+// whether to click through to the article - same lazy-singleton pattern as
+// chart-interactions.js's openChartModal/openGameGridModal, sharing the same .chart-modal
+// chrome via CSS, but text-only (no chart, no game grid). Lives here (not
+// chart-interactions.js) since data.js is already loaded on every page that needs it
+// (news.html, feed.html) without adding a new script tag.
+function openTextModal({ title, description, link }) {
+  let dialog = document.querySelector('.text-modal');
+  if (!dialog) {
+    dialog = document.createElement('dialog');
+    // Deliberately NOT also "chart-modal": the shared chrome (border/background/backdrop)
+    // is already applied to .text-modal directly via CSS group selectors, and the inner
+    // chart-modal__* classes on the CHILD elements below style regardless of the dialog's
+    // own class. Carrying the literal chart-modal class here would both pull in its fixed
+    // 600px height (defeating .text-modal's own auto-sized rule) and make this dialog
+    // collide with openChartModal's `.chart-modal` singleton lookup in chart-interactions.js.
+    dialog.className = 'text-modal';
+    dialog.innerHTML = `
+      <div class="chart-modal__inner">
+        <div class="chart-modal__header">
+          <h3 class="chart-modal__title"></h3>
+          <button type="button" class="chart-modal__close" aria-label="Close">&times;</button>
+        </div>
+        <div class="chart-modal__body text-modal__body" data-lenis-prevent>
+          <p class="text-modal__description"></p>
+          <a class="see-more-btn text-modal__link" target="_blank" rel="noopener noreferrer">Read full article &#8599;</a>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(dialog);
+    dialog.querySelector('.chart-modal__close').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close(); // click landed on <dialog> itself = backdrop
+    });
+  }
+
+  dialog.querySelector('.chart-modal__title').textContent = title;
+  dialog.querySelector('.text-modal__description').textContent = description;
+  dialog.querySelector('.text-modal__link').href = link;
+  dialog.showModal();
+}
+
 function steamStoreURL(appid) {
   return `https://store.steampowered.com/app/${appid}/`;
 }

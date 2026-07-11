@@ -8,15 +8,29 @@ function formatNewsDate(pubDate) {
 }
 
 // compact skips the excerpt: the home page's .news-strip cards are a fixed 260px wide,
-// too narrow for a 200-char excerpt to fit without breaking the compact layout - only
-// the full-width news.html list shows it.
+// too narrow for an excerpt to fit without breaking the compact layout - only the
+// full-width news.html list shows it, and only there does a card with a description
+// become a <button> that pops the full text open in a modal (see openTextModal in
+// data.js) instead of immediately leaving the site; a card with no description, or the
+// compact strip, stays a plain direct link since there's nothing extra to preview.
 function newsItemHTML(item, { compact = false } = {}) {
   const dateStr = formatNewsDate(item.pubDate);
+  const metaHTML = `<div class="news-item__meta">${escapeHTML(item.source)}${dateStr ? ` &middot; ${dateStr}` : ''}</div>`;
+
+  if (!compact && item.description) {
+    return `
+      <button type="button" class="news-item" data-title="${escapeHTML(item.title)}" data-description="${escapeHTML(item.description)}" data-link="${escapeHTML(item.link)}">
+        <div class="news-item__title">${escapeHTML(item.title)}</div>
+        <div class="news-item__excerpt">${escapeHTML(item.description)}</div>
+        ${metaHTML}
+      </button>
+    `;
+  }
+
   return `
     <a class="news-item" href="${escapeHTML(item.link)}" target="_blank" rel="noopener noreferrer">
       <div class="news-item__title">${escapeHTML(item.title)}</div>
-      ${!compact && item.description ? `<div class="news-item__excerpt">${escapeHTML(item.description)}</div>` : ''}
-      <div class="news-item__meta">${escapeHTML(item.source)}${dateStr ? ` &middot; ${dateStr}` : ''}</div>
+      ${metaHTML}
     </a>
   `;
 }
@@ -27,6 +41,15 @@ function renderNewsList(container, items, { compact = false } = {}) {
     return;
   }
   container.innerHTML = items.map((item) => newsItemHTML(item, { compact })).join('');
+}
+
+// Delegated on the (stable) container rather than per-card, so it survives re-renders.
+function initNewsItemModals(container) {
+  container.addEventListener('click', (event) => {
+    const btn = event.target.closest('.news-item[data-description]');
+    if (!btn) return;
+    openTextModal({ title: btn.dataset.title, description: btn.dataset.description, link: btn.dataset.link });
+  });
 }
 
 // Home shows a compact horizontal preview (.news-strip); the dedicated news.html page
@@ -58,7 +81,10 @@ async function initNews() {
     renderNewsList(stripContainer, items.slice(0, HOME_NEWS_STRIP_LIMIT), { compact: true });
     enhanceScrollStrip(stripContainer);
   }
-  if (fullContainer) renderNewsList(fullContainer, items);
+  if (fullContainer) {
+    renderNewsList(fullContainer, items);
+    initNewsItemModals(fullContainer);
+  }
 }
 
 initNews();

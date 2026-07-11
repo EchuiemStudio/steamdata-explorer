@@ -544,6 +544,17 @@ main.container section[id] {
   transform: translateY(-2px);
 }
 
+/* Items with a description render as <button> (opens the full-text modal) instead of
+   <a> (direct link) - reset the UA button defaults so it's visually indistinguishable
+   from the <a> version otherwise sharing this same .news-item class. */
+button.news-item {
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
 .news-item__title {
   font-size: 0.9rem;
   font-weight: 600;
@@ -1182,19 +1193,34 @@ main.container section[id] {
    explicitly or the modal would show as a jarring white box on this dark theme. --- */
 
 .chart-modal,
-.game-modal {
+.game-modal,
+.text-modal {
   border: none;
   border-radius: var(--radius-lg);
   padding: 0;
   box-shadow: var(--shadow-card-hover);
-  width: min(900px, 92vw);
-  height: min(600px, 85vh);
   background: var(--color-surface);
   color: var(--color-text);
 }
 
+.chart-modal,
+.game-modal {
+  width: min(900px, 92vw);
+  height: min(600px, 85vh);
+}
+
+/* Sized to fit a paragraph of text, not a chart/grid - a fixed 600px height (like the
+   other two modals) would leave a large dead gap below a short excerpt. Grows with
+   content up to the cap instead, scrolling internally past that (rare - most excerpts
+   are well under it). */
+.text-modal {
+  width: min(560px, 92vw);
+  max-height: min(600px, 85vh);
+}
+
 .chart-modal::backdrop,
-.game-modal::backdrop {
+.game-modal::backdrop,
+.text-modal::backdrop {
   background: rgba(5, 6, 9, 0.72);
   backdrop-filter: blur(4px);
 }
@@ -1244,6 +1270,16 @@ main.container section[id] {
 .chart-modal__scroll {
   position: relative;
   width: 100%;
+}
+
+.text-modal__description {
+  margin: 0 0 var(--space-3);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.text-modal__link {
+  text-decoration: none; /* .see-more-btn's hover rule already adds it back on :hover */
 }
 
 /* --- Footer --- */

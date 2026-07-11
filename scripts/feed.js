@@ -22,15 +22,39 @@ const FEED_SECTIONS = {
   },
 };
 
+// Items with a description become a <button> that pops the full (untruncated) text open
+// in a modal instead of immediately leaving the site - the inline excerpt is CSS-clamped
+// to 2 lines, so this is how you see the rest before deciding whether it's worth a click.
+// Items with no description have nothing to preview, so they stay a plain direct link.
 function feedItemHTML(item) {
   const dateStr = item.pubDate ? new Date(item.pubDate).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) : '';
+  const metaHTML = `<div class="news-item__meta">${escapeHTML(item.source)}${dateStr ? ` &middot; ${dateStr}` : ''}</div>`;
+
+  if (item.description) {
+    return `
+      <button type="button" class="news-item" data-title="${escapeHTML(item.title)}" data-description="${escapeHTML(item.description)}" data-link="${escapeHTML(item.link)}">
+        <div class="news-item__title">${escapeHTML(item.title)}</div>
+        <div class="news-item__excerpt">${escapeHTML(item.description)}</div>
+        ${metaHTML}
+      </button>
+    `;
+  }
+
   return `
     <a class="news-item" href="${escapeHTML(item.link)}" target="_blank" rel="noopener noreferrer">
       <div class="news-item__title">${escapeHTML(item.title)}</div>
-      ${item.description ? `<div class="news-item__excerpt">${escapeHTML(item.description)}</div>` : ''}
-      <div class="news-item__meta">${escapeHTML(item.source)}${dateStr ? ` &middot; ${dateStr}` : ''}</div>
+      ${metaHTML}
     </a>
   `;
+}
+
+// Delegated on the (stable) container rather than per-card, so it survives re-renders.
+function initFeedItemModals(container) {
+  container.addEventListener('click', (event) => {
+    const btn = event.target.closest('.news-item[data-description]');
+    if (!btn) return;
+    openTextModal({ title: btn.dataset.title, description: btn.dataset.description, link: btn.dataset.link });
+  });
 }
 
 async function initFeedPage() {
@@ -38,6 +62,7 @@ async function initFeedPage() {
   const titleEl = document.querySelector('[data-feed-title]');
   const descEl = document.querySelector('[data-feed-description]');
   if (!container) return;
+  initFeedItemModals(container);
 
   const section = new URLSearchParams(window.location.search).get('section');
   // Object.hasOwn guards against a crafted ?section= value (e.g. "constructor") matching
