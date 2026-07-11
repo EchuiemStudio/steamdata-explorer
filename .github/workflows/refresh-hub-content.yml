@@ -1,0 +1,54 @@
+name: Refresh hub content
+
+on:
+  schedule:
+    - cron: '0 7 * * *' # 07:00 UTC daily (offset from refresh-news.yml's 06:00 run)
+  workflow_dispatch: {} # allow manual runs from the Actions tab too
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-hub-content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch Game Dev & Design
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node scripts/fetch-gamedev.js
+
+      - name: Fetch Engine Research
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node scripts/fetch-engines.js
+
+      - name: Fetch AI / Claude
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node scripts/fetch-ai.js
+
+      - name: Fetch Art & Design
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node scripts/fetch-art.js
+
+      - name: Commit and push if hub content data files changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/gamedev.json data/engines.json data/ai.json data/art.json
+          git diff --cached --quiet || git commit -m "Auto-refresh hub content [skip ci]"
+          git push
