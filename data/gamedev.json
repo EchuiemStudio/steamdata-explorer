@@ -1,5 +1,33 @@
 [
   {
+    "title": "Word Play is now available on iOS!",
+    "link": "https://www.youtube.com/watch?v=JFG0GMCMLgs",
+    "pubDate": "2026-07-14T07:54:05+00:00",
+    "description": "Word Play is now available on iPhone and iPad. Get the free trial here",
+    "source": "GMTK (YouTube)"
+  },
+  {
+    "title": "The Alters and Frostpunk developer 11 Bit Studios is laying off 20 employees",
+    "link": "https://www.gamedeveloper.com/business/the-alters-and-frostpunk-developer-11-bit-studios-is-laying-off-20-employees-",
+    "pubDate": "Mon, 13 Jul 2026 15:27:53 GMT",
+    "description": "The studio said it has managed to mitigate the number of job cuts by transferring employees to other internal teams.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Games Done Quick apologizes for partnering with Saudi-owned studio SNK",
+    "link": "https://www.gamedeveloper.com/business/games-done-quick-apologizes-for-partnering-with-saudi-owned-studio-snk",
+    "pubDate": "Mon, 13 Jul 2026 14:39:33 GMT",
+    "description": "The speedrunning event cancelled a sponsored stream with SNK after community members sounded the alarm.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "'A kick in the teeth:' Game workers protest alleged misconduct at MindsEye developer Build A Rocket Boy",
+    "link": "https://www.gamedeveloper.com/business/-a-kick-in-the-teeth-game-workers-protest-alleged-misconduct-at-mindseye-developer-build-a-rocket-boy",
+    "pubDate": "Mon, 13 Jul 2026 11:06:05 GMT",
+    "description": "'Whilst the goingson at BARB sound extreme, game workers know that shocking treatment from bosses is rife across the sector.'",
+    "source": "Game Developer"
+  },
+  {
     "title": "NexusMods CEO digs into the dynamics of video game modding ft. Victor Folmann",
     "link": "https://www.gamedeveloper.com/pc/nexusmods-ceo-digs-into-the-dynamics-of-video-game-modding-ft-victor-folmann",
     "pubDate": "Fri, 10 Jul 2026 20:45:33 GMT",
@@ -84,25 +112,11 @@
     "source": "Game Developer"
   },
   {
-    "title": "Opinion: Welcome to the house of pain, brought to you by Xbox",
-    "link": "https://www.gamedeveloper.com/business/opinion-welcome-to-the-house-of-pain-brought-to-you-by-xbox",
-    "pubDate": "Wed, 08 Jul 2026 14:29:29 GMT",
-    "description": "Don't mind the screams.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "'Used, abused, and discarded:' CWA Canada slams Microsoft over handling of Bethesda layoffs",
-    "link": "https://www.gamedeveloper.com/business/-employers-are-ruthless-cwa-canada-slams-microsoft-over-handling-of-bethesda-layoffs",
-    "pubDate": "Wed, 08 Jul 2026 09:46:58 GMT",
-    "description": "The union claims around a dozen roles have been eliminated at Bethesda Game Studios Montreal.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Supercell starts developer grants program for African studios",
-    "link": "https://www.gamedeveloper.com/business/supercell-starts-developer-grants-program-for-studios-across-africa",
-    "pubDate": "Tue, 07 Jul 2026 16:28:44 GMT",
-    "description": "The equity-free grants can range from $20,000 to $200,000.",
-    "source": "Game Developer"
+    "title": "The GMTK Game Jam 2026 Theme is...",
+    "link": "https://www.youtube.com/watch?v=2alS2m5eOVY",
+    "pubDate": "2026-07-08T12:49:05+00:00",
+    "description": null,
+    "source": "GMTK (YouTube)"
   },
   {
     "title": "100 Steam Games that started life during GMTK Game Jam",
@@ -193,20 +207,6 @@
     "link": "https://www.youtube.com/watch?v=uuXrwA9nzM8",
     "pubDate": "2025-07-14T16:00:13+00:00",
     "description": null,
-    "source": "GMTK (YouTube)"
-  },
-  {
-    "title": "Word Play Trailer - Out Now!",
-    "link": "https://www.youtube.com/watch?v=chWr87u3Gdc",
-    "pubDate": "2025-06-26T16:49:53+00:00",
-    "description": null,
-    "source": "GMTK (YouTube)"
-  },
-  {
-    "title": "How I got my demo ready for Steam Next Fest",
-    "link": "https://www.youtube.com/watch?v=29kb8ouCGLA",
-    "pubDate": "2025-06-09T17:43:51+00:00",
-    "description": "It's Steam Next Fest, and I've got a game in the showcase. So here are 7 tips for making the most of this demo sharing festival. Check out Steam Next Fest",
     "source": "GMTK (YouTube)"
   }
 ]
