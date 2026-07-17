@@ -1,5 +1,33 @@
 [
   {
+    "title": "Unions take legal action against Microsoft for allegedly mishandling Xbox layoffs",
+    "link": "https://www.gamedeveloper.com/production/unions-take-legal-action-against-microsoft-for-allegedly-mishandling-xbox-layoffs",
+    "pubDate": "Thu, 16 Jul 2026 16:10:27 GMT",
+    "description": "CWA Canada president Carmel Smyth claims the company 'unlawfully fired people without giving notice to or discussing it with the union.'",
+    "source": "Game Developer"
+  },
+  {
+    "title": "'The goal of design is to efficiently communicate ideas'",
+    "link": "https://www.gamedeveloper.com/design/-the-goal-of-design-is-to-efficiently-communicate-ideas-",
+    "pubDate": "Thu, 16 Jul 2026 15:35:52 GMT",
+    "description": "Revisiting Stone Librande's classic One Page Designs GDC talk, for a dose of the good stuff.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "ZeniMax Online Studios leadership included in Xbox mass layoffs",
+    "link": "https://www.gamedeveloper.com/business/zenimax-online-studios-leadership-is-part-of-the-379-laid-off-workers",
+    "pubDate": "Thu, 16 Jul 2026 15:35:13 GMT",
+    "description": "The studio head, studio operations director, and studio game director join dozens of senior and lead positions cut by Xbox.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Pokemon Go owner Scopely 'reorganizes' Stumble Guys team",
+    "link": "https://www.gamedeveloper.com/business/pokemon-go-owner-scopely-reorganizes-stumble-guys-team",
+    "pubDate": "Thu, 16 Jul 2026 14:40:27 GMT",
+    "description": "The reorganization has affected a 'small number of employees.'",
+    "source": "Game Developer"
+  },
+  {
     "title": "Former Epic Games VP appointed Saber Interactive's chief business officer",
     "link": "https://www.gamedeveloper.com/business/former-epic-games-vp-appointed-saber-interactive-s-chief-business-officer",
     "pubDate": "Wed, 15 Jul 2026 18:00:00 GMT",
@@ -82,34 +110,6 @@
     "pubDate": "2026-07-14T07:54:05+00:00",
     "description": "Word Play is now available on iPhone and iPad. Get the free trial here",
     "source": "GMTK (YouTube)"
-  },
-  {
-    "title": "The Alters and Frostpunk developer 11 Bit Studios is laying off 20 employees",
-    "link": "https://www.gamedeveloper.com/business/the-alters-and-frostpunk-developer-11-bit-studios-is-laying-off-20-employees-",
-    "pubDate": "Mon, 13 Jul 2026 15:27:53 GMT",
-    "description": "The studio said it has managed to mitigate the number of job cuts by transferring employees to other internal teams.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Games Done Quick apologizes for partnering with Saudi-owned studio SNK",
-    "link": "https://www.gamedeveloper.com/business/games-done-quick-apologizes-for-partnering-with-saudi-owned-studio-snk",
-    "pubDate": "Mon, 13 Jul 2026 14:39:33 GMT",
-    "description": "The speedrunning event cancelled a sponsored stream with SNK after community members sounded the alarm.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "'A kick in the teeth:' Game workers protest alleged misconduct at MindsEye developer Build A Rocket Boy",
-    "link": "https://www.gamedeveloper.com/business/-a-kick-in-the-teeth-game-workers-protest-alleged-misconduct-at-mindseye-developer-build-a-rocket-boy",
-    "pubDate": "Mon, 13 Jul 2026 11:06:05 GMT",
-    "description": "'Whilst the goingson at BARB sound extreme, game workers know that shocking treatment from bosses is rife across the sector.'",
-    "source": "Game Developer"
-  },
-  {
-    "title": "NexusMods CEO digs into the dynamics of video game modding ft. Victor Folmann",
-    "link": "https://www.gamedeveloper.com/pc/nexusmods-ceo-digs-into-the-dynamics-of-video-game-modding-ft-victor-folmann",
-    "pubDate": "Fri, 10 Jul 2026 20:45:33 GMT",
-    "description": "Folmann believes the company can evolve from a file-hosting company to a bona fide user-generated content (UGC) platform.",
-    "source": "Game Developer"
   },
   {
     "title": "The GMTK Game Jam 2026 Theme is...",
