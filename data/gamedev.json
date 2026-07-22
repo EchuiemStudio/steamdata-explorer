@@ -1,5 +1,47 @@
 [
   {
+    "title": "Alpha Dog Games returns to independence two years after being shuttered by Xbox",
+    "link": "https://www.gamedeveloper.com/business/alpha-dog-games-returns-to-independence-two-years-after-being-shuttered-by-xbox",
+    "pubDate": "Wed, 22 Jul 2026 09:11:05 GMT",
+    "description": "'We're incredibly excited to have the name we put so much effort and pride into building back in our hands.'",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Former Wreckreation team starts up new studio working on sequel",
+    "link": "https://www.gamedeveloper.com/business/former-wreckreation-team-starts-up-new-studio-working-on-sequel",
+    "pubDate": "Tue, 21 Jul 2026 19:37:37 GMT",
+    "description": "\"The games we make don't really belong to us once they're out in the world. Players spend hundreds of hours with them. They notice things you've forgotten. They challenge your assumptions. And, if you listen, they make your games better.\"",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Pentiment director emphasizes the importance of RPG players not controlling everything",
+    "link": "https://www.gamedeveloper.com/design/pentiment-director-emphasizes-the-importance-of-rpg-players-not-controlling-everything",
+    "pubDate": "Tue, 21 Jul 2026 19:00:44 GMT",
+    "description": "Pentiment director Josh Sawyer argues in favor of going against the idea of 'I'm the protagonist, I can literally do anything' in RPGs.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "What developers can learn from this generation of game criticism",
+    "link": "https://www.gamedeveloper.com/design/what-developers-can-learn-from-this-generation-of-games-criticism",
+    "pubDate": "Tue, 21 Jul 2026 17:05:01 GMT",
+    "description": "Hour-long video essays analyzing game design are garnering millions of views. What can developers learn and utilize from the format?",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Report: Splitgate dev 1047 games lays off staff",
+    "link": "https://www.gamedeveloper.com/business/report-splitgate-dev-1047-games-lays-off-staff",
+    "pubDate": "Tue, 21 Jul 2026 14:01:04 GMT",
+    "description": "The reported layoffs come less than a month since the launch of Titanfall-inspired shooter Empulse.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Nintendo says consumers are not legally entitled to tariff refunds",
+    "link": "https://www.gamedeveloper.com/business/nintendo-says-consumers-are-not-legally-entitled-to-tariff-rebate",
+    "pubDate": "Tue, 21 Jul 2026 09:31:02 GMT",
+    "description": "'Nintendo or one of its retailers set a price for each product, and consumers decided whether that price was worth paying.'",
+    "source": "Game Developer"
+  },
+  {
     "title": "Edge of Memories developer Midgar Studio is being liquidated",
     "link": "https://www.gamedeveloper.com/business/edge-of-memories-developer-midgar-studio-is-being-liquidated",
     "pubDate": "Tue, 21 Jul 2026 08:43:06 GMT",
@@ -7,7 +49,7 @@
     "source": "Game Developer"
   },
   {
-    "title": "Unity unveils Unity 7 roadmap with update path that won't break your build",
+    "title": "Update: Unity unveils Unity 7 roadmap with update path that won't break your build",
     "link": "https://www.gamedeveloper.com/programming/unity-unveils-unity-7-roadmap-with-update-path-that-won-t-break-your-build",
     "pubDate": "Tue, 21 Jul 2026 02:00:00 GMT",
     "description": "Unity 7 will operate on top of the same architecture powering Unity 6, while still offering improvements and new tools for developers.",
@@ -60,48 +102,6 @@
     "link": "https://www.gamedeveloper.com/design/-the-goal-of-design-is-to-efficiently-communicate-ideas-",
     "pubDate": "Thu, 16 Jul 2026 15:35:52 GMT",
     "description": "Revisiting Stone Librande's classic One Page Designs GDC talk, for a dose of the good stuff.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "ZeniMax Online Studios leadership included in Xbox mass layoffs",
-    "link": "https://www.gamedeveloper.com/business/zenimax-online-studios-leadership-is-part-of-the-379-laid-off-workers",
-    "pubDate": "Thu, 16 Jul 2026 15:35:13 GMT",
-    "description": "The studio head, studio operations director, and studio game director join dozens of senior and lead positions cut by Xbox.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Pokemon Go owner Scopely 'reorganizes' Stumble Guys team",
-    "link": "https://www.gamedeveloper.com/business/pokemon-go-owner-scopely-reorganizes-stumble-guys-team",
-    "pubDate": "Thu, 16 Jul 2026 14:40:27 GMT",
-    "description": "The reorganization has affected a 'small number of employees.'",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Former Epic Games VP appointed Saber Interactive's chief business officer",
-    "link": "https://www.gamedeveloper.com/business/former-epic-games-vp-appointed-saber-interactive-s-chief-business-officer",
-    "pubDate": "Wed, 15 Jul 2026 18:00:00 GMT",
-    "description": "Steve Allison will oversee publishing, marketing, and revenue opportunities, reporting directly to CEO Matthew Karch.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Dead Space co-creator Glen Schofield retires",
-    "link": "https://www.gamedeveloper.com/business/call-of-duty-co-director-glen-schofield-retires",
-    "pubDate": "Wed, 15 Jul 2026 17:04:28 GMT",
-    "description": "Schofield had long tenures as manager of Dead Space maker Visceral Games as well as Call of Duty developer Sledgehammer Games.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "NYU opens incubator applications for New York City-area devs",
-    "link": "https://www.gamedeveloper.com/business/nyu-opens-incubator-applications-for-new-york-city-area-devs",
-    "pubDate": "Wed, 15 Jul 2026 15:32:52 GMT",
-    "description": "The NYC Game Design Future Lab offers mentorship, workshop, and investor opportunities for Big Apple-based developers.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "UK union launches free resource to decode video game writing contracts",
-    "link": "https://www.gamedeveloper.com/production/uk-union-launches-free-resource-to-decode-video-game-writing-contracts",
-    "pubDate": "Wed, 15 Jul 2026 11:53:08 GMT",
-    "description": "The Writers' Guild of Great Britain said it has witnessed an increase in poor practices around writing contracts in recent years.",
     "source": "Game Developer"
   },
   {

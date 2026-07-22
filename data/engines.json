@@ -1,5 +1,19 @@
 [
   {
+    "title": "Dev snapshot: Godot 4.8 dev 2",
+    "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-2/",
+    "pubDate": "Tue, 21 Jul 2026 12:00:00 +0000",
+    "description": "Happy GodotCon Boston for those who celebrate! While many key contributors are already at this event as we speak, that doesn’t mean that development snapshots are slowing down anytime soon. We hope anyone that couldn’t make it to the event this year looks forward to further coverage and highlights in the near future, as you enjoy Godot 4.8 dev 2 in the meantime! Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from The Incident at Galley House, a detective game where you wield a strange contraption to reveal the truth behind the 1936 tragedy at Galley House. You can buy the game on Steam, and follow the developers— William Rous and Evil Trout —on their socials. Highlights In case you missed them, see the 4.8 dev 1 release notes for an overview of some key features which were already in that snapshot, and are therefore still available for testing in dev 2. Editor: Automatically expand created resources in inspector Hugo Locurcio starts our roundup with GH-99725, bringing a long-desired QOL addition to the inspector: auto-expansion of resources. While most of our inspector items automatically revealed themselves when initialized, resources always existed as an unfortunate blindspot. As demonstrated below, this will no longer be the case! Editor: Add “Play Scene” option to file system context menu While the process of playing a scene is already relatively streamlined, there’s…",
+    "source": "Godot Engine"
+  },
+  {
+    "title": "The Fab Summer Mega Sale is now on!",
+    "link": "https://www.unrealengine.com/news/the-fab-summer-mega-sale-is-now-on",
+    "pubDate": "Tue, 21 Jul 2026 00:00:00 GMT",
+    "description": "Get up to 70% off tens of thousands of assets in the Fab Summer Mega Sale! You’ve got until 23:59 ET on July 29 to pocket bargains on gameplay systems, templates, materials, character packs, and more.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Godot Community Poll 2026",
     "link": "https://godotengine.org/article/godot-community-poll-2026/",
     "pubDate": "Thu, 16 Jul 2026 17:00:00 +0000",
@@ -147,13 +161,6 @@
     "source": "Unreal Engine"
   },
   {
-    "title": "Start building games with our new course: ‘Your First Game in Unreal Engine’",
-    "link": "https://www.unrealengine.com/learning/start-building-games-with-our-new-course-your-first-game-in-unreal-engine",
-    "pubDate": "Thu, 04 Jun 2026 00:00:00 GMT",
-    "description": "New to Unreal Engine? ‘Your First Game in Unreal Engine’ is a beginner-friendly course that teaches you how to create more complex gameplay by building an animated start countdown, game timer, checkpoint system, exploding mines, and more!",
-    "source": "Unreal Engine"
-  },
-  {
     "title": "Dev snapshot: Godot 4.7 beta 5",
     "link": "https://godotengine.org/article/dev-snapshot-godot-4-7-beta-5/",
     "pubDate": "Wed, 03 Jun 2026 12:00:00 +0000",
@@ -165,13 +172,6 @@
     "link": "https://godotengine.org/article/gabe-stable-release/",
     "pubDate": "Tue, 02 Jun 2026 14:00:00 +0000",
     "description": "Since 2023, Godot users could develop their games on Android, but they still needed a PC to perform the final export. We began changing that in Godot 4.4 by adding support for non-Gradle exports. However, many features remained out of reach; if your project used Android plugins like Google Play Billing or required some Gradle export customizations, you were back to using a PC. In Godot 4.6, we introduced a companion app for the Android editor with a simple goal: bring full Gradle support to mobile. While that early version made the editor “feature complete” on paper, it was still in alpha and wasn’t quite ready. Today, we’re happy to announce that GABE, the Godot Android Build Environment, is now stable and available on the Google Play Store and Meta Horizon Store. What is GABE? GABE stands for G odot A ndroid B uild E nvironment. And no, it has nothing to do with the other Gabe you are thinking about!:P This is a companion app for the Godot Editor on Android and XR devices which works in the background whenever you trigger a Gradle export. GABE handles downloading and managing all the build dependencies. After you grant it access to your project for the first time, it just works for subsequent exports in the background. What GABE brings to your workflow You can now generate AAB files (Android App Bundles) and APKs using Gradle directly on your Android device or XR device. You no longer need to move your project to a desktop just to get it ready for the Play Store or Horizon Store. This also means that you can now create, develop, export, and publish a Godot game to any store using only an Android device or XR device. If your project uses plugins like Google Play Billing or AdMob, you previously had to use a PC to export. Now, you can directly build your apps with plugin support. Since XR apps require Gradle for vendor-specific plugins and features, GABE enables you to build and deploy XR projects directly from within your headsets. (In case you missed it: Godot is…",
-    "source": "Godot Engine"
-  },
-  {
-    "title": "Dev snapshot: Godot 4.7 beta 4",
-    "link": "https://godotengine.org/article/dev-snapshot-godot-4-7-beta-4/",
-    "pubDate": "Fri, 29 May 2026 12:00:00 +0000",
-    "description": "Our fourth, and likely final, development snapshot for Godot 4.7 has arrived: 4.7 beta 4! Being an iteration on the relatively-stable 4.7 beta 3, it’s only a matter of time before the release candidate process begins, so join us for one last (probably) round-up in preparation. Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from Elfie: A Sand Plan, a puzzle game where you help a rotund elephant build sand castles. You can buy the game on Steam, and check out the developer on Bluesky, itch.io, or Mastodon! Highlights For an overview of what’s new overall in Godot 4.7, have a look at the highlights for 4.7 beta 1, which cover a lot of the changes. This blog post only covers the changes between beta 3 and beta 4. This section covers the most relevant changes made since the beta 3 snapshot, which are largely regression fixes: 3D: Fix autosmooth behavior change caused by performance fix ( GH-119682 ). Assetlib: Improve the look of the asset rating indicator ( GH-119635 ). Assetlib: Improve the visual of the Asset Store’s page selector ( GH-119719 ). Core: Fix ResourceLoader::load_threaded_get() deadlocks ( GH-119757 ). Editor: Change disabled “Paste” options to hidden ( GH-119717 ). Editor: Fix editor scene tabs not updating properly on theme change ( GH-119721 ). Editor: Make theme previews scale with the editor ( GH-119679 ). Editor: Speed up _find_file for case-insensitive…",
     "source": "Godot Engine"
   }
 ]
