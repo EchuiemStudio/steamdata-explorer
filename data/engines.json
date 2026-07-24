@@ -1,5 +1,12 @@
 [
   {
+    "title": "South East Asia Dev Days | Unreal Engine",
+    "link": "https://www.unrealengine.com/events/south-east-asia-dev-days",
+    "pubDate": "Thu, 23 Jul 2026 00:00:00 GMT",
+    "description": "Dev Days bring Unreal Engine developers together to learn, connect, and exchange ideas. Find the next event happening near you and discover new creative opportunities through engaging sessions led by Epic presenters and industry teams.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Dev snapshot: Godot 4.8 dev 2",
     "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-2/",
     "pubDate": "Tue, 21 Jul 2026 12:00:00 +0000",
@@ -86,7 +93,7 @@
   {
     "title": "Unreal Engine 5.8 is now available",
     "link": "https://www.unrealengine.com/news/unreal-engine-5-8-is-now-available",
-    "pubDate": "Tue, 23 Jun 2026 13:31:24 GMT",
+    "pubDate": "Tue, 23 Jun 2026 00:00:00 GMT",
     "description": "Build bigger, better, more differentiated worlds in less time; easily populate them with high-fidelity animated characters and custom vegetation; and light and render them at the speed and quality your audiences demand.",
     "source": "Unreal Engine"
   },
@@ -107,7 +114,7 @@
   {
     "title": "The road to Unreal Engine 6",
     "link": "https://www.unrealengine.com/news/the-road-to-ue-6",
-    "pubDate": "Mon, 22 Jun 2026 15:10:19 GMT",
+    "pubDate": "Mon, 22 Jun 2026 00:00:00 GMT",
     "description": "We have started the road to UE6, where Unreal Engine and UEFN will come together into a single, unified engine. Read more about our vision, transition plans, and timeline.",
     "source": "Unreal Engine"
   },
@@ -152,13 +159,6 @@
     "pubDate": "Mon, 08 Jun 2026 12:00:00 +0000",
     "description": "We had a few false-starts along the way, but Godot 4.7 has at last reached the Release Candidate stage. This means that all of our planned features are locked-in, and no critical regressions remain. As such: production-ready environments can begin integrating at this time. HDR output support, the Godot Asset Store, drawable textures, and more are ready-to-roll in this bountiful update! This comes with our usual caveat for release candidate builds: we can only truly ratify this claim through extensive testing by the community. Though we firmly believe that Godot 4.7 is suitable for existing projects, you will play a crucial role in ensuring that no major issues have somehow snuck through the cracks. As always: making a copy/backup before upgrading is strongly recommended, ideally with version control! Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from Pratfall, a multiplayer rougelite where you’ll fall, dig, and explode your way through a dangerous cave system to find your lost dog. You can buy the game on Steam, and follow the developers on Bluesky, YouTube, and Discord. Highlights We covered the most important highlights from Godot 4.7 in the previous 4.7 beta 1 blog post, so if you haven’t read that one, have a look to be introduced to the main new features added in the 4.7 release. Especially if you’re testing 4.7 for the first time, you’ll want to get a condensed…",
     "source": "Godot Engine"
-  },
-  {
-    "title": "UEFN Student Bootcamp application is open now",
-    "link": "https://www.unrealengine.com/learning/uefn-student-bootcamp-application-is-open-now",
-    "pubDate": "Mon, 08 Jun 2026 00:00:00 GMT",
-    "description": "Move beyond the classroom and ship a live product in Fortnite. This five-day intensive training—plus two weeks to build your own island—bridges the gap between learning engine basics and launching a polished Fortnite island.",
-    "source": "Unreal Engine"
   },
   {
     "title": "Dev snapshot: Godot 4.7 beta 5",
