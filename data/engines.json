@@ -1,5 +1,12 @@
 [
   {
+    "title": "July’s Epic learning content: Animation, mobile game development, and more",
+    "link": "https://www.unrealengine.com/learning/julys-epic-learning-content-animation-mobile-game-development-and-more",
+    "pubDate": "Fri, 31 Jul 2026 00:00:00 GMT",
+    "description": "This month’s Epic learning content includes tutorials on animation in Sequencer, performance capture with MetaHuman, and building destructible assets with Chaos—plus courses on using Unreal Engine to develop mobile games, customize characters, and more.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Halo: Campaign Evolved brings the legendary franchise into a new era with UE5",
     "link": "https://www.unrealengine.com/developer-interviews/halo-campaign-evolved-brings-the-legendary-franchise-into-a-new-era-with-ue5",
     "pubDate": "Thu, 30 Jul 2026 00:00:00 GMT",
@@ -109,13 +116,6 @@
     "link": "https://www.unrealengine.com/developer-interviews/lords-of-the-fallen-ii-takes-the-dark-fantasy-action-rpg-sequel-to-new-heights-with-ue5",
     "pubDate": "Tue, 23 Jun 2026 00:00:00 GMT",
     "description": "Discover how CI Games used UE5 to craft the highly-anticipated Lords of the Fallen II —a dark fantasy action RPG featuring high-energy, soulslike combat that challenges players to explore a vast, war-torn kingdom crumbling from within.",
-    "source": "Unreal Engine"
-  },
-  {
-    "title": "Unreal Engine HMI Template available now",
-    "link": "https://www.unrealengine.com/news/unreal-engine-hmi-template-available-now",
-    "pubDate": "Tue, 23 Jun 2026 00:00:00 GMT",
-    "description": "Evaluate and accelerate HMI development in Unreal Engine with the new Unreal Engine HMI Template and Data Reduction Pipeline Plugin, released with UE 5.8.",
     "source": "Unreal Engine"
   },
   {
