@@ -1,5 +1,12 @@
 [
   {
+    "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+    "link": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+    "pubDate": "Thu, 30 Jul 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
     "title": "Cognizant and Anthropic expand their partnership to bring Claude to enterprise clients",
     "link": "https://www.anthropic.com/news/cognizant-anthropic",
     "pubDate": "Mon, 27 Jul 2026 00:00:00 +0000",
@@ -59,13 +66,6 @@
     "title": "Introducing Claude for Teachers",
     "link": "https://www.anthropic.com/news/claude-for-teachers",
     "pubDate": "Tue, 14 Jul 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
-    "title": "UST is bringing Claude to physical AI",
-    "link": "https://www.anthropic.com/news/ust-claude",
-    "pubDate": "Thu, 09 Jul 2026 00:00:00 +0000",
     "description": null,
     "source": "Anthropic News"
   },
