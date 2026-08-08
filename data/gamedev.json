@@ -1,5 +1,47 @@
 [
   {
+    "title": "Playing GMTK Game Jam 2026 Games!",
+    "link": "https://www.youtube.com/watch?v=OHHZetuCkvk",
+    "pubDate": "2026-08-07T20:00:57+00:00",
+    "description": null,
+    "source": "GMTK (YouTube)"
+  },
+  {
+    "title": "My Favourite Games From GMTK Game Jam 2026",
+    "link": "https://www.youtube.com/watch?v=awegilW3DTc",
+    "pubDate": "2026-08-07T20:00:06+00:00",
+    "description": "For GMTK Game Jam 2026, more than 10,500 games were developed using the theme \"Count Down\". These were my 20 favourites from the ones I played. See the results: See all the submissions: Sign up to GMTK Game Jam 2027",
+    "source": "GMTK (YouTube)"
+  },
+  {
+    "title": "Pushing the limits in Simulating a City, One Page at a Time",
+    "link": "https://www.gamedeveloper.com/design/pushing-the-limits-in-simulating-a-city-one-page-at-a-time",
+    "pubDate": "Fri, 07 Aug 2026 17:08:37 GMT",
+    "description": "In which famed designer Stone Librande chronicles the design process of SimCity (2013) and the one-page design paradigm.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "GTA V surpasses 230 million sales months before GTA VI touches down",
+    "link": "https://www.gamedeveloper.com/business/gta-v-surpasses-230-million-sales-months-before-gta-vi-touches-down",
+    "pubDate": "Fri, 07 Aug 2026 15:34:18 GMT",
+    "description": "Those sales were delivered across three console generations.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "What devs need to know about localization, ft. Concha Fernandez Alvarez, Aurelie Perrin, and Guido Di Carlo",
+    "link": "https://www.gamedeveloper.com/production/what-devs-need-to-know-about-localization-ft-concha-fernandez-alvarez-aurelie-perrin-and-guido-di-carlo",
+    "pubDate": "Fri, 07 Aug 2026 14:30:00 GMT",
+    "description": "We're breaking down what developers need to know about working with localizers to bring their games to different languages.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "EA taken private by Saudi Arabia, GTA marketing jumps the shark, and Devolver's huge mistake - Patch Notes #64",
+    "link": "https://www.gamedeveloper.com/business/ea-taken-private-by-saudi-arabia-gta-marketing-jumps-the-shark-and-devolver-s-huge-mistake-patch-notes-64",
+    "pubDate": "Fri, 07 Aug 2026 11:03:10 GMT",
+    "description": "Plus: You need to listen to the new single from The Avalanches.",
+    "source": "Game Developer"
+  },
+  {
     "title": "Nintendo Switch 2 hardware sales are down 34.4 percent year-on-year",
     "link": "https://www.gamedeveloper.com/business/nintendo-switch-2-unit-sales-are-down-34-4-percent-year-on-year",
     "pubDate": "Thu, 06 Aug 2026 16:47:36 GMT",
@@ -77,41 +119,6 @@
     "source": "Game Developer"
   },
   {
-    "title": "Amid child safety lawsuits, Roblox says it 'continues' to push toward a standard for digital safety",
-    "link": "https://www.gamedeveloper.com/business/amid-child-safety-lawsuits-roblox-says-it-continues-to-set-a-standard-for-digital-safety",
-    "pubDate": "Tue, 04 Aug 2026 17:24:10 GMT",
-    "description": "Roblox Corp is defending its ability to set the 'global standard' for healthy, safe, and age-appropriate digital engagement—all against the backdrop of multiple lawsuits accusing the company of endangering children.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Update: Tencent-owned Lightspeed LA lays off 68 staff",
-    "link": "https://www.gamedeveloper.com/business/tencent-owned-lightspeed-la-is-laying-off-staff",
-    "pubDate": "Tue, 04 Aug 2026 14:22:00 GMT",
-    "description": "The Last Sentinel developer attributes the job cuts to a shift in creative and development direction for the project.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Live service revenue dominates in EA's last fiscal report ahead of Saudi deal",
-    "link": "https://www.gamedeveloper.com/business/live-service-revenue-dominates-in-ea-s-last-fiscal-report-ahead-of-saudi-merger",
-    "pubDate": "Tue, 04 Aug 2026 10:34:49 GMT",
-    "description": "The company's take-private deal with a consortium led by Saudi Arabia's sovereign wealth fund is expected to conclude later today.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "How Silent Hill: Townfall gets deep into its protagonist's headspace",
-    "link": "https://www.gamedeveloper.com/design/how-silent-hill-townfall-gets-deep-into-its-protagonist-s-headspace",
-    "pubDate": "Mon, 03 Aug 2026 18:07:30 GMT",
-    "description": "We spoke with Silent Hill series producer Motoi Okamoto and game director Jon McKellan about embracing analog horror and fully immersing players in a new perspective.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "The GMTK Game Jam 2026 Theme is...",
-    "link": "https://www.youtube.com/watch?v=2alS2m5eOVY",
-    "pubDate": "2026-07-22T17:00:06+00:00",
-    "description": null,
-    "source": "GMTK (YouTube)"
-  },
-  {
     "title": "Word Play is now available on iOS!",
     "link": "https://www.youtube.com/watch?v=JFG0GMCMLgs",
     "pubDate": "2026-07-14T07:54:05+00:00",
@@ -130,13 +137,6 @@
     "link": "https://www.youtube.com/watch?v=n1cd1FhVAWY",
     "pubDate": "2026-06-25T17:00:26+00:00",
     "description": "Word Play is my vocabulary roguelike, with over 100 passive perks. Implementing them into the game meant learning a whole new type of coding architecture: inheritance.",
-    "source": "GMTK (YouTube)"
-  },
-  {
-    "title": "The GMTK Game Jam returns for 2026",
-    "link": "https://www.youtube.com/watch?v=MAu3Yoi7KvE",
-    "pubDate": "2026-05-21T08:54:08+00:00",
-    "description": null,
     "source": "GMTK (YouTube)"
   },
   {
