@@ -1,5 +1,19 @@
 [
   {
+    "title": "Download the latest Game Animation Sample Project—now updated for UE 5.8!",
+    "link": "https://www.unrealengine.com/tech-blog/download-the-latest-game-animation-sample-project-now-updated-for-ue-5-8",
+    "pubDate": "Wed, 12 Aug 2026 00:00:00 GMT",
+    "description": "The Game Animation Sample Project is back with a brand-new update for Unreal Engine 5.8. Showcasing the latest and greatest in-engine animation features, this release includes new physics, motion matching, pose searching, and look-at features—and more.",
+    "source": "Unreal Engine"
+  },
+  {
+    "title": "GodotFest 2026 returns to Munich this November",
+    "link": "https://godotengine.org/article/godotfest-2026/",
+    "pubDate": "Wed, 12 Aug 2026 00:00:00 +0000",
+    "description": "Last November, close to 500 people joined us in Munich for the first GodotFest. We had 34 speakers, two stages, a workshop room, and two busy days of Godot. For a first edition, it was quite a turnout. GodotFest is an annual conference for people who build with Godot. We are the small Munich team behind GodotCon 23, and we run the event independently, in close cooperation with the Godot Foundation. We started it because we wanted a place where developers could share what they had learned, show their games, and meet others working with the engine. It worked, so GodotFest is coming back to smartvillage in Munich on the 3rd and 4th of November 2026. This year’s theme is “Godot Means Business”. There will still be plenty of technical talks, panels and community time, but we are making more room for studios, publishers and service providers building businesses around Godot. MeetToMatch, powered by Photon, is included with every ticket, so attendees can arrange meetings before the event. There will also be a game showcase, with space to bring your own hardware and let people play your game. The talks from 2025 are online if you would like an idea of what to expect from the programme. And yes, the food is included again. Every ticket covers premium catering on both days: breakfast, lunch and afternoon snacks, plus coffee, soft drinks and water throughout the event. Vegan and gluten-free options will be available. Call for speakers Did you ship a game with Godot, build a useful tool, or learn something the hard way? We would like to hear about it. We are looking for talks and panels from developers, artists, educators, tool makers and community organizers. First-time speakers are welcome, too. Submit a proposal, deadline: August 31st, 2026 at 13:00 UTC The deadline was already extended once, so this one is final. Sponsors We are also looking for sponsors to help make GodotFest happen. If your company would like to meet Godot developers and studios in Munich, have a look at…",
+    "source": "Godot Engine"
+  },
+  {
     "title": "Dev snapshot: Godot 4.8 dev 3",
     "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-3/",
     "pubDate": "Fri, 07 Aug 2026 12:00:00 +0000",
@@ -126,13 +140,6 @@
     "source": "Unreal Engine"
   },
   {
-    "title": "Lords of the Fallen II takes the dark fantasy action RPG sequel to new heights with UE5",
-    "link": "https://www.unrealengine.com/developer-interviews/lords-of-the-fallen-ii-takes-the-dark-fantasy-action-rpg-sequel-to-new-heights-with-ue5",
-    "pubDate": "Tue, 23 Jun 2026 00:00:00 GMT",
-    "description": "Discover how CI Games used UE5 to craft the highly-anticipated Lords of the Fallen II —a dark fantasy action RPG featuring high-energy, soulslike combat that challenges players to explore a vast, war-torn kingdom crumbling from within.",
-    "source": "Unreal Engine"
-  },
-  {
     "title": "The road to Unreal Engine 6",
     "link": "https://www.unrealengine.com/news/the-road-to-ue-6",
     "pubDate": "Mon, 22 Jun 2026 00:00:00 GMT",
@@ -165,13 +172,6 @@
     "link": "https://godotengine.org/article/release-candidate-godot-4-7-rc-2/",
     "pubDate": "Thu, 11 Jun 2026 12:00:00 +0000",
     "description": "This Monday featured the release of our first Release Candidate build of Godot 4.7. As a reminder: RC builds are when we believe the engine has stabilized and is ready for release, so it’s the last chance to report critical regressions before the stable version drops. Today, we’re excited to produce our second snapshot, addressing a small handful of critical regressions that revealed themselves in that time. Unless reports of any show-stopping regressions come from the changes made in RC 1 or RC 2, a stable release is just around the corner. Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from Pronoun Palace, a word-spelling roguelike set in a dystopian future where the government has taken your pronouns. You can buy the game on Steam, and follow the developers on Bluesky. Highlights We covered the most important highlights from Godot 4.7 in the previous 4.7 beta 1 blog post, so if you haven’t read that one, have a look to check out the main new features added in the 4.7 release. Especially if you’re testing 4.7 for the first time, you’ll want to get a condensed overview of what new features you might want to make use of. This section covers all changes made since the RC 1 snapshot, which are largely regression fixes: 2D: Fix first tile not being randomized ( GH-120085 ). Animation: Add null check for root_animation_node in AnimationTree ( GH-120106 ). Buildsystem: Fix…",
-    "source": "Godot Engine"
-  },
-  {
-    "title": "Release candidate: Godot 4.7 RC 1",
-    "link": "https://godotengine.org/article/release-candidate-godot-4-7-rc-1/",
-    "pubDate": "Mon, 08 Jun 2026 12:00:00 +0000",
-    "description": "We had a few false-starts along the way, but Godot 4.7 has at last reached the Release Candidate stage. This means that all of our planned features are locked-in, and no critical regressions remain. As such: production-ready environments can begin integrating at this time. HDR output support, the Godot Asset Store, drawable textures, and more are ready-to-roll in this bountiful update! This comes with our usual caveat for release candidate builds: we can only truly ratify this claim through extensive testing by the community. Though we firmly believe that Godot 4.7 is suitable for existing projects, you will play a crucial role in ensuring that no major issues have somehow snuck through the cracks. As always: making a copy/backup before upgrading is strongly recommended, ideally with version control! Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from Pratfall, a multiplayer rougelite where you’ll fall, dig, and explode your way through a dangerous cave system to find your lost dog. You can buy the game on Steam, and follow the developers on Bluesky, YouTube, and Discord. Highlights We covered the most important highlights from Godot 4.7 in the previous 4.7 beta 1 blog post, so if you haven’t read that one, have a look to be introduced to the main new features added in the 4.7 release. Especially if you’re testing 4.7 for the first time, you’ll want to get a condensed…",
     "source": "Godot Engine"
   }
 ]
