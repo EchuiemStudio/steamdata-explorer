@@ -1,5 +1,12 @@
 [
   {
+    "title": "Maintenance release: Godot 3.6.3",
+    "link": "https://godotengine.org/article/maintenance-release-godot-3-6-3/",
+    "pubDate": "Sat, 22 Aug 2026 12:00:00 +0000",
+    "description": "Godot 3.6.2 has been our recommended stable LTS version of 3.x for a while now, but the time has come to make a new build, primarily due to changes in requirements for Android and iOS. Google Play now requires new apps and updates to target Android 16 (API level 36). As a result we have updated Godot Android APIs and made compatibility changes to ensure users can update their Godot 3 games on Play Store with 3.6.3. On iOS, the minimum version is bumped to 15.0 (the minimum supported by XCode 27), a minimum target export option is added, and 32-bit export is removed as it is not supported since iOS 11. This is a safe and recommended update for all Godot 3.6.x users. It should have no major impact on your projects, even complex ones in production, if you’re already using 3.6.2-stable. Download Godot 3.6.3 now or try the online version of the Godot editor. Download Godot 3.6.3 stable Linux Standard.NET macOS Standard.NET Windows Standard.NET Export templates and other downloads Make a Donation.thankyou-wrapper { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.85); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10; }.thankyou { background: var(--base-color); box-shadow: var(--more-shadow); padding: 30px; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; border-radius: 13px; }.thankyou-reading { font-size: 16px; }.thankyou-reading-list { font-size: 16px; margin: 0; margin-left: 48px; padding-left: 0; }.thankyou-donate { margin-bottom: 24px; text-align: center; }.btn.btn-donate { background-color: var(--primary-color); color: hsla(0, 0%, 100%, 0.9); font-size: 22px; font-weight: 600; margin-bottom: 26px; }.thankyou h2 { text-shadow: var(--base-shadow); font-size: 36px; font-weight: 800; margin-bottom: 12px; }.thankyou h2.anchored-link { /* Hiding the anchored text automatically added on blogposts */ display: none!important; }.thankyou p {…",
+    "source": "Godot Engine"
+  },
+  {
     "title": "Maintenance release: Godot 4.7.2",
     "link": "https://godotengine.org/article/maintenance-release-godot-4-7-2/",
     "pubDate": "Tue, 18 Aug 2026 12:00:00 +0000",
@@ -159,13 +166,6 @@
     "pubDate": "Mon, 22 Jun 2026 00:00:00 GMT",
     "description": "We have started the road to UE6, where Unreal Engine and UEFN will come together into a single, unified engine. Read more about our vision, transition plans, and timeline.",
     "source": "Unreal Engine"
-  },
-  {
-    "title": "Godot 4.7 – Lights, Camera, Action!",
-    "link": "https://godotengine.org/article/godot-4-7-lights-camera-action/",
-    "pubDate": "Thu, 18 Jun 2026 13:00:00 +0000",
-    "description": "Like a cult classic movie, Godot 4 has only gotten better with age. This brings us to Godot 4.7. With 3 years under its belt, the 4.7 _Director’s Cut_ offers colors of never-before-reached intensity.",
-    "source": "Godot Engine"
   },
   {
     "title": "State of Unreal 2026: Top news from the show",
