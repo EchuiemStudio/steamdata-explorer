@@ -1,5 +1,12 @@
 [
   {
+    "title": "Fixing high polling rate mice on Windows in Godot",
+    "link": "https://godotengine.org/article/fixing-high-polling-rate-mice-on-windows/",
+    "pubDate": "Mon, 24 Aug 2026 14:00:00 +0000",
+    "description": "At long last, a performance issue with high polling rate mice on Windows has been fixed in Godot, starting with the recently released Godot 4.7.2. This article describes how the fix works, and why it’s so important today. Note: The definition of “high polling rate” here refers to any mouse that can be configured to having a polling rate of at least 2 kHz. Mice that poll at 1 kHz are not considered high polling rate here, as they generally did not exhibit performance issues except on CPUs with very slow single-core performance. What are high polling rate mice, and what are they useful for? To ensure games feel good to play, we want the delay between an action being performed and the result being visible on screen (input lag) to be as low as possible. We also want inputs to be spaced as consistently as possible, avoiding jitter. Mice are polled at a fixed rate. Historically, this has been 125 Hz as dictated by the USB standard. This means that the mouse input is polled every 8 milliseconds. This poses several limitations: The mouse position reported to the operating system only updates 125 times per second. If you have a high refresh rate monitor (144 Hz or more), the mouse position will not update every frame, which will make mouse movement look choppy. This affects not just the operating system, but also games that rely on mouse input, including captured mouse mode. Even on monitors with a 120 Hz or lower refresh rate, the mouse position will not be as consistent across the displayed frames on screen as with higher polling rates. The reason for this is that the mouse updates don’t line up with display refreshes. With a higher polling rate, there will be a lower average deviation between the time the mouse was last updated and the display refresh. On average, and on top of any latency incurred by the operating system and mouse hardware, there will be a delay of 4 milliseconds between the mouse being moved by the user and the updated position being available to the…",
+    "source": "Godot Engine"
+  },
+  {
     "title": "Maintenance release: Godot 3.6.3",
     "link": "https://godotengine.org/article/maintenance-release-godot-3-6-3/",
     "pubDate": "Sat, 22 Aug 2026 12:00:00 +0000",
@@ -138,13 +145,6 @@
     "pubDate": "Fri, 26 Jun 2026 00:00:00 GMT",
     "description": "This month’s free learning content includes a UE template for live broadcast workflows, a tutorial that explains how to create cinematic dialogue scenes using just your phone, tips on mesh-based terrain creation, and much more.",
     "source": "Unreal Engine"
-  },
-  {
-    "title": "Vision for the Engine",
-    "link": "https://godotengine.org/article/godot-vision-statement-2026/",
-    "pubDate": "Thu, 25 Jun 2026 15:00:00 +0000",
-    "description": "Read the Godot project vision statement here. When Godot was open sourced in 2014, the vision for the engine was held in the minds of the original creators: Juan Linietsky and Ariel Manzur. When they opened the engine up to public contribution, they were able to share the vision directly with new contributors who learned from them and became today’s maintainers. It wasn’t formalized as a written document at the time, but the result of a shared experience building, releasing, and maintaining the engine. However, Godot has grown rapidly over the last few years. The pool of contributors has grown as well and it is no longer feasible for new contributors to slowly learn the vision of the engine by chatting with the engine maintainers. Accordingly, the Board of the Godot Foundation has decided that it is finally time to write down a high-level statement of what our vision for the engine is so that it is easily accessible to all. The vision statement is intended to guide the Godot Foundation as we make decisions about where to allocate the Foundation’s resources. It is a useful tool for contributors and maintainers to understand how we set priorities and what areas of development will likely see an extra boost from Foundation staff. It is a good reference for users of the engine to understand what the Foundation and contributors work towards, and how it aligns with their own expectations for the engine. It is not intended to be used as a tool for evaluating specific changes to the engine or proposals. For that we already have comprehensive guidelines, in particular the Best Practices for Engine Contributors guide. Importantly, this is not a change in direction from the last decade of development. This is a formalization of the vision that we have shared and developed since the beginning of the project, we just feel the need to write it down now. You can read the full statement here: Vision for the Godot Engine",
-    "source": "Godot Engine"
   },
   {
     "title": "Shining Isle Productions goes all-in on Unreal Engine for The Wingfeather Saga",
