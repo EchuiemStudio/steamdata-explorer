@@ -1,5 +1,12 @@
 [
   {
+    "title": "&#39;Star Wars Zero Company&#39;: Bit Reactor crafts a galaxy of tactical possibilities with UE5",
+    "link": "https://www.unrealengine.com/developer-interviews/star-wars-zero-company-bit-reactor-crafts-a-galaxy-of-tactical-possibilities-with-ue5",
+    "pubDate": "Tue, 25 Aug 2026 00:00:00 GMT",
+    "description": "We caught up with Bit Reactor's Technical Director, Ryan McFall, to find out why Unreal Engine 5 was chosen for the studio's debut project and which UE5 features stood out to the team most during development.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Fixing high polling rate mice on Windows in Godot",
     "link": "https://godotengine.org/article/fixing-high-polling-rate-mice-on-windows/",
     "pubDate": "Mon, 24 Aug 2026 14:00:00 +0000",
@@ -144,13 +151,6 @@
     "link": "https://www.unrealengine.com/learning/junes-epic-learning-content-metahumans-mesh-terrain-and-more",
     "pubDate": "Fri, 26 Jun 2026 00:00:00 GMT",
     "description": "This month’s free learning content includes a UE template for live broadcast workflows, a tutorial that explains how to create cinematic dialogue scenes using just your phone, tips on mesh-based terrain creation, and much more.",
-    "source": "Unreal Engine"
-  },
-  {
-    "title": "Shining Isle Productions goes all-in on Unreal Engine for The Wingfeather Saga",
-    "link": "https://www.unrealengine.com/spotlights/shining-isle-productions-goes-all-in-on-unreal-engine-for-the-wingfeather-saga",
-    "pubDate": "Wed, 24 Jun 2026 00:00:00 GMT",
-    "description": "Shining Isle Productions moved its whole animation pipeline into Unreal Engine, training artists fast, rigging and animating in-engine—and unlocking faster iteration, instant reviews, and the time to go from good to great on The Wingfeather Saga.",
     "source": "Unreal Engine"
   },
   {
