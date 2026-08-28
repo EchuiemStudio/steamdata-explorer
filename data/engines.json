@@ -1,5 +1,19 @@
 [
   {
+    "title": "August’s Epic learning content: Networked physics, dynamic audio, and more",
+    "link": "https://www.unrealengine.com/learning/augusts-epic-learning-content-networked-physics-dynamic-audio-and-more",
+    "pubDate": "Fri, 28 Aug 2026 00:00:00 GMT",
+    "description": "Explore free Epic learning content that covers everything from networked physics and features like Mesh Terrain to tips on key workflows, such as project optimization, material creation, and beyond.",
+    "source": "Unreal Engine"
+  },
+  {
+    "title": "City Sample gets a major update with PCG and Unreal MCP workflows",
+    "link": "https://www.unrealengine.com/learning/city-sample-gets-a-major-update-with-pcg-and-unreal-mcp-workflows",
+    "pubDate": "Thu, 27 Aug 2026 00:00:00 GMT",
+    "description": "The City Sample project has been updated for Unreal Engine 5.8 with completely new levels that leverage recent advances in the engine, as well as a collection of additional toolsets, content, and examples for procedural worldbuilding.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Dev snapshot: Godot 4.8 dev 4",
     "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-4/",
     "pubDate": "Wed, 26 Aug 2026 12:00:00 +0000",
@@ -98,13 +112,6 @@
     "source": "Godot Engine"
   },
   {
-    "title": "The Fab Summer Mega Sale is now on!",
-    "link": "https://www.unrealengine.com/news/the-fab-summer-mega-sale-is-now-on",
-    "pubDate": "Tue, 21 Jul 2026 00:00:00 GMT",
-    "description": "Get up to 70% off tens of thousands of assets in the Fab Summer Mega Sale! You’ve got until 23:59 ET on July 29 to pocket bargains on gameplay systems, templates, materials, character packs, and more.",
-    "source": "Unreal Engine"
-  },
-  {
     "title": "Godot Community Poll 2026",
     "link": "https://godotengine.org/article/godot-community-poll-2026/",
     "pubDate": "Thu, 16 Jul 2026 17:00:00 +0000",
@@ -145,13 +152,6 @@
     "pubDate": "Wed, 01 Jul 2026 12:00:00 +0000",
     "description": "Ever since the release of Godot 4.7 just over a week ago, our team has been working nonstop in two critical areas: ensuring a strong initial development cycle for Godot 4.8, and polishing up the current stable release’s foundation for an upcoming maintenance release. We weren’t entirely sure which would end up coming to light first, but it’s now clear that the latter will be taking an early lead with our first 4.7.1 release candidate. We’d like to thank everyone who diligently reported on any showstopping bugs that weren’t present in Godot 4.6; your continued testing is making this process especially expedient! Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from nophenia, an exploration game where you wander dream-like environments as a wolfgirl with dedicated sitting and howling inputs. You can buy the game on Steam, and follow the developer on itch.io and Discord. Highlights This section covers the most relevant changes made since the stable release, which are largely regression fixes: Animation: Make animation folding access cfg only at save/load project time ( GH-120403 ). GUI: Fix crash in Tree::_get_item_focus_rect ( GH-120538 ). GUI: Fix scene tree drag-n-drop regression on touchscreens ( GH-120456 ). GUI: Fix visual glitch with connections lines in GraphEdit ( GH-120488 ). Input: Android: Fix EditorSettings not instantiated error when running game ( GH-120723 ).…",
     "source": "Godot Engine"
-  },
-  {
-    "title": "June’s Epic learning content: MetaHumans, Mesh Terrain, and more",
-    "link": "https://www.unrealengine.com/learning/junes-epic-learning-content-metahumans-mesh-terrain-and-more",
-    "pubDate": "Fri, 26 Jun 2026 00:00:00 GMT",
-    "description": "This month’s free learning content includes a UE template for live broadcast workflows, a tutorial that explains how to create cinematic dialogue scenes using just your phone, tips on mesh-based terrain creation, and much more.",
-    "source": "Unreal Engine"
   },
   {
     "title": "Unreal Engine 5.8 is now available",
