@@ -1,5 +1,110 @@
 [
   {
+    "title": "GDC Side Quest - Inside Austin Wintory's Collaborative Composing Process",
+    "link": "https://www.gamedeveloper.com/audio/gdc-side-quest-inside-austin-wintory-s-collaborative-composing-process",
+    "pubDate": "Fri, 28 Aug 2026 14:15:00 GMT",
+    "description": "This month, celebrated composer Austin Wintory joins content marketing manager Beth Elderkin for a conversation about his creative process.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Panic refunds tariff fees, 1047 Games pivots from Splitgate, and Gamescom Dev grows - Patch Notes #67",
+    "link": "https://www.gamedeveloper.com/business/panic-refunds-tariff-fees-1047-games-pivots-from-splitgate-and-gamescom-dev-grows-patch-notes-67",
+    "pubDate": "Fri, 28 Aug 2026 13:47:47 GMT",
+    "description": "Plus: No More Room in Hell 2 surpasses 1 million players after exiting a pivotal Early Access period.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Warlock's magic system was built on game-bending player choices",
+    "link": "https://www.gamedeveloper.com/design/warlock-s-magic-system-was-built-on-game-breaking-player-choices",
+    "pubDate": "Fri, 28 Aug 2026 12:03:43 GMT",
+    "description": "It's not a bug, it's a feature.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Spanish union calls for ongoing strike action at Ubisoft Mobile Barcelona",
+    "link": "https://www.gamedeveloper.com/business/spanish-union-calls-for-ongoing-strike-action-at-ubisoft-mobile-barcelona",
+    "pubDate": "Fri, 28 Aug 2026 09:57:07 GMT",
+    "description": "'The strike was communicated to the company in early August; however, the workers' representatives are still awaiting a response.'",
+    "source": "Game Developer"
+  },
+  {
+    "title": "How you (yes, you) can benefit from 1-on-1 synchronous playtesting",
+    "link": "https://www.gamedeveloper.com/design/how-you-yes-you-can-benefit-from-1-on-1-synchronous-playtesting",
+    "pubDate": "Thu, 27 Aug 2026 16:48:40 GMT",
+    "description": "In his 2026 GDC Festival of Gaming talk, designer Brian Cronin makes the case for one-on-one playtesting.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "CD Projekt Red has The Witcher 4 running on all target platforms after Cyberpunk 2077 lesson",
+    "link": "https://www.gamedeveloper.com/production/cd-projekt-red-has-the-witcher-4-running-on-all-target-platforms-after-cyberpunk-2077-lesson",
+    "pubDate": "Thu, 27 Aug 2026 16:41:50 GMT",
+    "description": "spoke to CD Projekt Red co-CEO Michal Nowakowski.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Saber exec: The game industry must look beyond North America and dilute risk",
+    "link": "https://www.gamedeveloper.com/business/saber-exec-the-game-industry-must-look-beyond-north-america-and-dilute-risk",
+    "pubDate": "Thu, 27 Aug 2026 15:00:00 GMT",
+    "description": "Saber chief creative officer Tim Willits said studios need to find 'reliable' income to support their big swings.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Xbox CEO Asha Sharma once again stresses Xbox's need for affordability",
+    "link": "https://www.gamedeveloper.com/business/xbox-ceo-asha-sharma-once-again-stresses-xbox-s-need-for-affordability",
+    "pubDate": "Thu, 27 Aug 2026 14:40:00 GMT",
+    "description": "Xbox isn't healthy, she said again.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Saudi media conglomerate MBC expands into video game industry with new studio",
+    "link": "https://www.gamedeveloper.com/business/saudi-owned-media-conglomerate-mbc-expands-into-the-game-industry",
+    "pubDate": "Thu, 27 Aug 2026 14:17:05 GMT",
+    "description": "MBC Game Studio broke cover at Gamescom 2026 and has already hired veterans from BioWare, Hi-Rez, Ubisoft Montreal, and Bungie.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Obituary: Actor Tim Curry, celebrated for his work in games, has passed at age 80",
+    "link": "https://www.gamedeveloper.com/audio/obituary-actor-tim-curry-celebrated-for-his-work-in-games-has-passed-at-age-80",
+    "pubDate": "Wed, 26 Aug 2026 20:08:56 GMT",
+    "description": "The charismatic star of stage and screen also lent his likeness to a number of celebrated video games.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Rockstar Games 'heartbroken' by Grand Theft Auto 6 leaks",
+    "link": "https://www.gamedeveloper.com/business/rockstar-games-heartbroken-by-grand-theft-auto-6-leaks",
+    "pubDate": "Wed, 26 Aug 2026 18:30:00 GMT",
+    "description": "The Grand Theft Auto 6 maker has responded to the game's massive leaks.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Playdate maker Panic is refunding tariff fees to customers",
+    "link": "https://www.gamedeveloper.com/business/playdate-maker-is-refunding-tariff-fees-to-customers",
+    "pubDate": "Wed, 26 Aug 2026 18:21:55 GMT",
+    "description": "'It's just not our money to keep, and it felt really good to give it back.'",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Xbox officially announces disc to digital program",
+    "link": "https://www.gamedeveloper.com/business/xbox-officially-announces-disc-to-digital-program",
+    "pubDate": "Wed, 26 Aug 2026 17:58:25 GMT",
+    "description": "The Verge reported this program back in July.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "CD Projekt Red to distribute The Witcher 3: The Wild Hunt on Blizzard's Battle.net",
+    "link": "https://www.gamedeveloper.com/business/cd-projekt-red-and-blizzard-enter-a-partnership",
+    "pubDate": "Wed, 26 Aug 2026 17:30:18 GMT",
+    "description": "The remastered rendition of The Witcher 3: Wild Hunt is coming to Battle.net, along with the new upcoming expansion and a Diablo IV collab.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Creative UK launches Barclays-sponsored growth program for screen businesses",
+    "link": "https://www.gamedeveloper.com/business/creative-uk-launches-barclays-sponsored-growth-program-for-screen-businesses",
+    "pubDate": "Wed, 26 Aug 2026 16:11:16 GMT",
+    "description": "The program led by Creative Enterprise, which is part of Creative UK, is funded by the BFI National Lottery.",
+    "source": "Game Developer"
+  },
+  {
     "title": "My Favourite Games From GMTK Game Jam 2026",
     "link": "https://www.youtube.com/watch?v=awegilW3DTc",
     "pubDate": "2026-08-07T20:00:06+00:00",
