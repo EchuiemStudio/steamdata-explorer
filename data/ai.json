@@ -1,5 +1,19 @@
 [
   {
+    "title": "Developing Enterprise Frontier Safeguards with our customers",
+    "link": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+    "pubDate": "Tue, 01 Sep 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
+    "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+    "link": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+    "pubDate": "Tue, 01 Sep 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
     "title": "Improving our alignment and security efforts",
     "link": "https://www.anthropic.com/news/improving-alignment-security-efforts",
     "pubDate": "Mon, 31 Aug 2026 00:00:00 +0000",
@@ -56,13 +70,6 @@
     "source": "Anthropic News"
   },
   {
-    "title": "Cognizant and Anthropic expand their partnership to bring Claude to enterprise clients",
-    "link": "https://www.anthropic.com/news/cognizant-anthropic",
-    "pubDate": "Mon, 27 Jul 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
     "title": "Our position on open-weights models",
     "link": "https://www.anthropic.com/news/position-open-weights-models",
     "pubDate": "Mon, 27 Jul 2026 00:00:00 +0000",
@@ -80,13 +87,6 @@
     "title": "The Making of Claude Code",
     "link": "https://www.anthropic.com/features/making-of-claude-code",
     "pubDate": "Mon, 06 Jul 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
-    "title": "Introducing Claude Sonnet 5",
-    "link": "https://www.anthropic.com/news/claude-sonnet-5",
-    "pubDate": "Tue, 30 Jun 2026 00:00:00 +0000",
     "description": null,
     "source": "Anthropic News"
   }
