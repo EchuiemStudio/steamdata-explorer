@@ -1,5 +1,19 @@
 [
   {
+    "title": "Stepping inside a retro anime-inspired game: a look into the rendering of Orbitals",
+    "link": "https://www.unrealengine.com/tech-blog/stepping-inside-a-retro-anime-inspired-game-a-look-into-the-rendering-of-orbitals",
+    "pubDate": "Thu, 03 Sep 2026 00:00:00 GMT",
+    "description": "Discover how Shapefarm recreated the look of classic 80s and 90s anime in space adventure game ‘Orbitals’ using UE5. Learn how custom shaders and film-inspired effects bring its retro sci-fi world to life.",
+    "source": "Unreal Engine"
+  },
+  {
+    "title": "EMEA Dev Days | Unreal Engine",
+    "link": "https://www.unrealengine.com/events/emea-dev-days",
+    "pubDate": "Thu, 03 Sep 2026 00:00:00 GMT",
+    "description": "Live in EMEA? Unreal Engine Dev Days are coming to a city near you, bringing together Unreal Engine developers to learn, connect, and share ideas.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Here’s why Rebel Wolves chose UE5 to power its ambitious, large scale, open world RPG The Blood of Dawnwalker",
     "link": "https://www.unrealengine.com/developer-interviews/heres-why-rebel-wolves-chose-ue5-to-power-its-ambitious-large-scale-open-world-rpg-the-blood-of-dawnwalker",
     "pubDate": "Wed, 02 Sep 2026 00:00:00 GMT",
@@ -89,20 +103,6 @@
     "pubDate": "Mon, 03 Aug 2026 12:00:00 +0000",
     "description": "A month and a half has passed since our initial release of Godot 4.7, which was then followed up with the Godot 4.7.1 maintenance release nearly three weeks ago. While we stand by the stable foundation of our maintenance releases, that doesn’t mean we’re ready to stop giving support to our most recently released version. In fact, thanks to the amount of work put into the in-progress 4.8 builds, the amount of resolved issues and regression fixes has only gone up! As such, we’re eager to deliver yet another maintenance release in the near future, starting with this initial release candidate: Godot 4.7.2 RC 1! Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from MOLDRISE, a psychological horror game where you must go up, go up, Go Up, Go Up, GO UP, GO UP, GO—. You can buy the game on Steam, and follow the developer on Bluesky, YouTube, and itch.io. Highlights This section covers the most relevant changes made since the 4.7.1 maintenance release, which are largely regression fixes (critical changes highlighted in bold): 3D: Fix 3D ruler tool tooltip ( GH-120890 ). Assetlib: Asset Store: Fix image width on different Editor Scales ( GH-121470 ). Core: Fix crash when failing to open log file for writing ( GH-121926 ). Core: Forbid negative weights in RandomPCG::rand_weighted ( GH-120004 ). Core: Make it impossible to have more than one main thread, and don’t release unnecessarily…",
     "source": "Godot Engine"
-  },
-  {
-    "title": "July’s Epic learning content: Animation, mobile game development, and more",
-    "link": "https://www.unrealengine.com/learning/julys-epic-learning-content-animation-mobile-game-development-and-more",
-    "pubDate": "Fri, 31 Jul 2026 00:00:00 GMT",
-    "description": "This month’s Epic learning content includes tutorials on animation in Sequencer, performance capture with MetaHuman, and building destructible assets with Chaos—plus courses on using Unreal Engine to develop mobile games, customize characters, and more.",
-    "source": "Unreal Engine"
-  },
-  {
-    "title": "Halo: Campaign Evolved brings the legendary franchise into a new era with UE5",
-    "link": "https://www.unrealengine.com/developer-interviews/halo-campaign-evolved-brings-the-legendary-franchise-into-a-new-era-with-ue5",
-    "pubDate": "Thu, 30 Jul 2026 00:00:00 GMT",
-    "description": "Discover how UE5 brings high-definition visuals, refined controls, and updated cinematics to Halo: Campaign Evolved, a faithful yet modernized remake of the legendary Halo: Combat Evolved campaign.",
-    "source": "Unreal Engine"
   },
   {
     "title": "Dev snapshot: Godot 4.8 dev 2",
