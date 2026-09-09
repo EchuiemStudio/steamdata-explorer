@@ -1,5 +1,33 @@
 [
   {
+    "title": "Riot Games is considering making premium titles, says co-founder",
+    "link": "https://www.gamedeveloper.com/business/riot-games-marc-merrill-says-company-is-considering-making-premium-games",
+    "pubDate": "Tue, 08 Sep 2026 21:14:23 GMT",
+    "description": "'Not every game needs to be infinite.'",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Report: EA is using genAI for commentator voiceover in NHL 27",
+    "link": "https://www.gamedeveloper.com/business/report-ea-s-nhl-27-is-using-genai-to-create-voiceover-claims-a-sports-commentator",
+    "pubDate": "Tue, 08 Sep 2026 18:00:00 GMT",
+    "description": "Veteran sports commentator John Buccigross claims EA showed him the tech using his voice for in-game commentary in NHL 27.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Tim Schafer says Double Fine's unique games can be commercial hits if they can find their audience",
+    "link": "https://www.gamedeveloper.com/business/tim-schafer-we-never-actively-tried-to-make-a-game-we-thought-was-going-to-lose-money",
+    "pubDate": "Tue, 08 Sep 2026 17:14:18 GMT",
+    "description": "The Double Fine head says the studio was not profitable under Xbox.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Report: FuturLab lays off devs without informing team leads or managers",
+    "link": "https://www.gamedeveloper.com/business/report-futurlab-makes-layoffs-without-informing-team-leads-or-managers",
+    "pubDate": "Tue, 08 Sep 2026 13:23:06 GMT",
+    "description": "Sources have also accused the Powerwash Simulator developer of obfuscating the truth by asking staff to refer to those laid off as 'the leavers.'",
+    "source": "Game Developer"
+  },
+  {
     "title": "Don't Nod considering laying off 90 workers in France",
     "link": "https://www.gamedeveloper.com/business/don-t-nod-considering-laying-off-90-workers-in-france",
     "pubDate": "Tue, 08 Sep 2026 11:14:25 GMT",
@@ -74,34 +102,6 @@
     "link": "https://www.gamedeveloper.com/business/sega-owned-rovio-is-shutting-down-its-copenhagen-studio",
     "pubDate": "Tue, 01 Sep 2026 15:37:36 GMT",
     "description": "The closure follows the cancellation of Sonic Blitz and the exact number of redundancies are yet to be confirmed.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Paradox Interactive's Afterworld wants to entice new players to grand strategy with tasty RPG hooks",
-    "link": "https://www.gamedeveloper.com/design/paradox-interactive-s-afterworld-wants-to-entice-new-players-to-grand-strategy-with-tasty-rpg-hooks",
-    "pubDate": "Tue, 01 Sep 2026 13:00:00 GMT",
-    "description": "Game director Dan Lind explains the appeal of strategy in grand strategy games, and how to invite new players into a sprawling game.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Star Wars Zero Company studio furloughed workers ahead of launch",
-    "link": "https://www.gamedeveloper.com/business/star-wars-zero-company-studio-furloughed-workers-ahead-of-launch",
-    "pubDate": "Tue, 01 Sep 2026 09:19:23 GMT",
-    "description": "Bit Reactor has confirmed it temporarily suspended workers without pay due to concerns over how its debut title would perform.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Housemarque co-founder Ilari Kuittinen exits from studio",
-    "link": "https://www.gamedeveloper.com/business/housemarque-co-founder-ilari-kuittinen-retires-from-studio",
-    "pubDate": "Mon, 31 Aug 2026 17:29:37 GMT",
-    "description": "'Strive to be a better professional, and a better human being.'",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Report: 13TB of Steam data leaked after users access 'publicly accessible endpoint'",
-    "link": "https://www.gamedeveloper.com/pc/report-13tb-of-steam-data-leaked-after-users-access-publicly-accessible-endpoint-",
-    "pubDate": "Mon, 31 Aug 2026 15:07:37 GMT",
-    "description": "The leaked data apparently includes beta builds and screenshots of pre-release Valve titles—and games from other publishers like EA and WB Games.",
     "source": "Game Developer"
   },
   {
