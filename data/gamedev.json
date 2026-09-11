@@ -1,5 +1,47 @@
 [
   {
+    "title": "Rockstar and fired GTA developers outline core arguments during union busting tribunal",
+    "link": "https://www.gamedeveloper.com/production/rockstar-and-fired-gta-developers-outline-core-arguments-during-union-busting-tribunal",
+    "pubDate": "Fri, 11 Sep 2026 10:26:10 GMT",
+    "description": "Both parties have set out their stall in legal documents obtained by Game Developer.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Xbox to publish Kojima Productions' Physint after PlayStation ditches project",
+    "link": "https://www.gamedeveloper.com/business/xbox-to-publish-kojima-productions-physint-after-playstation-ditches-project",
+    "pubDate": "Thu, 10 Sep 2026 19:35:18 GMT",
+    "description": "Xbox is committing to the project during a significant period of change for the company that has so far included mass layoffs and after numerous canceled publishing partnerships.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "'Ship a good game, learn from it, and build from there:' Lessons from going indie after a decade at id Software",
+    "link": "https://www.gamedeveloper.com/production/-ship-a-good-game-learn-from-it-and-build-from-there-lessons-from-going-indie-after-a-decade-at-id-software",
+    "pubDate": "Thu, 10 Sep 2026 18:56:42 GMT",
+    "description": "We sit down with Doom Eternal art director Tony Garza and fellow id alum Richard O'Neal to hear about their journey into the world of indie development through Turnkey Games.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "EA is using genAI for commentator voiceover in NHL 27",
+    "link": "https://www.gamedeveloper.com/business/report-ea-s-nhl-27-is-using-genai-to-create-voiceover-claims-a-sports-commentator",
+    "pubDate": "Thu, 10 Sep 2026 17:18:45 GMT",
+    "description": "EA says it's using the tech to expand on recording sessions with John Buccigross and Darren Pang's 'full consent and active collaboration.'",
+    "source": "Game Developer"
+  },
+  {
+    "title": "'Justice at last feels within reach:' Fired Rockstar workers rally in Glasgow as union busting tribunal begins",
+    "link": "https://www.gamedeveloper.com/production/-justice-at-last-feels-within-reach-fired-rockstar-workers-rally-in-glasgow-as-union-busting-tribunal-begins",
+    "pubDate": "Thu, 10 Sep 2026 13:48:57 GMT",
+    "description": "The hearing is expected to conclude on October 16, 2026.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Report: Steam now requires Australian users to verify their age with credit cards",
+    "link": "https://www.gamedeveloper.com/pc/report-steam-now-requires-australian-users-to-verify-their-age-with-credit-cards",
+    "pubDate": "Thu, 10 Sep 2026 09:24:59 GMT",
+    "description": "Multiple people now claim that Valve has implemented proof-of-age verification for Australian Steam users to access games classified as R18+.",
+    "source": "Game Developer"
+  },
+  {
     "title": "Mark Cerny and Geoff Keighley launch university-affiliated fellowship program",
     "link": "https://www.gamedeveloper.com/business/mark-cerny-and-geoff-keighley-launch-university-affiliated-fellowship-program",
     "pubDate": "Wed, 09 Sep 2026 20:00:00 GMT",
@@ -35,13 +77,6 @@
     "source": "Game Developer"
   },
   {
-    "title": "Report: EA is using genAI for commentator voiceover in NHL 27",
-    "link": "https://www.gamedeveloper.com/business/report-ea-s-nhl-27-is-using-genai-to-create-voiceover-claims-a-sports-commentator",
-    "pubDate": "Tue, 08 Sep 2026 18:00:00 GMT",
-    "description": "Veteran sports commentator John Buccigross claims EA showed him the tech using his voice for in-game commentary in NHL 27.",
-    "source": "Game Developer"
-  },
-  {
     "title": "Tim Schafer says Double Fine's unique games can be commercial hits if they can find their audience",
     "link": "https://www.gamedeveloper.com/business/tim-schafer-we-never-actively-tried-to-make-a-game-we-thought-was-going-to-lose-money",
     "pubDate": "Tue, 08 Sep 2026 17:14:18 GMT",
@@ -67,41 +102,6 @@
     "link": "https://www.gamedeveloper.com/production/strategically-making-star-wars-zero-company-ft-greg-foertsch",
     "pubDate": "Fri, 04 Sep 2026 14:15:00 GMT",
     "description": "Bit Reactor CEO and Star Wars Zero Company creative director Greg Foertsch discusses the development of the latest adventure from the world of Star Wars.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Xbox to cap Cloud Gaming hours for Game Pass subscribers",
-    "link": "https://www.gamedeveloper.com/cloud/xbox-to-cap-cloud-gaming-hours-for-game-pass-subscribers",
-    "pubDate": "Thu, 03 Sep 2026 23:40:49 GMT",
-    "description": "Game Pass subscribers will no longer have unlimited access to Xbox's Cloud Gaming service.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Supercell's acquisition of Metacore expected to close this month",
-    "link": "https://www.gamedeveloper.com/business/supercell-s-acquisition-of-metacore-expected-to-close-this-month",
-    "pubDate": "Thu, 03 Sep 2026 16:06:04 GMT",
-    "description": "Once the deal is closed, Merge Mansion will officially become part of Supercell's live games portfolio.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Gamecity Hamburg launches second round of prototype funding",
-    "link": "https://www.gamedeveloper.com/business/gamecity-hamburg-launches-second-round-of-prototype-funding",
-    "pubDate": "Thu, 03 Sep 2026 14:49:10 GMT",
-    "description": "The organization is offering up to €80,000 to developers based or operating in the region.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "CD Projekt Red won't be abandoning physical releases",
-    "link": "https://www.gamedeveloper.com/business/cd-projekt-red-won-t-be-abandoning-physical-releases",
-    "pubDate": "Thu, 03 Sep 2026 10:55:48 GMT",
-    "description": "'What you can definitely expect from us is to put out a box that's going to make it worth your while.'",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Nexus Mods is acquiring database and analytics site SteamDB",
-    "link": "https://www.gamedeveloper.com/business/nexus-mods-is-acquiring-database-and-analytics-site-steamdb",
-    "pubDate": "Wed, 02 Sep 2026 17:27:45 GMT",
-    "description": "Nexus Mods wants to grant SteamDB resources and the 'long-term stability it deserves.'",
     "source": "Game Developer"
   },
   {

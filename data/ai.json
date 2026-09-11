@@ -1,5 +1,12 @@
 [
   {
+    "title": "Detecting and countering misuse of AI: September 2026",
+    "link": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+    "pubDate": "Thu, 10 Sep 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
     "title": "Developing Enterprise Frontier Safeguards with our customers",
     "link": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
     "pubDate": "Tue, 01 Sep 2026 00:00:00 +0000",
@@ -80,13 +87,6 @@
     "title": "Introducing Claude Opus 5",
     "link": "https://www.anthropic.com/news/claude-opus-5",
     "pubDate": "Fri, 24 Jul 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
-    "title": "The Making of Claude Code",
-    "link": "https://www.anthropic.com/features/making-of-claude-code",
-    "pubDate": "Mon, 06 Jul 2026 00:00:00 +0000",
     "description": null,
     "source": "Anthropic News"
   }
