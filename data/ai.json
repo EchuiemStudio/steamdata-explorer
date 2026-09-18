@@ -1,5 +1,19 @@
 [
   {
+    "title": "Introducing the Life Sciences Verification Program",
+    "link": "https://www.anthropic.com/news/life-sciences-verification-program",
+    "pubDate": "Thu, 17 Sep 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
+    "title": "Measurements for understanding the pace of AI development inside frontier labs",
+    "link": "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+    "pubDate": "Thu, 17 Sep 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
     "title": "Detecting and countering misuse of AI: September 2026",
     "link": "https://www.anthropic.com/threat-intelligence-report-september-2026",
     "pubDate": "Thu, 10 Sep 2026 00:00:00 +0000",
@@ -73,20 +87,6 @@
     "title": "Investigating three real-world incidents in our cybersecurity evaluations",
     "link": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
     "pubDate": "Thu, 30 Jul 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
-    "title": "Our position on open-weights models",
-    "link": "https://www.anthropic.com/news/position-open-weights-models",
-    "pubDate": "Mon, 27 Jul 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
-    "title": "Introducing Claude Opus 5",
-    "link": "https://www.anthropic.com/news/claude-opus-5",
-    "pubDate": "Fri, 24 Jul 2026 00:00:00 +0000",
     "description": null,
     "source": "Anthropic News"
   }
