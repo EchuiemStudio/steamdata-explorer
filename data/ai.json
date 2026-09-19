@@ -1,5 +1,12 @@
 [
   {
+    "title": "Partnering with Accenture on embedded evaluation",
+    "link": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+    "pubDate": "Fri, 18 Sep 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
     "title": "Introducing the Life Sciences Verification Program",
     "link": "https://www.anthropic.com/news/life-sciences-verification-program",
     "pubDate": "Thu, 17 Sep 2026 00:00:00 +0000",
@@ -80,13 +87,6 @@
     "title": "Mariano-Florentino (Tino) Cuéllar to join Anthropic as Chief Global Affairs Officer",
     "link": "https://www.anthropic.com/news/tino-cuellar",
     "pubDate": "Tue, 04 Aug 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
-    "title": "Investigating three real-world incidents in our cybersecurity evaluations",
-    "link": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
-    "pubDate": "Thu, 30 Jul 2026 00:00:00 +0000",
     "description": null,
     "source": "Anthropic News"
   }
