@@ -1,5 +1,16 @@
 # TODO — fold in "Jam Roller" as a new Hub section
 
+> **Correction, KC 2026-09-21.** This plan says Jam Roller is *"currently
+> `d:\ClaudeProject\GameJamGenerator`"*. It is not, and it never was part of steamdata-explorer.
+> KC: *"gamejamgenerator is not steamdata project. but yes i will make the gamejamgenerator project
+> eventually but for ur question, it never in steamdata."*
+>
+> So this is **a plan for a project that does not exist yet**, not a fold-in of an existing one.
+> Nothing below is blocked on recovering a missing folder — there is no missing folder. Treat the
+> path references (including `GameJamGenerator/frontend/data.js` further down) as describing a
+> future codebase, not a current one.
+
+
 ## Intent
 KC wants to fuse the standalone **Jam Roller** project (currently
 `d:\ClaudeProject\GameJamGenerator`, a native-desktop-via-Tauri experiment)

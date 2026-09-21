@@ -1,7 +1,8 @@
 ---
 title: Jam Roller plan points at a missing project
-status: backlog
-state: not-started
+status: review
+state: review
+attempt: 1
 worker: claude
 review-gate: KC
 priority: C
@@ -30,6 +31,23 @@ Three possibilities and they want different responses: the folder was deleted af
 happened (then the plan is done, and should say so); it was deleted before (the plan is dead, or
 needs the source recovered); or it moved somewhere outside the harness (the path needs correcting).
 
-- [ ] KC: where is `GameJamGenerator`? Deleted, moved, or already folded in
-- [ ] Depending on the answer: correct the path, mark the plan done, or mark it dead
-- [ ] If it is to be built, resolve whether `scripts/data.js` here is the `frontend/data.js` the plan means
+- [x] KC answered 2026-09-21: it was **never in steamdata**. Not deleted, not moved — the project does not exist yet
+- [x] Plan annotated at the top rather than marked dead: the reasoning in it is still wanted, it just describes a future project
+- [ ] When GameJamGenerator is actually built, resolve whether `scripts/data.js` here is related to the `frontend/data.js` the plan names
+
+## Answered 2026-09-21 — the premise was wrong, not the path
+
+KC: *"gamejamgenerator is not steamdata project. but yes i will make the gamejamgenerator project
+eventually but for ur question, it never in steamdata."*
+
+So this card's framing was off. It read the plan's *"currently `d:\ClaudeProject\GameJamGenerator`"*
+as a path that had broken. It never resolved, because the project has not been made yet — the plan
+describes something KC intends to build, written as though it already existed.
+
+That matters for what happens next: there is nothing to recover and nothing to mark dead. The plan
+is a **future** project's brief that happens to live in this repo's `planning/`, which is also why
+folding it into this site is not a settled thing. Annotated at the top of the plan rather than
+rewritten, so the intent survives intact.
+
+Open: whether a plan for a project that does not exist yet should live in *this* project's
+`planning/` at all, or move out when GameJamGenerator gets its own folder.
