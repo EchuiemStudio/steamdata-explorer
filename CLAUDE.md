@@ -2,6 +2,12 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+> **ClaudeProject harness.** Board cards, concepts, docs, design notes and session notes follow
+> `D:\ClaudeProject\CLAUDE.md` and `D:\ClaudeProject\PROJECT-RULES.md` — read them before writing
+> any of those. Nature slot: the repo root itself (`index.html`, `browse.html`, `feed.html`,
+> `news.html`, `opportunity.html`, `steam-game-data.html` + `styles/` `partials/` `data/`) — a
+> no-build static site serves its own source; there is no separate consuming layer.
+
 ## What this is
 
 SteamData Explorer — a static, no-build multi-page site that browses a sampled
