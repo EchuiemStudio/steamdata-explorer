@@ -1,5 +1,12 @@
 [
   {
+    "title": "TT Games brings Gotham City to life in LEGO Batman: Legacy of the Dark Knight",
+    "link": "https://www.unrealengine.com/developer-interviews/tt-games-brings-gotham-city-to-life-in-lego-batman-legacy-of-the-dark-knight",
+    "pubDate": "Mon, 21 Sep 2026 00:00:00 GMT",
+    "description": "We caught up with TT Games to find out how UE5 features such as World Partition, the Gameplay Ability System, and more helped them fulfill their vision for an open world Gotham City in LEGO Batman: Legacy of the Dark Knight.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Dev snapshot: Godot 4.8 dev 6",
     "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-6/",
     "pubDate": "Tue, 15 Sep 2026 20:00:00 +0000",
@@ -96,13 +103,6 @@
     "pubDate": "Sat, 15 Aug 2026 13:00:00 +0000",
     "description": "Showcase your Godot Engine 2026 creations! We invite you to submit videos featuring your published or in-progress games or tools so we can make the Godot 2026 Showreel. Our annual showreels are informative and celebratory showcases, to highlight the wide array of projects developed using the Godot Engine. If you want to participate this year and share your Godot-made game, app, or tool, submit your entry starting today. Help us to decide! Like last year, we want to invite more people to participate in the voting phase. So, if you are a member of the Development Fund, you will be able to cast your votes alongside the Godot maintainers! To be eligible to vote, you need to have a recurrent donation active. How to submit You can submit your entry in our Godot Showreel website. Before submitting, please read the submission guidelines. Voting from October 2nd until October 16th 2026 Need inspiration? Check out our showreel playlist for some creative sparks and see what makes a great submission! Here is last year’s showreel: Good luck! We can’t wait to see your creations!",
     "source": "Godot Engine"
-  },
-  {
-    "title": "Download the latest Game Animation Sample Project—now updated for UE 5.8!",
-    "link": "https://www.unrealengine.com/tech-blog/download-the-latest-game-animation-sample-project-now-updated-for-ue-5-8",
-    "pubDate": "Wed, 12 Aug 2026 00:00:00 GMT",
-    "description": "The Game Animation Sample Project is back with a brand-new update for Unreal Engine 5.8. Showcasing the latest and greatest in-engine animation features, this release includes new physics, motion matching, pose searching, and look-at features—and more.",
-    "source": "Unreal Engine"
   },
   {
     "title": "GodotFest 2026 returns to Munich this November",
