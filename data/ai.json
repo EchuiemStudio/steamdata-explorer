@@ -1,5 +1,12 @@
 [
   {
+    "title": "Introducing Claude Opus 5.5",
+    "link": "https://www.anthropic.com/claude-opus-5-5",
+    "pubDate": "Tue, 22 Sep 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
     "title": "Partnering with Accenture on embedded evaluation",
     "link": "https://www.anthropic.com/news/accenture-embedded-evaluation",
     "pubDate": "Fri, 18 Sep 2026 00:00:00 +0000",
@@ -9,13 +16,6 @@
   {
     "title": "Introducing the Life Sciences Verification Program",
     "link": "https://www.anthropic.com/news/life-sciences-verification-program",
-    "pubDate": "Thu, 17 Sep 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
-    "title": "Measurements for understanding the pace of AI development inside frontier labs",
-    "link": "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
     "pubDate": "Thu, 17 Sep 2026 00:00:00 +0000",
     "description": null,
     "source": "Anthropic News"

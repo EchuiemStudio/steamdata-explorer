@@ -1,5 +1,40 @@
 [
   {
+    "title": "Undead Labs makes 'significant' layoffs after splitting from Xbox",
+    "link": "https://www.gamedeveloper.com/business/undead-labs-makes-significant-layoffs-after-splitting-from-xbox",
+    "pubDate": "Wed, 23 Sep 2026 11:22:24 GMT",
+    "description": "Microsoft signalled its intent to divest the Seattle-based studio earlier this year.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "'We want to keep it very simple:' How Nex Playground is beating expectations during a hardware crisis",
+    "link": "https://www.gamedeveloper.com/business/-we-want-to-keep-it-very-simple-how-nex-playrground-is-beating-expectations-during-a-hardware-crisis",
+    "pubDate": "Tue, 22 Sep 2026 15:15:00 GMT",
+    "description": "'If we don't create margin we can't continue to invest in software, and our software costs are going up every year—significantly.'",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Escape From Tarkov dev wants to bet on 'risky' games with its new publishing arm",
+    "link": "https://www.gamedeveloper.com/business/escape-from-tarkov-dev-wants-to-bet-on-risky-games-with-its-new-publishing-arm",
+    "pubDate": "Tue, 22 Sep 2026 14:34:35 GMT",
+    "description": "Battlestate Games Publishing aims to provide publishing support to 'hardcore' games.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Xbox continues 'reset' with Halo Studios layoffs and Undead Labs divestment",
+    "link": "https://www.gamedeveloper.com/business/xbox-continues-reset-with-halo-studios-layoffs-and-undead-labs-divestment",
+    "pubDate": "Tue, 22 Sep 2026 14:18:45 GMT",
+    "description": "Activision is developing the next Halo title, and Ninja Theory is being shuttered.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "'Do not': Rockstar outlines modding rules before GTA VI touches down",
+    "link": "https://www.gamedeveloper.com/production/-do-not-rockstar-outlines-modding-rules-before-gta-vi-touches-down",
+    "pubDate": "Tue, 22 Sep 2026 12:33:14 GMT",
+    "description": "Official Rockstar storylines, characters, and other elements from the studio's 'established continuity' are off-limits.",
+    "source": "Game Developer"
+  },
+  {
     "title": "Bungie declares it's 'not done with Destiny' as it lays out studio's future",
     "link": "https://www.gamedeveloper.com/console/bungie-declares-it-s-not-done-with-destiny-as-it-lays-out-studio-s-future",
     "pubDate": "Mon, 21 Sep 2026 20:30:57 GMT",
@@ -170,41 +205,6 @@
   {
     "title": "SLICE",
     "link": "https://www.gamedeveloper.com/events/slice",
-    "pubDate": null,
-    "description": null,
-    "source": "Game Developer"
-  },
-  {
-    "title": "Unreal Fest",
-    "link": "https://www.gamedeveloper.com/events/unreal-fest",
-    "pubDate": null,
-    "description": null,
-    "source": "Game Developer"
-  },
-  {
-    "title": "GodotCon",
-    "link": "https://www.gamedeveloper.comconference.godotengine.org",
-    "pubDate": null,
-    "description": null,
-    "source": "Game Developer"
-  },
-  {
-    "title": "NarraScope",
-    "link": "https://www.gamedeveloper.comnarrascope.org",
-    "pubDate": null,
-    "description": null,
-    "source": "Game Developer"
-  },
-  {
-    "title": "BitSummit",
-    "link": "https://www.gamedeveloper.combitsummit.org",
-    "pubDate": null,
-    "description": null,
-    "source": "Game Developer"
-  },
-  {
-    "title": "Tokyo Game Show (TGS)",
-    "link": "https://www.gamedeveloper.com/events/tokyo-game-show-tgs-",
     "pubDate": null,
     "description": null,
     "source": "Game Developer"
