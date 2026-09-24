@@ -1,5 +1,26 @@
 [
   {
+    "title": "Irish Game Fund expands with additional funding pathways",
+    "link": "https://www.gamedeveloper.com/business/irish-game-fund-expands-with-additional-funding-pathways",
+    "pubDate": "Thu, 24 Sep 2026 11:10:22 GMT",
+    "description": "Developers in the region will now be able to take advantage of a Development Fund, Prototype Fund, and Release Fund.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Discord re-introduces age verification policy based on 'account signal' methodology",
+    "link": "https://www.gamedeveloper.com/business/discord-re-introduces-age-verification-policy-with-new-methods",
+    "pubDate": "Wed, 23 Sep 2026 18:30:00 GMT",
+    "description": "Discord says it has built an age estimation model based on 'account signals' to determine an user's age group.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Report: Bethesda president tells Obsidian staff it won't lose 'creative identity' after merge",
+    "link": "https://www.gamedeveloper.com/business/report-bethesda-president-tells-obsidian-staff-it-won-t-lose-creative-identity-after-merge",
+    "pubDate": "Wed, 23 Sep 2026 17:03:46 GMT",
+    "description": "Bethesda president Jill Braff is reportedly calling Obsidian's merging with Bethesda 'primarily a change in reporting structure.'",
+    "source": "Game Developer"
+  },
+  {
     "title": "Undead Labs makes 'significant' layoffs after splitting from Xbox",
     "link": "https://www.gamedeveloper.com/business/undead-labs-makes-significant-layoffs-after-splitting-from-xbox",
     "pubDate": "Wed, 23 Sep 2026 11:22:24 GMT",
@@ -187,26 +208,5 @@
     "pubDate": "2025-06-26T16:49:53+00:00",
     "description": null,
     "source": "GMTK (YouTube)"
-  },
-  {
-    "title": "Game Conference MX (GCMX)",
-    "link": "https://www.gamedeveloper.com/events/untitled",
-    "pubDate": null,
-    "description": null,
-    "source": "Game Developer"
-  },
-  {
-    "title": "gamescom",
-    "link": "https://www.gamedeveloper.com/events/gamescom",
-    "pubDate": null,
-    "description": null,
-    "source": "Game Developer"
-  },
-  {
-    "title": "SLICE",
-    "link": "https://www.gamedeveloper.com/events/slice",
-    "pubDate": null,
-    "description": null,
-    "source": "Game Developer"
   }
 ]

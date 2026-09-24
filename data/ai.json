@@ -1,5 +1,19 @@
 [
   {
+    "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+    "link": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+    "pubDate": "Wed, 23 Sep 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
+    "title": "The Situation Report",
+    "link": "https://www.anthropic.com/features/ebola-response",
+    "pubDate": "Tue, 22 Sep 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
     "title": "Introducing Claude Opus 5.5",
     "link": "https://www.anthropic.com/claude-opus-5-5",
     "pubDate": "Tue, 22 Sep 2026 00:00:00 +0000",
@@ -80,13 +94,6 @@
     "title": "Improving Fable 5's biology safeguards",
     "link": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
     "pubDate": "Fri, 07 Aug 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
-    "title": "Mariano-Florentino (Tino) Cuéllar to join Anthropic as Chief Global Affairs Officer",
-    "link": "https://www.anthropic.com/news/tino-cuellar",
-    "pubDate": "Tue, 04 Aug 2026 00:00:00 +0000",
     "description": null,
     "source": "Anthropic News"
   }
