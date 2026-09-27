@@ -8,7 +8,7 @@ review-gate: KC
 priority: C
 complexity: CP1
 estimate: 0.25
-due: 2026-09-30
+due: ""
 phase: P0 Structure
 ---
 Found by a path audit across all nine projects on 2026-09-21.

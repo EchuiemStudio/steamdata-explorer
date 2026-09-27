@@ -7,7 +7,7 @@ review-gate: KC
 priority: B
 complexity: CP1
 estimate: 0.25
-due: 2026-09-27
+due: ""
 phase: P0 Structure
 attempt: 1
 ---
