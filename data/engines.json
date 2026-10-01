@@ -1,5 +1,19 @@
 [
   {
+    "title": "Gears of War: E-Day sees a return to dark, survival-horror roots with UE5",
+    "link": "https://www.unrealengine.com/developer-interviews/gears-of-war-e-day-sees-a-return-to-dark-survival-horror-roots-with-ue5",
+    "pubDate": "Thu, 01 Oct 2026 00:00:00 GMT",
+    "description": "With the latest major main-series installment of Gears of War about to drop, we caught up with The Coalition to find out how UE5 helped recapture the desperate “destroyed beauty” aesthetic of the original games—while evolving gameplay, animation, and more.",
+    "source": "Unreal Engine"
+  },
+  {
+    "title": "September’s Epic learning content: MetaHumans, physics, animation, and more",
+    "link": "https://www.unrealengine.com/learning/septembers-epic-learning-content-metahumans-physics-animation-and-more",
+    "pubDate": "Wed, 30 Sep 2026 00:00:00 GMT",
+    "description": "Check out this month’s free learning resources, including an exploration of the MetaHuman Animator Markerless Motion Capture plugin, a journey into UE 5.8’s MCP server, a look at the new Experimental AnimGen workflow—and much more.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Dev snapshot: Godot 4.8 dev 7",
     "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-7/",
     "pubDate": "Tue, 29 Sep 2026 12:00:00 +0000",
@@ -63,25 +77,11 @@
     "source": "Unreal Engine"
   },
   {
-    "title": "City Sample gets a major update with PCG and Unreal MCP workflows",
-    "link": "https://www.unrealengine.com/learning/city-sample-gets-a-major-update-with-pcg-and-unreal-mcp-workflows",
-    "pubDate": "Thu, 27 Aug 2026 00:00:00 GMT",
-    "description": "The City Sample project has been updated for Unreal Engine 5.8 with completely new levels that leverage recent advances in the engine, as well as a collection of additional toolsets, content, and examples for procedural worldbuilding.",
-    "source": "Unreal Engine"
-  },
-  {
     "title": "Dev snapshot: Godot 4.8 dev 4",
     "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-4/",
     "pubDate": "Wed, 26 Aug 2026 12:00:00 +0000",
     "description": "Those of you who follow our development blogposts closely might’ve noticed that the past few snapshots have been a little on the light side. This isn’t to say that there was a lack of features on display nor that we’re dissatisfied with what we’ve been able to share so far, but it was enough that some users were under the impression that Godot 4.8 was going to mainly be focused on stability and bugfixes compared to past releases. While that wouldn’t be inherently bad, it couldn’t be further from the truth. On the contrary, this development snapshot was easily the hardest to narrow down what features to highlight out of every blog post I’ve written since joining the foundation, because there’s so much to share. Buckle up, we’ve got a lot of ground to cover. Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from CICADAMATA”, a fast-paced first person platformer, where you shoot and speedrun your way through the CASCADE while unraveling what you have become. You can buy the game on Steam, and follow the developers on YouTube. Highlights In case you missed them, see the 4.8 dev 1, 4.8 dev 2, and 4.8 dev 3 release notes for an overview of some key features which were already in those snapshots, and are therefore still available for testing in 4.8 dev 4. VFX: Trail3D If you know anything about trails in 3D design, you know that they’re absurdly complicated to get right, requiring…",
     "source": "Godot Engine"
-  },
-  {
-    "title": "&#39;Star Wars Zero Company&#39;: Bit Reactor crafts a galaxy of tactical possibilities with UE5",
-    "link": "https://www.unrealengine.com/developer-interviews/star-wars-zero-company-bit-reactor-crafts-a-galaxy-of-tactical-possibilities-with-ue5",
-    "pubDate": "Tue, 25 Aug 2026 00:00:00 GMT",
-    "description": "We caught up with Bit Reactor's Technical Director, Ryan McFall, to find out why Unreal Engine 5 was chosen for the studio's debut project and which UE5 features stood out to the team most during development.",
-    "source": "Unreal Engine"
   },
   {
     "title": "Fixing high polling rate mice on Windows in Godot",
