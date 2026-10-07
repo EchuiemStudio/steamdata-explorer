@@ -1,5 +1,12 @@
 [
   {
+    "title": "Expanding the Cyber Verification Program",
+    "link": "https://www.anthropic.com/news/cyber-verification-program",
+    "pubDate": "Tue, 06 Oct 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
     "title": "Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap",
     "link": "https://www.anthropic.com/news/claude-frontier-academy",
     "pubDate": "Fri, 02 Oct 2026 00:00:00 +0000",
@@ -56,13 +63,6 @@
     "source": "Anthropic News"
   },
   {
-    "title": "Detecting and countering misuse of AI: September 2026",
-    "link": "https://www.anthropic.com/threat-intelligence-report-september-2026",
-    "pubDate": "Thu, 10 Sep 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
     "title": "Developing Enterprise Frontier Safeguards with our customers",
     "link": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
     "pubDate": "Tue, 01 Sep 2026 00:00:00 +0000",
@@ -94,13 +94,6 @@
     "title": "Previewing the Model Hardware Standard",
     "link": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
     "pubDate": "Thu, 27 Aug 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
-    "title": "Funding better evaluations of AI’s impact on wellbeing",
-    "link": "https://www.anthropic.com/news/wellbeing-research-grants",
-    "pubDate": "Tue, 25 Aug 2026 00:00:00 +0000",
     "description": null,
     "source": "Anthropic News"
   }
