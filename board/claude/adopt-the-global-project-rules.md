@@ -10,6 +10,7 @@ estimate: 0.25
 due: ""
 phase: P0 Structure
 attempt: 1
+id: A-000197
 ---
 `board/` and `concepts/` were already scaffolded here and `board.canvas` parses as valid JSON, so
 the work was the root and the `CLAUDE.md`.

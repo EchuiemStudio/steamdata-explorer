@@ -10,6 +10,7 @@ complexity: CP1
 estimate: 0.25
 due: ""
 phase: P0 Structure
+id: A-000198
 ---
 Found by a path audit across all nine projects on 2026-09-21.
 
