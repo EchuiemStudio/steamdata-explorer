@@ -1,5 +1,12 @@
 [
   {
+    "title": "Fuse Games uses UE5 to make a fast and authentic Star Wars ™ racing game",
+    "link": "https://www.unrealengine.com/developer-interviews/fuse-games-uses-ue5-to-make-a-fast-and-authentic-star-wars-racing-game",
+    "pubDate": "Tue, 13 Oct 2026 00:00:00 GMT",
+    "description": "Star Wars: Galactic Racer™ blends high-speed racing with a roguelite twist. Discover how Fuse Games used Unreal Engine 5’s Lumen, Nanite, and World Partition to create striking visuals that do justice to the game’s innovative gameplay and worldbuilding.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Gears of War: E-Day sees a return to dark, survival-horror roots with UE5",
     "link": "https://www.unrealengine.com/developer-interviews/gears-of-war-e-day-sees-a-return-to-dark-survival-horror-roots-with-ue5",
     "pubDate": "Thu, 01 Oct 2026 00:00:00 GMT",
@@ -67,13 +74,6 @@
     "link": "https://www.unrealengine.com/developer-interviews/heres-why-rebel-wolves-chose-ue5-to-power-its-ambitious-large-scale-open-world-rpg-the-blood-of-dawnwalker",
     "pubDate": "Wed, 02 Sep 2026 00:00:00 GMT",
     "description": "We connected with the Warsaw-based developer to learn more about its debut project and to sink our teeth into the reasons Unreal Engine 5 was chosen.",
-    "source": "Unreal Engine"
-  },
-  {
-    "title": "August’s Epic learning content: Networked physics, dynamic audio, and more",
-    "link": "https://www.unrealengine.com/learning/augusts-epic-learning-content-networked-physics-dynamic-audio-and-more",
-    "pubDate": "Fri, 28 Aug 2026 00:00:00 GMT",
-    "description": "Explore free Epic learning content that covers everything from networked physics and features like Mesh Terrain to tips on key workflows, such as project optimization, material creation, and beyond.",
     "source": "Unreal Engine"
   },
   {
