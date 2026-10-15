@@ -7,6 +7,13 @@
     "source": "Anthropic News"
   },
   {
+    "title": "Preparing for the 2026 US midterms",
+    "link": "https://www.anthropic.com/news/2026-us-midterms",
+    "pubDate": "Wed, 14 Oct 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
     "title": "Introducing the Anthropic Cyber Mission",
     "link": "https://www.anthropic.com/news/anthropic-cyber-mission",
     "pubDate": "Thu, 08 Oct 2026 00:00:00 +0000",
@@ -87,13 +94,6 @@
     "title": "Partnering with Accenture on embedded evaluation",
     "link": "https://www.anthropic.com/news/accenture-embedded-evaluation",
     "pubDate": "Fri, 18 Sep 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
-    "title": "Introducing the Life Sciences Verification Program",
-    "link": "https://www.anthropic.com/news/life-sciences-verification-program",
-    "pubDate": "Thu, 17 Sep 2026 00:00:00 +0000",
     "description": null,
     "source": "Anthropic News"
   }

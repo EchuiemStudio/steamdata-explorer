@@ -1,5 +1,12 @@
 [
   {
+    "title": "UEFN Professional Bootcamp: Prepare for Unreal Engine 6",
+    "link": "https://www.unrealengine.com/news/uefn-professional-bootcamp-prepare-for-unreal-engine-6",
+    "pubDate": "Wed, 14 Oct 2026 00:00:00 GMT",
+    "description": "With Epic’s roadmap bringing together Unreal Engine and UEFN in UE6, build your UEFN skills with our free UEFN Professional Bootcamp for games industry pros. Register today to create and publish a playable Fortnite island and strengthen your portfolio.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Fuse Games uses UE5 to make a fast and authentic Star Wars ™ racing game",
     "link": "https://www.unrealengine.com/developer-interviews/fuse-games-uses-ue5-to-make-a-fast-and-authentic-star-wars-racing-game",
     "pubDate": "Tue, 13 Oct 2026 00:00:00 GMT",
@@ -67,13 +74,6 @@
     "link": "https://www.unrealengine.com/events/emea-dev-days",
     "pubDate": "Thu, 03 Sep 2026 00:00:00 GMT",
     "description": "Live in EMEA? Unreal Engine Dev Days are coming to a city near you, bringing together Unreal Engine developers to learn, connect, and share ideas.",
-    "source": "Unreal Engine"
-  },
-  {
-    "title": "Here’s why Rebel Wolves chose UE5 to power its ambitious, large scale, open world RPG The Blood of Dawnwalker",
-    "link": "https://www.unrealengine.com/developer-interviews/heres-why-rebel-wolves-chose-ue5-to-power-its-ambitious-large-scale-open-world-rpg-the-blood-of-dawnwalker",
-    "pubDate": "Wed, 02 Sep 2026 00:00:00 GMT",
-    "description": "We connected with the Warsaw-based developer to learn more about its debut project and to sink our teeth into the reasons Unreal Engine 5 was chosen.",
     "source": "Unreal Engine"
   },
   {
