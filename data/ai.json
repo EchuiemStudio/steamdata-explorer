@@ -1,5 +1,12 @@
 [
   {
+    "title": "An update on independent evaluators",
+    "link": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+    "pubDate": "Thu, 15 Oct 2026 00:00:00 +0000",
+    "description": null,
+    "source": "Anthropic News"
+  },
+  {
     "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
     "link": "https://www.anthropic.com/news/singapore-office-opening",
     "pubDate": "Wed, 14 Oct 2026 00:00:00 +0000",
@@ -87,13 +94,6 @@
     "title": "Introducing Claude Opus 5.5",
     "link": "https://www.anthropic.com/claude-opus-5-5",
     "pubDate": "Tue, 22 Sep 2026 00:00:00 +0000",
-    "description": null,
-    "source": "Anthropic News"
-  },
-  {
-    "title": "Partnering with Accenture on embedded evaluation",
-    "link": "https://www.anthropic.com/news/accenture-embedded-evaluation",
-    "pubDate": "Fri, 18 Sep 2026 00:00:00 +0000",
     "description": null,
     "source": "Anthropic News"
   }

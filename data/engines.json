@@ -1,5 +1,19 @@
 [
   {
+    "title": "Dev snapshot: Godot 4.8 beta 1",
+    "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-1/",
+    "pubDate": "Thu, 15 Oct 2026 12:00:00 +0000",
+    "description": "It’s that time of the release cycle once again: the beta snapshot! With this, 4.8 is fully in feature-freeze, and developer resources have shifted exclusively to creating and reviewing various regression fixes. For those interested in aiding us on our quest to squash any bugs that come up during this time, we once again encourage you to join our bug-hunting sprints. Anyone interested should read the Bug Triage Introduction for more information, and join the #bugsquad and #bugsquad-sprints channels on our developer RocketChat to participate. Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from Rita, a puzzle game with platforming elements, featuring a wide variety of word puzzles within a cozy world. You can buy the game on Steam, and follow the developer on Bluesky, YouTube, and itch.io. Highlights For those who have been following our development snapshots closely, you may be familiar with a number of the highlights in this post which were already covered in previous articles ( 4.8 dev 1, 4.8 dev 2, 4.8 dev 3, 4.8 dev 4, 4.8 dev 5, 4.8 dev 6, and 4.8 dev 7 ). Because we’re already in feature freeze, there are no new features to cover compared to dev 7. Instead, we’ll focus on a general round-up of what to expect from Godot 4.8 as a whole, as well as expanding on some additions that we didn’t have the chance to highlight in our previous snapshots. Breaking changes 3D…",
+    "source": "Godot Engine"
+  },
+  {
+    "title": "SILENT HILL: Townfall delivers haunting psychological horror at its very best with UE5",
+    "link": "https://www.unrealengine.com/developer-interviews/silent-hill-townfall-delivers-haunting-psychological-horror-at-its-very-best-with-ue5",
+    "pubDate": "Thu, 15 Oct 2026 00:00:00 GMT",
+    "description": "Discover how UE5 tools including Lumen, Nanite, and MetaHuman helped Screen Burn Interactive craft complex, beautifully rendered scenes and compelling characters for chilling, slow-burn survival horror SILENT HILL: Townfall.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "UEFN Professional Bootcamp: Prepare for Unreal Engine 6",
     "link": "https://www.unrealengine.com/news/uefn-professional-bootcamp-prepare-for-unreal-engine-6",
     "pubDate": "Wed, 14 Oct 2026 00:00:00 GMT",
@@ -70,13 +84,6 @@
     "source": "Unreal Engine"
   },
   {
-    "title": "EMEA Dev Days | Unreal Engine",
-    "link": "https://www.unrealengine.com/events/emea-dev-days",
-    "pubDate": "Thu, 03 Sep 2026 00:00:00 GMT",
-    "description": "Live in EMEA? Unreal Engine Dev Days are coming to a city near you, bringing together Unreal Engine developers to learn, connect, and share ideas.",
-    "source": "Unreal Engine"
-  },
-  {
     "title": "Dev snapshot: Godot 4.8 dev 4",
     "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-4/",
     "pubDate": "Wed, 26 Aug 2026 12:00:00 +0000",
@@ -144,13 +151,6 @@
     "link": "https://godotengine.org/article/godot-community-poll-2026/",
     "pubDate": "Thu, 16 Jul 2026 17:00:00 +0000",
     "description": "Update: This poll is now over. You can view the results here or download the csv with all the responses. We want to learn more about the Godot community, understand who the users of the engine are, and find out how we can better support you. To achieve that, we have a short set of questions and hope you will take a few minutes to fill them out. The results will also help us guide our current and future items in the priority list. The poll is anonymous, and we will share the results publicly once submissions are closed. It will remain open for a month and should take only 5-10 minutes to complete. 👉 Click here to complete the 2026 community poll! If you are interested in results from previous years, you can find them at the following links: 2025, 2024, 2023, 2022, 2021, 2020.",
-    "source": "Godot Engine"
-  },
-  {
-    "title": "Godot Team Updates @ GodotCon Boston 2026",
-    "link": "https://godotengine.org/article/godotcon-us-2026-update/",
-    "pubDate": "Tue, 14 Jul 2026 15:00:00 +0000",
-    "description": "h4 {margin-bottom:0} Our second annual GodotCon in North America is right around the corner and it is full steam ahead for the Godot community in Boston. The schedule has been announced so we thought it would be worth highlighting some of the official updates and fun talks from the Godot Foundation that will take place during the conference. Godot Rendering Team Update 🗣️ Clay John An update on what major changes have happened within the renderer over the last two years with a focus on technical hurdles that we have overcome and the major limitations that we are now seeing. Also, a brief look at the future of Godot’s renderer including what to expect in terms of new high-end features and the long-term vision for the renderer. What’s New in Android 🗣️ Fredia L Huya-Kouadio Discover what’s new in Android in 2026 for Godot developers! This talk will provide updates, new development, and new features to the Godot Android Platform since 2025. The talk will also cover the growth of the Godot Android editor since 2025, and will provide a quick look at its 2026 development roadmap. How to make a VR game entirely in VR! (No PC required) 🗣️ David Snopek, Logan Lang Did you know that the Godot editor can run on standalone VR headsets like the Meta Quest 2/3, Pico 4, or Samsung Galaxy XR? This can allow you to build a game entirely in VR, without using a desktop or laptop computer at all! In this talk, David Snopek and Logan Lang of Godot’s XR team, will: Tell the story of “Expedition to Blobotopia”, a VR game which they built in one week for the Godot Wild Jam #81, working entirely on Meta Quest 3 headsets Explain the advantages of doing game dev in the headset Share tips and tricks for how you can do it too Demonstrate the newly released GABE, which allows running full Android Gradle builds on the headset Explain the basics of publishing your VR game on the Meta Horizon Store and Google Play Store Give a live demo of the editor running on a headset! Discover a new way to…",
     "source": "Godot Engine"
   },
   {
