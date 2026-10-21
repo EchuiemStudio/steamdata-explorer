@@ -1,5 +1,26 @@
 [
   {
+    "title": "Fuse Games CEO breaks down codev framework for Star Wars: Galactic Racer",
+    "link": "https://www.gamedeveloper.com/production/fuse-games-ceo-breaks-down-codev-framework-for-star-wars-galactic-racer",
+    "pubDate": "Tue, 20 Oct 2026 18:39:12 GMT",
+    "description": "A model for making the most of distributed development.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Innersloth co-founder warns devs: 'there are some very bad deals out there'",
+    "link": "https://www.gamedeveloper.com/business/outersloth-co-founder-warns-devs-there-are-some-very-bad-deals-out-there-",
+    "pubDate": "Tue, 20 Oct 2026 16:01:46 GMT",
+    "description": "'There are some truly abysmal deals for games that do not deserve that.'",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Griffin Gaming Partners, Entertainment 360 jointly unveil production company Hitpoint Entertainment",
+    "link": "https://www.gamedeveloper.com/business/griffin-gaming-partners-entertainment-360-jointly-unveil-production-company-hitpoint-entertainment",
+    "pubDate": "Tue, 20 Oct 2026 15:10:33 GMT",
+    "description": "A prominent game industry fund and Hollywood talent agency are teaming up to adapt games for TV and film.",
+    "source": "Game Developer"
+  },
+  {
     "title": "RocketWerkz' C# framework 'BRUTAL' is now available to all developers",
     "link": "https://www.gamedeveloper.com/programming/rocketwerkz-c-framework-brutal-is-now-available-for-all-developers",
     "pubDate": "Mon, 19 Oct 2026 20:57:38 GMT",
@@ -81,27 +102,6 @@
     "link": "https://www.gamedeveloper.com/business/denuvo-attempts-to-subpoena-discord-valve-and-reddit-in-effort-to-identify-hacker",
     "pubDate": "Thu, 08 Oct 2026 15:13:44 GMT",
     "description": "After numerous and consistent cracks over the last year, Denuvo wants to find the hacker that has compromised its security through other online platforms.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Star Wars Zero Company developer Bit Reactor brings back 'over half' of furloughed staff",
-    "link": "https://www.gamedeveloper.com/business/star-wars-zero-company-developer-bit-reactor-brings-back-over-half-of-furloughed-staff",
-    "pubDate": "Wed, 07 Oct 2026 18:00:00 GMT",
-    "description": "The studio suspended the majority of its staff ahead of the tactical Star Wars title's launch. Now it's bringing back many suspended employees.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Former Activision Blizzard CEO Bobby Kotick named to the board of post-merger Skydance",
-    "link": "https://www.gamedeveloper.com/business/former-activision-ceo-bobby-kotick-named-to-the-board-of-post-merger-skydance",
-    "pubDate": "Wed, 07 Oct 2026 17:19:05 GMT",
-    "description": "From the convergence of Paramount and WB comes a newly-formed company that has tapped Kotick to sit on its board.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Electronic Arts' leveraged buyout faces a bondholder battle",
-    "link": "https://www.gamedeveloper.com/business/electronic-arts-leveraged-buyout-faces-a-bondholder-battle",
-    "pubDate": "Wed, 07 Oct 2026 15:13:19 GMT",
-    "description": "The acquisition of Electronic Arts required taking on a lot of debt, and some bondholders are reportedly demanding more cash.",
     "source": "Game Developer"
   },
   {
