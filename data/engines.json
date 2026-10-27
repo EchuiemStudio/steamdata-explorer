@@ -1,5 +1,12 @@
 [
   {
+    "title": "Meccha Chameleon: How two devs built the indie smash hit of the summer",
+    "link": "https://www.unrealengine.com/developer-interviews/meccha-chameleon-how-two-devs-built-the-indie-smash-hit-of-the-summer",
+    "pubDate": "Mon, 26 Oct 2026 00:00:00 GMT",
+    "description": "Get the full story on how two Japanese developers took just two months to build Prop Hunt-inspired indie game Meccha Chameleon in UE5—and instantly had a massive hit on their hands that sold an impressive 1,000,000 copies in its first four days.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Godot XR Community Game Jam VI",
     "link": "https://godotengine.org/article/godot-xr-update-oct2026/",
     "pubDate": "Sun, 25 Oct 2026 12:00:00 +0000",
@@ -53,13 +60,6 @@
     "link": "https://www.unrealengine.com/developer-interviews/gears-of-war-e-day-sees-a-return-to-dark-survival-horror-roots-with-ue5",
     "pubDate": "Thu, 01 Oct 2026 00:00:00 GMT",
     "description": "With the latest major main-series installment of Gears of War about to drop, we caught up with The Coalition to find out how UE5 helped recapture the desperate “destroyed beauty” aesthetic of the original games—while evolving gameplay, animation, and more.",
-    "source": "Unreal Engine"
-  },
-  {
-    "title": "September’s Epic learning content: MetaHumans, physics, animation, and more",
-    "link": "https://www.unrealengine.com/learning/septembers-epic-learning-content-metahumans-physics-animation-and-more",
-    "pubDate": "Wed, 30 Sep 2026 00:00:00 GMT",
-    "description": "Check out this month’s free learning resources, including an exploration of the MetaHuman Animator Markerless Motion Capture plugin, a journey into UE 5.8’s MCP server, a look at the new Experimental AnimGen workflow—and much more.",
     "source": "Unreal Engine"
   },
   {
