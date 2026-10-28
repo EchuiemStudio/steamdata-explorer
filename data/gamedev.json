@@ -1,5 +1,47 @@
 [
   {
+    "title": "Rockstar Games workers to vote on unionization right as Grand Theft Auto VI launches",
+    "link": "https://www.gamedeveloper.com/business/rockstar-workers-to-vote-on-unionization-ahead-of-grand-theft-auto-vi-release",
+    "pubDate": "Tue, 27 Oct 2026 19:34:13 GMT",
+    "description": "Rockstar employees will have two weeks to decide if they want to recognize the IWGB Rockstar Game Workers Union.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Warhorse Studios hit by an undetailed cybersecurity incident",
+    "link": "https://www.gamedeveloper.com/programming/warhorse-studios-hit-by-an-undetailed-cybersecurity-incident",
+    "pubDate": "Tue, 27 Oct 2026 19:15:00 GMT",
+    "description": "The developer behind the Kingdom Come: Deliverance games has revealed that it has been hit by a 'serious' cybersecurity attack and is taking steps to assess the full impact.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Crossy Road creator Matt Hall named Atari's EVP of Mobile",
+    "link": "https://www.gamedeveloper.com/mobile/crossy-road-creator-matt-hall-named-atari-s-evp-of-mobile",
+    "pubDate": "Tue, 27 Oct 2026 18:45:00 GMT",
+    "description": "One of the mobile game industry's most well-known pioneers will spearhead Atari's own foray into mobile.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Epic is updating its EULA to allow AI training on outputs from Unreal Engine and MetaHuman",
+    "link": "https://www.gamedeveloper.com/programming/epic-is-updating-the-eula-to-allow-ai-training-on-outputs-from-unreal-engine-and-metahuman",
+    "pubDate": "Tue, 27 Oct 2026 17:53:41 GMT",
+    "description": "In a post on X, Epic CEO Tim Sweeney casually states that the EULA for using Epic's engine will allow for training AI on the output, though developers can still choose to restrict it for individual games.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Changing acquired studios' core identity consistently leads to doom, says Nightdive Studios CEO",
+    "link": "https://www.gamedeveloper.com/business/night-dive-studios-ceo-says-atari-is-demonstrating-right-way-to-do-acquisitions",
+    "pubDate": "Tue, 27 Oct 2026 14:47:20 GMT",
+    "description": "Why don't large publishers acquire companies and let them do what they do best?",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Sucker Punch lays off 24 to align with 'current market', 'next project needs'",
+    "link": "https://www.gamedeveloper.com/business/sucker-punch-lays-off-24-to-align-with-current-market-next-project-needs",
+    "pubDate": "Tue, 27 Oct 2026 14:10:40 GMT",
+    "description": "24 members of staff have been laid off from the studio making for an estimated total staff reduction of around 10 percent.",
+    "source": "Game Developer"
+  },
+  {
     "title": "Xbox reportedly turned down a $500 million deal from Netflix to adapt its video game properties",
     "link": "https://www.gamedeveloper.com/business/xbox-reportedly-turned-down-a-500-million-deal-from-netflix-for-adapting-gaming-properties",
     "pubDate": "Mon, 26 Oct 2026 18:45:00 GMT",
@@ -60,48 +102,6 @@
     "link": "https://www.gamedeveloper.com/business/outersloth-co-founder-warns-devs-there-are-some-very-bad-deals-out-there-",
     "pubDate": "Tue, 20 Oct 2026 16:01:46 GMT",
     "description": "'There are some truly abysmal deals for games that do not deserve that.'",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Griffin Gaming Partners, Entertainment 360 jointly unveil production company Hitpoint Entertainment",
-    "link": "https://www.gamedeveloper.com/business/griffin-gaming-partners-entertainment-360-jointly-unveil-production-company-hitpoint-entertainment",
-    "pubDate": "Tue, 20 Oct 2026 15:10:33 GMT",
-    "description": "A prominent game industry fund and Hollywood talent agency are teaming up to adapt games for TV and film.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "RocketWerkz' C# framework 'BRUTAL' is now available to all developers",
-    "link": "https://www.gamedeveloper.com/programming/rocketwerkz-c-framework-brutal-is-now-available-for-all-developers",
-    "pubDate": "Mon, 19 Oct 2026 20:57:38 GMT",
-    "description": "Developers who want to complete control over their game's code have a new framework to lean on.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Moonlighter developer delays public playtest of next game over concerns of AI cloning",
-    "link": "https://www.gamedeveloper.com/programming/moonlighter-developer-delays-public-playtest-of-next-game-over-concerns-of-ai-cloning",
-    "pubDate": "Mon, 19 Oct 2026 17:08:14 GMT",
-    "description": "Digital Sun Games is narrowing its early testing of ReVamp to its Discord community following fears of generative AI-enabled cloning.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Caves of Qud: Diaspora breaks new ground by being the first early access DLC release on Steam",
-    "link": "https://www.gamedeveloper.com/pc/caves-of-qud-diaspora-breaks-new-ground-by-being-the-first-early-access-dlc-release-on-steam",
-    "pubDate": "Thu, 15 Oct 2026 14:00:00 GMT",
-    "description": "The roguelike RPG is no longer in Steam Early Access, but its upcoming DLC Diaspora will be, marking untrodden ground for the in-development program.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Ubisoft to close Trials studio RedLynx, downsize Ubisoft Singapore",
-    "link": "https://www.gamedeveloper.com/business/ubisoft-to-close-trials-studio-redlynx-downsize-ubisoft-singapore",
-    "pubDate": "Wed, 14 Oct 2026 22:08:51 GMT",
-    "description": "The decisions will ultimately impact over 120 jobs between the two studios as part of Ubisoft's ongoing restructuring efforts.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "No more hand-written code? Epic's Disney project reportedly shifts to 'AI-First' development",
-    "link": "https://www.gamedeveloper.com/programming/no-more-hand-written-code-epic-s-disney-project-reportedly-shifts-to-ai-first-development",
-    "pubDate": "Wed, 14 Oct 2026 20:24:47 GMT",
-    "description": "Developers working on the upcoming Star Wars and Marvel shooter have been reportedly instructed to lean heavily on AI, especially during the creation of code and art.",
     "source": "Game Developer"
   },
   {

@@ -1,5 +1,12 @@
 [
   {
+    "title": "Mutable Sample for runtime character customization—now updated for UE 5.8!",
+    "link": "https://www.unrealengine.com/news/mutable-sample-for-runtime-character-customization-now-updated-for-ue-5-8",
+    "pubDate": "Tue, 27 Oct 2026 00:00:00 GMT",
+    "description": "The Mutable toolset is now Production-Ready in Unreal Engine 5.8—and to celebrate, there’s a completely updated Mutable Sample. Download it today and start building characters your players can truly customize in real time.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Meccha Chameleon: How two devs built the indie smash hit of the summer",
     "link": "https://www.unrealengine.com/developer-interviews/meccha-chameleon-how-two-devs-built-the-indie-smash-hit-of-the-summer",
     "pubDate": "Mon, 26 Oct 2026 00:00:00 GMT",
@@ -53,13 +60,6 @@
     "link": "https://www.unrealengine.com/developer-interviews/fuse-games-uses-ue5-to-make-a-fast-and-authentic-star-wars-racing-game",
     "pubDate": "Tue, 13 Oct 2026 00:00:00 GMT",
     "description": "Star Wars: Galactic Racer™ blends high-speed racing with a roguelite twist. Discover how Fuse Games used Unreal Engine 5’s Lumen, Nanite, and World Partition to create striking visuals that do justice to the game’s innovative gameplay and worldbuilding.",
-    "source": "Unreal Engine"
-  },
-  {
-    "title": "Gears of War: E-Day sees a return to dark, survival-horror roots with UE5",
-    "link": "https://www.unrealengine.com/developer-interviews/gears-of-war-e-day-sees-a-return-to-dark-survival-horror-roots-with-ue5",
-    "pubDate": "Thu, 01 Oct 2026 00:00:00 GMT",
-    "description": "With the latest major main-series installment of Gears of War about to drop, we caught up with The Coalition to find out how UE5 helped recapture the desperate “destroyed beauty” aesthetic of the original games—while evolving gameplay, animation, and more.",
     "source": "Unreal Engine"
   },
   {
