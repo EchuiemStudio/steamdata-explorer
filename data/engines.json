@@ -1,5 +1,19 @@
 [
   {
+    "title": "Ready for XREAL AURA",
+    "link": "https://godotengine.org/article/godot-xreal-aura-launch/",
+    "pubDate": "Wed, 28 Oct 2026 12:00:00 +0000",
+    "description": "XREAL AURA, the first optical see-through glasses on Android XR, is here and Godot is part of the launch lineup! Develop natively on spatial computing glasses Download the Godot editor and its companion app on the XREAL AURA, and develop, export, and publish spatial Godot games and apps natively on XREAL AURA. The Godot editor on XREAL AURA provides the features that you’d come to expect and love on desktop within a multi-window spatial workspace that goes with you. Download Godot editor on Google Play: Build spatial games and apps Godot continues the trend of being one of the lightest, most flexible, and best engines for XR development by delivering a plethora of new features to provide developers access to the newest Android XR capabilities available on XREAL AURA. This includes support for the new OpenXR Spatial Containers, which are system-managed volumes in which applications can display spatial content, similar to how traditional applications draw 2D content within windows on a desktop. On XREAL AURA, Godot spatial games and apps come alive right on your table, anchored exactly where you place it, with hand tracking and a low-latency spatial display that make every move feel natural. These new spatial capabilities lower the barrier of entry for developers to build new spatial games and apps, or port existing 3D games. Porting DOGWALK to XREAL AURA To showcase the new OpenXR Spatial Containers on XREAL AURA, and the ease through which developers can port their 3D games to Spatial Containers, the Godot Foundation in partnership with Blender Studio and W4 Games, is working on a spatial port of DOGWALK to XREAL AURA. This project builds on the ongoing collaboration between the Godot Foundation and W4 Games to expand Godot’s Android XR support. Working closely together, the teams have tackled the engineering challenges and optimizations involved in bringing the spatial version of DOGWALK to XREAL AURA in a relatively short time, and are now hard at work polishing…",
+    "source": "Godot Engine"
+  },
+  {
+    "title": "October’s Epic learning content: Mobile development in Unreal Engine",
+    "link": "https://www.unrealengine.com/learning/octobers-epic-learning-content-mobile-development-in-unreal-engine",
+    "pubDate": "Wed, 28 Oct 2026 00:00:00 GMT",
+    "description": "This month’s free learning content puts mobile development in Unreal Engine in the spotlight. Learn how to get started, optimize performance, and ship your game. Plus, find out how to create realistic characters for cross-platform experiences, and much more.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Mutable Sample for runtime character customization—now updated for UE 5.8!",
     "link": "https://www.unrealengine.com/news/mutable-sample-for-runtime-character-customization-now-updated-for-ue-5-8",
     "pubDate": "Tue, 27 Oct 2026 00:00:00 GMT",
@@ -53,13 +67,6 @@
     "link": "https://www.unrealengine.com/news/uefn-professional-bootcamp-prepare-for-unreal-engine-6",
     "pubDate": "Wed, 14 Oct 2026 00:00:00 GMT",
     "description": "With Epic’s roadmap bringing together Unreal Engine and UEFN in UE6, build your UEFN skills with our free UEFN Professional Bootcamp for games industry pros. Register today to create and publish a playable Fortnite island and strengthen your portfolio.",
-    "source": "Unreal Engine"
-  },
-  {
-    "title": "Fuse Games uses UE5 to make a fast and authentic Star Wars ™ racing game",
-    "link": "https://www.unrealengine.com/developer-interviews/fuse-games-uses-ue5-to-make-a-fast-and-authentic-star-wars-racing-game",
-    "pubDate": "Tue, 13 Oct 2026 00:00:00 GMT",
-    "description": "Star Wars: Galactic Racer™ blends high-speed racing with a roguelite twist. Discover how Fuse Games used Unreal Engine 5’s Lumen, Nanite, and World Partition to create striking visuals that do justice to the game’s innovative gameplay and worldbuilding.",
     "source": "Unreal Engine"
   },
   {
@@ -144,13 +151,6 @@
     "link": "https://godotengine.org/article/release-candidate-godot-4-7-2-rc-1/",
     "pubDate": "Mon, 03 Aug 2026 12:00:00 +0000",
     "description": "A month and a half has passed since our initial release of Godot 4.7, which was then followed up with the Godot 4.7.1 maintenance release nearly three weeks ago. While we stand by the stable foundation of our maintenance releases, that doesn’t mean we’re ready to stop giving support to our most recently released version. In fact, thanks to the amount of work put into the in-progress 4.8 builds, the amount of resolved issues and regression fixes has only gone up! As such, we’re eager to deliver yet another maintenance release in the near future, starting with this initial release candidate: Godot 4.7.2 RC 1! Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from MOLDRISE, a psychological horror game where you must go up, go up, Go Up, Go Up, GO UP, GO UP, GO—. You can buy the game on Steam, and follow the developer on Bluesky, YouTube, and itch.io. Highlights This section covers the most relevant changes made since the 4.7.1 maintenance release, which are largely regression fixes (critical changes highlighted in bold): 3D: Fix 3D ruler tool tooltip ( GH-120890 ). Assetlib: Asset Store: Fix image width on different Editor Scales ( GH-121470 ). Core: Fix crash when failing to open log file for writing ( GH-121926 ). Core: Forbid negative weights in RandomPCG::rand_weighted ( GH-120004 ). Core: Make it impossible to have more than one main thread, and don’t release unnecessarily…",
-    "source": "Godot Engine"
-  },
-  {
-    "title": "Dev snapshot: Godot 4.8 dev 2",
-    "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-dev-2/",
-    "pubDate": "Tue, 21 Jul 2026 12:00:00 +0000",
-    "description": "Happy GodotCon Boston for those who celebrate! While many key contributors are already at this event as we speak, that doesn’t mean that development snapshots are slowing down anytime soon. We hope anyone that couldn’t make it to the event this year looks forward to further coverage and highlights in the near future, as you enjoy Godot 4.8 dev 2 in the meantime! Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from The Incident at Galley House, a detective game where you wield a strange contraption to reveal the truth behind the 1936 tragedy at Galley House. You can buy the game on Steam, and follow the developers— William Rous and Evil Trout —on their socials. Highlights In case you missed them, see the 4.8 dev 1 release notes for an overview of some key features which were already in that snapshot, and are therefore still available for testing in 4.8 dev 2. Editor: Automatically expand created resources in inspector Hugo Locurcio starts our roundup with GH-99725, bringing a long-desired QOL addition to the inspector: auto-expansion of resources. While most of our inspector items automatically revealed themselves when initialized, resources always existed as an unfortunate blindspot. As demonstrated below, this will no longer be the case! Editor: Add “Play Scene” option to file system context menu While the process of playing a scene is already relatively streamlined,…",
     "source": "Godot Engine"
   },
   {

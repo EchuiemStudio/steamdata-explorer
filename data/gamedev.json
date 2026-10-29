@@ -1,5 +1,33 @@
 [
   {
+    "title": "The History of Every Video Game Genre",
+    "link": "https://www.youtube.com/watch?v=Dbgdi7BzMR0",
+    "pubDate": "2026-10-28T18:53:19+00:00",
+    "description": null,
+    "source": "GMTK (YouTube)"
+  },
+  {
+    "title": "Epic VP says AI code tools have stomped out decade-old 'non-deterministic cooking bugs' in Unreal Engine",
+    "link": "https://www.gamedeveloper.com/programming/unreal-engine-will-be-developed-with-ai-code-confirms-epic",
+    "pubDate": "Wed, 28 Oct 2026 16:28:55 GMT",
+    "description": "After an AI-first pivot, Epic has confirmed that AI is shaping the Unreal Engine in the near future.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Roblox confirms no adult content used in AI training after scraping Open3DLab data",
+    "link": "https://www.gamedeveloper.com/business/roblox-confirms-no-adult-content-used-in-ai-training-after-scraping-open3dlab-data",
+    "pubDate": "Wed, 28 Oct 2026 15:45:59 GMT",
+    "description": "Roblox says an AI agent failed to operate 'as intended' when it mass-downloaded adult content from Open3DLab, Smutlab, and SFMLab.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Valve weighs in on Next Fest AI cloning phenomenon",
+    "link": "https://www.gamedeveloper.com/pc/valve-addresses-steam-ai-cloning-problem",
+    "pubDate": "Wed, 28 Oct 2026 14:42:21 GMT",
+    "description": "The worrying trend of games on Steam getting quick clones for the same storefront has been acknowledged by store owner Valve — and the onus placed on developers to prevent it themselves.",
+    "source": "Game Developer"
+  },
+  {
     "title": "Rockstar Games workers to vote on unionization right as Grand Theft Auto VI launches",
     "link": "https://www.gamedeveloper.com/business/rockstar-workers-to-vote-on-unionization-ahead-of-grand-theft-auto-vi-release",
     "pubDate": "Tue, 27 Oct 2026 19:34:13 GMT",
@@ -81,27 +109,6 @@
     "link": "https://www.gamedeveloper.com/extended-reality/vr-pioneer-owlchemy-labs-pivots-to-xr-for-its-next-release",
     "pubDate": "Thu, 22 Oct 2026 14:37:37 GMT",
     "description": "Owlchemy Labs' new game Hyper Visor will be a launch title for HTC's XREAL Aura headset.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "EA closes Mass Effect, Dragon Age creator BioWare after 30 years of game development",
-    "link": "https://www.gamedeveloper.com/business/ea-closes-mass-effect-dragon-age-creator-bioware-after-30-years-of-game-development",
-    "pubDate": "Wed, 21 Oct 2026 18:57:37 GMT",
-    "description": "EA is reportedly laying off 400 employees, 50 of whom were the remaining staffers at BioWare.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Fuse Games CEO breaks down codev framework for Star Wars: Galactic Racer",
-    "link": "https://www.gamedeveloper.com/production/fuse-games-ceo-breaks-down-codev-framework-for-star-wars-galactic-racer",
-    "pubDate": "Tue, 20 Oct 2026 18:39:12 GMT",
-    "description": "A model for making the most of distributed development.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Innersloth co-founder warns devs: 'there are some very bad deals out there'",
-    "link": "https://www.gamedeveloper.com/business/outersloth-co-founder-warns-devs-there-are-some-very-bad-deals-out-there-",
-    "pubDate": "Tue, 20 Oct 2026 16:01:46 GMT",
-    "description": "'There are some truly abysmal deals for games that do not deserve that.'",
     "source": "Game Developer"
   },
   {
@@ -199,13 +206,6 @@
     "title": "How I Made Word Play",
     "link": "https://www.youtube.com/watch?v=uuXrwA9nzM8",
     "pubDate": "2025-07-14T16:00:13+00:00",
-    "description": null,
-    "source": "GMTK (YouTube)"
-  },
-  {
-    "title": "Word Play Trailer - Out Now!",
-    "link": "https://www.youtube.com/watch?v=chWr87u3Gdc",
-    "pubDate": "2025-06-26T16:49:53+00:00",
     "description": null,
     "source": "GMTK (YouTube)"
   }
