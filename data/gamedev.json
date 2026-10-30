@@ -2,9 +2,23 @@
   {
     "title": "The History of Every Video Game Genre",
     "link": "https://www.youtube.com/watch?v=Dbgdi7BzMR0",
-    "pubDate": "2026-10-28T18:53:19+00:00",
-    "description": null,
+    "pubDate": "2026-10-29T19:00:08+00:00",
+    "description": "From racing and sports, to shoot 'em ups and platformers, to fighting games and first-person shooters, to cozy games and friendslop, this is the history of every video game genre. Ever.",
     "source": "GMTK (YouTube)"
+  },
+  {
+    "title": "Donald Glover to direct, star in Netflix adaptation of PUBG Battlegrounds",
+    "link": "https://www.gamedeveloper.com/business/netflix-adapts-krafton-pubg-to-be-written-and-led-by-donald-glover",
+    "pubDate": "Thu, 29 Oct 2026 18:17:55 GMT",
+    "description": "An adaptation of the battle royale shooter has been picked up by Netflix, with protean entertainer Donald Glover to write, produce, and star in the adaptation.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Xbox CEO says console demand is outstripping supply—but sales continue to drop",
+    "link": "https://www.gamedeveloper.com/console/xbox-ceo-says-console-demand-is-outstripping-supply-as-sales-continue-to-drop",
+    "pubDate": "Thu, 29 Oct 2026 17:35:37 GMT",
+    "description": "Xbox CEO Asha Sharma insists that the demand for Xbox consoles is there, Microsoft simple cannot produce enough, a claim that may clash with Xbox's public sales data.",
+    "source": "Game Developer"
   },
   {
     "title": "Epic VP says AI code tools have stomped out decade-old 'non-deterministic cooking bugs' in Unreal Engine",
@@ -95,20 +109,6 @@
     "link": "https://www.gamedeveloper.com/programming/gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-commercial-devs",
     "pubDate": "Fri, 23 Oct 2026 17:51:14 GMT",
     "description": "GameMaker's GMRT runtime will be free to use for all developers starting in 2027.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Opinion: Why words matter when we prioritize 'core teams' in game development",
-    "link": "https://www.gamedeveloper.com/production/opinion-why-prioritizing-success-of-core-teams-risks-devaluing-other-devs",
-    "pubDate": "Thu, 22 Oct 2026 20:33:50 GMT",
-    "description": "How we describe game development will inevitably shape our processes.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "VR pioneer Owlchemy Labs jumps to XR for its next release",
-    "link": "https://www.gamedeveloper.com/extended-reality/vr-pioneer-owlchemy-labs-pivots-to-xr-for-its-next-release",
-    "pubDate": "Thu, 22 Oct 2026 14:37:37 GMT",
-    "description": "Owlchemy Labs' new game Hyper Visor will be a launch title for HTC's XREAL Aura headset.",
     "source": "Game Developer"
   },
   {
