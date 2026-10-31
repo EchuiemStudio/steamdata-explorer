@@ -1,10 +1,24 @@
 [
   {
+    "title": "Rivian brings Ghostbusters universe to Halloween Mode, with real-time visuals in Unreal Engine",
+    "link": "https://www.unrealengine.com/news/rivian-brings-ghostbusters-universe-to-halloween-mode-with-real-time-visuals-in-unreal-engine",
+    "pubDate": "Fri, 30 Oct 2026 18:00:13 GMT",
+    "description": "Who you gonna call? Rivian brings Ghostbusters &nbsp;universe to life with its Halloween Mode, featuring Slimer, Mini-Pufts, and spooky surprises—all powered by real-time 3D graphics created in Unreal Engine 5.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Dev snapshot: Godot 4.8 beta 2",
     "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-2/",
     "pubDate": "Thu, 29 Oct 2026 12:00:00 +0000",
     "description": "In the two weeks since the release of 4.8 beta 1, our team has made great strides in ensuring the detection and resolution of nearly 150 regressions. This blog post covering the beta snapshot, and however many more are to come, will be lighter than the dev snapshots as 4.8 is considered feature-complete at this stage. Nonetheless, there’s still a fair bit to test, so we welcome you to try our newest release for yourself: Godot 4.8 beta 2. Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from Heartfall — A Tale in Three Lives, a visual novel where you wake up as Grian on a mysterious island, and embark on an adventure with 12+ other characters partaking in fatal-but-temporary shenanigans across multiple story routes. You can buy the game on Steam, and check out the developer on Bluesky, Tumblr, and YouTube! Highlights For an overview of what’s new overall in Godot 4.8, have a look at the highlights for 4.8 beta 1, which cover a lot of the changes. This blog post only covers the changes between beta 1 and beta 2. This section covers the most relevant changes made since the beta 1 snapshot, which are largely regression fixes: Animation: Fix collapsing the time of a bezier track with box scaling creates incorrect undo data ( GH-124433 ). Assetlib: Set the Asset Store’s default sorting back to most relevant ( GH-124749 ). Buildsystem: CI: Bump minimum Python version (3.9 → 3.10)…",
     "source": "Godot Engine"
+  },
+  {
+    "title": "UE devs can now choose to train AI Models on their projects",
+    "link": "https://www.unrealengine.com/ue-devs-can-now-choose-to-train-ai-models-on-their-projects",
+    "pubDate": "Thu, 29 Oct 2026 00:00:00 GMT",
+    "description": "We’ve updated the Unreal Engine End User License Agreement (EULA) so developers can choose to train AI models on their Unreal Engine and MetaHuman projects.",
+    "source": "Unreal Engine"
   },
   {
     "title": "Ready for XREAL AURA",
@@ -61,20 +75,6 @@
     "pubDate": "Thu, 15 Oct 2026 12:00:00 +0000",
     "description": "It’s that time of the release cycle once again: the beta snapshot! With this, 4.8 is fully in feature-freeze, and developer resources have shifted exclusively to creating and reviewing various regression fixes. For those interested in aiding us on our quest to squash any bugs that come up during this time, we once again encourage you to join our bug-hunting sprints. Anyone interested should read the Bug Triage Introduction for more information, and join the #bugsquad and #bugsquad-sprints channels on our developer RocketChat to participate. Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from Rita, a puzzle game with platforming elements, featuring a wide variety of word puzzles within a cozy world. You can buy the game on Steam, and follow the developer on Bluesky, YouTube, and itch.io. Highlights For those who have been following our development snapshots closely, you may be familiar with a number of the highlights in this post which were already covered in previous articles ( 4.8 dev 1, 4.8 dev 2, 4.8 dev 3, 4.8 dev 4, 4.8 dev 5, 4.8 dev 6, and 4.8 dev 7 ). Because we’re already in feature freeze, there are no new features to cover compared to dev 7. Instead, we’ll focus on a general round-up of what to expect from Godot 4.8 as a whole, as well as expanding on some additions that we didn’t have the chance to highlight in our previous snapshots. Breaking changes 3D Core…",
     "source": "Godot Engine"
-  },
-  {
-    "title": "SILENT HILL: Townfall delivers haunting psychological horror at its very best with UE5",
-    "link": "https://www.unrealengine.com/developer-interviews/silent-hill-townfall-delivers-haunting-psychological-horror-at-its-very-best-with-ue5",
-    "pubDate": "Thu, 15 Oct 2026 00:00:00 GMT",
-    "description": "Discover how UE5 tools including Lumen, Nanite, and MetaHuman helped Screen Burn Interactive craft complex, beautifully rendered scenes and compelling characters for chilling, slow-burn survival horror SILENT HILL: Townfall.",
-    "source": "Unreal Engine"
-  },
-  {
-    "title": "UEFN Professional Bootcamp: Prepare for Unreal Engine 6",
-    "link": "https://www.unrealengine.com/news/uefn-professional-bootcamp-prepare-for-unreal-engine-6",
-    "pubDate": "Wed, 14 Oct 2026 00:00:00 GMT",
-    "description": "With Epic’s roadmap bringing together Unreal Engine and UEFN in UE6, build your UEFN skills with our free UEFN Professional Bootcamp for games industry pros. Register today to create and publish a playable Fortnite island and strengthen your portfolio.",
-    "source": "Unreal Engine"
   },
   {
     "title": "Dev snapshot: Godot 4.8 dev 7",
