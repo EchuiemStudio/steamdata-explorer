@@ -1,5 +1,19 @@
 [
   {
+    "title": "Unreal Engine Innovation Heads to I/ITSEC 2026",
+    "link": "https://www.unrealengine.com/news/unreal-engine-innovation-heads-to-i-itsec-2026",
+    "pubDate": "Wed, 04 Nov 2026 00:00:00 GMT",
+    "description": "Don’t miss our Mesh Terrain demo, discussion on Unreal MCP and agnostic LLM integrations, AI co-developed applications, and much more as we head to I/ITSEC 2026 in Orlando on 30 November. Book your meeting with us today.",
+    "source": "Unreal Engine"
+  },
+  {
+    "title": "NO LAW: Crafting a living, breathing cyber-noir world with UE5",
+    "link": "https://www.unrealengine.com/developer-interviews/no-law-crafting-a-living-breathing-cyber-noir-world-with-ue5",
+    "pubDate": "Tue, 03 Nov 2026 00:00:00 GMT",
+    "description": "Discover how Neon Giant used UE5 to craft NO LAW, a first-person cyber-noir immersive shooter with stunning detail and realism. The studio says this level of polish would have been impossible for a team of their size without Unreal Engine.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Rivian brings Ghostbusters universe to Halloween Mode, with real-time visuals in Unreal Engine",
     "link": "https://www.unrealengine.com/news/rivian-brings-ghostbusters-universe-to-halloween-mode-with-real-time-visuals-in-unreal-engine",
     "pubDate": "Mon, 02 Nov 2026 15:48:38 GMT",
@@ -54,20 +68,6 @@
     "pubDate": "Sun, 25 Oct 2026 12:00:00 +0000",
     "description": "The sixth Godot XR Community Game Jam ran from 21 September 2026 until 5 October 2026. We had 85 participants join, who submitted 28 games. Down from 98 participants but up from 22 games last jam. The quality of the entries however has risen sharply. The theme of this game jam was “Adrift”. The whole top 10 is worth checking out and even beyond are some real gems, but as always we’re counting down the top 5: No 5. Balloon Dino Death Dome by Kimau This entry has you take control of a balloon where you physically need to pull on levers to control the balloon. Well, for as far as you have control because for the most part, different air currents take over. Those air currents are brilliantly visualised and animated with tiny particles. A cannon mounted on the balloon has you shooting targets to score points. No 4. Tether Charge Express VR by UltraGravityLabs This entry has you trying to stay in front of a storm. Through a unique control mechanism, you control a drone on the end of a tether that gathers electricity from the storm to power your craft. It becomes a balancing act between collecting energy, evading the storm, and recharging your craft. No 3. Build a Lighthouse VR by Bauxite This entry is a very impressive physics-based tower stacking game. You find yourself on a little island in the middle of an ocean, with all sorts of flotsam drifting ashore. As you do, you pick up the flotsam, and try and build the highest tower. The physics interaction in this game is sublime; it is a real challenge building a tower where every new piece can upset the balance. This is hours of fun! No 2. Balloons Adrift VR by simenhs This deceptively simple entry has you shooting balloons out of the air. Gunplay in VR is always satisfying but what sets this apart is that at the start of the game, you only get a few seconds to shoot. With each balloon successfully popped, you get a few dollars to spend. After each round, you can buy upgrades, be it additional time, more dollars per…",
     "source": "Godot Engine"
-  },
-  {
-    "title": "Vibe your way to $50k: the 2026 Epic AI MegaJam is coming",
-    "link": "https://www.unrealengine.com/news/2026-epic-ai-megajam",
-    "pubDate": "Thu, 22 Oct 2026 00:00:00 GMT",
-    "description": "The 2026 Epic AI MegaJam runs November 12–15. Team up with up to four other humans and as many AI agents as you want to build a playable game in Unreal Engine or UEFN, and compete for cash prizes.",
-    "source": "Unreal Engine"
-  },
-  {
-    "title": "Check out the top Fortnite islands from the UEFN Student Bootcamp",
-    "link": "https://www.unrealengine.com/learning/check-out-the-top-fortnite-islands-from-the-uefn-student-bootcamp",
-    "pubDate": "Fri, 16 Oct 2026 00:00:00 GMT",
-    "description": "The UEFN Student Bootcamp has wrapped! Watch this sizzle reel of some of the best Fortnite islands created during this intensive three-week course, which was completed by over 300 students.",
-    "source": "Unreal Engine"
   },
   {
     "title": "Dev snapshot: Godot 4.8 beta 1",
