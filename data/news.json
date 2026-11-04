@@ -1,282 +1,282 @@
 [
   {
-    "title": "Arc Raiders devs Embark insist that using genAI for voice lines was necessary, as \"actors would just go crazy if they had to read all of that\"",
-    "link": "https://www.rockpapershotgun.com/arc-raiders-devs-embark-insist-that-using-genai-for-voice-lines-was-necessary-as-actors-would-just-go-crazy-if-they-had-to-read-all-of-that",
-    "pubDate": "Tue, 03 Nov 2026 12:32:19 +0000",
-    "description": "Despite taking the voice performances of actors and feeding them into machines to spurt out AI-generated mimicry, Embark CCO Stefan Strandberg insists that \"we are not in the industry of replacing actors.\" In a new video posted to the Arc Raiders channel focused on audio design, Strandberg refers back to the infamous use of genAI in Arc Raiders to generate voice lines based on real voice actors' performances, something which the game was heavily ( and rightly ) criticised for before and since its release. In that linked piece (thanks Oisin!), CEO Patrick S&ouml;derlund stated that they have been replacing lines that were originally generated with actual recorded lines, presumably because Arc Raiders has made quite a bit of money and now they feel that they can continue paying actors to record more lines, rather than just scraping their talents and avoiding the dreaded fee of paying professionals for their work. This choice already came after their previous game, The Finals, was heavily criticised for the exact same thing, which is just a fascinating series of decisions to consider. Read more",
+    "title": "One of Nintendo's Switch and Switch 2 cartridge manufacturers is exiting the business, which could make physical games more expensive",
+    "link": "https://www.eurogamer.net/nintendo-switch-2-cartridge-macronix-ending-rom-manufacturing",
+    "pubDate": "Wed, 04 Nov 2026 13:34:57 +0000",
+    "description": "Macronix, longtime Nintendo hardware partner and one of the main producers of ROM memory, has announced it's leaving the business. ROM chips are key components in Switch and Switch 2 cartridges. Read more",
+    "source": "Eurogamer"
+  },
+  {
+    "title": "Ubisoft Could Be The Company That Keeps Marvel’s Blade Alive",
+    "link": "https://www.gamespot.com/articles/ubisoft-could-be-the-company-that-keeps-marvels-blade-alive/",
+    "pubDate": "Wed, 04 Nov 2026 13:21:14 +0000",
+    "description": "Time is running out for Arkane Lyon to find a buyer, but Ubisoft could acquire the Marvel's Blade developer, according to a new report. Arkane was one of several studios that Xbox divested itself of earlier this year, and while most of those developers have since gone on to become indie studios again-- except for Ninja Theory, which is expected to be closed after deals fell through--Arkane has found itself in a tough spot as it navigates life after Microsoft. Bloomberg reported that Ubisoft was in talks with Microsoft to acquire Arkane Lyon and help it finish work on Marvel's Blade. The report added that Microsoft is also exploring selling Arkane Lyon back to its management, but if plans fall through before a deal can be struck by December, it looks likely the studio will ultimately be shut down. Bloomberg claims Ubisoft is one of three companies that have submitted bids for Arkane Lyon, but it has not yet revealed the identities of the other two bidders. Arkane Lyon moving to Ubisoft does make sense on paper, as both the developer and the Assassin's Creed publisher are based in France. At the same time, Ubisoft has embarked on a major restructuring process throughout 2026, setting up new Creative Houses to spearhead development on its biggest franchises and downsizing operations across the globe. Recently, Ubisoft laid off 72 people from its Skull & Bones developer, Ubisoft Singapore, and Trials studio RedLynx might be shut down next. Marvel's Blade was announced at The Game Awards in December 2023, and since then, Arkane has gone radio silent about the game's status. Reports say it's close to completion and could launch in Q4 2027 if Arkane Lyon can keep working on it under a new publisher.",
+    "source": "GameSpot"
+  },
+  {
+    "title": "Steam Is Tightening Its Game Submission Rules As AI Slop Floods The Store",
+    "link": "https://www.gamespot.com/articles/steam-is-tightening-its-game-submission-rules-as-ai-slop-floods-the-store/",
+    "pubDate": "Wed, 04 Nov 2026 13:19:17 +0000",
+    "description": "Valve currently has a review backlog on Steam, as the mandatory QA check every game must pass before launch on the platform has reportedly seen wait times balloon from a few days to over two weeks. The problem appears to be a massive number of builds, thought to be AI slop, that fail basic technical checks and are sent back for re-reviews, gumming up the works. To make headway and reduce back-and-forth friction, Valve has announced it's tightening the rules on what developers must verify before submitting builds. According to Valve, developers must ensure their games can run through Steam for at least five minutes, since the platform often receives builds that have never launched through Steam. Developers must also explicitly state whether their game requires common components like DirectX, Visual C++, or.NET so Steam knows to install them automatically, and, if advertised, prove that cloud saves work. On top of that, Steam will run automated checks to flag broken or incomplete achievements, and it will enforce stricter image categories. This is to ensure that players aren't misled by non-gameplay images posing as screenshots. Finally, dynamic reminders will pop up in the submission portal to nudge developers to deliver the content they originally promised. Is this a response to a flood of AI slop content on Steam lately? Valve didn't directly refer to that content, but as the recent Next Fest proved, mass-produced asset flips and AI-generated shovelware were everywhere. Content like that could be choking Steam's manual review queue, and indie game platform Itch.io addressed it this week with new guidelines for submitting games. Requiring developers to prove they've actually booted up their game and tested basic features through Steam could bring the review process back to manageable times, but it's not a silver bullet for the bad actors out there. Developers can voluntarily disclose that AI assisted in some form in building a game, and according to Game Discovery…",
+    "source": "GameSpot"
+  },
+  {
+    "title": "Fate of the Galaxy is a huge, fully-featured Star Wars space combat sim that, thanks to being a total conversion mod for Freespace Open, even runs on my rubbish laptop",
+    "link": "https://www.rockpapershotgun.com/fate-of-the-galaxy-is-a-huge-fully-featured-star-wars-space-combat-sim-that-thanks-to-being-a-total-conversion-mod-for-freespace-open-even-runs-on-my-rubbish-laptop",
+    "pubDate": "Wed, 04 Nov 2026 13:15:44 +0000",
+    "description": "Star Wars has been back in the news recently because, to cut a long story short, the US alt-right have decided that Darth Vader was actually the good guy. We are not here to indulge such buffoonery. We are here to talk about Fate of the Galaxy, a free unofficial space combat simulator set during the events of the original Star Wars trilogy, featuring several mission-based campaigns and a stable of Imperial and Rebel Alliance ships that ranges from the quad-blasting X-Wing to Boba Fett's Firespray 31. Also, Naboo starfighters, if you really must. It's a total conversion of poor dead Volition 's venerable dogfighter FreeSpace 2, running on the open source Free Space 2 Open engine via the popular Knossos launcher. You don't need a copy of FreeSpace 2 to play it. You also don't need to pay. And nor do you need a whizbang PC – this bucket of bolts hums along happily on my i5-1145G7 with no dedicated graphics card. As the Rancor said to the padawan: finally, some good food. Read more",
     "source": "Rock Paper Shotgun"
   },
   {
-    "title": "Indie game website itch.io expands its AI disclosure filter as 'AI slop' continues to overwhelm Steam and other storefronts",
-    "link": "https://www.eurogamer.net/itchio-generative-ai-filters-slop",
-    "pubDate": "Tue, 03 Nov 2026 12:03:56 +0000",
-    "description": "Indie game storefront itch.io has expanded its AI disclosure filters, allowing its users to better separate games made with the controversial technology from those who don't. Read more",
+    "title": "Halo and Destiny composer Marty O'Donnell loses his race for a seat in the US House of Representatives",
+    "link": "https://www.eurogamer.net/halo-destiny-composer-martin-o-donnell-projected-lose-us-congress-race",
+    "pubDate": "Wed, 04 Nov 2026 13:11:26 +0000",
+    "description": "Halo and Destiny composer Marty O'Donnell's political aspirations have hit a roadblock following last night's US mid-term elections. O'Donnell was campaigning for a seat in the US House of Representatives, running as a Republican candidate in Nevada's Third Congressional District, but is projected to lose. Read more",
     "source": "Eurogamer"
   },
   {
-    "title": "\"There’s always a night when Rome burns\": South Of Midnight director says that Xbox funding it was \"unsustainable\", at least in hindsight",
-    "link": "https://www.rockpapershotgun.com/theres-always-a-night-when-rome-burns-south-of-midnight-director-says-that-xbox-funding-it-was-unsustainable-at-least-in-hindsight",
-    "pubDate": "Tue, 03 Nov 2026 11:49:29 +0000",
-    "description": "Compulsion Games parted ways with former owners Xbox, having landed on the long list of things Microsoft were determined to ditch as part of multi-round mass cuts this year. Now, South of Midnight creative director David Sears has suggested that an eventual pulling of the rug was something he feared throughout the game's development, to the point where he seemingly doesn't think he'd have funded it if he'd been in the shoes of Xbox execs. Read more",
+    "title": "\"Keep talking about it\": Raw Power Games call for Wishlist aid as they, and their historical strategy sandbox Chronicles: Medieval, lose funding",
+    "link": "https://www.rockpapershotgun.com/keep-talking-about-it-raw-power-games-call-for-wishlist-aid-as-they-and-their-historical-strategy-sandbox-chronicles-medieval-lose-funding",
+    "pubDate": "Wed, 04 Nov 2026 12:43:24 +0000",
+    "description": "Raw Power Games, an independent studio comprising veteran developers of The Witcher 3, Total War: Three Kingdoms, and Crusader Kings III (among others), have called on players for support after losing their funding - an existential threat to both the organisation and to their debut, the still-in-development historical strategy game Chronicles: Medieval. Read more",
     "source": "Rock Paper Shotgun"
   },
   {
-    "title": "Upcoming Final Fantasy 14 update should massively cut down on dungeon queue times",
-    "link": "https://www.pcgamer.com/games/mmo/upcoming-final-fantasy-14-update-should-massively-cut-down-on-dungeon-queue-times/",
-    "pubDate": "Tue, 03 Nov 2026 11:47:55 +0000",
-    "description": "Region queueing's open for business.",
+    "title": "AMD says it's going to beat Intel in total revenue for the very first time by the end of 2026",
+    "link": "https://www.pcgamer.com/hardware/processors/amd-says-its-going-to-beat-intel-in-total-revenue-for-the-very-first-time-by-the-end-of-2026/",
+    "pubDate": "Wed, 04 Nov 2026 12:40:51 +0000",
+    "description": "Intel's expecting to hit $15 - $16 billion for Q4 2026, while AMD is looking at an impressive $17 billion.",
     "source": "PC Gamer"
   },
   {
-    "title": "It looks like Call of Duty: Modern Warfare 4 had fewer active players at launch in the US compared to last year's Black Ops 7",
-    "link": "https://www.eurogamer.net/call-of-duty-modern-warfare-4-player-engagement-black-ops-7",
-    "pubDate": "Tue, 03 Nov 2026 11:22:41 +0000",
-    "description": "It's been speculated for a while that Call of Duty may be losing its lustre. Although we don't have concrete data with detailed statistics for each game released in the last several years, there's an observable trend in player numbers that's hard to ignore. Read more",
+    "title": "How To Safely Pack Your PS5 For A Trip To New Zealand So You Can Play GTA 6 Early",
+    "link": "https://www.gamespot.com/articles/how-to-safely-pack-your-ps5-for-a-trip-to-new-zealand-so-you-can-play-gta-6-early/",
+    "pubDate": "Wed, 04 Nov 2026 12:20:23 +0000",
+    "description": "Grand Theft Auto 6 is almost here, and the first people to play it will be those lovely folks in New Zealand. Developer Rockstar Games has announced that GTA 6 will officially be ready to play at midnight local time on November 19, 2026, so it looks like the Kiwis are getting a significant head start. What's an eager GTA fan with a PlayStation 5 console in a later time zone supposed to do? Be patient? Hell no--not when you can grab a quick flight and start playing hours ahead of the rest of the world. Why can't I just change my PS5 region? Xbox Series X|S owners won't need to brave the horrors of coach on an international flight because they can easily change their region, but PS5 owners don't have that luxury. Sony hard-locks every PlayStation Network account to the region where it was originally created, so if you set up your account in a country other than New Zealand, you're out of luck, even if you have flown to New Zealand. That means you'll have to set up a new PSN account with New Zealand as your region and buy GTA 6 with New Zealand Dollar-denominated PlayStation Network gift cards from an online key retailer. This isn't exactly safe, but if you're seriously considering flying to New Zealand just to play the game a day early, I'm guessing you're willing to take a chance. When should I aim to fly? I'm going to assume you want to download GTA 6 at home, since hotel Wi-Fi networks in Auckland rarely provide the bandwidth to smoothly download a huge 200GB file without throttling or dropping connections. Ideally, fly from Los Angeles or San Francisco to Auckland, and book a flight that departs on November 10 at night after you're done preloading (if your internet is fast enough). That means you'll land on November 12, and the flight will take roughly 13 hours. You're also gaining 21 hours relative to LAX time, so you'll have a few days to shake off any jet lag. What am I supposed to do for the next week? Dude, you're in New Zealand, one of the coolest countries…",
+    "source": "GameSpot"
+  },
+  {
+    "title": "Nexus Mods introduces new AI disclosure rules, but won't ban AI mods outright",
+    "link": "https://www.eurogamer.net/nexus-mods-gen-ai-disclosure-rules",
+    "pubDate": "Wed, 04 Nov 2026 12:18:44 +0000",
+    "description": "Nexus Mods, the largest website for finding and downloading PC mods, has revealed new guidelines aimed at properly identifying mods created entirely using gen-AI or those created with AI assistance. Read more",
     "source": "Eurogamer"
   },
   {
-    "title": "Users pull $3.6 bn from Binance as it reopens following $6.3 billion mega-hack - FBI says North Korean hacking group 'TraderTraitor' to blame, North Korea says nuh-uh",
-    "link": "https://www.pcgamer.com/software/security/users-pull-usd3-6-bn-from-binance-as-it-reopens-following-usd6-3-billion-mega-hack-fbi-says-north-korean-hacking-group-tradertraitor-to-blame-north-korea-says-nuh-uh/",
-    "pubDate": "Tue, 03 Nov 2026 10:54:30 +0000",
-    "description": "Plenty of users still happy to deposit their funds into the cryptocurrency exchange nevertheless.",
-    "source": "PC Gamer"
-  },
-  {
-    "title": "itch.io will soon let you filter games with genAI disclosures out of your search results on the site, after admitting it was previously \"critically lacking\"",
-    "link": "https://www.rockpapershotgun.com/itchio-will-soon-let-you-filter-games-with-genai-disclosures-out-of-your-search-results-on-the-site-after-admitting-it-was-previously-critically-lacking",
-    "pubDate": "Tue, 03 Nov 2026 10:12:22 +0000",
-    "description": "itch.io has unfortunately, much like Steam, long had an issue with genAI content being uploaded in droves, drowning out perfectly good games made by human hands. The apparent standard method against this, voluntary genAI disclosure, has been itch's primary tool to combat this wave of low-quality slop, but hasn't worked out too well; itch revealed a few days ago that ' the number of game pages being created per-day has doubled in the past two months '. Now, in attempts to further combat this, beyond just game assets requiring a genAI disclosure to upload as they have for two years, itch will be expanding the mandatory disclosure to tabletop games, books, comics, and soundtracks, as well as adding a 'no AI' filter directly into the search function. Read more",
+    "title": "The Elder Scrolls 6: Sentinel already has a Nexus Mods page, so now all we have to do is wait",
+    "link": "https://www.rockpapershotgun.com/the-elder-scrolls-6-sentinel-already-has-a-nexus-mods-page-so-now-all-we-have-to-do-is-wait",
+    "pubDate": "Wed, 04 Nov 2026 12:08:24 +0000",
+    "description": "Aha. Here it is. Freshly poked live and right on time. Now, we wait for the inevitable flood of mods, like the ceaseless current of add-ons which still flows into Skyrim. Read more",
     "source": "Rock Paper Shotgun"
   },
   {
-    "title": "Remedy revenue soars by 226% following release of Control Resonant, the developer's fastest-selling game ever",
-    "link": "https://www.eurogamer.net/control-resonant-remedy-revenue-leaps",
-    "pubDate": "Tue, 03 Nov 2026 09:56:48 +0000",
-    "description": "Remedy - the developer behind the recently released Control Resonant - has released a scorcher of a quarterly financial report. It shows that following Resonant's release in September, the company's revenue surged by 226 percent, bringing in &euro;39.6m in Q3. Read more",
-    "source": "Eurogamer"
-  },
-  {
-    "title": "Days Gone studio's next PlayStation exclusive to be revealed and released in 2027, according to new report",
-    "link": "https://www.eurogamer.net/sony-bend-studio-next-playstation-game-2027",
-    "pubDate": "Tue, 03 Nov 2026 09:18:39 +0000",
-    "description": "Sony's Bend Studio, perhaps one of its lesser discussed development houses, has apparently been deep in development on its next title. The game is reportedly set to be announced in 2027, and released in the same year. Read more",
-    "source": "Eurogamer"
-  },
-  {
-    "title": "Epic Just Saved Fortnite–For Now, Anyway",
-    "link": "https://www.gamespot.com/articles/epic-just-saved-fortnite-for-now-anyway/",
-    "pubDate": "Tue, 03 Nov 2026 00:22:53 +0000",
-    "description": "It's been a rough year for Fortnite, but Epic took a big swing with its new One Piece-themed Treasure Hunters season and, thankfully, it's paying off. Player counts are way up, with Fortnite's main Battle Royale mode averaging four times as many players on Sunday for the season launch than it had been the past few months. The numbers then got even larger on Monday, somehow. Fortnite BR now looks on track to have its best month since the original Fortnite OG mini-season in 2023. With GTA VI on the horizon, that's very good news for Epic. There is one particularly obvious reason why the numbers are spiking so hard: The Treasure Hunt is giving players the chance to win two weeks of free item-shop cosmetics every time they open a treasure chest. But Epic has also made a few major changes to BR that make it more fun to play than it has been at any previous point during Chapter 7. The hunt for free cosmetics might be the thing that got everyone's attention, but the other changes might actually get some of these new and returning folks to stick around into Chapter 8. Let's take a look at what Epic did right by ending Chapter 7 with this new mini-season. Treasure Hunt I've complained before about the sort of transparently coercive engagement mechanics that Epic has been using in Chapter 7, but I'd say they found a genuinely excellent one with the Treasure Hunt. Any time you or one of your squadmates opens a treasure chest, you have a chance of winning one of several free cosmetics, including an A$AP Rocky skin and a Mercedes SUV. But there's also kind of a Willy Wonka golden ticket that a lucky few will find, which allows them to claim everything in the item shop for free for two weeks. That's an engagement technique I can get behind, because winning free cosmetics is the sort of thing that appeals broadly to the vast majority of Fortnite players, and the entry fee is just to play the game the same way you usually would. It's not something you can grind out, so there's…",
+    "title": "Link’s Ocarina Playing In The Remake Is So Accurate You Could Learn From It",
+    "link": "https://www.gamespot.com/articles/links-ocarina-playing-in-the-remake-is-so-accurate-you-could-learn-from-it/",
+    "pubDate": "Wed, 04 Nov 2026 12:00:00 +0000",
+    "description": "Music has been a major part of The Legend of Zelda almost from the beginning, from the flute in A Link to the Past to the Wind Fish instruments of Link's Awakening. It played a titular role in Ocarina of Time, as a magical object tied to both the narrative and several gameplay elements. You would learn several different songs during your adventure, and for the Ocarina 2026 remake, Nintendo has taken it up a notch with finger movements so accurate you could use them to actually learn how to play the ocarina yourself. For an expert perspective, we turned to Eric Bernard, manager of Songbird Ocarina. For you longtime fans, this is the same company whose ads were ubiquitous in Nintendo Power magazine for years following the original release of Ocarina of Time. And Bernard said that based on the videos of Link in pre-release trailers, the playing was extremely accurate--with one minor caveat. \"What we noticed from the animations of Link playing the Ocarina in the remake, is that he is always playing the song in the exact same key signature that each song was originally written in the original Ocarina of Time game,\" he said. \"The fingering pattern when Link plays each song is also surprisingly very accurate, with just one general exception due to the physical limitations of the instrument.\" Bernard said the one exception is a product of the note range of the actual instrument being depicted. That range isn't quite large enough to capture all of the notes needed for some songs, so Nintendo had to get a little creative. \"A standard 12-Hole Alto C ocarina such as the one depicted in the remake has a musical range of almost two octaves from A4 - F6,\" he said. \"However, some songs that Link plays on the ocarina in the original key have notes that surpass the possible range of the actual ocarina. \"For example, when we see Link play the Sun's Song, the highest note that the song ends on is a high G. However, an ocarina can not normally possibly reach a high G. The highest note…",
     "source": "GameSpot"
   },
   {
-    "title": "WoW: Forever Excavation Site: Wetlands Dungeon Guide – Quests, Bosses, and Loot",
-    "link": "https://www.gamespot.com/articles/wow-forever-excavation-site-wetlands-dungeon-guide-quests-bosses-and-loot/",
-    "pubDate": "Tue, 03 Nov 2026 00:09:26 +0000",
-    "description": "Of all of World of Warcraft: Forever’s new dungeons, Excavation Site: Wetlands could very well be the shortest. It’s also one of the sweetest for lore-heads, owing to its links to the Dragonmaw Clan, Titans, and more. This self-contained safari won’t take particularly long to clear, but whether you’re Alliance or Horde it’s well worth venturing through. Our Excavation Site: Wetlands guide will give you all the info you’ll ever need to navigate its danger-filled paths -- believe us, you’ll want to go in fully prepared. Below you’ll find not only directions for getting to the dungeon, but all of the quests you can clear (including their breadcrumbs), bosses you can beat, and loot you can fill your boots (or bags) with. While you can pick up all of the quests by the time you ding level 24, we’d recommend waiting until at least level 26 before heading in, based on the difficulty of its major encounters. How to get to Excavation Site: Wetlands Excavation Site: Wetlands is located by Thelgen Rock in the southern Wetlands. Alliance players will have the easiest time getting to the dungeon, seeing as they can take the rotating ship between Auberdine in Darkshire, Southshore in Hillsbrad Foothills, and Menethil Harbor in the Wetlands itself. If you’re coming from Stormwind, first take the ship from the harbor to Auberdine, then switch over to the vessel which follows the listed route. Simply hop off at Menethil Harbor, and make the run across the Wetlands to the east before following the path down to the south. There's a good chance you already have the flight path in Menethil Harbor if you've been questing in the region, which makes travel considerably easier. For the Horde, it’s slightly more complex. You’ll need to first get into the Hillsbrad Foothills via Silverpine Forest, before following the path through the Arathi Highlands down into the Wetlands. The Highlands aren’t particularly dangerous despite it being a level 30-40 area, provided you stick to the road and…",
-    "source": "GameSpot"
-  },
-  {
-    "title": "WoW: Forever Ruins of Lordaeron Dungeon Guide – Quests, Bosses, and Loot",
-    "link": "https://www.gamespot.com/articles/wow-forever-ruins-of-lordaeron-dungeon-guide-quests-bosses-and-loot/",
-    "pubDate": "Tue, 03 Nov 2026 00:05:50 +0000",
-    "description": "Where the great city of Lordaeron once proudly stood, only desolate ruins remain. The good news is that this makes it the perfect location for some good ol’ fashioned plundering, and a cromulent quantity of Scourge-slaying. In World of Warcraft: Forever, the Ruins of Lordaeron serves as a low-level instance that sits just above the Undercity in Trisfal Glades. While this may intrinsically mark the Ruins of Lordaeron as a Horde-exclusive dungeon, there’s plenty of joy to be found if you take the plunge on your Alliance toon. As we’ll come to explain in the guide, getting to the instance isn’t nearly as daunting in Forever as it was in Classic. Of course, we’ll also give you the full Lordaeron lowdown, including all the quests you can cash in, bosses you can challenge, and, most importantly, all of the goodies you can potentially acquire for your efforts. For a comfortable time in RoL, we’d recommend steering clear until level 18, though you can always jump in as soon as you’ve snapped up the quests. How to get to Ruins of Lordaeron Ruins of Lordaeron is located in Trisfal Glades, outside the entrance to the Undercity. Horde-side, Undead will have the easiest time reaching the ruins, seeing as they’re parked on the doorstep of the Undercity. A quick Hearthstone back to base (provided you haven’t relocated to The Sepulcher or elsewhere) is all you need. If you’re a Skyborne, Orc, Troll, or Tauren coming from Kalimdor, then hop on the zeppelin stationed near Orgrimmar’s entrance, which will drop you off just outside the city walls. If you’re part of the Alliance, you best take your sea sickness meds as all races will need to head out on a cruise across the ocean at some point. If you’re stationed in Stormwind (Humans, Skyborne at this point), take the shiny new ship from the harbor over to Auberdine in Darkshore. There, you’ll find a vessel that travels on a route rotating between Auberdine, Menethil Harbor (Wetlands), and Southshore (Hillsbrad Foothills). Kick your…",
-    "source": "GameSpot"
-  },
-  {
-    "title": "WoW: Forever City of Dalaran Dungeon Guide – Quests, Bosses, and Loot",
-    "link": "https://www.gamespot.com/articles/wow-forever-city-of-dalaran-dungeon-guide-quests-bosses-and-loot/",
-    "pubDate": "Tue, 03 Nov 2026 00:04:46 +0000",
-    "description": "All we got to see of the gleaming city of Dalaran back in the day was a giant purple dome. This eventually changed with Wrath of the Lich King, but we never got to see its full splendor in Alterac Valley. In World of Warcraft: Forever, the magocratic municipality is fully open to visitors… provided they’re Alliance. Nonetheless, the City of Daloran dungeon can be cleared by either faction, and it’s a doozy. Starting you off down in the sewers, you’ll make your way up onto its hallowed streets, clearing multiple bosses (and a fair share of trash) in the process. Here, we break down everything you’ll need to successfully navigate CoD, including how to get there, attunement steps, quests, major encounters, and more. We were clearing the instance comfortably at level 30 during the beta, so this stands as our recommended point of entry. How to get to City of Dalaran The City of Dalaran is located to the north of Hillsbrad in the Alterac Mountains. The dungeon's entrance is a sewage pipe on the outer side of the northern wall, which leads out onto Lordamere Lake. There are a couple of routes to the dungeon, and which one you take largely depends on whether you’re Alliance or Horde. If you’re the former, either fly or take a ship into Southshore, Hillsbrad Foothills, before heading north-west through the zone, up into Dalaran. For the latter, the most efficient route is to fly to The Sepulcher and head east to Lordamere Lake. Once you reach The Decrepit Ferry, swim south-east to the dungeon entrance. If you’re over in Kalimdor, simply take the zeppelin from Orgrimmar and run down to the lake from the Undercity. While you can run up from Hillsbrad, which is tempting considering where your attunement chain takes you (more on that in a moment), you'll have to carefully navigate the max-level Kirin Tor guards patrolling the entrance to Dalaran proper. City of Dalaran Attunement Before you can enter the dungeon, you’ll first need to get attuned. Well, one person in your group…",
-    "source": "GameSpot"
-  },
-  {
-    "title": "Best WoW: Forever Addons To Download In 2026",
-    "link": "https://www.gamespot.com/articles/best-wow-forever-addons-to-download-in-2026/",
-    "pubDate": "Tue, 03 Nov 2026 00:02:40 +0000",
-    "description": "World of Warcraft: Forever and addons go together like Alterac Swiss and the finest bottle of Dalaran Noir. There are a ton of them out there, from major overhauls that completely shake up your UI, to roleplay-bolstering mods that track your journey across Azeroth. Quest helpers, bag managers, and even fishing enhancers, you can switch up almost any aspect of the game. In This Article Ellesmere UI BlizzMove Cinematic Immersion Node Sight SlangSight What's Training? Auctionator Bagnon Loot Triage OpenMap Questie Forever Quest Pins Forever Quest Tint RareScanner Follow The Arrow Road To Sixty Social Diary BiS>Memories Forever Goal Tracker DungeonJournal Attune ItemTree Reverse Engineering GearQuest Forever Manners Angleur With thousands of addons out there, many of which having been ported over from Retail and Classic, it’s hard to sort the wheat from the chaff. It’s doubly-difficult to gauge what’s worth using now that Blizzard’s brought its own in-built tools to the fore in the reimagined MMO. Having spent north of 100 hours in Forever’s beta, and a good amount of time hunting for promising new additions to our collection, we’re here to bring you the best WoW: Forever addons to install at launch and beyond. CurseForge is our go-to WoW addon manager, so the included links will send you that way. That said, you can also download each file as a standalone from there if you prefer to do things manually. Ellesmere UI Creator: Ellesmere Essential Addon WoW Forever's UI is as classic as it gets, and the thought of changing that may be sacreligious for some. While Ellesmere UI, ElvUI's spiritual successor, is known for its ultra-sleek, modern layout, the Forever version allows you to maintain a more Vanilla look. Or, if you're after a middle ground, it even boasts a Retail setting. This is, however, scratching the literal surface of what Ellesmere UI brings to the table. It is absurdly customizable. You can tweak pretty much every interface element to your liking, which is…",
-    "source": "GameSpot"
-  },
-  {
-    "title": "Queen's Domain might be the best game like Metroid Prime since Metroid Prime",
-    "link": "https://www.pcgamer.com/games/rpg/queens-domain-might-be-the-best-game-like-metroid-prime-since-metroid-prime/",
-    "pubDate": "Mon, 02 Nov 2026 22:41:29 +0000",
-    "description": null,
+    "title": "WoW: Forever's massive pre-launch balance patch breaks from the chains Classic power, increasing 'the health of higher level creatures to compensate'",
+    "link": "https://www.pcgamer.com/games/world-of-warcraft/wow-forevers-massive-pre-launch-balance-patch-breaks-from-the-chains-classic-power-increasing-the-health-of-higher-level-creatures-to-compensate/",
+    "pubDate": "Wed, 04 Nov 2026 11:45:45 +0000",
+    "description": "\"Those reductions left some iconic abilities feeling lackluster, and closed the door to other potentially exciting design options.\"",
     "source": "PC Gamer"
   },
   {
-    "title": "Enshrouded 1.0 review",
-    "link": "https://www.pcgamer.com/games/survival-crafting/enshrouded-1-0-review/",
-    "pubDate": "Mon, 02 Nov 2026 21:47:58 +0000",
-    "description": "The fog of war clears around Embervale, revealing a survival crafting masterpiece.",
+    "title": "Dodgy download and spoofed job ad led to $6.3 billion Binance hack: attacker offered fake software and fake job to infiltrate company wallets and steal billions",
+    "link": "https://www.pcgamer.com/software/security/dodgy-download-and-spoofed-job-ad-led-to-usd6-3-billion-binance-hack-attacker-offered-fake-software-and-fake-job-to-infiltrate-company-wallets-and-steal-billions/",
+    "pubDate": "Wed, 04 Nov 2026 11:12:58 +0000",
+    "description": "I'm feeling fresh appreciation for my company's mandatory cybersecurity awareness course.",
     "source": "PC Gamer"
   },
   {
-    "title": "Super Smash Bros. Was The Best Thing To Ever Happen To Fire Emblem",
-    "link": "https://www.gamespot.com/articles/super-smash-bros-was-the-best-thing-to-ever-happen-to-fire-emblem/",
-    "pubDate": "Mon, 02 Nov 2026 20:37:56 +0000",
-    "description": "Booting up Fire Emblem: Fortune’s Weave had me feeling nostalgic. Fire Emblem as it is now would’ve been surreal to six-year-old me, who only knew “Marth and Roy from Smash.” Back then, Fire Emblem was still a niche series in the west and many of us had no idea who they were. Little did I know, these swordsmen would just be two of many Fire Emblem heroes to join the fighting game series, and Fire Emblem games would reach mainstream popularity. I discovered Fire Emblem in the early 2000s when I first started playing Super Smash Bros. Melee on our clunky big-screen TV in the basement. It was my favorite game to play with my cousins outside of having them watch me play single-player games like Spyro: Enter the Dragonfly and The Legend of Zelda: Wind Waker. We played Melee for hours that summer of 2001, eventually unlocking Marth, the blue-haired prince from the 1990's Fire Emblem: Shadow Dragon and the Blade of Light. After that, we unlocked Roy, the protagonist of 2002's Fire Emblem: The Binding Blade. Marth and Roy do have voicelines, but they are all in Japanese. I mostly remember just the grunting sounds they would make from swinging around their swords, anyway. Maybe it’s because of that that the Smash fandom invented personalities for both fighters in fanfics and comics until their games were released in the west and set things straight. Link also showed up in many of these creations, maybe because he’s the only other Super Smash swordsman from that era. Most of the fan-made stories that I remember from that time came from Fanfiction.net and Deviantart. CallistoHime, the author of fanfics like Time Cannot Erase, admits that she filled in the blanks because she had little to go off of besides Marth’s Smash Bros. profile. One artist I followed back then, Katie Tiedrich, also made a comic about the gap between her interpretation of Marth and the real thing. These are just a few examples from what was a relatively small community in the mid-to-late 2000s. Nintendo…",
-    "source": "GameSpot"
-  },
-  {
-    "title": "Xbox COO who left after just 3 months shoots down claims she was 'fired for a policy violation,' says her story is about 'core values'",
-    "link": "https://www.pcgamer.com/gaming-industry/xbox-coo-who-left-after-just-3-months-shoots-down-claims-she-was-fired-for-a-policy-violation-says-her-story-is-about-core-values/",
-    "pubDate": "Mon, 02 Nov 2026 20:37:38 +0000",
-    "description": "Helen Chiang, who became the Xbox division's first chief operating officer in July, says she has \"serious concerns\" about how her case was handled.",
-    "source": "PC Gamer"
-  },
-  {
-    "title": "Yakuza creator's new studio and its debut game Gang of Dragon are no more after losing funding from NetEase",
-    "link": "https://www.eurogamer.net/yakuza-creator-new-studio-closed-netease",
-    "pubDate": "Mon, 02 Nov 2026 20:30:09 +0000",
-    "description": "Nagoshi Studio has officially shut down and its first game called Gang of Dragon is seemingly no more, months after publisher NetEase pulled funding from the Yakuza-like project. Read more",
-    "source": "Eurogamer"
-  },
-  {
-    "title": "Former Xbox Exec Shares Her Side Of The Story After Mysterious Depature",
-    "link": "https://www.gamespot.com/articles/former-xbox-exec-shares-her-side-of-the-story-after-mysterious-depature/",
-    "pubDate": "Mon, 02 Nov 2026 20:16:26 +0000",
-    "description": "Helen Chiang, the veteran Xbox staffer who got promoted in July and left the company amid mysterious circumstances just recently, has shared her side of the story--but her response doesn't close the book on this saga. In a LinkedIn post titled \"Clarity is Kindess,\" which itself is a reference to her former boss (and Xbox CEO) Asha Sharma's much-ridiculed and cringey mantra, said it's \"not accurate\" that she was \"fired for a policy violation\" as multiple reports said. Chiang said she will not \"turn this into a play-by-play\" and reveal the specifics, but she wanted to speak out to dispel rumors. \"What has been said about my departure, and what has been left unsaid, has created a picture of me that I hardly recognize.\" Xbox is undergoing a \"reset\" currently. She went on to \"set the record straight\" by claiming she did not leak confidential company information to the press as some had speculated. \"I have never communicated with any journalist outside the limited, company-authorized interviews I’ve done as part of my job,\" she said, adding that this includes having no contact with any journalist who reached out to her before today to ask for her side of the story. Chiang went on to say she did not leave Xbox to join a competitor. \"You don’t spend two decades somewhere without developing a deep loyalty to the people, teams, and businesses you’ve helped build,\" she said \"Xbox was never just another stop in my career. My end game was always to keep building here,\" she said. That may all be true, but it's also unquestionable that people regularly spend lengthy periods of their career at one company, in high-level positions, and then move to other companies. Third, Chiang said she \"did not engage in discrimination, bullying, harassment, insider trading, embezzlement, or other fraudulent activity.\" \"I stand by my record: both the results I delivered and the way I have treated people throughout my career. I won’t let speculation define my character or erase that record,\" she…",
-    "source": "GameSpot"
-  },
-  {
-    "title": "You can make a vampire hunter who's afraid of the dark, disease and small spaces in Hunter: The Reckoning - Deathwish, and that's surely the best way to play",
-    "link": "https://www.rockpapershotgun.com/you-can-make-a-vampire-hunter-whos-afraid-of-the-dark-disease-and-small-spaces-in-hunter-the-reckoning-deathwish-and-thats-surely-the-best-way-to-play",
-    "pubDate": "Mon, 02 Nov 2026 19:00:00 +0000",
-    "description": "A month or two back I penned a 1500 word whine about feeling too powerful in Blood of Dawnwalker. \"Gimme a vampire sim in which I'm a pathetic vein-nibbling goblin,\" I wrote, using many more adjectives than that. Well, never let it be said that I'm biased against vampires, for I am equally keen to play an RPG in which I am the least capable vampire hunter in the universe. A vampire hunter who screams when he wakes up with his hair over his face. A vampire hunter who has to spray the vampires with antibac before staking them. An RPG like Hunter: The Reckoning – Deathwish, perhaps, which presents you with a choice of Advantages and Flaws when creating a character. You have to balance these out on a gnarly weighing scale, before they'll let you through the game's front door. Here is a video showing all that off, together with a lot of sixpacks. Read more",
+    "title": "Smash hit cyberpunk storekeeper Probably Stolen was originally a different, non-cyberpunk game that seemed destined to sink without trace",
+    "link": "https://www.rockpapershotgun.com/smash-hit-cyberpunk-storekeeper-probably-stolen-was-originally-a-different-non-cyberpunk-game-that-seemed-destined-to-sink-without-trace",
+    "pubDate": "Wed, 04 Nov 2026 11:00:00 +0000",
+    "description": "Space station trading game Probably Stolen – Cyberpunk Shopkeeper Sim has been doing rather well on Steam, attracting over 162,000 concurrent players last night. I've been feeling the urge to fire it up again myself, after my brief launch-day trawl through its quagmire of black market economics and factional rivalries. The game's big numbers come as a shock given that it began life as another, non-cyberpunk kiosk job sim called Deepspace Emporium, which still has a Steam page as of writing. Deepspace Emporium seemed doomed to fizzle out in obscurity. But publisher tinyBuild got behind it regardless, working with developers Questing Goose to overhaul the art direction and lay on extra brainchips. The gamble paid off. Read more",
     "source": "Rock Paper Shotgun"
   },
   {
-    "title": "The Borderlands series has sold over 100 million copies, and Gearbox is \"cooking hard on more Borderlands 4 content for next year\"",
-    "link": "https://www.eurogamer.net/borderlands-100-million-copies-gearbox",
-    "pubDate": "Mon, 02 Nov 2026 18:44:15 +0000",
-    "description": "The Borderlands series has sold more than 100m copies across all games, developer Gearbox Software has announced. No surprise, then - the studio also said it's cooking up \"big plans\" for the evergreen looter shooter's future. Read more",
+    "title": "The Legend of Zelda: Ocarina of Time (2026) review",
+    "link": "https://www.eurogamer.net/the-legend-of-zelda-ocarina-of-time-remake-review",
+    "pubDate": "Wed, 04 Nov 2026 11:00:00 +0000",
+    "description": "I have a friend who first played The Legend of Zelda: Ocarina of Time back in the day, when the game was only just released and he was home from university for Christmas. This is objectively the best of all times to play any video game: not Christmas specifically, but dropped out of the regular world and faced with a few weeks filled with nothing pressing to do whatsoever. Years later, though, my friend told me that the magic of the game didn't just come down to the playing of it, but the way that the playing of it unfolded. Read more",
     "source": "Eurogamer"
   },
   {
-    "title": "CoD: Modern Warfare 4 Arrives To Warzone With New Maps, Movement, And Features",
-    "link": "https://www.gamespot.com/articles/cod-modern-warfare-4-arrives-to-warzone-with-new-maps-movement-and-features/",
-    "pubDate": "Mon, 02 Nov 2026 18:35:41 +0000",
-    "description": "Season 1 of Modern Warfare 4 and Warzone arrives on November 6, and this fully integrates the new Call of Duty into battle royale. The season update replaces Black Ops 7's maps with two Modern Warfare-themed maps, overhauls Warzone's movement, introduces new game mechanics, and adds an operator-skin toggle feature. Here is everything you need to know when Season 1 of Modern Warfare 4 goes live in Warzone. Additionally, Season 1 of Modern Warfare 4 adds a new battle pass, more multiplayer maps and modes, and plenty of new DMZ content. There are four new DLC weapons to unlock for use in MW4 and battle royale. This big update also also celebrates the launch of Warzone on the Nintendo Switch 2. MW4 integration and level reset Season 1 marks the start of a new year of Warzone, meaning all players will be reset to player level one. Players will have the choice to level up and prestige across multiplayer, DMZ, and Warzone. All of Modern Warfare 4's operators, weapons, attachments, and camos will be available to use in battle royale. However, Warzone's \"legacy\" weapons will work differently this year. The older guns from the last three Call of Duty games will become \"legacy\" weapons, and while they are still available to use, they will no longer be customizable in the Gunsmith. Black Ops 7's omnimovement is also removed from the game, transitioning battle royale to Modern Warfare 4's scaled-back movement with fluid sliding and mantling mechanics. New Warzone maps New Zodiac map For Season 1, DMZ’s Hajin will launch as Warzone's large standard battle royale map, while Zodiac arrives as the smaller Resurgence map. All other Warzone maps will be removed from the game. Hajin features the same points-of-interest as the DMZ version of the map, and it will also include the mode's dynamic weather with rain and fog. However, the battle royale version of the map will feature Warzone's 1v1 Gulag arena, and there will be two Gulag layouts for players to experience. Verdansk and…",
+    "title": "The Zelda: Ocarina Of Time Remake Shows That A Masterpiece Is Ageless | Review",
+    "link": "https://www.gamespot.com/videos/the-zelda-ocarina-of-time-remake-shows-that-a-masterpiece-is-ageless-review/",
+    "pubDate": "Wed, 04 Nov 2026 11:00:00 +0000",
+    "description": "2026's The Legend of Zelda: Ocarina of Time is a reverent remake with stellar presentation, letting the original greatness shine through.",
     "source": "GameSpot"
   },
   {
-    "title": "Nintendo tried adding fast travel to The Legend of Zelda: Ocarina of Time remake, before devs realised \"we were missing out on the moments of discovery\"",
-    "link": "https://www.eurogamer.net/nintendo-fast-travel-legend-of-zelda-ocarina-of-time-remake",
-    "pubDate": "Mon, 02 Nov 2026 18:01:38 +0000",
-    "description": "The Legend of Zelda: Ocarina of Time is being wrapped up in all kinds of modern touches for its imminent Nintendo Switch 2 remake (that owl seems to be less chatty, for starters), but there's at least one quality-of-life feature borrowed from Breath of the Wild that the developers felt was better left on the cutting room floor: fast travel. Read more",
-    "source": "Eurogamer"
+    "title": "The Zelda: Ocarina Of Time Remake Shows That A Masterpiece Is Ageless",
+    "link": "https://www.gamespot.com/reviews/the-zelda-ocarina-of-time-remake-shows-that-a-masterpiece-is-ageless/",
+    "pubDate": "Wed, 04 Nov 2026 11:00:00 +0000",
+    "description": "2026's The Legend of Zelda: Ocarina of Time is a reverent remake, remaining true to all the silliness and solemnity of the original, modernizing some gameplay elements with an elegance that feels so natural, it's as if it had always been there, and respecting the original design ethos enough to trust that all of the exploration and adventure will still feel great. For fans, to play this remake is to remember over and over again why you fell in love with Ocarina in the first place, and to see the brilliance with fresh eyes. For newcomers, this is now the definitive way to experience this all-time classic, and it's a can't-miss Switch 2 exclusive for everyone else. In case you're coming to this entirely fresh, Ocarina of Time was the first 3D Zelda game. This is the game that established series mainstays like Epona, Z-targeting, and the Goron and Gerudo. The Zelda series would not be the same without Ocarina of Time, so it holds a special place in the hearts of Zelda fans and in the history of Nintendo. Alongside Super Mario 64, this set the template for decades of the company's development. And since Nintendo tends to blaze trails that others follow, it was also remarkably influential on the industry as a whole. The most noticeable change to Ocarina 2026, naturally, is to the presentation, and the upgrade is stellar. Put simply, this is one of the best-looking Switch 2 games and a showpiece for the system. Link and the Kokiri children have been given careful plant-fiber stitching to their clothes, driving home the idea that they're forest sprites innately connected to the woods they occupy. Light glints off the titular Ocarina of Time as if it's a real piece of glazed ceramic. The brick textures of dungeons look decrepit and lived-in, and become spookier when lit by the dim glow of your fairy friend, Navi. Boss creatures crumble into purple ash and collapse into dust when defeated. Every piece of this world has been lovingly crafted, and as a returning fan, I was…",
+    "source": "GameSpot"
   },
   {
-    "title": "'There was some really fair criticism': Arc Raiders' devs understand why players were so upset about its AI use but say that it was 'too impractical to record' every voice line",
-    "link": "https://www.pcgamer.com/games/third-person-shooter/there-was-some-really-fair-criticism-arc-raiders-devs-understand-why-players-were-so-upset-about-its-ai-use-but-admit-that-it-was-too-impractical-to-record-every-voice-line/",
-    "pubDate": "Mon, 02 Nov 2026 17:55:20 +0000",
-    "description": "Embark has since re-recorded lines to inject more real human voices to the game.",
-    "source": "PC Gamer"
+    "title": "Guild Wars Is Getting Its First New Expansion In Almost 20 Years",
+    "link": "https://www.gamespot.com/articles/guild-wars-is-getting-its-first-new-expansion-in-almost-20-years/",
+    "pubDate": "Wed, 04 Nov 2026 10:39:48 +0000",
+    "description": "ArenaNet may be hard at work on a new entry in the Guild Wars series, but it apparently won't stop it from releasing brand-new content for the 21-year-old original. Guild Wars Afterlife has just been announced, and it's a full paid expansion for Guild Wars arriving next January. Excitingly for old-school Guild Wars fans, Afterlife seems to bring back some content from the long-cancelled Utopia campaign, including the mystical, Mesoamerican-inspired setting of Xotecha. The new expansion will take players away from the continent of Tyria and into the Mists to explore the lost land of the dead. The expansion's mechanics seem to be purpose-built for replayability. Xotecha's new dungeon is an ever-changing expanse called the Unformed, where no two runs will be the same. This dynamic design even extends to your character build, with a custom skill-drafting mechanic allowing you to change up your abilities on the fly. While the skill-drafting mechanic seems unique to Xotecha, playing through Afterlife lets players unlock rewards they can take back with them out of the Mists. Afterlife will be the second true expansion for the original Guild Wars, after 2007's Eye of the North. Players looking to get into the new expansion will need Guild Wars Reforged, the 2025 re-release of the original game. Alongside Reforged, ArenaNet continues to support 2012's Guild Wars 2, while the brand-new Guild Wars 3 is also in the works. When the new game was announced, ArenaNet said it was committed to \"actively developing all three games at the same time,\" and the Afterlife announcement shows the studio isn't taking that promise lightly. Guild Wars Afterlife will launch on PC, Steam, the App Store, and Google Play on January 13, 2027. The expansion will retail for $30 at full price, but ArenaNet is offering a discounted pre-order price of $24.",
+    "source": "GameSpot"
   },
   {
-    "title": "Thief Remastered's new expansion is being made by the legendary Black Parade mod team, and it's out next month",
-    "link": "https://www.pcgamer.com/games/fps/thief-remastereds-new-expansion-is-being-made-by-the-legendary-black-parade-mod-team-and-its-out-next-month/",
-    "pubDate": "Mon, 02 Nov 2026 17:53:01 +0000",
-    "description": "It's a big day for PC gaming old heads.",
-    "source": "PC Gamer"
-  },
-  {
-    "title": "The 28 cozy game launches in November technically include 3 horse games, which is actually a lot for the eternally underserved horse gamers",
-    "link": "https://www.pcgamer.com/games/new-cozy-games-november-2026/",
-    "pubDate": "Mon, 02 Nov 2026 17:52:16 +0000",
-    "description": "November's slate of cozy games is a pretty varied bunch, but the horse girls should be getting away with neigh a complaint.",
-    "source": "PC Gamer"
-  },
-  {
-    "title": "Fix up towering robots while battle rages outside in Bay 12: Mech Repair, a first-person job sim with some handsome heavy duty analog tech",
-    "link": "https://www.rockpapershotgun.com/fix-up-towering-robots-while-battle-rages-outside-in-bay-12-mech-repair-a-first-person-job-sim-with-some-handsome-heavy-duty-analog-tech",
-    "pubDate": "Mon, 02 Nov 2026 17:30:00 +0000",
-    "description": "The most important thing to know about Bay 12: Mech Repair is that these are mechs of the MechWarrior or possibly Patlabor school – that is, basically WW2 tanks on hydraulic legs, with cockpits full of switches and wireframe displays. Their bodies are assemblages of pistons and reactors. They are not biomechs like the ones in Evangelion. An Evangelion Repair game would be… different. Less industrial, more Oedipal. You would dread removing the smallest piece of housing. Read more",
+    "title": "\"An outright ban will not eliminate AI from the modding process,\" Nexus Mods say as they rule out barring generated creations from their site",
+    "link": "https://www.rockpapershotgun.com/nexus-mods-rule-out-barring-ai-generated-creations-from-their-site",
+    "pubDate": "Wed, 04 Nov 2026 10:34:07 +0000",
+    "description": "The owners of Nexus Mods have ruled out instituting an outright ban on AI-generated works being uploaded the site, instead opting to expand their current rules on modders disclosing how they've used AI in making their mods. This latest move to address the waves of AI-created or AI-thumbnailed mods now hitting Nexus Mods on a daily basis follows Nexus' modus operandi up to this point, which has been simply to try and ensure AI usage is clearly labelled so prospective downloaders can make informed decisions. Read more",
     "source": "Rock Paper Shotgun"
   },
   {
-    "title": "When Is Resident Evil Coming To Home Video? It Could Be Very Soon",
-    "link": "https://www.gamespot.com/articles/the-new-resident-evil-movie-will-be-available-to-watch-at-home-november-3-report/",
-    "pubDate": "Mon, 02 Nov 2026 17:26:02 +0000",
-    "description": "Zach Cregger's Resident Evil movie crushed it at the box office, banking more than $400 million globally to become the most successful entry in the series ever. When will the film be available to watch at home, though? According to Fandango, the home video release is set for November 3. That's apparently when people can buy the movie outright or rent it digitally, with a physical edition for Blu-ray coming at some point later. It will also presumably come to streaming at some point, and it should hit Netflix given the multi-billion-dollar Pay-1 deal the two companies have in place. While we wait, Netflix just announced that director Paul W.S. Anderson's original Resident Evil, along with its follow-up, Resident Evil: Apocalypse, are now available to stream. They join the other Resident Evil movies already on Netflix, including Resident Evil: Afterlife, Resident Evil: Retribution, Resident Evil: Extinction, and Resident Evil: The Final Chapter. The 2022 Resident Evil TV show is also currently streaming on Netflix. While the new Resident Evil movie may be coming to home video on November 3, it's also staying in theaters. In fact, it was just announced that the movie is returning to IMAX and other premium large format (PLF) screens. Cregger, who co-wrote and directed the new Resident Evil movie, recently discussed the backlash from the hardcore gamer community. He said he should have known better that fans of the games wouldn't embrace him and his ideas. After the movie came out and got great reviews and made tons of money, Cregger said he felt \"gratified.\" The filmmaker has said he has ideas for more Resident Evil movies, but he's not going to pursue them; instead, he's only going to make original, non-franchise movies going forward. His next movie, The Flood, is a sci-fi film starring Jennifer Lawrence.",
-    "source": "GameSpot"
+    "title": "Dragon's Dogma 2 gets a timed collaboration with beloved anime and manga series Delicious in Dungeon, and it's out right now on PC, PlayStation and Xbox",
+    "link": "https://www.eurogamer.net/dragons-dogma-2-dungeon-meshi-collaboration-out-now",
+    "pubDate": "Wed, 04 Nov 2026 10:03:46 +0000",
+    "description": "Have you ever seen - or read - the wonderful Dungeon Meshi (known in English as 'Delicious in Dungeon')? It's a phenomenal manga series written and illustrated by Ryoko Kui, which was adapted into an anime series produced by Trigger in 2024. Long story short, it's about a group of adventurers in a fantasy world who lose an encounter with a dragon - who eats one of the party. What follows is a quest to revive the fallen party member (who happens to be the sister of one of the main characters), with the adventuring party learning to cook and eat monsters in dungeons as they uncover the stranger truth behind the world they inhabit. Read more",
+    "source": "Eurogamer"
   },
   {
-    "title": "Yakuza creator's studio, and the game it was working on, are now officially gone",
-    "link": "https://www.pcgamer.com/gaming-industry/yakuza-creators-studio-and-the-game-it-was-working-on-are-now-officially-gone/",
-    "pubDate": "Mon, 02 Nov 2026 16:59:36 +0000",
-    "description": "Nagoshi Studio revealed Gang of Dragon less than a year ago, but it ran into trouble just a few months later.",
+    "title": "Guild Wars gets its first major gameplay update in almost 20 years",
+    "link": "https://www.eurogamer.net/guild-wars-1-afterlife-announced-20-years",
+    "pubDate": "Wed, 04 Nov 2026 09:59:17 +0000",
+    "description": "ArenaNet and co-dev studio 2Weeks have announced Guild Wars Afterlife - the first major update for the game in nearly 20 years. Read more",
+    "source": "Eurogamer"
+  },
+  {
+    "title": "Ubisoft and at least two other companies are interested in buying Arkane, according to new report",
+    "link": "https://www.eurogamer.net/arkane-studios-ubisoft-interested-buyers",
+    "pubDate": "Wed, 04 Nov 2026 09:17:51 +0000",
+    "description": "Arkane Studios, which spent the last several months in limbo following Xbox's decision to divest itself from the studio, has apparently received buyout offers from several bidders. Read more",
+    "source": "Eurogamer"
+  },
+  {
+    "title": "Bethesda's associate art director really did try to fit 7,000 actual steps into Skyrim's 7,000 Steps: 'I take no responsibility for the Frost Troll'",
+    "link": "https://www.pcgamer.com/games/the-elder-scrolls/bethesdas-associate-art-director-really-did-try-to-fit-7-000-actual-steps-into-skyrims-7-000-steps-i-take-no-responsibility-for-the-frost-troll/",
+    "pubDate": "Wed, 04 Nov 2026 00:18:41 +0000",
+    "description": "\"See that mountain? You can overanalyze it.\"",
     "source": "PC Gamer"
   },
   {
-    "title": "Turtle Beach Command Series MC7 review",
-    "link": "https://www.pcgamer.com/hardware/gaming-mice/turtle-beach-command-series-mc7-review/",
-    "pubDate": "Mon, 02 Nov 2026 16:56:48 +0000",
-    "description": "How much is a touchscreen really worth to you?",
+    "title": "Valve admits it's 'running behind' on approving Steam games because it has to keep re-reviewing them, which surely has nothing to do with AI",
+    "link": "https://www.pcgamer.com/gaming-industry/valve-admits-its-running-behind-on-approving-steam-games-because-it-has-to-keep-re-reviewing-them-which-surely-has-nothing-to-do-with-ai/",
+    "pubDate": "Tue, 03 Nov 2026 23:51:13 +0000",
+    "description": "As wishlisted games miss their release dates, Valve creates a new checklist to help devs get it right the first time.",
     "source": "PC Gamer"
   },
   {
-    "title": "Fewer genAI clones of \"someone else's specific game\" should flood the net going forwards, as Anthropic tell Claude to stop messing with some stuff other people own",
-    "link": "https://www.rockpapershotgun.com/fewer-genai-clones-of-someone-elses-specific-game-should-flood-the-net-going-forwards-as-anthropic-tell-claude-to-stop-messing-with-some-stuff-other-people-own",
-    "pubDate": "Mon, 02 Nov 2026 16:51:17 +0000",
-    "description": "Anthropic have told their genAI tool Claude to start ducking requests from users to recreate or clone existing games, following a flood of folks using the tech to generate six-fingered remakes. Instead of risking infringing on the intellectual property of series or titles that companies which aren't Anthropic own, Claude will instead restrict itself to only generating \"original\" games slopped together based on whatever data it's drawing on. Read more",
+    "title": "Google criticized by NYC mayor Zohran Mamdani following AI policy change: 'Google is trying to use its monopoly power to force AI into our public schools'",
+    "link": "https://www.pcgamer.com/software/ai/google-criticized-by-nyc-mayor-zohran-mamdani-following-ai-policy-change-google-is-trying-to-use-its-monopoly-power-to-force-ai-into-our-public-schools/",
+    "pubDate": "Tue, 03 Nov 2026 22:58:03 +0000",
+    "description": "Mamdani and others have called out Google's decision to disable search functionality for schools who opt out of its AI tools.",
+    "source": "PC Gamer"
+  },
+  {
+    "title": "Ubisoft are reportedly tapped as one potential company that could acquire Arkane, though the Dishonored studio's own management may be in the running too",
+    "link": "https://www.rockpapershotgun.com/ubisoft-are-reportedly-tapped-as-one-potential-company-that-could-acquire-arkane-though-the-dishonored-studios-own-management-may-be-in-the-running-too",
+    "pubDate": "Tue, 03 Nov 2026 22:51:31 +0000",
+    "description": "Things are potentially looking up for Arkane, depending on how you feel about Ubisoft (and depending on who actually ends up acquiring them). I mention the Assassin's Creed developer because, reportedly, they're interested in buying the studio from Microsoft, having even made a bid for it. I'll go out on a limb here and say it's the whole being French thing, but uh, I'd really rather someone else bought Arkane. Read more",
     "source": "Rock Paper Shotgun"
   },
   {
-    "title": "Nightdive is reviving the iconic trapezoid big box for Thief: Remastered's special edition… but only on console",
-    "link": "https://www.pcgamer.com/games/fps/nightdive-is-reviving-the-iconic-trapezoid-big-box-for-thief-remastereds-special-edition-but-only-on-console/",
-    "pubDate": "Mon, 02 Nov 2026 16:47:29 +0000",
-    "description": "The injustice of it all.",
+    "title": "Ubisoft reportedly wants to buy Arkane from Xbox",
+    "link": "https://www.pcgamer.com/gaming-industry/ubisoft-reportedly-wants-to-buy-arkane-from-xbox/",
+    "pubDate": "Tue, 03 Nov 2026 22:12:35 +0000",
+    "description": "There might be hope for Arkane after all: A new report says multiple companies have made offers for it.",
     "source": "PC Gamer"
   },
   {
-    "title": "Phantom Blade Zero Put Up Some Massive Sales Numbers",
-    "link": "https://www.gamespot.com/articles/phantom-blade-zero-put-up-some-massive-sales-numbers/",
-    "pubDate": "Mon, 02 Nov 2026 16:41:44 +0000",
-    "description": "Developer S-Game's action-RPG Phantom Blade Zero launched on October 29 and had a massive start across PC and PS5. The game sold more than 4 million copies over its first 72 hours. That works out to 926 units sold per minute or about 15.4 per second over the first three days. \"Thank you everyone from the bottom of our hearts for all the love and support,\" the studio said in a social media post. The 4 million figure counts copies sold across both PC and PS5--the game is not available on Xbox. The game reached a record of 833,921 peak concurrent users on Steam on November 1. The game's developer is based in China, and the majority of preorders for the game came from China, Taiwan, and Hong Kong. Phantom Blade Zero's sales out of the gate are strong, but do not come close to another hit game from the Chinese game developer scene, Black Myth: Wukong. That game sold 10 million copies over its first three days. The Legend of Zelda: Tears of the Kingdom, meanwhile, sold 10 million copies in three days as well. If you’re looking to get started, you can check out our Phantom Blade Zero guides hub for many walkthroughs on increasing your power and finding rare items. “S-Game’s Wuxia-inspired combat puts you in the middle of a Chinese action movie,” Richard Wakeling wrote in GameSpot’s Phantom Blade Zero review.",
+    "title": "Control Resonant is Remedy's fastest-selling game to date, tripling the studio's quarterly revenue",
+    "link": "https://www.pcgamer.com/games/action/control-resonant-is-remedys-fastest-selling-game-to-date-tripling-the-studios-quarterly-revenue/",
+    "pubDate": "Tue, 03 Nov 2026 21:54:41 +0000",
+    "description": "Countless sickos of a certain vintage just breathed sighs of relief.",
+    "source": "PC Gamer"
+  },
+  {
+    "title": "\"Steam's review queue is clogged up by AI slop\": Salacious Fire Emblem-ish Food Devils gets a delay because its devs think Valve is inundated with genAI games",
+    "link": "https://www.rockpapershotgun.com/steams-review-queue-is-clogged-up-by-ai-slop-salacious-fire-emblem-ish-food-devils-gets-a-delay-because-its-devs-think-valve-is-inundated-with-genai-games",
+    "pubDate": "Tue, 03 Nov 2026 21:41:08 +0000",
+    "description": "You might have seen that for today's grub, Edwin decided to in part feed The Maw with Food Devils, an incredibly salacious, foodie take on Fire Emblem, as it was meant to release today. The only problem is, it's not actually out yet. That might prompt you to call Edwin a rotten liar and march up to his castle at the top of the hill on a dark and stormy night with pitchforks and torches, but I beseech you to wait, because it's actually Steam's fault. And potentially, it's the fault of all those awful AI games that have been flooding Steam recently. Read more",
+    "source": "Rock Paper Shotgun"
+  },
+  {
+    "title": "This Custom Xbox-Inside-An-Alligator Console Is Actually One Big Ad For GTA 6",
+    "link": "https://www.gamespot.com/articles/this-custom-xbox-inside-an-alligator-console-is-actually-one-big-ad-for-gta-6/",
+    "pubDate": "Tue, 03 Nov 2026 21:22:30 +0000",
+    "description": "Given that Sony holds the marketing rights for Grand Theft Auto 6, Microsoft has had to get creative to promote the open-world crime game for Xbox--and the company's latest effort in that department goes big. Say Hello to the X-Bite, a playable Xbox Series X console that was designed to look like it was swallowed whole by one of Florida's millions of alligators. Microsoft only made one of these ornate consoles, and you have to win a contest to get it. Microsoft's blog post doesn't mention GTA 6 or Rockstar Games, but Xbox marketing boss Josh Munsee said the system has \"pure Miami vibes,\" and that's a pretty obvious reference to GTA 6 given the game takes place in a stand-in, Vice City, for the popular Florida city. The blog post says the winner of the console can play \"some of the biggest games of the year\" using it, and that's no doubt another nod to GTA 6. \"This November, Xbox is heading to Florida--home to incredible wildlife, unforgettable places, and every now and then, stories you have to see to believe,\" Microsoft said in its announcement of the X-Bite. The X-Bite is about five feet long, and the console itself sits inside the alligator, with the Nexus/Guide button illuminated through the gator's skin. The lucky winner will also get a custom Xbox controller with simulated bite marks on it. The custom console was designed by creature animatronic specialist John Nolan Studio, which did work for The Witcher and Jurassic World Dominion. Microsoft's fine print states that the gator console is a \"custom fabrication\" and wasn't made from a real alligator. \"No actual alligators were used or harmed in the making of this console,\" Microsoft said. The estimated value of the console is $800, Microsoft said. The X-Bite. You can enter for a chance to win the X-Bite by following Xbox on X, Instagram, or TikTok, reposting the sweepstakes post, and then add #XbiteSweepstakes to your repost. You'll also need to have a public account. The sweepstakes runs now through November…",
     "source": "GameSpot"
   },
   {
-    "title": "COD Modern Warfare 4 has seemingly answered DMZ players' PvE calls with new Story Mission changes - but there are major caveats",
-    "link": "https://www.eurogamer.net/call-of-duty-modern-warfare-4-dmz-story-missions-pve",
-    "pubDate": "Mon, 02 Nov 2026 16:19:40 +0000",
-    "description": "For as long as Call of Duty: Modern Warfare 4's DMZ extraction mode has been available, there've been calls for PvE-only servers. Developer Infinity Ward, for its part, has maintained the mode is designed as a PvPvE experience, but it's now seemingly made a change offering solo players something of a compromise, albeit with caveats. Read more",
-    "source": "Eurogamer"
-  },
-  {
-    "title": "Xbox Game Pass Has A Busy November Ahead With Several Day-One Launches",
-    "link": "https://www.gamespot.com/articles/xbox-game-pass-has-a-busy-november-ahead-with-several-day-one-launches/",
-    "pubDate": "Mon, 02 Nov 2026 16:17:53 +0000",
-    "description": "The start of the month is a good time to be an Xbox Game Pass subscriber, as that's when Microsoft reveals the next batch of games coming to the service. November is frontloaded with new game releases before November 19-- we can't imagine why --and several of them are day-one releases. Once more games are revealed, we'll update this post. A few games have already been revealed for November, and usually, the first wave is the biggest one for Game Pass. Kicking things off is the online horror co-op game Pit of Goblin. This has been in early access since 2024, and November 3 marks its 1.0 release. Warhammer Survivors Next up is Escape Academy 2: Back to School on November 5. This is a day-one release, and it's all about exploring a campus, escaping life-threatening puzzle rooms, and uncovering a deadly conspiracy. November 10 will be a big day for Warhammer fans, as Warhammer Survivors launches. It's Vampire Survivors with a grimdark spin, so expect dozens of characters and weapons to master in this bullet-heaven game. Hope in the City launches on November 11, and this stylish game follows a young girl as she searches for her parents in Shenyang's seedy underbelly. As a reminder, more games will leave Game Pass this month, with 14 titles heading out in the first wave of departures. Xbox Game Pass November Wave 1 Games November 3 Pit of Goblin November 5 Escape Academy 2: Back to School November 10 Warhammer Survivors November 11 Hope in the City",
+    "title": "Don’t Make Me Pick A Favorite Dog In This Co-Op Game",
+    "link": "https://www.gamespot.com/articles/dont-make-me-pick-a-favorite-dog-in-this-co-op-game/",
+    "pubDate": "Tue, 03 Nov 2026 21:14:25 +0000",
+    "description": "Before I jumped into Gravhounds, the new third-person co-op shooter from Octopus Panic, the most pressing questions on my mind were centered on gameplay. In trailers, it seemed to have touches of both Helldivers 2 and Deep Rock Galactic, so I wondered which it resembled more. I saw elements of physics-based gameplay, so I was curious how chaotic that might get. With its alien worlds, I was eager to know what exploration was like. But once I finally got into the game, I was struck by a more immediate conundrum: Which dog do I pick? Out now in early access on PC and consoles, Gravhounds is a third-person shooter with tower-defense and extraction elements. It is a little like Helldivers 2, a bit more like Deep Rock Galactic, and the physics of its world are fun, but damn, I took a long time picking which doggo hero to play as. Currently, there are five characters to choose from, each with their own strengths, weaknesses, and special abilities. Though these are the aspects of a hero-based shooter that typically give me pause on a character-select screen, here they were merely secondary to the look and biography of each powerful pup. Dozer is an English Bulldog who is meant to play the tank role of the group. I practically never use the tank role, as I strongly prefer mobility to health whenever I can choose, but his blue-collar attire is easy to love, and the tag on his ear makes me root for him. What jerk did that? I get that it may mean he's up to date on his vaccines, and that's great, but can't we think of a different system? He's already fighting aliens from 9 to 5. Let's give his ears a break. Selene is an all-rounder with no major strengths or weaknesses in her attributes. That likely makes her a good starting class for most folks, which is pretty neat considering she seems to be a Weimaraner, often remembered as the dogs from Sesame Street. In a way, she was a lot of kids' first dog, too. Though those dogs from Jim Henson's world had human hands mimicking human…",
     "source": "GameSpot"
   },
   {
-    "title": "GTA 6 Buying Guide: Get Ready For Sticker Shock",
-    "link": "https://www.gamespot.com/articles/gta-6-buying-guide-get-ready-for-sticker-shock/",
-    "pubDate": "Mon, 02 Nov 2026 16:10:15 +0000",
-    "description": "Rockstar's GTA 6 finally releases on November 19, and if you're looking to play the game, you'll also need a console--and those are more expensive than ever. Here's a quick buying guide to help you understand what you need and how much the items will cost. A console First, you'll need a PlayStation 5 or Xbox Series X|S console. The least expensive option for buying a new system outright is the Xbox Series S, which costs $500. Unfortunately, that's $200 more expensive than the system cost at launch in 2020--there are a number macroeconomic and AI factors that drove prices up significantly. A new Xbox Series X, meanwhile, costs $750 for a system with no disc drive, or $800 for a console with a disc drive. GTA 6 is not available on a disc, but having a disc drive may still be important to you for other games and media like DVDs and Blu-rays. Switching to PlayStation, the least expensive system on Sony's side is the $600 digital edition, scaling up to $900 for a PS5 Pro (with a disc drive). PS5 Pro, as the most powerful of these options, is likely to provide the best experience from a technical and graphical standpoint, although the gameplay itself should be identical across all platforms. These are all prices for brand-new units, but Sony offers certified refurbished PS5 consoles starting at $500. A certified refurbished Xbox Series S, meanwhile, goes for $400. These are the prices from Sony and Microsoft directly, but you can find secondhand consoles at a variety of other retailers, along with places like eBay, Facebook Marketplace, and Craigslist. As usual, check your local or preferred retailer to see the latest prices. New and certified refurbished consoles come with everything you need--including the system, controller, and power cords. You will need a TV or monitor, but the odds are good that if you're looking to play GTA 6, you probably already have one. People on platforms outside PlayStation and Xbox are out of luck, as GTA 6 has not been announced for Switch…",
+    "title": "Pokemon Go November 2026 Events: Raids, Spotlight Hours, Community Day, And More",
+    "link": "https://www.gamespot.com/articles/pokemon-go-november-2026-events-raids-spotlight-hours-community-day-and-more/",
+    "pubDate": "Tue, 03 Nov 2026 20:28:02 +0000",
+    "description": "It's the final month of Pokemon Go 's Twilight Trails season, and the game is closing things out in a big way. New and returning Dynamax Pokemon will appear in various events over the next few weeks, including Gigantamax Duraludon, which is set to debut during this month's global Go Wild Area. A new selection of legendary and Mega Pokemon are returning to Raids as well in November. You can also expect to encounter new Spotlight Pokemon this month, and Eternamax Eternatus will make another rare appearance during the Dynamax Trails event. You can read more about this month's biggest Pokemon Go events below. In This Article November Raid Schedule Five-Star Raids Mega Raids Max Battles Shadow Raids November Spotlight Hours Halloween Part II Into The Wild Featured Pokemon Bonuses Go Wild Area 2026: Global Dynamax Trails Featured Pokemon Bonuses Eternatus Returns Bonuses Pawniard Community Day Bonuses Twilight Wishes Super Mega Raid Day November Raid Schedule New bosses are swooping into Raids and Max Battles this month. The Sinnoh legendaries Giratina, Cresselia, and Darkrai will return to five-star Raids during the first half of the month, after which they'll be replaced by all four forms of Deoxys. Mega Raids, meanwhile, will rotate through Mega Sableye, Mega Banette, and Mega Metagross, and Shadow Incarnate Forme Tornadus will periodically appear as a Shadow Raid boss. You can see November's full Raid schedule below: Five-Star Raids Origin Forme Giratina (October 28-November 3) Altered Forme Giratina (November 4-8) Cresselia (November 16-24) Darkrai (November 16-24) Normal Forme Deoxys (November 25-December 1) Attack Forme Deoxys (November 25-December 1) Defense Forme Deoxys (November 25-December 1) Speed Forme Deoxys (November 25-December 1) Mega Raids Mega Sableye (October 28-November 8) Mega Banette (November 16-24) Mega Metagross (November 25-December 1) Max Battles Dynamax Sableye (October 26-November 1) Dynamax Machop (November 2-8) TBA (November 16-23) Dynamax…",
     "source": "GameSpot"
   },
   {
-    "title": "Resident Evil Requiem Drops To Lowest Price, But For One Day Only",
-    "link": "https://www.gamespot.com/articles/resident-evil-requiem-drops-to-lowest-price-but-for-one-day-only/",
-    "pubDate": "Mon, 02 Nov 2026 16:00:00 +0000",
-    "description": "Resident Evil Requiem is brilliant. I don’t need to tell you that—the critical scores across the board, feedback from both fans and newcomers, and the fact that Leon Kennedy returns are enough evidence to support my opinion. Halloween may be dead until next year, but what hasn’t died is the need to defeat hordes of infected. With the latest Resident Evil game cheaper than ever, there’s no better time to buy it. You only have one day to get it at this price, though. What makes Resident Evil Requiem one of the best horror games and one of the best entries in the franchise is how it balances the recent first-person perspective entries with the survival horror-action hybrid of older games. As Grace Ashcroft, you’re forced to deal with enemies that will easily overpower you and, if you’re anything like me, avoid the darkness in that forsaken basement level. As Leon, it’s third-person horror and action, parrying fatal attacks with a satisfyingly timed hatchet block and unleashing a barrage of bullets against foes that you found horrifying as Grace. Of course, the story follows a familiar Resident Evil plot, but it’s done so well that it remains captivating throughout. Grace’s story, as an FBI analyst, takes her to the hotel where her mother was murdered. Finally coming face-to-face with her trauma, she inevitably has to deal with a very clearly virus-infected researcher who wants her for some reason. You’ll have to find out why when you play it. Leon, an agent for the Division of Security Operations, has his own investigation, which eventually intertwines with Grace’s story, bringing everything together in a truly gripping way. As the meme suggests: absolute cinema. I’m someone who has been a fan of both the old and new entries. I loved Resident Evil 2 and beyond, but I truly fell in love with the franchise with Resident Evil 7. Seeing both styles combined isn't confusing; it feels like the perfect blend. You’ll also get to play the new Leon Must Die Forever mode after…",
+    "title": "The Citadel Project is a Thief-inspired dark fantasy, survival-horror lite stealth-em-up with some lovely shadows set in a medieval megastructure",
+    "link": "https://www.rockpapershotgun.com/the-citadel-project-is-a-thief-inspired-dark-fantasy-survival-horror-lite-stealth-em-up-with-some-lovely-shadows-set-in-a-medieval-megastructure",
+    "pubDate": "Tue, 03 Nov 2026 20:10:03 +0000",
+    "description": "You know, given the whole stealthy element of Thief-like immersive sims, I'm surprised there haven't been more of them with horror elements. There's Gloomwood, sure, but it's not as common as I'd like. That in turn then makes me curious about The Citadel Project, an immersive sim with some survival-horror elements set in a nasty, parasite-infected dark fantasy world, all apparently made by just one person. Read more",
+    "source": "Rock Paper Shotgun"
+  },
+  {
+    "title": "WoW: Forever Shamans Are Protesting Class Changes After Being “Completely Ignored”",
+    "link": "https://www.gamespot.com/articles/wow-forever-shamans-are-protesting-class-changes-after-being-completely-ignored/",
+    "pubDate": "Tue, 03 Nov 2026 19:54:31 +0000",
+    "description": "World of Warcraft: Forever just received a massive batch of class-balance updates ahead of launch that have boosted power across the board, but one group of players isn't happy with the changes: Shamans. Developer Blizzard recently released Forever's launch patch notes based on feedback and data accumulated during the beta, resulting in a power spike for all classes and major reworks for classes like Paladin and Rogue. Shamans, too, received some significant changes, most notably the removal of a key Elemental specialization ability, Lava Burst, along with any interactions other abilities had with it. It's that change, and other changes to specialization-specific abilities like Restoration's Riptide and Enhancement's Maelstrom Weapon, that have resulted in the WoW Classic Shaman Discord going into lockdown in protest. The entire server, which has around 80,000 members, has been made read-only, with a message declaring the reason for why it took what it described as such a \"drastic measure.\" \"Community feedback gets completely ignored and class fantasies are getting destroyed,\" the server declared. \"With this we intend to give them [Blizzard] a sign and show them that the community is not [happy] with how they approached our beloved class. Give us back our class and spec identities and fantasies.\" While the protest is in regards to class changes in Forever specifically, the server is also home to Shaman discussions as they relate to other \"classic\" versions of the game as well, including WoW Classic and Mists of Pandaria Classic. As of writing, all of those channels are also locked and set to read-only. In a follow-up post, the server went into more detail about its complaints in regards to how Blizzard has approached Forever's Shaman design. It stated its complaints aren't about \"damage output.\" It also made clear the server will re-open \"regardless of the outcome,\" but that it felt like its feedback through \"legitimate\" channels were being ignored. The server then…",
     "source": "GameSpot"
   },
   {
-    "title": "One World of Warcraft: Forever player is working on a first-person mod that's a love letter to retro RPGs like Hexen and Morrowind",
-    "link": "https://www.eurogamer.net/world-of-warcraft-forever-first-person-mod-rpg",
-    "pubDate": "Mon, 02 Nov 2026 15:21:24 +0000",
-    "description": "One World of Warcraft: Forever player is attempting to turn Blizzard's new MMO endeavour into a Morrowind-esque first-person fantasy RPG, full of retro animations harkening back to the good ol' days. And there's no generative AI in sight. Read more",
-    "source": "Eurogamer"
+    "title": "Crowning the greatest FPS mode of all time through 1v1 combat—SEMIFINALS!",
+    "link": "https://www.pcgamer.com/games/fps/crowning-the-greatest-fps-mode-of-all-time-through-1v1-combat-semifinals/",
+    "pubDate": "Tue, 03 Nov 2026 19:41:04 +0000",
+    "description": "Battle royale is dead. Bomb be gone. It only gets harder from here...",
+    "source": "PC Gamer"
   },
   {
-    "title": "As the controversy around AI-created video game copies continues, Anthropic seemingly restricts Claude's cloning abilities",
-    "link": "https://www.eurogamer.net/anthropic-claude-generative-ai-game-clones-update",
-    "pubDate": "Mon, 02 Nov 2026 14:29:41 +0000",
-    "description": "An update to Anthropic's Claude AI software has seemingly blocked the creation of outright clones or copies of existing games. Instead, Claude has been altered to only create \"original\" games. Read more",
-    "source": "Eurogamer"
+    "title": "The Curse Of Star Wars Battlefront 3",
+    "link": "https://www.gamespot.com/articles/the-curse-of-star-wars-battlefront-3/",
+    "pubDate": "Tue, 03 Nov 2026 19:34:27 +0000",
+    "description": "I think Star Wars Battlefront 3 might be cursed. For the past 20 years, several different game studios have attempted to create a third entry in Star Wars’ premier shooter sub-series, yet have failed over and over again. We learned last week that EA is reportedly developing Battlefront 3, but also that the project came at the cost of shutting down BioWare. Battlefront 3 has always seemed like a no-brainer to make; 2005’s Star Wars: Battlefront 2 is widely beloved, and more personally, my favorite game of all time. Yet, the video game industry has never been able to actually launch a third installment in the popular series despite multiple attempts. After Pandemic Studios released Battlefront 2 in 2005, it would’ve made sense for the studio to roll right into making a third game, but that didn’t happen. In a 2025 interview with VideoGamer, game designer Dan Nanni revealed that Pandemic started work on a follow-up, but negotiations fell through as the console generation shifted and Pandemic couldn’t meet LucasArts' one-year deadline, reflecting the additional challenges of developing a big-budget licensed game. This wouldn’t be the last time a set-in-stone deadline would get a Battlefront game canceled. In lieu of making a new game with Pandemic Studios, LucasArts pursued a partnership with TimeSplitters developer Free Radical Design. This relationship led to what has become the best-known (and most infamous) prototype of Star Wars Battlefront 3. Leaked footage shows how this take on Battlefront 3 would’ve been a very ambitious, large-scale shooter, wherein players could fight on a planet’s surface, then get in a ship, take off, and fight in space. Plenty of footage from this take on Battlefront 3 has leaked over the years, so we have a somewhat good idea of what could’ve been. Some developers have even claimed the game was between 75% and 95% finished and that LucasArts was at one point interested in greenlighting a sequel, but Free Radical’s Battlefront 3 was never…",
+    "source": "GameSpot"
+  },
+  {
+    "title": "WoW: Forever Won’t Get More Class Balance Changes Any Time Soon",
+    "link": "https://www.gamespot.com/articles/wow-forever-wont-get-more-class-balance-changes-any-time-soon/",
+    "pubDate": "Tue, 03 Nov 2026 19:31:30 +0000",
+    "description": "World of Warcraft: Forever is gearing up for launch with some major class balance changes, but don't expect any more for at least a month. As detailed in Forever's launch patch notes, Blizzard is making some dramatic class changes, including major reworks to Rogue and Paladin talents, in time for release that will result in a big spike in player power. Blizzard said it has used all the data from the game's month-long beta to \"get everything tuned to a reasonable place.\" However, don't expect additional changes in the near future. Blizzard said it won't be making significant balance changes until sometime next month. \"With the exception of bugs and serious outliers, we don't plan on making big tuning changes between now and the opening of the raids next month,\" Blizzard wrote in its patch notes. \"Once we have sufficient data from players leveling past 30 and engaging in a wide range of content, we expect that we will do a large tuning pass based on our data.\" Forever's three launch raids will open December 9, meaning there will be a little over a month without class changes. But launch and its subsequent months will just be the beginning, Blizzard said. \"This is all merely a starting point for the classes in Forever, which will continue over the course of the months and years ahead just as they did following the original launch in 2004,\" Blizzard said. Blizzard is in it for the long haul with Forever, telling GameSpot in an interview it hopes the game will continue to receive updates for the next 10-20 years (or potentially forever). It recently announced its plans to release major Forever content updates every four months, as well as teased how its controller support will eventually lead to players being able to play the MMORPG on \"whatever you want.\" WoW: Forever launches November 4, but you can make your character now. In other Forever news, Blizzards revealed it will be making major improvements to the game's divisive layering system, how it's avoiding the…",
+    "source": "GameSpot"
+  },
+  {
+    "title": "GTA 6 Is Getting A Physical Map–Here’s How To Get One For Free Or Very Cheap",
+    "link": "https://www.gamespot.com/articles/gta-6-is-getting-a-physical-map-heres-how-to-get-one-for-free-or-very-cheap/",
+    "pubDate": "Tue, 03 Nov 2026 19:28:46 +0000",
+    "description": "Rockstar Games has confirmed more details about Grand Theft Auto 6 's impending release on November 19, including more information about physical goodies. While the game itself won't be available on a disc, Rockstar is offering a printable physical GTA 6 cover art poster and a map of the game's setting, Leonida. The poster and Leonida map will be available for free as digital downloads on GTA 6's official website on November 19. A double-sized physical version of the poster will be available \"shortly after launch\" from the Rockstar Store for 99 cents. Alternatively, it's free with any purchase from the Rockstar Store. Back in the day, Rockstar used to include fold-out posters in the box for GTA games featuring the game's cover art and map. But GTA 6 is a digital-only game. Players can buy a physical GTA 6 box at retail stores, but it won't include a disc, only a code for a digital download. Rockstar hasn't said if it will include anything extra in the box. Some retailers are apparently trying to sweeten the deal to encourage people to buy from them. It was recently reported that Walmart orders of GTA 6 will include some kind of \"surprise.\" When the Switch 2 released, some Walmart orders for the console included \"game-ready\" snacks like soda and chips. In other news, Rockstar just recently announced when GTA 6 preloading begins and when the game unlocks--players in the US will be among the last people in the world to get in.",
+    "source": "GameSpot"
+  },
+  {
+    "title": "The Elder Scrolls 6 is still a long way off, Bethesda warns: 'It'll be some time before we're ready to share more'",
+    "link": "https://www.pcgamer.com/games/the-elder-scrolls/the-elder-scrolls-6-is-still-a-long-way-off-bethesda-warns-itll-be-some-time-before-were-ready-to-share-more/",
+    "pubDate": "Tue, 03 Nov 2026 19:27:07 +0000",
+    "description": "The waiting ain't over yet.",
+    "source": "PC Gamer"
+  },
+  {
+    "title": "Silica, an FPS and RTS hybrid that mixes a smidge of Dune and Helldivers together, has left early access and entered 1.0",
+    "link": "https://www.rockpapershotgun.com/silica-an-fps-and-rts-hybrid-that-mixes-a-smidge-of-dune-and-helldivers-together-has-left-early-access-and-entered-10",
+    "pubDate": "Tue, 03 Nov 2026 19:00:00 +0000",
+    "description": "The concept of fusing an RTS and an FPS always sounds like a fun one, and since 2023 Martin Melich&aacute;rek has been trying to make a new take on the combination under the watchful eye of DayZ devs Bohemia Interactive through Silica. Today marks the day that Silica leaves early access and enters 1.0, fully fleshing out its hybrid and mish mash of Dune's Arrakis and Helldivers ' Terminids. Read more",
+    "source": "Rock Paper Shotgun"
   }
 ]
