@@ -1,5 +1,33 @@
 [
   {
+    "title": "My game was cloned with AI... what do I do?",
+    "link": "https://www.youtube.com/watch?v=8LMau1qXPYE",
+    "pubDate": "2026-11-05T13:23:11+00:00",
+    "description": "Turns out: no one is immune to AI-generated clone games.",
+    "source": "GMTK (YouTube)"
+  },
+  {
+    "title": "Tripwire Interactive expands publishing business to focus on smaller developers and games",
+    "link": "https://www.gamedeveloper.com/business/tripwire-interactive-expands-publishing-business-to-focus-on-smaller-developers-and-games",
+    "pubDate": "Wed, 04 Nov 2026 19:45:00 GMT",
+    "description": "The publishing division of Tripwire Interactive seeks to broaden its initiative with a focus on smaller games with scaled support.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Ubisoft among the bidders for Arkane as Xbox looks to sell the studio",
+    "link": "https://www.gamedeveloper.com/business/ubisoft-among-the-bidders-for-arkane-as-xbox-looks-to-sell-the-studio",
+    "pubDate": "Wed, 04 Nov 2026 17:37:00 GMT",
+    "description": "The Lyon-based studio has a few options on the table to avoid studio closure, including an acquisition from fellow-French video game industry contemporary Ubisoft.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Valve warns of slower Steam approvals, possibly due to AI game surge",
+    "link": "https://www.gamedeveloper.com/business/valve-warns-of-slower-steam-approval-process-due-to-flood-of-new-games",
+    "pubDate": "Wed, 04 Nov 2026 16:50:48 GMT",
+    "description": "New games on Valve's Steam platform are getting delayed due to an extended approval process, which Valve does not directly attribute to any kind of development trend.",
+    "source": "Game Developer"
+  },
+  {
     "title": "Half of Control Resonant's players were 'new' to the franchise",
     "link": "https://www.gamedeveloper.com/business/half-of-control-resonant-s-players-were-new-to-the-franchise",
     "pubDate": "Tue, 03 Nov 2026 19:56:03 GMT",
@@ -91,27 +119,6 @@
     "source": "GMTK (YouTube)"
   },
   {
-    "title": "Donald Glover to direct, star in Netflix adaptation of PUBG Battlegrounds",
-    "link": "https://www.gamedeveloper.com/business/netflix-adapts-krafton-pubg-to-be-written-and-led-by-donald-glover",
-    "pubDate": "Thu, 29 Oct 2026 18:17:55 GMT",
-    "description": "An adaptation of the battle royale shooter has been picked up by Netflix, with protean entertainer Donald Glover to write, produce, and star in the adaptation.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Xbox CEO says console demand is outstripping supply—but sales continue to drop",
-    "link": "https://www.gamedeveloper.com/console/xbox-ceo-says-console-demand-is-outstripping-supply-as-sales-continue-to-drop",
-    "pubDate": "Thu, 29 Oct 2026 17:35:37 GMT",
-    "description": "Xbox CEO Asha Sharma insists that the demand for Xbox consoles is there, Microsoft simple cannot produce enough, a claim that may clash with Xbox's public sales data.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Epic VP says AI code tools have stomped out decade-old 'non-deterministic cooking bugs' in Unreal Engine",
-    "link": "https://www.gamedeveloper.com/programming/unreal-engine-will-be-developed-with-ai-code-confirms-epic",
-    "pubDate": "Wed, 28 Oct 2026 16:28:55 GMT",
-    "description": "After an AI-first pivot, Epic has confirmed that AI is shaping the Unreal Engine in the near future.",
-    "source": "Game Developer"
-  },
-  {
     "title": "My Favourite Games From GMTK Game Jam 2026",
     "link": "https://www.youtube.com/watch?v=awegilW3DTc",
     "pubDate": "2026-08-07T20:00:06+00:00",
@@ -200,13 +207,6 @@
     "link": "https://www.youtube.com/watch?v=lgG_vfbDPeo",
     "pubDate": "2025-08-15T13:05:31+00:00",
     "description": "Switch 🇪 🇸 USA - Xbox 🇪 🇸 USA - PlayStation 🇪 🇸 USA",
-    "source": "GMTK (YouTube)"
-  },
-  {
-    "title": "How I Made Word Play",
-    "link": "https://www.youtube.com/watch?v=uuXrwA9nzM8",
-    "pubDate": "2025-07-14T16:00:13+00:00",
-    "description": null,
     "source": "GMTK (YouTube)"
   }
 ]
