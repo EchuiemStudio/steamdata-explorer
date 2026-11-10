@@ -1,5 +1,19 @@
 [
   {
+    "title": "Beyond the product page: Logitech G’s 360° Racing Studio",
+    "link": "https://www.unrealengine.com/spotlights/beyond-the-product-page-logitech-g-s-360-racing-studio",
+    "pubDate": "Tue, 10 Nov 2026 00:00:00 GMT",
+    "description": "Service Partner The New Face built Logitech G’s 360° Racing Studio, a sim racing showroom you can step into from the browser. See how they put it together with UE5’s Lumen, Nanite, Sequencer, and Pixel Streaming.",
+    "source": "Unreal Engine"
+  },
+  {
+    "title": "Dev snapshot: Godot 4.8 beta 3",
+    "link": "https://godotengine.org/article/dev-snapshot-godot-4-8-beta-3/",
+    "pubDate": "Mon, 09 Nov 2026 12:00:00 +0000",
+    "description": "Despite much of our team being at GodotFest this past week, there was still a healthy amount of progress made on our handful of remaining release blockers. It’s looking like it won’t be too much longer before we’re ready to transition to the release candidate phase, so now’s the time to seek out and report any new bugs/regressions with our latest snapshot: Godot 4.8 beta 3. Please consider supporting the project financially, if you are able. Godot is maintained by the efforts of volunteers and a small team of paid contributors. Your donations go towards sponsoring their work and ensuring they can dedicate their undivided attention to the needs of the project. Jump to the Downloads section, and give it a spin right now, or continue reading to learn more about improvements in this release. You can also try the Web editor, the XR editor, or the Android editor for this release. If you are interested in the latter, please request to join our testing group to get access to pre-release builds. The cover illustration is from Repel The Rifts, a tower defense roguelike where you task your commander with holding back the chaos of a treacherous, alien world. You can buy the game on Steam, and check out the developer on Bluesky and itch.io! Highlights For an overview of what’s new overall in Godot 4.8, have a look at the highlights for 4.8 beta 1, which cover a lot of the changes. This blog post only covers the changes between beta 2 and beta 3. This section covers the most relevant changes made since the beta 2 snapshot, which are largely regression fixes: 2D: Prettier Sprite2D error message when texture image is null ( GH-125054 ). 3D: Add LineBase3D and mark it as abstract ( GH-124741 ). Animation: Don’t auto-insert keys when Animation is not active ( GH-124940 ). Audio: Web: Various fixes to the Sample audio driver ( GH-123996 ). Buildsystem: Enable build IDs for Linux and Windows builds with debug symbols ( GH-125188 ). Editor: Fix “Save on Focus Loss” recreating deleted…",
+    "source": "Godot Engine"
+  },
+  {
     "title": "Godot Showcase - Sovereign Tower",
     "link": "https://godotengine.org/article/godot-showcase-sovereign-tower/",
     "pubDate": "Fri, 06 Nov 2026 14:00:00 +0000",
@@ -60,13 +74,6 @@
     "link": "https://www.unrealengine.com/news/mutable-sample-for-runtime-character-customization-now-updated-for-ue-5-8",
     "pubDate": "Tue, 27 Oct 2026 00:00:00 GMT",
     "description": "The Mutable toolset is now Production-Ready in Unreal Engine 5.8—and to celebrate, there’s a completely updated Mutable Sample. Download it today and start building characters your players can truly customize in real time.",
-    "source": "Unreal Engine"
-  },
-  {
-    "title": "Meccha Chameleon: How two devs built the indie smash hit of the summer",
-    "link": "https://www.unrealengine.com/developer-interviews/meccha-chameleon-how-two-devs-built-the-indie-smash-hit-of-the-summer",
-    "pubDate": "Mon, 26 Oct 2026 00:00:00 GMT",
-    "description": "Get the full story on how two Japanese developers took just two months to build Prop Hunt-inspired indie game Meccha Chameleon in UE5—and instantly had a massive hit on their hands that sold an impressive 1,000,000 copies in its first four days.",
     "source": "Unreal Engine"
   },
   {
@@ -144,13 +151,6 @@
     "link": "https://godotengine.org/article/submissions-open-godot-2026-showreel/",
     "pubDate": "Sat, 15 Aug 2026 13:00:00 +0000",
     "description": "Showcase your Godot Engine 2026 creations! We invite you to submit videos featuring your published or in-progress games or tools so we can make the Godot 2026 Showreel. Our annual showreels are informative and celebratory showcases, to highlight the wide array of projects developed using the Godot Engine. If you want to participate this year and share your Godot-made game, app, or tool, submit your entry starting today. Help us to decide! Like last year, we want to invite more people to participate in the voting phase. So, if you are a member of the Development Fund, you will be able to cast your votes alongside the Godot maintainers! To be eligible to vote, you need to have a recurrent donation active. How to submit You can submit your entry in our Godot Showreel website. Before submitting, please read the submission guidelines. Voting from October 2nd until October 16th 2026 Need inspiration? Check out our showreel playlist for some creative sparks and see what makes a great submission! Here is last year’s showreel: Good luck! We can’t wait to see your creations!",
-    "source": "Godot Engine"
-  },
-  {
-    "title": "GodotFest 2026 returns to Munich this November",
-    "link": "https://godotengine.org/article/godotfest-2026/",
-    "pubDate": "Wed, 12 Aug 2026 00:00:00 +0000",
-    "description": "Last November, close to 500 people joined us in Munich for the first GodotFest. We had 34 speakers, two stages, a workshop room, and two busy days of Godot. For a first edition, it was quite a turnout. GodotFest is an annual conference for people who build with Godot. We are the small Munich team behind GodotCon 23, and we run the event independently, in close cooperation with the Godot Foundation. We started it because we wanted a place where developers could share what they had learned, show their games, and meet others working with the engine. It worked, so GodotFest is coming back to smartvillage in Munich on the 3rd and 4th of November 2026. This year’s theme is “Godot Means Business”. There will still be plenty of technical talks, panels and community time, but we are making more room for studios, publishers and service providers building businesses around Godot. MeetToMatch, powered by Photon, is included with every ticket, so attendees can arrange meetings before the event. There will also be a game showcase, with space to bring your own hardware and let people play your game. The talks from 2025 are online if you would like an idea of what to expect from the programme. And yes, the food is included again. Every ticket covers premium catering on both days: breakfast, lunch and afternoon snacks, plus coffee, soft drinks and water throughout the event. Vegan and gluten-free options will be available. Call for speakers Did you ship a game with Godot, build a useful tool, or learn something the hard way? We would like to hear about it. We are looking for talks and panels from developers, artists, educators, tool makers and community organizers. First-time speakers are welcome, too. Submit a proposal, deadline: August 31st, 2026 at 13:00 UTC The deadline was already extended once, so this one is final. Sponsors We are also looking for sponsors to help make GodotFest happen. If your company would like to meet Godot developers and studios in Munich, have a look at…",
     "source": "Godot Engine"
   },
   {
