@@ -1,5 +1,47 @@
 [
   {
+    "title": "Tripwire Interactive lays off workers after announcing new publishing initiative",
+    "link": "https://www.gamedeveloper.com/business/tripwire-interactive-layoffs-come-after-announcing-new-publishing-initiative",
+    "pubDate": "Thu, 12 Nov 2026 19:15:00 GMT",
+    "description": "The Killing Floor studio lays off 36 in a move the former co-founder blames on 'woke leftists' ousting him from his position years ago.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "GenAI-using developers say they mostly employ it for 'research and brainstorming'",
+    "link": "https://www.gamedeveloper.com/production/genai-using-developers-say-they-mostly-use-it-for-research-and-brainstorming-",
+    "pubDate": "Thu, 12 Nov 2026 18:15:00 GMT",
+    "description": "A recent survey clocked AI-generated coding as the third-most common use case for industry professionals employing generative AI.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "One in three developers say they've been laid off within the last two years",
+    "link": "https://www.gamedeveloper.com/business/one-in-three-developers-have-been-laid-off-within-the-last-two-years",
+    "pubDate": "Thu, 12 Nov 2026 18:03:45 GMT",
+    "description": "According to the State of the Industry survey, 34 percent of respondents have stated that they have been laid off in the last two years.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "A second 2026 State of the Game Industry survey? It can happen! ft. Beth Elderkin & Imran Khan",
+    "link": "https://www.gamedeveloper.com/business/a-second-2026-state-of-the-game-industry-survey-it-can-happen-ft-beth-elderkin-imran-khan",
+    "pubDate": "Thu, 12 Nov 2026 17:31:00 GMT",
+    "description": "On this week's BONUS episode of the GameDeveloper.com Podcast, we're diving into a second GDC Festival of Gaming State of the Industry report with all-new data on the world of game development",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Layoffs, AI, and next-gen: what 2,600+ game professionals told GDC this year",
+    "link": "https://www.gamedeveloper.com/business/layoffs-ai-and-next-gen-what-2-600-game-professionals-told-gdc-this-year",
+    "pubDate": "Thu, 12 Nov 2026 17:00:00 GMT",
+    "description": "The GDC State of the Game Industry Report returns with an up-to-date snapshot on the state of the professional world of game development.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Nvidia CEO Jensen Huang resigns after potentially damaging marital affairs",
+    "link": "https://www.gamedeveloper.com/business/nvidia-ceo-jensen-huang-resigns-after-scandal",
+    "pubDate": "Thu, 12 Nov 2026 16:15:03 GMT",
+    "description": "After multiple legally-compromising affairs came to light in the public, Nvidia CEO Jensen Huang has tendered his resignation as the head of one of the largest companies in the world.",
+    "source": "Game Developer"
+  },
+  {
     "title": "PlayStation 5 crosses 100 million consoles sold",
     "link": "https://www.gamedeveloper.com/console/playstation-5-ships-100-million-consoles",
     "pubDate": "Wed, 11 Nov 2026 19:15:00 GMT",
@@ -63,53 +105,11 @@
     "source": "Game Developer"
   },
   {
-    "title": "Sony insists its next-generation console plans are still on schedule",
-    "link": "https://www.gamedeveloper.com/console/sony-insists-next-generation-consoles-are-still-on-schedule-in-new-financial-report",
-    "pubDate": "Fri, 06 Nov 2026 15:36:44 GMT",
-    "description": "As part of the media giant's quarterly financial report, Sony states that progress toward the next generation of consoles is proceeding on schedule.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Nintendo confident in memory supply in new financial report",
-    "link": "https://www.gamedeveloper.com/business/nintendo-confident-in-memory-supply-in-new-financial-report",
-    "pubDate": "Thu, 05 Nov 2026 17:40:57 GMT",
-    "description": "As part of the company's quarterly financial report, company president Shuntaro Furukawa affirmed that Nintendo is not suffering due to the ongoing memory crisis, and is confident it has enough supply.",
-    "source": "Game Developer"
-  },
-  {
     "title": "My game was cloned with AI... what do I do?",
     "link": "https://www.youtube.com/watch?v=8LMau1qXPYE",
     "pubDate": "2026-11-05T13:23:11+00:00",
     "description": "Turns out: no one is immune to AI-generated clone games.",
     "source": "GMTK (YouTube)"
-  },
-  {
-    "title": "Tripwire Interactive expands publishing business to focus on smaller developers and games",
-    "link": "https://www.gamedeveloper.com/business/tripwire-interactive-expands-publishing-business-to-focus-on-smaller-developers-and-games",
-    "pubDate": "Wed, 04 Nov 2026 19:45:00 GMT",
-    "description": "The publishing division of Tripwire Interactive seeks to broaden its initiative with a focus on smaller games with scaled support.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Ubisoft among the bidders for Arkane as Xbox looks to sell the studio",
-    "link": "https://www.gamedeveloper.com/business/ubisoft-among-the-bidders-for-arkane-as-xbox-looks-to-sell-the-studio",
-    "pubDate": "Wed, 04 Nov 2026 17:37:00 GMT",
-    "description": "The Lyon-based studio has a few options on the table to avoid studio closure, including an acquisition from fellow-French video game industry contemporary Ubisoft.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Valve warns of slower Steam approvals, possibly due to AI game surge",
-    "link": "https://www.gamedeveloper.com/business/valve-warns-of-slower-steam-approval-process-due-to-flood-of-new-games",
-    "pubDate": "Wed, 04 Nov 2026 16:50:48 GMT",
-    "description": "New games on Valve's Steam platform are getting delayed due to an extended approval process, which Valve does not directly attribute to any kind of development trend.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Half of Control Resonant's players were 'new' to the franchise",
-    "link": "https://www.gamedeveloper.com/business/half-of-control-resonant-s-players-were-new-to-the-franchise",
-    "pubDate": "Tue, 03 Nov 2026 19:56:03 GMT",
-    "description": "Players unfamiliar with Remedy's 'new weird' action series helped drive Control Resonant to over one million units sold in just three weeks.",
-    "source": "Game Developer"
   },
   {
     "title": "The History of Every Video Game Genre",
