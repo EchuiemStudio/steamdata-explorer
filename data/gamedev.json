@@ -1,5 +1,26 @@
 [
   {
+    "title": "Newly-proposed EU law could place tight restrictions on free-to-play games",
+    "link": "https://www.gamedeveloper.com/business/european-union-proposes-digital-fairness-act-which-could-have-major-effects-on-game-development",
+    "pubDate": "Fri, 13 Nov 2026 18:32:59 GMT",
+    "description": "The Digital Fairness Act, if adopted, could massively change the way some games are developed and published not just in Europe, but across the globe.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Development secrets of Dressmaker, ft. Ruan Rothmann & Sara Laubscher",
+    "link": "https://www.gamedeveloper.com/pc/development-secrets-of-dressmaker-ft-ruan-rothmann-sara-laubscher",
+    "pubDate": "Fri, 13 Nov 2026 16:05:43 GMT",
+    "description": "Dressmaker is the kind of story indie devs dream of—so what did it take to bring the surprise hit of 2026 to life?",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Witcher 3 devs use AI to help Polish voice actor reprise role of Geralt after stroke",
+    "link": "https://www.gamedeveloper.com/production/polish-voice-actor-for-geralt-returns-for-the-witcher-3-with-ai",
+    "pubDate": "Fri, 13 Nov 2026 15:28:34 GMT",
+    "description": "After a stroke left him unable to do the voice of the Witcher series' main character anymore, Jacek Rozenek consented to using AI for Witcher 3's next expansion.",
+    "source": "Game Developer"
+  },
+  {
     "title": "Tripwire Interactive lays off workers after announcing new publishing initiative",
     "link": "https://www.gamedeveloper.com/business/tripwire-interactive-layoffs-come-after-announcing-new-publishing-initiative",
     "pubDate": "Thu, 12 Nov 2026 19:15:00 GMT",
@@ -84,28 +105,7 @@
     "source": "Game Developer"
   },
   {
-    "title": "World of Warcraft: Forever is the MMORPG's biggest launch as measured by peak concurrent players",
-    "link": "https://www.gamedeveloper.com/pc/world-of-warcraft-forever-is-the-mmorpg-s-biggest-launch-in-player-numbers",
-    "pubDate": "Mon, 09 Nov 2026 16:39:06 GMT",
-    "description": "The highly-anticipated launch from Blizzard has been a bright spot in the Xbox portfolio.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "SAG-AFTRA introduces new process for hiring union actors in game pitches",
-    "link": "https://www.gamedeveloper.com/production/sag-aftra-introduces-new-process-for-using-actors-in-game-pitches",
-    "pubDate": "Fri, 06 Nov 2026 19:17:10 GMT",
-    "description": "SAG-AFTRA actors can now be recruited for vertical slices, demos, and other forms of content needed to pitch games.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Report: Silver Lake and the Saudi Arabia PIF hold talks with Unity to explore acquisition",
-    "link": "https://www.gamedeveloper.com/business/silver-lake-and-the-saudi-arabia-pif-hold-talks-with-unity-to-explore-acquisition",
-    "pubDate": "Fri, 06 Nov 2026 17:57:21 GMT",
-    "description": "The investment partners recently acquired Electronic Arts and are now reportedly turning their gaze toward software engine Unity.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "My game was cloned with AI... what do I do?",
+    "title": "How it feels to have your game cloned",
     "link": "https://www.youtube.com/watch?v=8LMau1qXPYE",
     "pubDate": "2026-11-05T13:23:11+00:00",
     "description": "Turns out: no one is immune to AI-generated clone games.",
