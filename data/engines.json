@@ -1,5 +1,12 @@
 [
   {
+    "title": "Say cheese! Recreating an iconic 2D art style with UE5 in Bluey’s Happy Snaps",
+    "link": "https://www.unrealengine.com/developer-interviews/say-cheese-recreating-an-iconic-2d-art-style-with-ue5-in-blueys-happy-snaps",
+    "pubDate": "Mon, 16 Nov 2026 00:00:00 GMT",
+    "description": "How did Gameloft Brisbane bring Bluey ’s iconic 2D world to life in 3D? Discover the Unreal Engine 5 animation tools and techniques that helped the team translate the popular kids’ TV show into a playful video game adventure for the whole family.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "JetBrains Renews its Platinum Sponsorship of the Godot Foundation",
     "link": "https://godotengine.org/article/partners_jetbrains_sponsorship_renewal_2027/",
     "pubDate": "Tue, 10 Nov 2026 12:00:00 +0000",
@@ -74,13 +81,6 @@
     "link": "https://www.unrealengine.com/learning/octobers-epic-learning-content-mobile-development-in-unreal-engine",
     "pubDate": "Wed, 28 Oct 2026 00:00:00 GMT",
     "description": "This month’s free learning content puts mobile development in Unreal Engine in the spotlight. Learn how to get started, optimize performance, and ship your game. Plus, find out how to create realistic characters for cross-platform experiences, and much more.",
-    "source": "Unreal Engine"
-  },
-  {
-    "title": "Mutable Sample for runtime character customization—now updated for UE 5.8!",
-    "link": "https://www.unrealengine.com/news/mutable-sample-for-runtime-character-customization-now-updated-for-ue-5-8",
-    "pubDate": "Tue, 27 Oct 2026 00:00:00 GMT",
-    "description": "The Mutable toolset is now Production-Ready in Unreal Engine 5.8—and to celebrate, there’s a completely updated Mutable Sample. Download it today and start building characters your players can truly customize in real time.",
     "source": "Unreal Engine"
   },
   {
