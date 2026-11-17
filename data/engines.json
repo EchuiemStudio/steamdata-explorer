@@ -1,5 +1,12 @@
 [
   {
+    "title": "Expanding Anyma’s Coachella performance into broadcast AR with Unreal Engine",
+    "link": "https://www.unrealengine.com/spotlights/expanding-anymas-coachella-performance-into-broadcast-ar-with-unreal-engine",
+    "pubDate": "Tue, 17 Nov 2026 00:00:00 GMT",
+    "description": "Anyma’s Coachella performance pushed the boundaries of live music visuals. Learn how Unreal Engine, MetaHuman, broadcast AR, and spidercam technology helped bring his world to a vast audience watching online.",
+    "source": "Unreal Engine"
+  },
+  {
     "title": "Say cheese! Recreating an iconic 2D art style with UE5 in Bluey’s Happy Snaps",
     "link": "https://www.unrealengine.com/developer-interviews/say-cheese-recreating-an-iconic-2d-art-style-with-ue5-in-blueys-happy-snaps",
     "pubDate": "Mon, 16 Nov 2026 00:00:00 GMT",
@@ -75,13 +82,6 @@
     "pubDate": "Wed, 28 Oct 2026 12:00:00 +0000",
     "description": "XREAL AURA, the first optical see-through glasses on Android XR, is here and Godot is part of the launch lineup! Develop natively on spatial computing glasses Download the Godot editor and its companion app on the XREAL AURA, and develop, export, and publish spatial Godot games and apps natively on XREAL AURA. The Godot editor on XREAL AURA provides the features that you’d come to expect and love on desktop within a multi-window spatial workspace that goes with you. Download Godot editor on Google Play: Build spatial games and apps Godot continues the trend of being one of the lightest, most flexible, and best engines for XR development by delivering a plethora of new features to provide developers access to the newest Android XR capabilities available on XREAL AURA. This includes support for the new OpenXR Spatial Containers, which are system-managed volumes in which applications can display spatial content, similar to how traditional applications draw 2D content within windows on a desktop. On XREAL AURA, Godot spatial games and apps come alive right on your table, anchored exactly where you place it, with hand tracking and a low-latency spatial display that make every move feel natural. These new spatial capabilities lower the barrier of entry for developers to build new spatial games and apps, or port existing 3D games. Porting DOGWALK to XREAL AURA To showcase the new OpenXR Spatial Containers on XREAL AURA, and the ease through which developers can port their 3D games to Spatial Containers, the Godot Foundation in partnership with Blender Studio and W4 Games, is working on a spatial port of DOGWALK to XREAL AURA. This project builds on the ongoing collaboration between the Godot Foundation and W4 Games to expand Godot’s Android XR support. Working closely together, the teams have tackled the engineering challenges and optimizations involved in bringing the spatial version of DOGWALK to XREAL AURA in a relatively short time, and are now hard at work polishing…",
     "source": "Godot Engine"
-  },
-  {
-    "title": "October’s Epic learning content: Mobile development in Unreal Engine",
-    "link": "https://www.unrealengine.com/learning/octobers-epic-learning-content-mobile-development-in-unreal-engine",
-    "pubDate": "Wed, 28 Oct 2026 00:00:00 GMT",
-    "description": "This month’s free learning content puts mobile development in Unreal Engine in the spotlight. Learn how to get started, optimize performance, and ship your game. Plus, find out how to create realistic characters for cross-platform experiences, and much more.",
-    "source": "Unreal Engine"
   },
   {
     "title": "Godot XR Community Game Jam VI",
