@@ -1,9 +1,30 @@
 [
   {
+    "title": "European Game Worker unions publish manifesto warning against unchecked AI usage",
+    "link": "https://www.gamedeveloper.com/production/europe-s-game-worker-unions-publish-a-manifesto-warning-against-unchecked-ai-usage",
+    "pubDate": "Tue, 17 Nov 2026 21:21:17 GMT",
+    "description": "Members in Ireland, Spain, and Milan have come together to outline concerns, grievances, pitfalls, and proposed solutions surrounding Generative AI use.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Zelda and Grand Theft Auto headline the nominees for the 2027 Game Awards",
+    "link": "https://www.gamedeveloper.com/marketing/zelda-and-grand-theft-auto-headline-the-nominees-for-the-2027-game-awards",
+    "pubDate": "Tue, 17 Nov 2026 19:29:31 GMT",
+    "description": "The numerous categories of The Game Awards were largely dominated by Grand Theft Auto VI and The Legend of Zelda: Ocarina of Time, but there's plenty to talk about in this year's nominees.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "This year's video game Grammy nominations reveal Academy's potential favor against songs with vocals",
+    "link": "https://www.gamedeveloper.com/audio/grammy-nominations-for-video-games-announced-unbeatable-developers-lament-the-preference-against-vocal-songs",
+    "pubDate": "Tue, 17 Nov 2026 17:30:00 GMT",
+    "description": "The Grammys are celebrating a suite of stellar video game soundtracks—but one indie dev says the academy rejected their score for being heavy on vocals.",
+    "source": "Game Developer"
+  },
+  {
     "title": "Take-Two lays off Firaxis employees on eve of Grand Theft Auto VI launch",
     "link": "https://www.gamedeveloper.com/business/take-two-lays-off-firaxis-employees-on-eve-of-grand-theft-auto-vi-launch",
     "pubDate": "Tue, 17 Nov 2026 16:07:35 GMT",
-    "description": "Sid Meier's Civilization VII and Marvel's Midnight Suns developer Firaxis is laying off workers.",
+    "description": "Firaxis, a sibling studio to Take-Two's Rockstar Games, is known for games like Sid Meier's Civilization VII and Marvel's Midnight Suns.",
     "source": "Game Developer"
   },
   {
@@ -81,27 +102,6 @@
     "link": "https://www.gamedeveloper.com/production/genai-using-developers-say-they-mostly-use-it-for-research-and-brainstorming-",
     "pubDate": "Thu, 12 Nov 2026 18:15:00 GMT",
     "description": "A recent survey clocked AI-generated coding as the third-most common use case for industry professionals employing generative AI.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "One in three developers say they've been laid off within the last two years",
-    "link": "https://www.gamedeveloper.com/business/one-in-three-developers-have-been-laid-off-within-the-last-two-years",
-    "pubDate": "Thu, 12 Nov 2026 18:03:45 GMT",
-    "description": "According to the State of the Industry survey, 34 percent of respondents have stated that they have been laid off in the last two years.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "A second 2026 State of the Game Industry survey? It can happen! ft. Beth Elderkin & Imran Khan",
-    "link": "https://www.gamedeveloper.com/business/a-second-2026-state-of-the-game-industry-survey-it-can-happen-ft-beth-elderkin-imran-khan",
-    "pubDate": "Thu, 12 Nov 2026 17:31:00 GMT",
-    "description": "On this week's BONUS episode of the GameDeveloper.com Podcast, we're diving into a second GDC Festival of Gaming State of the Industry report with all-new data on the world of game development",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Layoffs, AI, and next-gen: what 2,600+ game professionals told GDC this year",
-    "link": "https://www.gamedeveloper.com/business/layoffs-ai-and-next-gen-what-2-600-game-professionals-told-gdc-this-year",
-    "pubDate": "Thu, 12 Nov 2026 17:00:00 GMT",
-    "description": "The GDC State of the Game Industry Report returns with an up-to-date snapshot on the state of the professional world of game development.",
     "source": "Game Developer"
   },
   {
