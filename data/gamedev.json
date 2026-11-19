@@ -1,5 +1,26 @@
 [
   {
+    "title": "Why greenlighting Dressmaker wasn't an easy decision to make",
+    "link": "https://www.gamedeveloper.com/marketing/why-greenlighting-dressmaker-wasn-t-an-easy-decision-to-make",
+    "pubDate": "Thu, 19 Nov 2026 15:57:43 GMT",
+    "description": "Pre-production data said Dressmaker might not find an audience. Free Lives pushed past those numbers to make a bona fide hit.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Clair Obscur: Expedition 33's narrative lead wants to change game funding",
+    "link": "https://www.gamedeveloper.com/design/clair-obscur-expedition-33-s-narrative-lead-wants-to-change-game-funding",
+    "pubDate": "Wed, 18 Nov 2026 19:02:15 GMT",
+    "description": "After winning numerous awards, Clair Obscur narrative lead Jennifer Svedberg-Yen wants to change the story about priorities in game funding.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "PlayStation emerges victorious in a $2.6 billion lawsuit alleging a digital monopoly",
+    "link": "https://www.gamedeveloper.com/console/playstation-emerges-victorious-in-a-2-6-billion-lawsuit-alleging-a-digital-monopoly",
+    "pubDate": "Wed, 18 Nov 2026 18:14:35 GMT",
+    "description": "The now-dismissed lawsuit accused PlayStation of setting \"excessive and unfair prices\" in the UK, but will not proceed any further.",
+    "source": "Game Developer"
+  },
+  {
     "title": "European Game Worker unions publish manifesto warning against unchecked AI usage",
     "link": "https://www.gamedeveloper.com/production/europe-s-game-worker-unions-publish-a-manifesto-warning-against-unchecked-ai-usage",
     "pubDate": "Tue, 17 Nov 2026 21:21:17 GMT",
@@ -82,34 +103,6 @@
     "pubDate": "Fri, 13 Nov 2026 16:05:43 GMT",
     "description": "Dressmaker is the kind of story indie devs dream of—so what did it take to bring the surprise hit of 2026 to life?",
     "source": "Game Developer"
-  },
-  {
-    "title": "Witcher 3 devs use AI to help Polish voice actor reprise role of Geralt after stroke",
-    "link": "https://www.gamedeveloper.com/production/polish-voice-actor-for-geralt-returns-for-the-witcher-3-with-ai",
-    "pubDate": "Fri, 13 Nov 2026 15:28:34 GMT",
-    "description": "After a stroke left him unable to do the voice of the Witcher series' main character anymore, Jacek Rozenek consented to using AI for Witcher 3's next expansion.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Tripwire Interactive lays off workers after announcing new publishing initiative",
-    "link": "https://www.gamedeveloper.com/business/tripwire-interactive-layoffs-come-after-announcing-new-publishing-initiative",
-    "pubDate": "Thu, 12 Nov 2026 19:15:00 GMT",
-    "description": "The Killing Floor studio lays off 36 in a move the former co-founder blames on 'woke leftists' ousting him from his position years ago.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "GenAI-using developers say they mostly employ it for 'research and brainstorming'",
-    "link": "https://www.gamedeveloper.com/production/genai-using-developers-say-they-mostly-use-it-for-research-and-brainstorming-",
-    "pubDate": "Thu, 12 Nov 2026 18:15:00 GMT",
-    "description": "A recent survey clocked AI-generated coding as the third-most common use case for industry professionals employing generative AI.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "How it feels to have your game cloned",
-    "link": "https://www.youtube.com/watch?v=8LMau1qXPYE",
-    "pubDate": "2026-11-05T13:23:11+00:00",
-    "description": "Turns out: no one is immune to AI-generated clone games.",
-    "source": "GMTK (YouTube)"
   },
   {
     "title": "The History of Every Video Game Genre",
@@ -207,6 +200,13 @@
     "link": "https://www.youtube.com/watch?v=lgG_vfbDPeo",
     "pubDate": "2025-08-15T13:05:31+00:00",
     "description": "Switch 🇪 🇸 USA - Xbox 🇪 🇸 USA - PlayStation 🇪 🇸 USA",
+    "source": "GMTK (YouTube)"
+  },
+  {
+    "title": "How I Made Word Play",
+    "link": "https://www.youtube.com/watch?v=uuXrwA9nzM8",
+    "pubDate": "2025-07-14T16:00:13+00:00",
+    "description": null,
     "source": "GMTK (YouTube)"
   }
 ]
