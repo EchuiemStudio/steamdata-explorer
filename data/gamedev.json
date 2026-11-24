@@ -1,5 +1,26 @@
 [
   {
+    "title": "Opinion: Grand Theft Auto VI and World of Warcraft: Forever show that mundanity is having a moment",
+    "link": "https://www.gamedeveloper.com/design/grand-theft-auto-vi-and-world-of-warcraft-forever-show-that-mundanity-is-having-a-moment",
+    "pubDate": "Tue, 24 Nov 2026 15:42:06 GMT",
+    "description": "Two of the year's biggest hits tell us that downtime and doldrums can be as compelling as dungeons and dragons.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Nvidia reinstates Jensen Huang as CEO weeks after his resignation",
+    "link": "https://www.gamedeveloper.com/business/nvidia-reinstates-jensen-huang-as-ceo",
+    "pubDate": "Mon, 23 Nov 2026 21:07:02 GMT",
+    "description": "The ousted CEO has been reinstated by the board less than two weeks after his ouster, in consultation with senior officials from the United States government.",
+    "source": "Game Developer"
+  },
+  {
+    "title": "Epic Games no longer plans to include Blueprints or Actor Gameplay Framework in Unreal Engine 6",
+    "link": "https://www.gamedeveloper.com/programming/unreal-engine-6-to-remove-blueprints-and-actor-gameplay-framework-from-the-beginning",
+    "pubDate": "Mon, 23 Nov 2026 19:50:33 GMT",
+    "description": "Until recently Epic had maintained that both features would initially remain options in Unreal Engine with plans to wind down the features over time, but now Blueprints and the Actor Gameplay Framework have been dropped in favor of support for AI driven tools.",
+    "source": "Game Developer"
+  },
+  {
     "title": "Devs can now utilize the high-end ambient occlusion technique seen in EVE: Frontier",
     "link": "https://www.gamedeveloper.com/programming/devs-can-now-utilize-high-end-ambient-occlusion-technique-seen-in-eve-frontier",
     "pubDate": "Mon, 23 Nov 2026 15:10:00 GMT",
@@ -81,27 +102,6 @@
     "link": "https://www.gamedeveloper.com/business/take-two-lays-off-firaxis-employees-on-eve-of-grand-theft-auto-vi-launch",
     "pubDate": "Tue, 17 Nov 2026 16:07:35 GMT",
     "description": "Firaxis, a sibling studio to Take-Two's Rockstar Games, is known for games like Sid Meier's Civilization VII and Marvel's Midnight Suns.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Shigeru Miyamoto selected as inaugural Legend Award inductee at DICE Awards",
-    "link": "https://www.gamedeveloper.com/console/shigeru-miyamoto-selected-as-inaugural-legend-award-inductee-at-d-i-c-e-awards",
-    "pubDate": "Mon, 16 Nov 2026 20:15:00 GMT",
-    "description": "Nintendo's early game director, creative fellow, and most famous face is named as the first Legend Award winner at the 30th annual D.I.C.E. awards.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "Riot unveils New Dawn, a major overhaul for League of Legends",
-    "link": "https://www.gamedeveloper.com/pc/riot-unveils-new-dawn-the-next-evolution-of-league-of-legends",
-    "pubDate": "Mon, 16 Nov 2026 19:15:00 GMT",
-    "description": "At the League of Legends 2026 championship, Riot revealed a new era for League of Legends with a cinematic that's a bit brief on details.",
-    "source": "Game Developer"
-  },
-  {
-    "title": "'It's common for there to be speculation and headlines:' Unity exec addresses acquisition rumors",
-    "link": "https://www.gamedeveloper.com/business/-it-s-common-for-there-to-be-speculation-and-headlines-unity-exec-addresses-acquisition-rumors",
-    "pubDate": "Mon, 16 Nov 2026 18:14:49 GMT",
-    "description": "Unity senior vice president of product Adam Smith says speculation over M&A tends to follow strong quarterly results.",
     "source": "Game Developer"
   },
   {
